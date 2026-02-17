@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Моя UGC Студия</title>
+<style>
+    /* Base Reset */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    /* Layout */
+    .screen {
+      display: none;
+      padding: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    /* Components */
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      font-size: 16px;
+      box-sizing: border-box;
+      /* Critical for width */
+      background: #f9f9f9;
+    }
+
+    button {
+      width: 100%;
+      padding: 18px;
+      background: #000;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:disabled {
+      background: #ccc;
+    }
+
+    .text-link {
+      text-align: center;
+      margin-top: 20px;
+      color: #007bff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* Grid for Models/Locations */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .grid-item {
+      aspect-ratio: 1;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      border: 3px solid transparent;
+    }
+
+    .grid-item.selected {
+      border-color: #000;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .grid-item-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 10px;
+      padding: 4px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .section-header {
+      font-weight: bold;
+      margin: 25px 0 10px;
+      font-size: 18px;
+    }
+
+    .upload-area {
+      height: 200px;
+      border: 2px dashed #ccc;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: #888;
+      overflow: hidden;
+    }
+
+    .upload-area img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .error-msg {
+      color: red;
+      text-align: center;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .success-msg {
+      color: green;
+      text-align: center;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  </style>
+<link href="https://yas.wine/ru/app.html" rel="canonical"/><link href="https://yas.wine/app.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/app.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/app.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/app.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/app.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/app.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+<!-- Login Screen -->
+<div class="screen active" id="loginScreen">
+<div class="card">
+<h1>Моя UGC Студия</h1>
+<h2 id="loginTitle">С возвращением</h2>
+<div class="error-msg" id="loginError"></div>
+<div class="input-group" id="emailInputGroup">
+<input autocomplete="email" id="email" placeholder="Электронная почта" type="email"/>
+</div>
+<div class="input-group" id="passwordInputGroup">
+<input autocomplete="current-password" id="password" placeholder="Пароль" type="password"/>
+</div>
+<button id="authBtn" onclick="handleAuth()">Войти</button>
+<div class="text-link" onclick="toggleAuthMode()">
+<span id="authToggle">Впервые здесь? Создать аккаунт</span>
+</div>
+</div>
+</div>
+<!-- Home Screen -->
+<div class="screen" id="homeScreen">
+<div class="card" style="text-align: center;">
+<div id="credits" style="font-size: 32px; font-weight: bold;">0</div>
+<div style="color: #666;">доступные кредиты</div>
+</div>
+<button onclick="showGenerateScreen()">Новое поколение</button>
+<div style="margin-top: 30px; text-align: center;">
+<div style="color: #888; font-size: 14px;">Последние генерации</div>
+<div id="history" style="padding: 20px; color: #ccc;">Истории пока нет</div>
+</div>
+<div class="text-link" onclick="logout()" style="color: #333;">Выйти</div>
+</div>
+<!-- Generate Screen -->
+<div class="screen" id="generateScreen">
+<div onclick="showHomeScreen()" style="margin-bottom: 20px; font-weight: bold; cursor: pointer;">← Назад</div>
+<div class="section-header">1. Загрузить продукт</div>
+<div class="upload-area" id="productBox" onclick="document.getElementById('productInput').click()">
+      Нажмите, чтобы загрузить фото
+    </div>
+<input accept="image/*" id="productInput" onchange="handleProductUpload(event)" style="display: none;" type="file"/>
+<div class="section-header">2. Выберите модель</div>
+<div id="modelsLoading" style="text-align: center; padding: 20px; color: #888;">Загрузка...</div>
+<div class="grid" id="modelsGrid"></div>
+<div class="section-header">3. Местоположение (необязательно)</div>
+<div class="grid" id="locationsGrid"></div>
+<div class="error-msg" id="generateError"></div>
+<div class="success-msg" id="generateSuccess"></div>
+<button disabled="" id="generateBtn" onclick="handleGenerate()" style="margin-top: 30px; margin-bottom: 50px;">
+      Сгенерировать изображение
+    </button>
+</div>
+<script>
+    const API_URL = 'https://api.yas.wine';
+    let token = localStorage.getItem('token');
+    let isOtpMode = false;
+    let otpEmail = '';
+    let productImage = null;
+    let selectedModel = null;
+    let selectedLocation = null;
+    let models = [];
+    let locations = [];
+
+    // Init
+    if (token) {
+      showHomeScreen();
+      loadUserData();
+    }
+
+    function toggleAuthMode() {
+      isOtpMode = !isOtpMode;
+      const title = document.getElementById('loginTitle');
+      const btn = document.getElementById('authBtn');
+      const toggle = document.getElementById('authToggle');
+      const passwordInput = document.getElementById('passwordInputGroup');
+      const emailInput = document.getElementById('email');
+
+      document.getElementById('loginError').textContent = '';
+
+      if (isOtpMode) {
+        title.textContent = 'Login with Code';
+        btn.textContent = 'Send Code';
+        toggle.textContent = 'Back to Password Login';
+        passwordInput.style.display = 'none';
+        emailInput.placeholder = 'Enter your email';
+        btn.onclick = handleSendCode;
+      } else {
+        title.textContent = 'Welcome Back';
+        btn.textContent = 'Log In';
+        toggle.textContent = 'Login with Email Code (No Password)';
+        passwordInput.style.display = 'block';
+        emailInput.placeholder = 'Email';
+        btn.onclick = handleAuth;
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('token');
+      token = null;
+      document.getElementById('homeScreen').classList.remove('active');
+      document.getElementById('loginScreen').classList.add('active');
+      document.getElementById('email').value = '';
+      document.getElementById('password').value = '';
+      isOtpMode = false;
+      toggleAuthMode(); // Reset to default
+      toggleAuthMode();
+    }
+
+    async function handleSendCode() {
+      const email = document.getElementById('email').value;
+      const errorEl = document.getElementById('loginError');
+      const btn = document.getElementById('authBtn');
+
+      if (!email) {
+        errorEl.textContent = 'Please enter email';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(API_URL + '/api/auth/send-code', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          otpEmail = email;
+          showOtpInput();
+        } else {
+          errorEl.textContent = data.error || 'Failed to send code';
+        }
+      } catch (error) {
+        errorEl.textContent = 'Network error';
+      } finally {
+        btn.disabled = false;
+        if (!document.getElementById('otpInputGroup')) btn.textContent = 'Send Code';
+      }
+    }
+
+    function showOtpInput() {
+      const container = document.querySelector('.login-container .card') || document.querySelector('.card');
+      container.innerHTML = `
+                <h1>Enter Code</h1>
+                <h2 style="margin-bottom: 20px">Sent to ${otpEmail}</h2>
+                <div id="loginError" class="error-msg"></div>
+                <div class="input-group">
+                    <input type="text" id="otpCode" placeholder="1234" style="text-align: center; letter-spacing: 5px; font-size: 24px;">
+                </div>
+                <button onclick="handleVerifyCode()">Verify Code</button>
+                <div class="text-link" onclick="location.reload()">Back</div>
+            `;
+    }
+
+    async function handleVerifyCode() {
+      const code = document.getElementById('otpCode').value;
+      const errorEl = document.getElementById('loginError');
+
+      if (!code) return;
+
+      try {
+        const res = await fetch(API_URL + '/api/auth/verify-code', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: otpEmail, code })
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          token = data.token;
+          localStorage.setItem('token', token);
+          location.reload(); // Reload to show home screen
+        } else {
+          errorEl.textContent = data.error || 'Invalid code';
+        }
+      } catch (error) {
+        errorEl.textContent = 'Network error';
+      }
+    }
+
+    async function handleAuth() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const errorEl = document.getElementById('loginError');
+      errorEl.textContent = '';
+
+      if (!email || !password) {
+        errorEl.textContent = 'Please enter email and password';
+        return;
+      }
+
+      try {
+        // Original logic for password login/register
+        const endpoint = '/api/auth/login'; // Assuming password login is default when not in OTP mode
+        const res = await fetch(API_URL + endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await res.json();
+
+        if (!data.success) {
+          errorEl.textContent = data.error || 'Authentication failed';
+          return;
+        }
+
+        token = data.token;
+        localStorage.setItem('token', token);
+        showHomeScreen();
+        loadUserData();
+      } catch (error) {
+        errorEl.textContent = 'Network error: ' + error.message;
+      }
+    }
+
+    function showHomeScreen() {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('homeScreen').classList.add('active');
+    }
+
+    function showGenerateScreen() {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('generateScreen').classList.add('active');
+      loadPresets();
+    }
+
+    async function loadUserData() {
+      try {
+        const res = await fetch(API_URL + '/api/user', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById('credits').textContent = data.user.credits || 0;
+          loadHistory(); // Load history after user data
+        }
+      } catch (error) {
+        if (error.status === 401) logout();
+      }
+    }
+
+    async function loadHistory() {
+      try {
+        const res = await fetch(API_URL + '/api/user/images', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const data = await res.json();
+
+        const historyEl = document.getElementById('history');
+
+        if (data.success && data.images && data.images.length > 0) {
+          historyEl.style.color = 'inherit';
+          historyEl.style.padding = '0';
+          historyEl.innerHTML = `
+            <div class="grid">
+              ${data.images.map(img => `
+                <div class="grid-item">
+                  <img src="${API_URL}${img.imageUrl}" alt="${img.productTitle || 'Generated Image'}" onclick="window.open(this.src, '_blank')">
+                </div>
+              `).join('')}
+            </div>
+          `;
+        } else {
+          historyEl.innerHTML = 'No history yet';
+          historyEl.style.color = '#ccc';
+          historyEl.style.padding = '20px';
+        }
+      } catch (error) {
+        console.error('Failed to load history:', error);
+      }
+    }
+
+    async function loadPresets() {
+      try {
+        const res = await fetch(API_URL + '/api/presets');
+        const data = await res.json();
+
+        if (data.success) {
+          models = data.models || [];
+          locations = data.locations || [];
+
+          document.getElementById('modelsLoading').style.display = 'none';
+
+          // Render models
+          const modelsGrid = document.getElementById('modelsGrid');
+          modelsGrid.innerHTML = models.map(m => `
+                        <div class="grid-item" onclick="selectModel('${m.id}', this)">
+                            <img src="${m.image}" alt="${m.name}">
+                            <div class="grid-item-label">${m.name}</div>
+                        </div>
+                    `).join('');
+
+          // Render locations
+          const locationsGrid = document.getElementById('locationsGrid');
+          locationsGrid.innerHTML = locations.map(l => `
+                        <div class="grid-item" onclick="selectLocation('${l.id}', this)">
+                            <img src="${l.image}" alt="${l.name}">
+                            <div class="grid-item-label">${l.name}</div>
+                        </div>
+                    `).join('');
+        }
+      } catch (error) {
+        document.getElementById('modelsLoading').textContent = 'Error loading presets';
+      }
+    }
+
+    function selectModel(id, el) {
+      selectedModel = id;
+      document.querySelectorAll('#modelsGrid .grid-item').forEach(e => e.classList.remove('selected'));
+      el.classList.add('selected');
+      updateGenerateButton();
+    }
+
+    function selectLocation(id, el) {
+      selectedLocation = id;
+      document.querySelectorAll('#locationsGrid .grid-item').forEach(e => e.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function handleProductUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          productImage = e.target.result;
+          document.getElementById('productBox').innerHTML = `<img src="${productImage}" alt="Product">`;
+          updateGenerateButton();
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function updateGenerateButton() {
+      const btn = document.getElementById('generateBtn');
+      btn.disabled = !productImage || !selectedModel;
+    }
+
+    async function handleGenerate() {
+      const errorEl = document.getElementById('generateError');
+      const successEl = document.getElementById('generateSuccess');
+      const btn = document.getElementById('generateBtn');
+
+      errorEl.textContent = '';
+      successEl.textContent = '';
+
+      if (!productImage || !selectedModel) {
+        errorEl.textContent = 'Please select product and model';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Generating...';
+
+      try {
+        const formData = new FormData();
+        const blob = await fetch(productImage).then(r => r.blob());
+        formData.append('productImage', blob, 'product.jpg');
+        formData.append('modelId', selectedModel);
+        if (selectedLocation) formData.append('locationId', selectedLocation);
+        formData.append('productType', 'clothing');
+
+        const res = await fetch(API_URL + '/api/generate', {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${token}` },
+          body: formData
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          successEl.textContent = 'Success! Redirecting...';
+          setTimeout(() => {
+            showHomeScreen();
+            loadUserData();
+          }, 2000);
+        } else {
+          errorEl.textContent = data.error || 'Generation failed';
+        }
+      } catch (error) {
+        errorEl.textContent = 'Error: ' + error.message;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Generate Image';
+      }
+    }
+  </script>
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260217-2"></script></body>
+</html>

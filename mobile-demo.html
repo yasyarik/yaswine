@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YAS Wine - Mobile Demo</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background: #333;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .link {
+            text-align: center;
+            color: #007bff;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .info {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .error {
+            background: #fee;
+            color: #c00;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .success {
+            background: #efe;
+            color: #060;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+    </style>
+<link href="https://yas.wine/mobile-demo.html" rel="canonical"/><link href="https://yas.wine/mobile-demo.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/mobile-demo.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/mobile-demo.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/mobile-demo.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/mobile-demo.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/mobile-demo.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div class="container">
+<!-- Login Screen -->
+<div id="loginScreen">
+<h1>YAS Wine</h1>
+<p class="subtitle" id="authTitle">Welcome Back</p>
+<div class="error hidden" id="errorMsg"></div>
+<input autocomplete="email" id="email" placeholder="Email" type="email"/>
+<input autocomplete="current-password" id="password" placeholder="Password" type="password"/>
+<button id="authBtn" onclick="handleAuth()">Log In</button>
+<div class="link" onclick="toggleMode()">
+<span id="toggleText">New here? Create Account</span>
+</div>
+</div>
+<!-- Home Screen -->
+<div class="hidden" id="homeScreen">
+<h1>My Studio</h1>
+<div class="info">
+<strong id="creditsText">0 credits</strong> available
+            </div>
+<div class="success hidden" id="successMsg"></div>
+<button onclick="testGenerate()">Test API Connection</button>
+<button onclick="logout()">Logout</button>
+</div>
+</div>
+<script>
+        const API_URL = 'https://api.yas.wine';
+        let isRegistering = false;
+        let token = localStorage.getItem('token');
+
+        // Check if logged in
+        if (token) {
+            checkAuth();
+        }
+
+        function toggleMode() {
+            isRegistering = !isRegistering;
+            document.getElementById('authTitle').textContent = isRegistering ? 'Create Account' : 'Welcome Back';
+            document.getElementById('authBtn').textContent = isRegistering ? 'Sign Up' : 'Log In';
+            document.getElementById('toggleText').textContent = isRegistering
+                ? 'Already have an account? Log In'
+                : 'New here? Create Account';
+        }
+
+        async function handleAuth() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (!email || !password) {
+                showError('Please enter email and password');
+                return;
+            }
+
+            const btn = document.getElementById('authBtn');
+            btn.disabled = true;
+            btn.textContent = 'Loading...';
+
+            try {
+                const endpoint = isRegistering ? '/api/auth/register' : '/api/auth/login';
+                const response = await fetch(API_URL + endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (!data.success) {
+                    throw new Error(data.error || 'Authentication failed');
+                }
+
+                token = data.token;
+                localStorage.setItem('token', token);
+                showHome(data.user);
+            } catch (error) {
+                showError(error.message);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = isRegistering ? 'Sign Up' : 'Log In';
+            }
+        }
+
+        async function checkAuth() {
+            try {
+                const response = await fetch(API_URL + '/api/auth/me', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showHome(data.user);
+                } else {
+                    logout();
+                }
+            } catch (error) {
+                logout();
+            }
+        }
+
+        async function testGenerate() {
+            try {
+                const response = await fetch(API_URL + '/api/credits', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    document.getElementById('creditsText').textContent = `${data.credits} credits`;
+                    showSuccess('API connection successful! Credits loaded.');
+                } else {
+                    showError('Failed to fetch credits');
+                }
+            } catch (error) {
+                showError('API connection failed: ' + error.message);
+            }
+        }
+
+        function showHome(user) {
+            document.getElementById('loginScreen').classList.add('hidden');
+            document.getElementById('homeScreen').classList.remove('hidden');
+            document.getElementById('creditsText').textContent = `${user.credits || 0} credits`;
+        }
+
+        function logout() {
+            token = null;
+            localStorage.removeItem('token');
+            document.getElementById('homeScreen').classList.add('hidden');
+            document.getElementById('loginScreen').classList.remove('hidden');
+        }
+
+        function showError(msg) {
+            const el = document.getElementById('errorMsg');
+            el.textContent = msg;
+            el.classList.remove('hidden');
+            setTimeout(() => el.classList.add('hidden'), 5000);
+        }
+
+        function showSuccess(msg) {
+            const el = document.getElementById('successMsg');
+            el.textContent = msg;
+            el.classList.remove('hidden');
+            setTimeout(() => el.classList.add('hidden'), 5000);
+        }
+    </script>
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260217-2"></script></body>
+</html>

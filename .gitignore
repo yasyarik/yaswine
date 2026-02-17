@@ -1,0 +1,6 @@
+mobile-app-download.tar.gz
+
+# Local backups
+*.bak*
+index.html.bak_*
+sitemap.xml.bak_*

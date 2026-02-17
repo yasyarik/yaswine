@@ -1,0 +1,21 @@
+{
+    "name": "YAS Wine: AI Photo & Video",
+    "short_name": "My UGC AI",
+    "description": "Generate professional AI product photography and UGC videos.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0514",
+    "theme_color": "#8b5cf6",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

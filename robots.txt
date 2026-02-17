@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+
+Disallow: /factory
+Disallow: /factory/
+Sitemap: https://yas.wine/sitemap_index.xml
