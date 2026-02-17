@@ -1,709 +1,145 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
-<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | YAS Wine</title>
+  <meta name="description" content="Latest articles and resources." />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <style>
+    :root{
+      --bg-dark: #12070c;
+      --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+      --accent: #b63a5a;
+      --accent-hover: #962f49;
+      --glass-bg: rgba(255,255,255,.035);
+      --glass-border: rgba(255,255,255,.12);
+      --text: #f4edf0;
+      --dim: #cfbec5;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+    body{background:var(--bg-dark);color:var(--text);overflow-x:hidden}
+    .fixed-bg{position:fixed;inset:0;z-index:-1;background:var(--bg-gradient)}
+    .fixed-bg:before{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+      radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+      radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%);
+      background-size:200% 200%;animation:shift 34s ease infinite}
+    @keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
-        gtag('config', 'G-Z2K6PK6MRG');
-    </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Блог и ресурсы | YAS Wine</title>
-<meta content="Экспертные мнения, тематические исследования и руководства по AI-фотографии продуктов и росту электронной коммерции." name="description"/>
-<!-- Favicon -->
-<link href="/logo.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/logo.png" rel="apple-touch-icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<style>
-        :root {
-            --bg-dark: #0a0514;
-            --bg-gradient: linear-gradient(135deg, #0a0514 0%, #1a0a2e 50%, #2d1b4e 100%);
-            --accent-green: #8b5cf6;
-            --accent-hover: #7c3aed;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text-white: #ededed;
-            --text-dim: #a1a1aa;
-        }
+    .container{max-width:1280px;margin:0 auto;padding:0 24px}
+    nav{padding:24px 0;display:flex;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:20;transition:.25s}
+    nav.nav-scrolled{background:rgba(18,7,12,.85);backdrop-filter:blur(12px);padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-container{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;width:100%}
+    .logo{display:flex;align-items:center;text-decoration:none}
+    .logo-img{height:64px;width:auto;object-fit:contain}
+    .nav-links{display:flex;gap:22px}
+    .nav-links a{color:var(--dim);text-decoration:none;font-size:14px;font-weight:600}
+    .nav-links a:hover{color:#fff}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+    .hero{padding:120px 0 16px}
+    .hero-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:22px;padding:26px}
+    .hero h1{font-size:clamp(32px,5.2vw,52px);line-height:1.06;margin-bottom:10px}
+    .hero p{font-size:18px;color:var(--dim);max-width:70ch}
 
-        body {
-            background: var(--bg-dark);
-            color: var(--text-white);
-            line-height: 1.5;
-            overflow-x: hidden;
-        }
+    .grid{margin-top:18px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:22px;padding:16px}
 
-        .fixed-bg {
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            background: var(--bg-gradient);
-            overflow: hidden;
-        }
+    /* Factory-inserted cards */
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .blog-card{text-decoration:none;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);border-radius:22px;overflow:hidden;transition:.2s;color:inherit;display:block}
+    .blog-card:hover{transform:translateY(-8px);border-color:var(--accent)}
+    .card-image{height:190px;background:#241018 center/cover no-repeat}
+    .card-content{padding:18px 18px 20px}
+    .category{display:inline-block;background:rgba(182,58,90,.16);color:#f4cad5;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+    .card-title{margin:12px 0 10px;font-size:18px;line-height:1.32;font-weight:900}
+    .card-excerpt{color:var(--dim);font-size:14px;margin-bottom:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{text-decoration:none;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);border-radius:22px;overflow:hidden;transition:.2s;color:inherit}
+    .card:hover{transform:translateY(-8px);border-color:var(--accent)}
+    .thumb{height:190px;background:#241018 center/cover no-repeat}
+    .body{padding:18px 18px 20px}
+    .pill{display:inline-block;background:rgba(182,58,90,.16);color:#f4cad5;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+    .title{margin:12px 0 10px;font-size:18px;line-height:1.32}
+    .excerpt{color:var(--dim);font-size:14px;margin-bottom:16px}
+    .read{color:var(--accent);font-size:14px;font-weight:800}
 
-        .fixed-bg::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 15% 25%, rgba(139, 92, 246, 0.4) 0%, transparent 35%),
-                radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.45) 0%, transparent 35%),
-                radial-gradient(circle at 50% 75%, rgba(217, 70, 239, 0.35) 0%, transparent 40%);
-            background-size: 200% 200%;
-            animation: gradientShift 18s ease infinite;
-        }
+    .pager{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px;padding:0 2px 2px}
+    .pager-group{display:flex;gap:8px;flex-wrap:wrap}
+    .pager-btn{border:1px solid var(--glass-border);background:rgba(255,255,255,.02);color:#fff;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
+    .pager-btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+    .pager-btn.active{background:rgba(182,58,90,.16);border-color:var(--accent)}
+    .pager-load{background:var(--accent);border-color:transparent}
+    .pager-load:hover{background:var(--accent-hover);border-color:transparent}
+    .pager-meta{color:var(--dim);font-size:14px;font-weight:700}
 
-        @keyframes gradientShift {
+    .empty{padding:34px 18px;color:var(--dim);text-align:center}
 
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
+    footer{border-top:1px solid var(--glass-border);padding:40px 0;text-align:center;color:var(--dim);font-size:14px;margin-top:28px}
+    footer a{color:var(--dim);text-decoration:none;margin:0 10px}
 
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        nav {
-            padding: 24px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: 0.3s;
-        }
-
-        .nav-scrolled {
-            background: rgba(10, 5, 20, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            padding: 15px 0;
-        }
-
-        .logo-img {
-            height: 70px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            margin-right: 25px;
-            font-size: 14px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: white;
-        }
-
-        .arrow {
-            font-size: 10px;
-            margin-left: 4px;
-            opacity: 0.7;
-            transition: transform 0.3s;
-            display: inline-block;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropbtn {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgba(10, 5, 20, 0.95);
-            min-width: 220px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-            z-index: 1000;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-size: 14px;
-            margin-right: 0;
-        }
-
-        .dropdown-content a:hover {
-            background-color: rgba(139, 92, 246, 0.2);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .arrow {
-            transform: rotate(180deg);
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: 0.3s;
-            border: none;
-            font-size: 14px;
-        }
-
-        .btn-primary {
-            background: var(--accent-green);
-            color: white;
-        }
-
-        .btn-glass {
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            border: 1px solid var(--glass-border);
-        }
-
-        header.blog-header {
-            padding: 80px 0 60px;
-            text-align: center;
-        }
-
-        header.blog-header h1 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #fff, #a1a1aa);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header.blog-header p {
-            color: var(--text-dim);
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 100px;
-        }
-
-        .blog-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            overflow: hidden;
-            text-decoration: none;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-green);
-        }
-
-        .card-image {
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .card-content {
-            padding: 25px;
-            flex-grow: 1;
-        }
-
-        .category {
-            background: rgba(139, 92, 246, 0.1);
-            color: var(--accent-green);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .card-title {
-            font-size: 20px;
-            color: white;
-            margin: 15px 0 10px;
-            line-height: 1.4;
-            display: block;
-        }
-
-        .card-excerpt {
-            color: var(--text-dim);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .share-section {
-            margin-top: 60px;
-            padding: 40px;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .share-label {
-            font-weight: 700;
-            font-size: 16px;
-            color: white;
-        }
-
-        .share-group {
-            display: flex;
-            gap: 12px;
-        }
-
-        .share-icon-btn {
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            color: var(--text-dim);
-            text-decoration: none;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-
-        .share-icon-btn:hover {
-            background: var(--accent-green);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .share-icon-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        footer {
-            padding: 60px 0;
-            border-top: 1px solid var(--glass-border);
-            text-align: center;
-            color: var(--text-dim);
-            font-size: 14px;
-        }
-
-
-        .blog-controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            align-items: center;
-            margin: -55px 0 60px;
-        }
-
-        .pager-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        .pager-btn {
-            min-width: 42px;
-            height: 42px;
-            padding: 0 14px;
-            border-radius: 12px;
-            border: 1px solid var(--glass-border);
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .pager-btn:hover {
-            border-color: var(--accent-green);
-            transform: translateY(-1px);
-        }
-
-        .pager-btn.active {
-            background: var(--accent-green);
-            border-color: var(--accent-green);
-        }
-
-        .pager-load {
-            padding: 10px 16px;
-        }
-
-        .pager-meta {
-            color: var(--text-dim);
-            font-size: 13px;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            header.blog-header h1 {
-                font-size: 32px;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-<link href="https://yas.wine/ru/blog/" rel="canonical"/><link href="https://yas.wine/blog/" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/" hreflang="x-default" rel="alternate"/></head>
+    @media (max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.blog-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:740px){.cards{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.logo-img{height:52px}}
+  </style>
+</head>
 <body>
-<div class="fixed-bg"></div>
-<nav id="mainNav">
-<div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-<a class="logo" href="/ru/">
-<img alt="Моя UGC Студия" class="logo-img" src="/logo.png"/>
-</a>
-<div class="nav-links"><a href="/ru/#market">Localization</a><a href="/ru/#virtual-showroom">Apparel</a><a href="/ru/#placements">Placements</a><a href="/ru/gallery/">Gallery</a><div class="dropdown"><a class="dropbtn" href="/ru/use-cases/">Use Cases <span class="arrow">▼</span></a><div class="dropdown-content"><a href="/ru/use-cases/amazon-fba.html">Amazon FBA</a><a href="/ru/use-cases/apparel.html">Apparel</a><a href="/ru/use-cases/tiktok-shop.html">TikTok Shop</a><a href="/ru/use-cases/dropshipping.html">Dropshipping</a></div></div><div class="dropdown"><a class="dropbtn" href="/ru/blog/">Blog <span class="arrow">▼</span></a><div class="dropdown-content"><a href="/ru/blog/dropshipping-content-2026-sales-ai.html">Dropshipping Sales 2026</a><a href="/ru/blog/ugc-content-dropshipping-2026.html">UGC for Dropshipping</a><a href="/ru/blog/amazon-listing-optimization-ai-placements.html">Amazon Optimization</a><a href="/ru/blog/tiktok-ads-2026-ai-ugc-vs-studio.html">TikTok Ads 2026</a><a href="/ru/blog/how-to-save-90-percent-on-shopify-content.html">Save 90% on Content</a><a href="/ru/blog/scaling-shopify-brand-with-ai.html">Scaling Shopify with AI</a></div></div><a href="/ru/#pricing">Pricing</a></div>
-<div style="display: flex; gap: 12px; align-items: center;">
-<a class="btn" href="https://web.yas.wine" style="background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">Попробовать
-                    в Веб</a>
-<a class="btn btn-primary" href="https://apps.shopify.com/my-ugc-studio" style="padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">На
-                    Shopify</a>
-</div>
-</div>
-</nav>
-<header class="blog-header">
-<div class="container">
-<h1>Ресурсы и аналитика</h1>
-<p>Освойте искусство создания контента для электронной коммерции с помощью ИИ и масштабируйте свой бренд по всему миру.</p>
-</div>
-</header>
-<main class="container">
-<div class="blog-grid">
-            <!-- FACTORY-RU:ai-photography-2026-revolutionizing-visuals -->
-            <a href="/ru/blog/ai-photography-2026-revolutionizing-visuals.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/ai-photography-2026-revolutionizing-visuals-hero.png');"></div>
+  <div class="fixed-bg"></div>
+  <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links"><a href="/">Home</a><a href="/blog/">Blog</a></div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Blog</h1>
+        <p>Latest resources and practical guides from YAS Wine.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="container grid">
+    <div class="blog-grid">
+            <!-- FACTORY-RU:what-is-chianti-classico -->
+            <a href="/ru/blog/what-is-chianti-classico.html" class="blog-card">
+                <div class="card-image" style="background-image: url('/blog/what-is-chianti-classico-hero.png');"></div>
                 <div class="card-content">
-                    <span class="category">ИИ-стратегия контента</span>
-                    <h3 class="card-title">ИИ-фотография в 2026 году: Революция в создании визуального контента</h3>
-                    <p class="card-excerpt">Узнайте, как ИИ-фотография трансформирует визуальный контент в 2026 году. Ознакомьтесь с изображениями, сгенерированными ИИ, гиперперсонализацией и масштабированием ви...</p>
+                    <span class="category">Вино</span>
+                    <h3 class="card-title">Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы</h3>
+                    <p class="card-excerpt">Откройте для себя Кьянти Классико: историческое сердце винодельческого региона Тосканы. Узнайте о его сортах винограда, уникальном вкусе, символе Черного Петуха и прав...</p>
                 </div>
             </a>
 
-            <!-- FACTORY-RU:digital-content-dropshipping-guide-2026 -->
-            <a href="/ru/blog/digital-content-dropshipping-guide-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/digital-content-dropshipping-guide-2026-hero.png');"></div>
-                <div class="card-content">
-                    <span class="category">Дропшиппинг</span>
-                    <h3 class="card-title">Цифровой контентный дропшиппинг 2026: Полное руководство по пассивному доходу</h3>
-                    <p class="card-excerpt">Откройте для себя пассивный доход с помощью цифрового контентного дропшиппинга в 2026 году. Узнайте о настройке, платформах, маркетинге и масштабировании для успеха в...</p>
-                </div>
-            </a>
+            <!-- Cards are inserted here by the Factory on Publish -->
+    </div>
+    <div id="empty" class="empty">No posts yet. Create your first article in the factory.</div>
+  </section>
 
-            <!-- FACTORY-RU:digital-content-dropshipping-marketing-2026 -->
-            <a href="/ru/blog/digital-content-dropshipping-marketing-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/digital-content-dropshipping-marketing-2026-hero.png');"></div>
-                <div class="card-content">
-                    <span class="category">Dropshipping</span>
-                    <h3 class="card-title">Маркетинг цифрового контент-дропшиппинга в 2026 году: Примеры и стратегии успеха</h3>
-                    <p class="card-excerpt">Узнайте, как освоить маркетинг цифрового контент-дропшиппинга в 2026 году. Изучите ключевые стратегии, практические примеры и необходимые инструменты для успеха в инте...</p>
-                </div>
-            </a>
+  <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
 
-            <!-- FACTORY-RU:ai-photosession-2026-ecommerce-revolution -->
-            <a href="/ru/blog/ai-photosession-2026-ecommerce-revolution.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/ai-photosession-2026-ecommerce-revolution-hero.png');"></div>
-                <div class="card-content">
-                    <span class="category">Стратегия</span>
-                    <h3 class="card-title">AI-фотосессия 2026: Будущее продуктовой фотографии в электронной коммерции</h3>
-                    <p class="card-excerpt">Узнайте, как AI-фотосессии революционизируют продуктовую фотографию в 2026 году. Научитесь генерировать гиперреалистичные визуальные материалы, сокращать расходы и мгн...</p>
-                </div>
-            </a>
+  <script>
+    window.addEventListener('scroll', function(){
+      const nav = document.querySelector('nav');
+      if (!nav) return;
+      if (window.scrollY > 20) nav.classList.add('nav-scrolled'); else nav.classList.remove('nav-scrolled');
+    });
 
-            <!-- FACTORY-RU:dropshipping-content-2026-sales-ai -->
-            <a href="/ru/blog/dropshipping-content-2026-sales-ai.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/dropshipping-content-2026-sales-ai-hero.png');"></div>
-                <div class="card-content">
-                    <span class="category">Дропшиппинг</span>
-                    <h3 class="card-title">Ключевая роль контента в успехе дропшиппинг-продаж в 2026 году</h3>
-                    <p class="card-excerpt">Узнайте, как стратегическая роль контента меняет дропшиппинг-продажи в 2026 году. Используйте визуальные материалы на основе ИИ и гиперперсонализированный контент для...</p>
-                </div>
-            </a>
-
-<!-- FACTORY:generate-ugc-images-ai-2026 -->
-<a class="blog-card" href="/ru/blog/generate-ugc-images-ai-2026.html">
-<div class="card-image" style="background-image: url('/blog/generate-ugc-images-ai-2026-hero.png');"></div>
-<div class="card-content">
-<span class="category">Стратегия контента с ИИ</span>
-<h3 class="card-title">Как генерировать изображения UGC с помощью ИИ в 2026 году: Полное руководство</h3>
-<p class="card-excerpt">Раскройте потенциал ИИ для создания гиперреалистичных UGC-изображений в 2026 году. Изучите пошаговую генерацию, платформы и лучшие практики для масштабирования вашего бренда.</p>
-</div>
-</a>
-<!-- FACTORY:tiktok-ugc-ad-best-practices-2026 -->
-<a class="blog-card" href="/ru/blog/tiktok-ugc-ad-best-practices-2026.html">
-<div class="card-image" style="background-image: url('/blog/tiktok-ugc-ad-best-practices-2026-hero.png');"></div>
-<div class="card-content">
-<span class="category">Маркетинг</span>
-<h3 class="card-title">TikTok UGC Рекламные креативы: Лучшие практики 2026 для вирусного роста</h3>
-<p class="card-excerpt">Освойте рекламные креативы TikTok UGC в 2026 году с лучшими практиками экспертов. Создавайте аутентичный, высококонверсионный пользовательский контент для максимальной рентабельности инвестиций и виральности.</p>
-</div>
-</a>
-<!-- FACTORY:dropshipping-content-strategy-ai-2026 -->
-<a class="blog-card" href="/ru/blog/dropshipping-content-strategy-ai-2026.html">
-<div class="card-image" style="background-image: url('/blog/dropshipping-content-strategy-ai-2026-hero.png');"></div>
-<div class="card-content">
-<span class="category">Дропшиппинг</span>
-<h3 class="card-title">Контент-стратегия на основе ИИ для успеха в дропшиппинге в 2026 году</h3>
-<p class="card-excerpt">Используйте ИИ, чтобы трансформировать вашу контент-стратегию дропшиппинга в 2026 году. Создавайте уникальные визуальные материалы, масштабируйте контент и повышайте конверсию с помощью гиперперсонализированного ИИ-др</p>
-</div>
-</a>
-<!-- FACTORY:ugc-video-ads-tiktok-2026 -->
-<a class="blog-card" href="/ru/blog/ugc-video-ads-tiktok-2026.html">
-<div class="card-image" style="background-image: url('/blog/ugc-video-ads-tiktok-2026-hero.png');"></div>
-<div class="card-content">
-<span class="category">UGC-реклама</span>
-<h3 class="card-title">Как создавать высококонверсионные UGC видеообъявления для TikTok в 2026 году</h3>
-<p class="card-excerpt">Освойте высококонверсионные видеообъявления UGC для TikTok в 2026 году. Узнайте, как стратегии ИИ повышают аутентичность, вовлеченность и обеспечивают более высокую рентабельность инвестиций для ваших кампаний.</p>
-</div>
-</a>
-<!-- Card 1 -->
-<a class="blog-card" href="/ru/blog/scaling-shopify-brand-with-ai.html">
-<div class="card-image" style="background-image: url('/blog/scaling-ai.jpg');"></div>
-<div class="card-content">
-<span class="category">Стратегия</span>
-<h3 class="card-title">Как масштабировать свой бренд Shopify с помощью ИИ UGC</h3>
-<p class="card-excerpt">Узнайте, как контент, сгенерированный ИИ, меняет правила игры для электронной коммерции,
-                        сокращая расходы и повышая доверие.</p>
-</div>
-</a>
-<!-- Card 2 -->
-<a class="blog-card" href="/ru/blog/localize-ecommerce-brand-with-ai-presets.html">
-<div class="card-image" style="background-image: url('/blog/localization.jpg');"></div>
-<div class="card-content">
-<span class="category">Локализация</span>
-<h3 class="card-title">Лайфхак локализации: Глобальная экспансия</h3>
-<p class="card-excerpt">Как использовать предустановки моделей ИИ для охвата любого рынка (США, Азия, Ближний Восток) в один клик.</p>
-</div>
-</a>
-<!-- Card 3 -->
-<a class="blog-card" href="/ru/blog/tiktok-ads-2026-ai-ugc-vs-studio.html">
-<div class="card-image" style="background-image: url('/blog/tiktok-ads.jpg');"></div>
-<div class="card-content">
-<span class="category">Маркетинг</span>
-<h3 class="card-title">TikTok Ads 2026: Почему AI UGC побеждает</h3>
-<p class="card-excerpt">Узнайте, почему кинематографические студийные объявления терпят неудачу в социальных сетях и почему аутентичный контент ИИ
-                        конвертирует в 5 раз лучше.</p>
-</div>
-</a>
-<!-- Card 4 -->
-<a class="blog-card" href="/ru/blog/how-to-save-90-percent-on-shopify-content.html">
-<div class="card-image" style="background-image: url('/blog/cost-savings.jpg');"></div>
-<div class="card-content">
-<span class="category">Финансы</span>
-<h3 class="card-title">Как сократить расходы на контент Shopify на 90%</h3>
-<p class="card-excerpt">Перестаньте переплачивать за профессиональные съемки. Узнайте, как ИИ сокращает ваш бюджет на визуальное
-                        производство за одну ночь.</p>
-</div>
-</a>
-<!-- Card 5 -->
-<a class="blog-card" href="/ru/blog/dropshipping-content-secrets-ai.html">
-<div class="card-image" style="background-image: url('/blog/dropshipping.jpg');"></div>
-<div class="card-content">
-<span class="category">Дропшиппинг</span>
-<h3 class="card-title">Секреты дропшиппинга: Уникальный контент</h3>
-<p class="card-excerpt">Как превратить обычные фотографии поставщиков в уникальные, высококонверсионные активы бренда, которые превзойдут конкурентов.</p>
-</div>
-</a>
-<!-- Card 6 -->
-<a class="blog-card" href="/ru/blog/amazon-listing-optimization-ai-placements.html">
-<div class="card-image" style="background-image: url('/blog/amazon-listing.jpg');"></div>
-<div class="card-content">
-<span class="category">Amazon</span>
-<h3 class="card-title">Объявление на Amazon на миллион долларов</h3>
-<p class="card-excerpt">Повысьте воспринимаемую ценность и CTR с помощью профессиональных AI-размещений в стиле жизни
-                        для вашего магазина FBA.</p>
-</div>
-</a>
-</div>
-<div class="blog-controls" id="blogControls" style="display:none;">
-<div class="pager-group" id="pagerGroup"></div>
-<button class="pager-btn pager-load" id="loadMoreBtn" type="button">Загрузить еще</button>
-<div class="pager-meta" id="pagerMeta"></div>
-</div>
-<div class="share-section" style="margin-top: 80px; margin-bottom: 40px;">
-<span class="share-label">Расскажите о нашем блоге</span>
-<div class="share-group">
-<a class="share-icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/" target="_blank" title="Поделиться в LinkedIn">
-<svg viewbox="0 0 24 24">
-<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-</svg>
-</a>
-<a class="share-icon-btn" href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/&amp;text=Check out the YAS Wine Blog for the latest AI E-commerce insights!" target="_blank" title="Поделиться в X">
-<svg viewbox="0 0 24 24">
-<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-</svg>
-</a>
-<a class="share-icon-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/" target="_blank" title="Поделиться в Facebook">
-<svg viewbox="0 0 24 24">
-<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
-</svg>
-</a>
-<a class="share-icon-btn" href="https://api.whatsapp.com/send?text=Check%20out%20the%20My%20UGC%20Studio%20Blog%20https%3A%2F%2Fyas.wine%2Fblog%2F" target="_blank" title="Поделиться в WhatsApp">
-<svg viewbox="0 0 24 24">
-<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"></path>
-</svg>
-</a>
-<a class="share-icon-btn" href="https://t.me/share/url?url=https://yas.wine/blog/&amp;text=Check out the YAS Wine Blog" target="_blank" title="Поделиться в Telegram">
-<svg viewbox="0 0 24 24">
-<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z"></path>
-</svg>
-</a>
-<div class="share-icon-btn" onclick="copyUrlBlog()" title="Скопировать ссылку">
-<svg viewbox="0 0 24 24">
-<path d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z"></path>
-</svg>
-</div>
-</div>
-</div>
-<script>
-            function copyUrlBlog() {
-                navigator.clipboard.writeText("https://yas.wine/blog/");
-                alert('Blog link copied to clipboard!');
-            }
-        </script>
-</main>
-<footer>
-<div class="container">
-<p>© 2026 YAS Wine. Все права защищены.</p>
-</div>
-</footer>
-<script>
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('mainNav');
-            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
-            else nav.classList.remove('nav-scrolled');
-        });
-
-        function initBlogPagination() {
-            const PAGE_SIZE = 12;
-            const grid = document.querySelector('.blog-grid');
-            if (!grid) return;
-
-            const cards = Array.from(grid.querySelectorAll(':scope > .blog-card'));
-            const total = cards.length;
-            if (total <= PAGE_SIZE) return;
-
-            const controls = document.getElementById('blogControls');
-            const pagerGroup = document.getElementById('pagerGroup');
-            const loadMoreBtn = document.getElementById('loadMoreBtn');
-            const pagerMeta = document.getElementById('pagerMeta');
-            if (!controls || !pagerGroup || !loadMoreBtn || !pagerMeta) return;
-
-            let currentVisible = PAGE_SIZE;
-
-            function currentPage() {
-                return Math.max(1, Math.ceil(currentVisible / PAGE_SIZE));
-            }
-
-            function maxPage() {
-                return Math.ceil(total / PAGE_SIZE);
-            }
-
-            function syncUrlPage(page) {
-                try {
-                    const u = new URL(window.location.href);
-                    if (page <= 1) u.searchParams.delete('page');
-                    else u.searchParams.set('page', String(page));
-                    window.history.replaceState({}, '', u.pathname + u.search + u.hash);
-                } catch (_) {}
-            }
-
-            function renderPager() {
-                const p = currentPage();
-                const mp = maxPage();
-                pagerGroup.innerHTML = '';
-                for (let i = 1; i <= mp; i += 1) {
-                    const b = document.createElement('button');
-                    b.type = 'button';
-                    b.className = 'pager-btn' + (i === p ? ' active' : '');
-                    b.textContent = String(i);
-                    b.addEventListener('click', () => {
-                        currentVisible = i * PAGE_SIZE;
-                        render();
-                        window.scrollTo({ top: grid.offsetTop - 80, behavior: 'smooth' });
-                    });
-                    pagerGroup.appendChild(b);
-                }
-                loadMoreBtn.style.display = currentVisible < total ? 'inline-flex' : 'none';
-                pagerMeta.textContent = 'Показано ' + Math.min(currentVisible, total) + ' из ' + total + ' статей';
-                syncUrlPage(p);
-            }
-
-            function render() {
-                cards.forEach((card, idx) => {
-                    card.style.display = idx < currentVisible ? '' : 'none';
-                });
-                renderPager();
-            }
-
-            loadMoreBtn.addEventListener('click', () => {
-                currentVisible = Math.min(total, currentVisible + PAGE_SIZE);
-                render();
-            });
-
-            try {
-                const pageFromUrl = Number(new URL(window.location.href).searchParams.get('page') || '1');
-                if (Number.isFinite(pageFromUrl) && pageFromUrl > 1) {
-                    currentVisible = Math.min(total, pageFromUrl * PAGE_SIZE);
-                }
-            } catch (_) {}
-
-            controls.style.display = 'flex';
-            render();
-        }
-
-        window.addEventListener('DOMContentLoaded', initBlogPagination);
-    </script>
-<script src="https://api.yas.wine/assistant.js?v=2"></script>
-<script defer="defer" src="/i18n-switcher.js?v=20260217-2"></script></body>
+    // Hide the empty state once factory cards exist.
+    window.addEventListener('load', function(){
+      const grid = document.querySelector('.blog-grid');
+      const empty = document.getElementById('empty');
+      if (!grid || !empty) return;
+      if (grid.querySelector('a')) empty.style.display = 'none';
+    });
+  </script>
+</body>
 </html>
+

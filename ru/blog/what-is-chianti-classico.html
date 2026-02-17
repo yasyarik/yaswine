@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Что такое Кьянти Классико? Ваше полное руководство по (2026)</title>
+    <meta name="description" content="Откройте для себя Кьянти Классико: историческое сердце винодельческого региона Тосканы. Узнайте о его сортах винограда, уникальном вкусе, символе Черного Learn ">
+
+    <meta property="og:title" content="Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы">
+    <meta property="og:description" content="Откройте для себя Кьянти Классико: историческое сердце винодельческого региона Тосканы. Узнайте о его сортах винограда, уникальном вкусе, символе Черного Learn ">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yas.wine/blog/what-is-chianti-classico.html">
+    <meta property="og:image" content="https://yas.wine//blog/what-is-chianti-classico-hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-white: #ededed;
+            --text-dim: #a1a1aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: var(--bg-gradient);
+            overflow: hidden;
+        }
+
+        .fixed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
+            background-size: 200% 200%;
+            animation: gradientShift 18s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        #mainNav { 
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .nav-scrolled {
+            background: rgba(10, 5, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(10, 5, 20, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            margin-right: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(182, 58, 90, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        article {
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .post-header {
+            margin-bottom: 50px;
+        }
+
+        .post-category {
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-hero {
+            width: 100%;
+            min-height: 450px;
+            height: auto;
+            border-radius: 32px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        .post-content h2 {
+            font-size: 32px;
+            color: white;
+            margin: 50px 0 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            background: var(--glass-bg);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /* Factory-injected blocks (breadcrumbs + TOC) */
+        .breadcrumbs {
+            margin: 18px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .breadcrumbs a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumbs a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.25);
+        }
+        .breadcrumbs .sep {
+            opacity: 0.55;
+        }
+        .breadcrumbs .current {
+            color: white;
+            font-weight: 600;
+        }
+
+        .toc-box {
+            margin: 18px 0 28px;
+            padding: 18px 18px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+        }
+        .toc-title {
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .toc-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+        .toc-items li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc-items a {
+            display: block;
+            color: var(--accent-green);
+            text-decoration: none;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            padding: 6px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-items a:hover {
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
+            color: white;
+        }
+        .toc-h3 {
+            margin-left: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Links + images inside article */
+        .post-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
+        }
+        .post-content a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.10);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+        .post-content figure {
+            margin: 26px 0;
+        }
+        .post-content figcaption {
+            margin-top: 10px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+
+        /* Tables */
+        .post-content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 26px 0;
+        }
+        .post-content thead th {
+            background: rgba(182, 58, 90, 0.14);
+            color: white;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .post-content th,
+        .post-content td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .post-content td {
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+        .post-content th:last-child,
+        .post-content td:last-child {
+            border-right: none;
+        }
+        .post-content tbody tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+.share-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .share-label {
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .share-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .share-icon-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .share-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 30px;
+            }
+        }
+    </style>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы">
+<meta name="twitter:description" content="Откройте для себя Кьянти Классико: историческое сердце винодельческого региона Тосканы. Узнайте о его сортах винограда, уникальном вкусе, символе Черного Learn ">
+<meta name="twitter:image" content="https://myugc.studio/blog/what-is-chianti-classico-hero.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://myugc.studio/blog/what-is-chianti-classico.html"}, "headline": "Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы", "description": "Откройте для себя Кьянти Классико: историческое сердце винодельческого региона Тосканы. Узнайте о его сортах винограда, уникальном вкусе, символе Черного Learn ", "image": ["https://myugc.studio/blog/what-is-chianti-classico-hero.png"], "datePublished": "2026-02-17", "dateModified": "2026-02-17", "author": {"@type": "Organization", "name": "My UGC Studio"}, "publisher": {"@type": "Organization", "name": "My UGC Studio"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://myugc.studio/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://myugc.studio/blog/"}, {"@type": "ListItem", "position": 3, "name": "Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы", "item": "https://myugc.studio/blog/what-is-chianti-classico.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое символ Черного Петуха на Кьянти Классико?", "acceptedAnswer": {"@type": "Answer", "text": "Черный Петух (Gallo Nero) — официальная эмблема Консорциума Кьянти Классико, символизирующая его подлинность и качество, и он гарантирует, что вино соответствует строгим стандартам исторической зоны Классико."}}, {"@type": "Question", "name": "Какие сорта винограда в основном используются для производства Кьянти Классико?", "acceptedAnswer": {"@type": "Answer", "text": "Вина Кьянти Классико преимущественно производятся из Санджовезе, который должен составлять не менее 80% купажа, с добавлением до 20% других разрешенных красных сортов винограда."}}, {"@type": "Question", "name": "Что означает статус DOCG для Кьянти Классико?", "acceptedAnswer": {"@type": "Answer", "text": "DOCG (Denominazione di Origine Controllata e Garantita) — это высшая классификация вин Италии, гарантирующая происхождение, качество и соблюдение традиционных методов производства для Кьянти Классико."}}, {"@type": "Question", "name": "Какие существуют классификации выдержки для Кьянти Классико?", "acceptedAnswer": {"@type": "Answer", "text": "Кьянти Классико имеет три основные классификации, основанные на выдержке: Annata (минимум 12 месяцев), Riserva (минимум 24 месяца) и Gran Selezione (минимум 30 месяцев), каждая со своими специфическими требованиями."}}, {"@type": "Question", "name": "Какие лучшие сочетания с едой для Кьянти Классико?", "acceptedAnswer": {"@type": "Answer", "text": "Кьянти Классико исключительно хорошо сочетается с традиционными итальянскими и тосканскими блюдами, такими как Bistecca alla Fiorentina, рагу из дикого кабана, насыщенные соусы для пасты на томатной основе и выдержанные сыры, благодаря своей высокой кислотности и пикантному характеру."}}, {"@type": "Question", "name": "Какова идеальная температура подачи для Кьянти Классико?", "acceptedAnswer": {"@type": "Answer", "text": "Идеальная температура подачи для Кьянти Классико обычно составляет 16-18°C (60-64°F), что немного прохладнее комнатной температуры, чтобы наилучшим образом выразить его ароматы и вкусы."}}, {"@type": "Question", "name": "Можно ли выдерживать вина Кьянти Классико?", "acceptedAnswer": {"@type": "Answer", "text": "Да, Кьянти Классико, особенно классификации Riserva и Gran Selezione, хорошо подходят для выдержки, извлекая выгоду из правильного хранения в прохладном, темном и влажном помещении для развития большей сложности со временем."}}]}</script>
+<link href="https://yas.wine/ru/blog/what-is-chianti-classico.html" rel="canonical"/><link href="https://yas.wine/blog/what-is-chianti-classico.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/what-is-chianti-classico.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/what-is-chianti-classico.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/what-is-chianti-classico.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/what-is-chianti-classico.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/what-is-chianti-classico.html" hreflang="x-default" rel="alternate"/></head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav id="mainNav">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1280px;">
+            <a href="/" class="logo">
+                <img src="../logo.png" alt="YAS Wine" class="logo-img">
+            </a>
+            <div class="nav-links"><a href="/#market">Localization</a><a href="/#virtual-showroom">Apparel</a><a href="/#placements">Placements</a><a href="/gallery/">Gallery</a><div class="dropdown"><a class="dropbtn" href="/use-cases/">Use Cases <span class="arrow">▼</span></a><div class="dropdown-content"><a href="/use-cases/amazon-fba.html">Amazon FBA</a><a href="/use-cases/apparel.html">Apparel</a><a href="/use-cases/tiktok-shop.html">TikTok Shop</a><a href="/use-cases/dropshipping.html">Dropshipping</a></div></div><div class="dropdown"><a class="dropbtn" href="/blog/">Blog <span class="arrow">▼</span></a><div class="dropdown-content"><a href="/blog/dropshipping-content-2026-sales-ai.html">Dropshipping Sales 2026</a><a href="/blog/ugc-content-dropshipping-2026.html">UGC for Dropshipping</a><a href="/blog/amazon-listing-optimization-ai-placements.html">Amazon Optimization</a><a href="/blog/tiktok-ads-2026-ai-ugc-vs-studio.html">TikTok Ads 2026</a><a href="/blog/how-to-save-90-percent-on-shopify-content.html">Save 90% on Content</a><a href="/blog/scaling-shopify-brand-with-ai.html">Scaling Shopify with AI</a></div></div><a href="/#pricing">Pricing</a></div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <a href="https://web.yas.wine" class="btn"
+                    style="background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">Try
+                    on Web</a>
+                <a href="https://apps.shopify.com/my-ugc-studio" class="btn btn-primary"
+                    style="padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">On
+                    Shopify</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+
+            <header class="post-header">
+                <span class="post-category">Вино</span>
+                <h1 itemprop="headline">Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы</h1>
+                <div class="post-intro" style="margin-top:16px;"><p><strong>Кьянти Классико — это историческое и исконное сердце винодельческого региона Кьянти в Тоскане, Италия, известное производством высококачественного красного вина преимущественно из винограда Санджовезе.</strong> Это отдельное обозначение в более широкой зоне Кьянти, узнаваемое по культовому символу Черного Петуха (Gallo Nero) и более строгим правилам производства.</p></div>
+                <div class="post-meta">
+                    <time itemprop="datePublished" datetime="2026-02-17">Published 2026-02-17</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="post-hero" style="background-image: url('/blog/what-is-chianti-classico-hero.png');"></div>
+
+            <div class="post-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы</span></nav><section id="what-exactly-is-chianti-classico"><h2 id="what-exactly-is-chianti-classico">Что именно представляет собой Кьянти Классико?</h2>
+<p><strong>Кьянти Классико относится к вину, производимому в старейшей и наиболее традиционной винодельческой зоне Кьянти, регулируемой строгими стандартами качества.</strong> Этот исторический регион, расположенный между Флоренцией и Сиеной, отличается от более широкой зоны Кьянти DOCG особым составом винограда, требованиями к выдержке и уникальным терруаром, который способствует его отличительному характеру.</p>
+
+<h3 id="defining-the-classico-designation">Определение обозначения «Классико»</h3>
+<p><strong>Обозначение «Классико» означает вина, происходящие из исторического сердца Кьянти, установленного великим герцогом Козимо III в 1716 году.</strong> Эта зона была официально разграничена для защиты качества и репутации самых уважаемых вин региона, отличая их от вин, произведенных в периферийных районах, которые позже приняли название Кьянти. Вина из этой основной зоны неизменно демонстрируют более высокое качество и потенциал выдержки.</p>
+
+<h3 id="the-historical-heartland-of-chianti">Историческое сердце Кьянти</h3>
+<p><strong>Историческое сердце Кьянти охватывает девять конкретных коммун между Флоренцией и Сиеной, образующих ядро региона Кьянти Классико.</strong> Эти коммуны – Барберино Валь д'Эльса, Кастеллина ин Кьянти, Гайоле ин Кьянти, Греве ин Кьянти, Поджибонси, Радда ин Кьянти, Сан Кашано Валь ди Пеза, Таварнелле Валь ди Пеза и Вальяльи – это места, где выращивались оригинальные вина Кьянти, извлекающие выгоду из уникального состава почв и микроклимата. Узнайте больше о <a href="/blog/tuscany-wine-regions.html">разнообразных винодельческих регионах Тосканы</a>.</p>
+
+<h3 id="why-the-black-rooster-symbol">Почему символ Черного Петуха?</h3>
+<p><strong>Черный Петух (Gallo Nero) — официальная эмблема Консорциума Кьянти Классико, символизирующая его подлинность и качество.</strong> Этот культовый символ восходит к средневековой легенде, связанной с Флоренцией и Сиеной, где черный петух использовался для определения территориальных границ соперничающих городов-государств. Сегодня он служит гарантией того, что вино в бутылке соответствует строгим стандартам консорциума и происходит из исторической зоны Классико.</p>
+<blockquote>
+  <p>«Gallo Nero — это больше, чем просто символ; это свидетельство многовековых традиций и обещание бескомпромиссного качества. Он отличает вина из истинного сердца Кьянти». – Известный винный историк</p>
+</blockquote>
+<figure><img src="what-is-chianti-classico-img-1.png" alt="Символ Черного Петуха (Gallo Nero) на этикетке бутылки Кьянти Классико" /><figcaption>Культовый символ Черного Петуха гарантирует подлинность вин Кьянти Классико.</figcaption></figure>
+
+</section><section id="where-is-chianti-classico-located"><h2 id="where-is-chianti-classico-located">Где находится Кьянти Классико?</h2>
+<p><strong>Кьянти Классико географически расположен в центральной Тоскане, Италия, конкретно на холмистой местности между городами Флоренция на севере и Сиена на юге.</strong> Это идеальное место предлагает прекрасные условия для виноградарства, характеризующиеся пологими холмами, разнообразными почвами и средиземноморским климатом, на который влияет высота над уровнем моря.</p>
+
+<h3 id="the-geographic-boundaries">Географические границы</h3>
+<p><strong>Географические границы Кьянти Классико строго определены, охватывая площадь около 71 800 гектаров (177 400 акров) в пределах провинций Флоренции и Сиены.</strong> Эта ограниченная зона гарантирует, что все вина, носящие название Кьянти Классико, соответствуют определенным экологическим и винодельческим параметрам, способствуя их постоянному качеству и региональной идентичности.</p>
+
+<h3 id="key-communes-in-the-region">Ключевые коммуны региона</h3>
+<p><strong>Регион Кьянти Классико состоит из девяти основных коммун, каждая из которых привносит уникальные нюансы в вина.</strong> Гайоле ин Кьянти, Радда ин Кьянти и Кастеллина ин Кьянти полностью находятся в зоне Классико, в то время как части Греве ин Кьянти, Барберино Таварнелле, Поджибонси, Сан Кашано ин Валь ди Пеза, Кастельнуово Берарденга и Таварнелле Валь ди Пеза также входят в ее границы. Эти коммуны характеризуются различными высотами, экспозициями и типами почв, влияющими на окончательный профиль вина.</p>
+
+<h3 id="terroir-and-its-impact">Терруар и его влияние</h3>
+<p><strong>Отличительный терруар Кьянти Классико, сочетание климата, почвы и топографии, глубоко влияет на характер его вин.</strong> Регион отличается разнообразным геологическим составом, включая почвы галестро (сланцевая глинистая сланцевая порода) и альбарезе (известняковый мергель), которые придают винам минеральность и структуру. Значительные суточные колебания температуры и идеальное солнечное воздействие на южных склонах способствуют оптимальному созреванию винограда Санджовезе, что приводит к сложным ароматам и сбалансированной кислотности.</p>
+
+</section><section id="what-grapes-make-chianti-classico"><h2 id="what-grapes-make-chianti-classico">Из каких сортов винограда производится Кьянти Классико?</h2>
+<p><strong>Вина Кьянти Классико преимущественно производятся из Санджовезе, местного сорта винограда Тосканы, который должен составлять не менее 80% купажа.</strong> Это требование гарантирует, что вино выражает истинный характер региона и его важнейшего сорта винограда. Для более глубокого изучения ознакомьтесь с нашим руководством по <a href="/blog/sangiovese-grape-varieties.html">сортам винограда Санджовезе</a>.</p>
+
+<h3 id="sangiovese-the-dominant-grape">Санджовезе: доминирующий сорт винограда</h3>
+<p><strong>Санджовезе — основа Кьянти Классико, придающая ему характерные ноты красной вишни, пикантные оттенки, высокую кислотность и твердые танины.</strong> Его название, как полагают, происходит от «Sanguis Jovis» (Кровь Юпитера), что отражает его древнее происхождение и важность в итальянском виноградарстве. Качество и выразительность Санджовезе имеют первостепенное значение для успеха вин Кьянти Классико.</p>
+
+<h3 id="permitted-blending-grapes">Разрешенные для купажирования сорта винограда</h3>
+<p><strong>До 20% других красных сортов винограда, как местных, так и международных, разрешены в купажах Кьянти Классико для дополнения Санджовезе.</strong> Местные сорта, такие как Канайоло и Колорино, могут добавить ароматическую сложность и цвет. Международные сорта, такие как Каберне Совиньон и Мерло, также разрешены, придавая структуру и мягкость, хотя их использование часто является разумным для поддержания традиционного характера вина.</p>
+
+<h3 id="the-role-of-white-grapes-historically-vs-now">Роль белых сортов винограда (исторически и сейчас)</h3>
+<p><strong>Исторически белые сорта винограда, такие как Треббиано и Мальвазия, были разрешены и часто включались в купажи Кьянти для смягчения вина и придания ему большей доступности в молодости.</strong> Однако современные правила для вин Кьянти Классико прямо запрещают включение белых сортов винограда, что отражает сдвиг в сторону акцента на чистоту и интенсивность Санджовезе и купажей красных сортов винограда, что приводит к созданию более структурированных и способных к длительной выдержке вин.</p>
+
+</section><section id="how-does-chianti-classico-taste"><h2 id="how-does-chianti-classico-taste">Какой вкус у Кьянти Классико?</h2>
+<p><strong>Кьянти Классико обычно предлагает профиль ярких красных фруктов, землистых оттенков, пикантных нот и характерной кислотности, что делает его очень гастрономичным.</strong> Вкус может варьироваться в зависимости от производителя, урожая и конкретного субрегиона, но определенные характеристики присутствуют постоянно.</p>
+
+<h3 id="typical-flavor-profile">Типичный вкусовой профиль</h3>
+<p><strong>Типичный вкусовой профиль Кьянти Классико доминируют терпкая красная вишня и слива, часто сопровождаемые нотами сушеных трав, томатного листа и бальзамика.</strong> Молодые вина обычно демонстрируют более первичные фруктовые ароматы, в то время как более старые вина развивают вторичные и третичные характеристики, такие как кожа, табак и лесная подстилка. Вино обычно имеет среднюю полноту и долгое, пикантное послевкусие.</p>
+
+<h3 id="aromatics-and-bouquet">Ароматы и букет</h3>
+<p><strong>Кьянти Классико очень ароматично, представляя букет, включающий цветочные ноты фиалки, красные ягоды, такие как малина и кислая вишня, и часто намек на специи или бальзамик.</strong> По мере старения вина эти первичные ароматы превращаются в более сложный букет, раскрывая нюансы подлеска, дичи, а иногда и легкий оттенок жареного кофе или лакрицы, добавляя слои глубины.</p>
+
+<h3 id="acidity-tannins-and-body">Кислотность, танины и тело</h3>
+<p><strong>Кьянти Классико характеризуется своей яркой, высокой кислотностью, твердыми танинами и, как правило, средним телом, что является отличительными чертами винограда Санджовезе.</strong> Кислотность придает свежесть и делает вино отличным партнером для богатых, жирных блюд. Мощные танины придают вину структуру и потенциал выдержки, смягчаясь со временем. Тело обычно хорошо сбалансировано, не слишком легкое и не слишком тяжелое, предлагая универсальность.</p>
+
+</section><section id="understanding-chianti-classicos-regulations"><h2 id="understanding-chianti-classicos-regulations">Понимание правил Кьянти Классико</h2>
+<p><strong>Вина Кьянти Классико регулируются строгими правилами в рамках итальянской системы Denominazione di Origine Controllata e Garantita (DOCG), обеспечивающей качество и региональную подлинность.</strong> Эти правила диктуют все: от сортов винограда до минимальных сроков выдержки. Чтобы узнать больше о классификации итальянских вин, см. наше руководство по <a href="/blog/understanding-italian-wine-laws.html">итальянским законам о вине</a>.</p>
+
+<h3 id="docg-status-and-quality-control">Статус DOCG и контроль качества</h3>
+<p><strong>Статус DOCG (Denominazione di Origine Controllata e Garantita) — это высшая классификация вин Италии, гарантирующая происхождение, качество и соблюдение традиционных методов производства.</strong> Для Кьянти Классико это означает строгий контроль над виноградными практиками, урожайностью, винификацией и выдержкой. Каждое вино проходит органолептические и аналитические тесты, прежде чем оно сможет носить печать DOCG и Черного Петуха.</p>
+
+<h3 id="minimum-aging-requirements">Минимальные требования к выдержке</h3>
+<p><strong>Вина Кьянти Классико имеют определенные минимальные требования к выдержке перед выпуском, что гарантирует им развитие достаточной сложности и гладкости.</strong></p>
+
+<ol>
+  <li>
+    <strong>Annata (стандартное Кьянти Классико):</strong> Должно выдерживаться минимум 12 месяцев, включая не менее 3 месяцев в бутылке, перед выпуском.
+  </li>
+  <li>
+    <strong>Riserva:</strong> Требует минимум 24 месяцев выдержки, из них не менее 3 месяцев в бутылке, обеспечивая большую сложность и более долгий потенциал старения.
+  </li>
+  <li>
+    <strong>Gran Selezione:</strong> Высший уровень, требующий минимум 30 месяцев выдержки, из них не менее 3 месяцев в бутылке, и должен производиться исключительно из винограда, выращенного в хозяйстве, предлагая исключительное качество и долговечность.
+  </li>
+</ol>
+
+<h3 id="riserva-and-gran-selezione-classifications">Классификации Riserva и Gran Selezione</h3>
+<p><strong>Riserva и Gran Selezione — это высшие классификации в рамках Кьянти Классико, обозначающие вина с длительной выдержкой, большей сложностью и часто более высоким качеством.</strong> Вина Riserva производятся из отборного винограда и проходят более длительную выдержку, в то время как Gran Selezione представляет собой вершину, сделанную из лучшего винограда производителя и требующую самого длительного периода выдержки, предлагая более глубокое и долговечное выражение Кьянти Классико. Вот краткое сравнение:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Классификация</th>
+      <th>Минимальная выдержка (общая)</th>
+      <th>Минимальная выдержка в бутылке</th>
+      <th>Источник винограда</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Annata</td>
+      <td>12 месяцев</td>
+      <td>3 месяца</td>
+      <td>Виноградники региона</td>
+    </tr>
+    <tr>
+      <td>Riserva</td>
+      <td>24 месяца</td>
+      <td>3 месяца</td>
+      <td>Отборный виноград</td>
+    </tr>
+    <tr>
+      <td>Gran Selezione</td>
+      <td>30 месяцев</td>
+      <td>3 месяца</td>
+      <td>Виноград собственного хозяйства</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><section id="how-to-choose-and-buy-chianti-classico"><h2 id="how-to-choose-and-buy-chianti-classico">Как выбрать и купить Кьянти Классико?</h2>
+<p><strong>Выбор Кьянти Классико включает понимание обозначений на этикетке, качества урожая и личных предпочтений, что упрощает осознанный выбор.</strong> Ищите символ Черного Петуха, чтобы убедиться в подлинности.</p>
+
+<h3 id="decoding-the-labels">Расшифровка этикеток</h3>
+<p><strong>Расшифровка этикеток Кьянти Классико в основном включает идентификацию символа Черного Петуха и понимание классификации (Annata, Riserva, Gran Selezione).</strong> Год урожая также заметен, указывая год сбора винограда. Имя производителя, происхождение и содержание алкоголя предоставляют дополнительные детали. Хорошая этикетка будет четко указывать «Chianti Classico DOCG» или что-то подобное.</p>
+<figure><img src="what-is-chianti-classico-img-2.png" alt="Бутылка вина Кьянти Классико с этикеткой, на которой изображен символ Черного Петуха" /><figcaption>Ищите символ Черного Петуха и обозначение «DOCG» на этикетке для подлинного Кьянти Классико.</figcaption></figure>
+
+<h3 id="vintage-considerations">Соображения по поводу винтажей</h3>
+<p><strong>Соображения по поводу винтажей важны для Кьянти Классико, поскольку качество и характер вина могут значительно варьироваться от года к году из-за климатических условий.</strong> Отличные винтажи (например, 2015, 2016, 2018, 2019) производят вина с большей сложностью и потенциалом выдержки. Консультации с винтажными таблицами из надежных источников могут помочь в выборе лучших бутылок для употребления сейчас или для хранения в погребе.</p>
+
+<h3 id="price-points-and-value">Ценовые категории и ценность</h3>
+<p><strong>Кьянти Классико предлагает широкий диапазон ценовых категорий, обычно отражающих классификацию, репутацию производителя и винтаж.</strong> Вина Annata обычно наиболее доступны, предлагая отличную повседневную ценность. Riserva и Gran Selezione стоят дороже из-за длительной выдержки и более строгого отбора, обеспечивая большую сложность и долговечность. Отличное соотношение цены и качества может быть найдено во всех категориях знающими покупателями.</p>
+
+</section><section id="what-are-the-best-food-pairings"><h2 id="what-are-the-best-food-pairings">Какие лучшие сочетания с едой?</h2>
+<p><strong>Высокая кислотность, твердые танины и пикантный характер Кьянти Классико делают его исключительно универсальным вином для сочетания с едой, особенно с итальянской кухней.</strong> Его структура и вкусовой профиль способны пробиваться сквозь богатые блюда и дополнять широкий спектр вкусов.</p>
+
+<h3 id="classic-italian-pairings">Классические итальянские сочетания</h3>
+<p><strong>Классические итальянские сочетания для Кьянти Классико включают традиционные тосканские блюда, такие как Bistecca alla Fiorentina (флорентийский стейк), рагу из дикого кабана и насыщенные соусы для пасты на томатной основе.</strong> Его кислотность прорезает жир мяса, а пикантные ноты дополняют травы и специи, используемые в итальянской кулинарии. Пицца, лазанья и выдержанный сыр Pecorino также являются фантастическими сочетаниями. Расширьте свои знания с нашим руководством по <a href="/blog/food-pairing-basics.html">основам сочетания еды и вина</a>.</p>
+
+<h3 id="versatility-with-other-cuisines">Универсальность с другими кухнями</h3>
+<p><strong>Помимо итальянской кухни, Кьянти Классико демонстрирует впечатляющую универсальность, хорошо сочетаясь с различными международными кухнями.</strong> Оно может дополнять жареную птицу, баранину на гриле, грибные блюда и даже некоторые азиатские блюда с вкусом умами. Его сбалансированный профиль позволяет ему гармонировать с различными специями и способами приготовления, делая его надежным выбором для разнообразных меню.</p>
+
+<h3 id="avoid-these-pairings">Избегайте этих сочетаний</h3>
+<p><strong>Чтобы в полной мере насладиться Кьянти Классико, как правило, лучше избегать сочетаний с очень нежными блюдами, очень острой пищей или сильными, горькими вкусами.</strong> Рыба с нежными соусами, очень сладкие десерты и интенсивно острые карри могут конфликтовать с кислотностью и танинами вина, потенциально делая как еду, так и вино несбалансированными или неприятными на вкус. Блюда с высоким содержанием цитрусовых также могут быть сложными.</p>
+
+</section><section id="how-to-serve-and-store-chianti-classico"><h2 id="how-to-serve-and-store-chianti-classico">Как подавать и хранить Кьянти Классико?</h2>
+<p><strong>Правильная температура подачи и условия хранения имеют решающее значение для того, чтобы Кьянти Классико раскрыло свой полный потенциал и обеспечило свою долговечность.</strong> Соблюдение этих рекомендаций улучшит ваш опыт дегустации.</p>
+
+<h3 id="ideal-serving-temperature">Идеальная температура подачи</h3>
+<p><strong>Идеальная температура подачи для Кьянти Классико обычно составляет 16-18°C (60-64°F), что немного прохладнее комнатной температуры.</strong> Подача слишком теплого вина может сделать алкоголь более выраженным, а фруктовые ароматы — смазанными, в то время как подача слишком холодного вина может приглушить его ароматы и сделать танины более резкими. Небольшое охлаждение в холодильнике часто может довести его до идеальной температуры.</p>
+
+<h3 id="decanting-recommendations">Рекомендации по декантации</h3>
+<p><strong>Декантация Кьянти Классико, особенно Riserva или Gran Selezione, часто рекомендуется, чтобы дать вину «подышать» и раскрыть свои ароматы и вкусы.</strong> Молодые вина могут получить пользу от 30 минут до часа декантации, чтобы смягчить танины. Старые вина, особенно с осадком, могут потребовать тщательной декантации непосредственно перед подачей, чтобы отделить вино от любых твердых частиц, минимизируя при этом воздействие воздуха для очень хрупких старых винтажей.</p>
+
+<h3 id="optimal-storage-conditions">Оптимальные условия хранения</h3>
+<p><strong>Оптимальные условия хранения для Кьянти Классико, особенно если оно предназначено для выдержки, включают прохладную, темную и влажную среду с постоянной температурой.</strong> Идеальная температура в погребе составляет около 12-14°C (54-57°F) при влажности 70-80%. Бутылки следует хранить на боку, чтобы пробка оставалась влажной, предотвращая преждевременное окисление. Следует избегать колебаний температуры, прямого света и вибрации, чтобы сохранить качество вина. Для получения дополнительной информации ознакомьтесь с нашей статьей о <a href="/blog/aging-wine-at-home.html">выдержке вина в домашних условиях</a>.</p>
+<figure><img src="what-is-chianti-classico-img-3.png" alt="Винные бутылки в тускло освещенном погребе, демонстрирующие идеальные условия хранения" /><figcaption>Правильное хранение в прохладном, темном и влажном помещении является ключом к выдержке Кьянти Классико.</figcaption></figure></section>
+            </div>
+
+            <div class="share-section">
+                <span class="share-label">Share this article</span>
+                <div class="share-group">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/what-is-chianti-classico.html"
+                        target="_blank" class="share-icon-btn" title="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/what-is-chianti-classico.html&text=Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы"
+                        target="_blank" class="share-icon-btn" title="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/what-is-chianti-classico.html"
+                        target="_blank" class="share-icon-btn" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы%20https://yas.wine/blog/what-is-chianti-classico.html"
+                        target="_blank" class="share-icon-btn" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://yas.wine/blog/what-is-chianti-classico.html&text=Что такое Кьянти Классико? Ваше полное руководство по культовому вину Тосканы"
+                        target="_blank" class="share-icon-btn" title="Share on Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z" />
+                        </svg>
+                    </a>
+                    <div class="share-icon-btn" onclick="copyUrl()" title="Copy Link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function copyUrl() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            </script>
+
+            <div class="cta-box">
+                <h2>Ready to transform your brand?</h2>
+                <p>Join 500+ Shopify stores using YAS Wine to scale their content production.</p>
+                <a href="https://web.yas.wine" class="btn btn-primary"
+                    style="padding: 16px 40px; font-size: 18px;">Try for Free</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 YAS Wine. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
+        });
+    </script>
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+</body>
+
+</html>

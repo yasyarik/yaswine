@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es el Chianti Classico? Tu guía esencial para el vino</title>
+    <meta name="description" content="Descubre el Chianti Classico: el corazón histórico de la región vinícola de la Toscana. Aprende sobre sus uvas, sabor único, el símbolo del Gallo Negro y las">
+
+    <meta property="og:title" content="¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana">
+    <meta property="og:description" content="Descubre el Chianti Classico: el corazón histórico de la región vinícola de la Toscana. Aprende sobre sus uvas, sabor único, el símbolo del Gallo Negro y las">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yas.wine/blog/what-is-chianti-classico.html">
+    <meta property="og:image" content="https://yas.wine//blog/what-is-chianti-classico-hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-white: #ededed;
+            --text-dim: #a1a1aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: var(--bg-gradient);
+            overflow: hidden;
+        }
+
+        .fixed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
+            background-size: 200% 200%;
+            animation: gradientShift 18s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        #mainNav { 
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .nav-scrolled {
+            background: rgba(10, 5, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(10, 5, 20, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            margin-right: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(182, 58, 90, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        article {
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .post-header {
+            margin-bottom: 50px;
+        }
+
+        .post-category {
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-hero {
+            width: 100%;
+            min-height: 450px;
+            height: auto;
+            border-radius: 32px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        .post-content h2 {
+            font-size: 32px;
+            color: white;
+            margin: 50px 0 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            background: var(--glass-bg);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /* Factory-injected blocks (breadcrumbs + TOC) */
+        .breadcrumbs {
+            margin: 18px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .breadcrumbs a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumbs a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.25);
+        }
+        .breadcrumbs .sep {
+            opacity: 0.55;
+        }
+        .breadcrumbs .current {
+            color: white;
+            font-weight: 600;
+        }
+
+        .toc-box {
+            margin: 18px 0 28px;
+            padding: 18px 18px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+        }
+        .toc-title {
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .toc-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+        .toc-items li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc-items a {
+            display: block;
+            color: var(--accent-green);
+            text-decoration: none;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            padding: 6px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-items a:hover {
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
+            color: white;
+        }
+        .toc-h3 {
+            margin-left: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Links + images inside article */
+        .post-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
+        }
+        .post-content a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.10);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+        .post-content figure {
+            margin: 26px 0;
+        }
+        .post-content figcaption {
+            margin-top: 10px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+
+        /* Tables */
+        .post-content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 26px 0;
+        }
+        .post-content thead th {
+            background: rgba(182, 58, 90, 0.14);
+            color: white;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .post-content th,
+        .post-content td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .post-content td {
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+        .post-content th:last-child,
+        .post-content td:last-child {
+            border-right: none;
+        }
+        .post-content tbody tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+.share-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .share-label {
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .share-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .share-icon-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .share-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 30px;
+            }
+        }
+    </style>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana">
+<meta name="twitter:description" content="Descubre el Chianti Classico: el corazón histórico de la región vinícola de la Toscana. Aprende sobre sus uvas, sabor único, el símbolo del Gallo Negro y las">
+<meta name="twitter:image" content="https://myugc.studio/blog/what-is-chianti-classico-hero.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://myugc.studio/blog/what-is-chianti-classico.html"}, "headline": "¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana", "description": "Descubre el Chianti Classico: el corazón histórico de la región vinícola de la Toscana. Aprende sobre sus uvas, sabor único, el símbolo del Gallo Negro y las", "image": ["https://myugc.studio/blog/what-is-chianti-classico-hero.png"], "datePublished": "2026-02-17", "dateModified": "2026-02-17", "author": {"@type": "Organization", "name": "My UGC Studio"}, "publisher": {"@type": "Organization", "name": "My UGC Studio"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://myugc.studio/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://myugc.studio/blog/"}, {"@type": "ListItem", "position": 3, "name": "¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana", "item": "https://myugc.studio/blog/what-is-chianti-classico.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es el símbolo del Gallo Negro en el Chianti Classico?", "acceptedAnswer": {"@type": "Answer", "text": "El Gallo Negro (Gallo Nero) es el emblema oficial del Consorzio Chianti Classico, que simboliza su autenticidad y calidad, y garantiza que el vino cumple con los rigurosos estándares de la histórica zona Classico."}}, {"@type": "Question", "name": "¿Qué uvas se utilizan principalmente para elaborar Chianti Classico?", "acceptedAnswer": {"@type": "Answer", "text": "Los vinos Chianti Classico se elaboran predominantemente con Sangiovese, que debe constituir al menos el 80% de la mezcla, con hasta un 20% de otras variedades de uva tinta permitidas."}}, {"@type": "Question", "name": "¿Qué significa el estatus DOCG para el Chianti Classico?", "acceptedAnswer": {"@type": "Answer", "text": "DOCG (Denominazione di Origine Controllata e Garantita) es la clasificación más alta de Italia para los vinos, garantizando el origen, la calidad y la adhesión a los métodos de producción tradicionales para el Chianti Classico."}}, {"@type": "Question", "name": "¿Cuáles son las diferentes clasificaciones de envejecimiento para el Chianti Classico?", "acceptedAnswer": {"@type": "Answer", "text": "El Chianti Classico tiene tres clasificaciones principales basadas en el envejecimiento: Annata (mínimo 12 meses), Riserva (mínimo 24 meses) y Gran Selezione (mínimo 30 meses), cada una con requisitos específicos."}}, {"@type": "Question", "name": "¿Cuáles son los mejores maridajes para el Chianti Classico?", "acceptedAnswer": {"@type": "Answer", "text": "El Chianti Classico marida excepcionalmente bien con platos tradicionales italianos y toscanos como la Bistecca alla Fiorentina, ragú de jabalí, salsas de pasta ricas a base de tomate y quesos añejos debido a su alta acidez y carácter sabroso."}}, {"@type": "Question", "name": "¿Cuál es la temperatura de servicio ideal para el Chianti Classico?", "acceptedAnswer": {"@type": "Answer", "text": "La temperatura de servicio ideal para el Chianti Classico suele oscilar entre 16-18 °C (60-64 °F), ligeramente más fresco que la temperatura ambiente, para expresar mejor sus aromas y sabores."}}, {"@type": "Question", "name": "¿Se pueden envejecer los vinos Chianti Classico?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, el Chianti Classico, especialmente las clasificaciones Riserva y Gran Selezione, es muy adecuado para el envejecimiento, beneficiándose de un almacenamiento adecuado en un ambiente fresco, oscuro y húmedo para desarrollar una mayor complejidad con el tiempo."}}]}</script>
+<link href="https://yas.wine/es/blog/what-is-chianti-classico.html" rel="canonical"/><link href="https://yas.wine/blog/what-is-chianti-classico.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/what-is-chianti-classico.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/what-is-chianti-classico.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/what-is-chianti-classico.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/what-is-chianti-classico.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/what-is-chianti-classico.html" hreflang="x-default" rel="alternate"/></head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav id="mainNav">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1280px;">
+            <a href="/" class="logo">
+                <img src="../logo.png" alt="YAS Wine" class="logo-img">
+            </a>
+            <div class="nav-links"><a href="/#market">Localization</a><a href="/#virtual-showroom">Apparel</a><a href="/#placements">Placements</a><a href="/gallery/">Gallery</a><div class="dropdown"><a class="dropbtn" href="/use-cases/">Use Cases <span class="arrow">▼</span></a><div class="dropdown-content"><a href="/use-cases/amazon-fba.html">Amazon FBA</a><a href="/use-cases/apparel.html">Apparel</a><a href="/use-cases/tiktok-shop.html">TikTok Shop</a><a href="/use-cases/dropshipping.html">Dropshipping</a></div></div><div class="dropdown"><a class="dropbtn" href="/blog/">Blog <span class="arrow">▼</span></a><div class="dropdown-content"><a href="/blog/dropshipping-content-2026-sales-ai.html">Dropshipping Sales 2026</a><a href="/blog/ugc-content-dropshipping-2026.html">UGC for Dropshipping</a><a href="/blog/amazon-listing-optimization-ai-placements.html">Amazon Optimization</a><a href="/blog/tiktok-ads-2026-ai-ugc-vs-studio.html">TikTok Ads 2026</a><a href="/blog/how-to-save-90-percent-on-shopify-content.html">Save 90% on Content</a><a href="/blog/scaling-shopify-brand-with-ai.html">Scaling Shopify with AI</a></div></div><a href="/#pricing">Pricing</a></div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <a href="https://web.yas.wine" class="btn"
+                    style="background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">Try
+                    on Web</a>
+                <a href="https://apps.shopify.com/my-ugc-studio" class="btn btn-primary"
+                    style="padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">On
+                    Shopify</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+
+            <header class="post-header">
+                <span class="post-category">Vino</span>
+                <h1 itemprop="headline">¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana</h1>
+                <div class="post-intro" style="margin-top:16px;"><p><strong>El Chianti Classico es el corazón histórico y original de la región vinícola del Chianti en la Toscana, Italia, reconocido por producir un vino tinto de alta calidad principalmente a partir de uvas Sangiovese.</strong> Es una denominación distinta dentro de la zona más amplia del Chianti, identificada por el icónico símbolo del Gallo Negro (Gallo Nero) y regulaciones de producción más estrictas.</p></div>
+                <div class="post-meta">
+                    <time itemprop="datePublished" datetime="2026-02-17">Published 2026-02-17</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="post-hero" style="background-image: url('/blog/what-is-chianti-classico-hero.png');"></div>
+
+            <div class="post-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana</span></nav><section id="what-exactly-is-chianti-classico"><h2 id="what-exactly-is-chianti-classico">¿Qué es exactamente el Chianti Classico?</h2>
+<p><strong>Chianti Classico se refiere al vino producido dentro de la zona vitivinícola más antigua y tradicional del Chianti, regida por estrictos estándares de calidad.</strong> Esta región histórica, enclavada entre Florencia y Siena, se distingue del DOCG Chianti más amplio por una composición específica de uvas, requisitos de envejecimiento y un terruño único que contribuye a su carácter distintivo.</p>
+
+<h3 id="defining-the-classico-designation">Definiendo la denominación "Classico"</h3>
+<p><strong>La denominación "Classico" designa vinos que provienen del corazón histórico del Chianti, establecido por el Gran Duque Cosme III en 1716.</strong> Esta zona fue oficialmente delimitada para proteger la calidad y reputación de los vinos más estimados de la región, distinguiéndolos de los vinos producidos en áreas periféricas que más tarde adoptaron el nombre Chianti. Los vinos de esta zona central exhiben consistentemente una mayor calidad y potencial de envejecimiento.</p>
+
+<h3 id="the-historical-heartland-of-chianti">El corazón histórico del Chianti</h3>
+<p><strong>El corazón histórico del Chianti abarca nueve municipios específicos entre Florencia y Siena, formando el núcleo de la región Chianti Classico.</strong> Estos municipios – Barberino Val d'Elsa, Castellina in Chianti, Gaiole in Chianti, Greve in Chianti, Poggibonsi, Radda in Chianti, San Casciano Val di Pesa, Tavarnelle Val di Pesa y Vagliagli – son donde se cultivaron los vinos Chianti originales, beneficiándose de composiciones de suelo y microclimas únicos. Aprende más sobre las <a href="/blog/tuscany-wine-regions.html">diversas regiones vinícolas de la Toscana</a>.</p>
+
+<h3 id="why-the-black-rooster-symbol">¿Por qué el símbolo del Gallo Negro?</h3>
+<p><strong>El Gallo Negro (Gallo Nero) es el emblema oficial del Consorzio Chianti Classico, simbolizando su autenticidad y calidad.</strong> Este icónico símbolo se remonta a una leyenda medieval que involucra a Florencia y Siena, donde un gallo negro fue utilizado para determinar los límites territoriales de las ciudades-estado rivales. Hoy en día, sirve como garantía de que el vino en la botella cumple con los rigurosos estándares del consorcio y proviene de la histórica zona Classico.</p>
+<blockquote>
+  <p>“El Gallo Nero es más que un símbolo; es un testimonio de siglos de tradición y una promesa de calidad inquebrantable. Distingue los vinos del verdadero corazón del Chianti.” – Historiador de Vino Renombrado</p>
+</blockquote>
+<figure><img src="what-is-chianti-classico-img-1.png" alt="Símbolo del Gallo Negro (Gallo Nero) en la etiqueta de una botella de Chianti Classico" /><figcaption>El icónico símbolo del Gallo Negro garantiza la autenticidad de los vinos Chianti Classico.</figcaption></figure>
+
+</section><section id="where-is-chianti-classico-located"><h2 id="where-is-chianti-classico-located">¿Dónde se encuentra el Chianti Classico?</h2>
+<p><strong>Chianti Classico está geográficamente situado en el centro de la Toscana, Italia, específicamente dentro del terreno montañoso entre las ciudades de Florencia al norte y Siena al sur.</strong> Esta ubicación privilegiada ofrece condiciones ideales para la viticultura, caracterizada por colinas onduladas, suelos diversos y un clima mediterráneo influenciado por la altitud.</p>
+
+<h3 id="the-geographic-boundaries">Los límites geográficos</h3>
+<p><strong>Los límites geográficos del Chianti Classico están estrictamente definidos, cubriendo un área de aproximadamente 71.800 hectáreas (177.400 acres) dentro de las provincias de Florencia y Siena.</strong> Esta zona delimitada asegura que todos los vinos que llevan el nombre Chianti Classico cumplan con parámetros ambientales y vitivinícolas específicos, contribuyendo a su calidad consistente e identidad regional.</p>
+
+<h3 id="key-communes-in-the-region">Comunas clave en la región</h3>
+<p><strong>La región del Chianti Classico está compuesta por nueve comunas principales, cada una de las cuales aporta matices únicos a los vinos.</strong> Gaiole in Chianti, Radda in Chianti y Castellina in Chianti se encuentran completamente dentro de la zona Classico, mientras que partes de Greve in Chianti, Barberino Tavarnelle, Poggibonsi, San Casciano in Val di Pesa, Castelnuovo Berardenga y Tavarnelle Val di Pesa también caen dentro de sus límites. Estas comunas presentan altitudes, exposiciones y tipos de suelo variados, lo que influye en el perfil final del vino.</p>
+
+<h3 id="terroir-and-its-impact">El terruño y su impacto</h3>
+<p><strong>El terruño distintivo del Chianti Classico, una combinación de clima, suelo y topografía, impacta profundamente el carácter de sus vinos.</strong> La región presenta una composición geológica diversa, incluyendo suelos de galestro (arcilla esquistosa) y albarese (margal calcárea), que aportan mineralidad y estructura. Las significativas variaciones de temperatura diurna y la exposición solar ideal en las laderas orientadas al sur contribuyen a la maduración óptima de las uvas Sangiovese, lo que da lugar a aromas complejos y una acidez equilibrada.</p>
+
+</section><section id="what-grapes-make-chianti-classico"><h2 id="what-grapes-make-chianti-classico">¿Qué uvas componen el Chianti Classico?</h2>
+<p><strong>Los vinos Chianti Classico se elaboran predominantemente con Sangiovese, la variedad de uva autóctona de la Toscana, que debe constituir al menos el 80% de la mezcla.</strong> Este requisito garantiza que el vino exprese el verdadero carácter de la región y su uva más importante. Para una inmersión más profunda, explora nuestra guía sobre las <a href="/blog/sangiovese-grape-varieties.html">variedades de uva Sangiovese</a>.</p>
+
+<h3 id="sangiovese-the-dominant-grape">Sangiovese: La uva dominante</h3>
+<p><strong>La Sangiovese es la columna vertebral del Chianti Classico, aportando su característico sabor a cereza roja, notas saladas, alta acidez y taninos firmes.</strong> Su nombre, que se cree deriva de "Sanguis Jovis" (Sangre de Júpiter), refleja sus antiguos orígenes y su importancia en la viticultura italiana. La calidad y expresión de la Sangiovese son primordiales para el éxito de los vinos Chianti Classico.</p>
+
+<h3 id="permitted-blending-grapes">Uvas de mezcla permitidas</h3>
+<p><strong>Se permite hasta un 20% de otras variedades de uva tinta, tanto autóctonas como internacionales, en las mezclas de Chianti Classico para complementar la Sangiovese.</strong> Uvas autóctonas como Canaiolo y Colorino pueden añadir complejidad aromática y color. También se permiten variedades internacionales como Cabernet Sauvignon y Merlot, que contribuyen a la estructura y suavidad, aunque su uso suele ser juicioso para mantener el carácter tradicional del vino.</p>
+
+<h3 id="the-role-of-white-grapes-historically-vs-now">El papel de las uvas blancas (históricamente vs. ahora)</h3>
+<p><strong>Históricamente, las variedades de uva blanca como Trebbiano y Malvasia estaban permitidas, y a menudo incluidas, en las mezclas de Chianti para suavizar el vino y hacerlo más accesible en su juventud.</strong> Sin embargo, las regulaciones modernas para los vinos Chianti Classico prohíben específicamente la inclusión de uvas blancas, lo que refleja un cambio hacia la priorización de la pureza e intensidad de la Sangiovese y las mezclas de uvas tintas, lo que resulta en vinos más estructurados y con mayor potencial de envejecimiento.</p>
+
+</section><section id="how-does-chianti-classico-taste"><h2 id="how-does-chianti-classico-taste">¿A qué sabe el Chianti Classico?</h2>
+<p><strong>El Chianti Classico suele ofrecer un perfil de fruta roja vibrante, matices terrosos, notas saladas y una acidez distintiva que lo hace muy versátil con la comida.</strong> El sabor puede variar según el productor, la añada y la subregión específica, pero ciertas características están consistentemente presentes.</p>
+
+<h3 id="typical-flavor-profile">Perfil de sabor típico</h3>
+<p><strong>El perfil de sabor típico del Chianti Classico está dominado por cereza roja ácida y ciruela, a menudo acompañada de notas de hierbas secas, hoja de tomate y balsámico.</strong> Los vinos más jóvenes tienden a exhibir sabores primarios de fruta, mientras que los vinos más viejos desarrollan características secundarias y terciarias como cuero, tabaco y sotobosque. El vino suele tener un cuerpo medio y un final largo y sabroso.</p>
+
+<h3 id="aromatics-and-bouquet">Aromas y bouquet</h3>
+<p><strong>El Chianti Classico es muy aromático, presentando un bouquet que incluye notas florales de violeta, bayas rojas como frambuesa y cereza ácida, y a menudo un toque de especias o balsámico.</strong> A medida que el vino envejece, estos aromas primarios evolucionan hacia un bouquet más complejo, revelando matices de sotobosque, caza y, a veces, un toque de café tostado o regaliz, añadiendo capas de profundidad.</p>
+
+<h3 id="acidity-tannins-and-body">Acidez, taninos y cuerpo</h3>
+<p><strong>El Chianti Classico se caracteriza por su acidez brillante y alta, taninos firmes y, generalmente, un cuerpo medio, que son las señas de identidad de la uva Sangiovese.</strong> La acidez proporciona frescura y convierte al vino en un excelente compañero para comidas ricas y grasas. Los taninos robustos dan estructura al vino y potencial de envejecimiento, suavizándose con el tiempo. El cuerpo suele estar bien equilibrado, ni demasiado ligero ni demasiado pesado, ofreciendo versatilidad.</p>
+
+</section><section id="understanding-chianti-classicos-regulations"><h2 id="understanding-chianti-classicos-regulations">Comprendiendo las regulaciones del Chianti Classico</h2>
+<p><strong>Los vinos Chianti Classico se rigen por estrictas regulaciones bajo el sistema Denominazione di Origine Controllata e Garantita (DOCG) de Italia, asegurando la calidad y autenticidad regional.</strong> Estas reglas dictan todo, desde las variedades de uva hasta los mínimos de envejecimiento. Para saber más sobre la clasificación del vino en Italia, consulta nuestra guía sobre las <a href="/blog/understanding-italian-wine-laws.html">leyes del vino italiano</a>.</p>
+
+<h3 id="docg-status-and-quality-control">Estatus DOCG y control de calidad</h3>
+<p><strong>El estatus DOCG (Denominazione di Origine Controllata e Garantita) es la clasificación más alta de Italia para los vinos, garantizando el origen, la calidad y la adhesión a los métodos de producción tradicionales.</strong> Para el Chianti Classico, esto significa controles estrictos sobre las prácticas vitivinícolas, rendimientos, vinificación y envejecimiento. Cada vino se somete a pruebas sensoriales y analíticas antes de que pueda llevar el sello DOCG y el Gallo Negro.</p>
+
+<h3 id="minimum-aging-requirements">Requisitos mínimos de envejecimiento</h3>
+<p><strong>Los vinos Chianti Classico tienen requisitos mínimos de envejecimiento específicos antes de su lanzamiento, asegurando que desarrollen suficiente complejidad y suavidad.</strong></p>
+
+<ol>
+  <li>
+    <strong>Annata (Chianti Classico Estándar):</strong> Debe envejecerse un mínimo de 12 meses, incluyendo al menos 3 meses en botella, antes de su lanzamiento.
+  </li>
+  <li>
+    <strong>Riserva:</strong> Requiere un mínimo de 24 meses de envejecimiento, con al menos 3 meses en botella, lo que proporciona mayor complejidad y un mayor potencial de guarda.
+  </li>
+  <li>
+    <strong>Gran Selezione:</strong> El nivel más alto, que exige un mínimo de 30 meses de envejecimiento, con al menos 3 meses en botella, y debe producirse exclusivamente a partir de uvas cultivadas en la propia finca, ofreciendo una calidad y longevidad excepcionales.
+  </li>
+</ol>
+
+<h3 id="riserva-and-gran-selezione-classifications">Clasificaciones Riserva y Gran Selezione</h3>
+<p><strong>Riserva y Gran Selezione son clasificaciones superiores dentro del Chianti Classico, indicando vinos con envejecimiento prolongado, mayor complejidad y a menudo mayor calidad.</strong> Los vinos Riserva provienen de uvas seleccionadas y se someten a un envejecimiento más largo, mientras que Gran Selezione representa la cúspide, elaborada con las mejores uvas de un productor y que requiere el período de envejecimiento más prolongado, ofreciendo una expresión más profunda y digna de guarda del Chianti Classico. Aquí una rápida comparación:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clasificación</th>
+      <th>Envejecimiento Mínimo (total)</th>
+      <th>Envejecimiento Mínimo en Botella</th>
+      <th>Origen de la Uva</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Annata</td>
+      <td>12 meses</td>
+      <td>3 meses</td>
+      <td>Viñedos de la región</td>
+    </tr>
+    <tr>
+      <td>Riserva</td>
+      <td>24 meses</td>
+      <td>3 meses</td>
+      <td>Uvas seleccionadas</td>
+    </tr>
+    <tr>
+      <td>Gran Selezione</td>
+      <td>30 meses</td>
+      <td>3 meses</td>
+      <td>Uvas cultivadas en la finca</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><section id="how-to-choose-and-buy-chianti-classico"><h2 id="how-to-choose-and-buy-chianti-classico">¿Cómo elegir y comprar Chianti Classico?</h2>
+<p><strong>Elegir Chianti Classico implica comprender las designaciones de las etiquetas, la calidad de la añada y la preferencia personal, lo que facilita una selección informada.</strong> Busca el símbolo del Gallo Negro para asegurar la autenticidad.</p>
+
+<h3 id="decoding-the-labels">Decodificando las etiquetas</h3>
+<p><strong>Decodificar las etiquetas de Chianti Classico implica principalmente identificar el símbolo del Gallo Negro y comprender la clasificación (Annata, Riserva, Gran Selezione).</strong> El año de la añada también es prominente, indicando el año en que se cosecharon las uvas. El nombre del productor, el origen y el contenido de alcohol proporcionan detalles adicionales. Una buena etiqueta indicará claramente "Chianti Classico DOCG" o similar.</p>
+<figure><img src="what-is-chianti-classico-img-2.png" alt="Una botella de vino Chianti Classico con una etiqueta que muestra el símbolo del Gallo Negro" /><figcaption>Busca el símbolo del Gallo Negro y la designación "DOCG" en la etiqueta para un auténtico Chianti Classico.</figcaption></figure>
+
+<h3 id="vintage-considerations">Consideraciones de añada</h3>
+<p><strong>Las consideraciones de la añada son importantes para el Chianti Classico, ya que la calidad y el carácter del vino pueden variar significativamente de un año a otro debido a las condiciones climáticas.</strong> Las añadas excelentes (por ejemplo, 2015, 2016, 2018, 2019) producen vinos con mayor complejidad y potencial de envejecimiento. Consultar tablas de añadas de fuentes fiables puede ayudar a seleccionar las mejores botellas para beber ahora o guardar en bodega.</p>
+
+<h3 id="price-points-and-value">Rangos de precio y valor</h3>
+<p><strong>El Chianti Classico ofrece un amplio rango de precios, que generalmente reflejan la clasificación, la reputación del productor y la añada.</strong> Los vinos Annata son típicamente los más accesibles, ofreciendo un gran valor para el día a día. Los Riserva y Gran Selezione tienen precios más altos debido a su envejecimiento prolongado y selección más estricta, lo que proporciona mayor complejidad y longevidad. Los compradores informados pueden encontrar un excelente valor en todas las categorías.</p>
+
+</section><section id="what-are-the-best-food-pairings"><h2 id="what-are-the-best-food-pairings">¿Cuáles son los mejores maridajes?</h2>
+<p><strong>La alta acidez, los taninos firmes y el carácter sabroso del Chianti Classico lo convierten en un vino excepcionalmente versátil para maridar con alimentos, especialmente con la cocina italiana.</strong> Su estructura y perfil de sabor pueden atravesar platos ricos y complementar una amplia gama de sabores.</p>
+
+<h3 id="classic-italian-pairings">Maridajes italianos clásicos</h3>
+<p><strong>Los maridajes italianos clásicos para el Chianti Classico incluyen platos tradicionales toscanos como la Bistecca alla Fiorentina (filete a la florentina), ragú de jabalí y salsas de pasta ricas a base de tomate.</strong> Su acidez corta la grasa de las carnes, mientras que sus notas saladas complementan las hierbas y especias utilizadas en la cocina italiana. La pizza, la lasaña y el queso Pecorino añejo también son combinaciones fantásticas. Amplía tus conocimientos con nuestra guía sobre los <a href="/blog/food-pairing-basics.html">principios básicos del maridaje</a>.</p>
+
+<h3 id="versatility-with-other-cuisines">Versatilidad con otras cocinas</h3>
+<p><strong>Más allá de la cocina italiana, el Chianti Classico demuestra una impresionante versatilidad, maridando bien con diversas cocinas internacionales.</strong> Puede complementar aves asadas, cordero a la parrilla, platos de champiñones e incluso algunas comidas de inspiración asiática con sabores umami. Su perfil equilibrado le permite armonizar con una variedad de especias y preparaciones, lo que lo convierte en una opción fiable para menús diversos.</p>
+
+<h3 id="avoid-these-pairings">Evita estos maridajes</h3>
+<p><strong>Para apreciar plenamente el Chianti Classico, generalmente es mejor evitar maridajes con platos muy delicados, comidas muy picantes o sabores fuertes y amargos.</strong> Pescados con salsas delicadas, postres muy dulces y curries intensamente picantes pueden chocar con la acidez y los taninos del vino, haciendo que tanto la comida como el vino resulten desequilibrados o desagradables. Los platos con mucho cítrico también pueden ser un desafío.</p>
+
+</section><section id="how-to-serve-and-store-chianti-classico"><h2 id="how-to-serve-and-store-chianti-classico">¿Cómo servir y almacenar Chianti Classico?</h2>
+<p><strong>La temperatura de servicio y las condiciones de almacenamiento adecuadas son cruciales para que el Chianti Classico exprese todo su potencial y asegure su longevidad.</strong> Adherirse a estas pautas mejorará tu experiencia de cata.</p>
+
+<h3 id="ideal-serving-temperature">Temperatura de servicio ideal</h3>
+<p><strong>La temperatura de servicio ideal para el Chianti Classico suele oscilar entre 16-18 °C (60-64 °F), ligeramente más fresco que la temperatura ambiente.</strong> Servirlo demasiado caliente puede hacer que el alcohol parezca más prominente y los sabores frutales se confundan, mientras que servirlo demasiado frío puede atenuar sus aromas y hacer que los taninos parezcan más ásperos. Un breve enfriamiento en el refrigerador a menudo puede llevarlo a la temperatura perfecta.</p>
+
+<h3 id="decanting-recommendations">Recomendaciones para decantar</h3>
+<p><strong>Decantar el Chianti Classico, especialmente Riserva o Gran Selezione, a menudo se recomienda para permitir que el vino respire y revele sus aromas y sabores.</strong> Los vinos más jóvenes pueden beneficiarse de 30 minutos a una hora de decantación para suavizar los taninos. Los vinos más viejos, particularmente aquellos con sedimento, pueden necesitar una decantación cuidadosa justo antes de servir para separar el vino de cualquier partícula sólida, minimizando la exposición al aire para añadas muy frágiles y antiguas.</p>
+
+<h3 id="optimal-storage-conditions">Condiciones óptimas de almacenamiento</h3>
+<p><strong>Las condiciones óptimas de almacenamiento para el Chianti Classico, especialmente si se destina a la guarda, incluyen un ambiente fresco, oscuro y húmedo con una temperatura constante.</strong> La temperatura ideal de la bodega ronda los 12-14 °C (54-57 °F) con una humedad del 70-80%. Las botellas deben almacenarse de lado para mantener el corcho húmedo, evitando la oxidación prematura. Deben evitarse las fluctuaciones de temperatura, la luz directa y las vibraciones para preservar la calidad del vino. Para más información, consulta nuestro artículo sobre <a href="/blog/aging-wine-at-home.html">el envejecimiento del vino en casa</a>.</p>
+<figure><img src="what-is-chianti-classico-img-3.png" alt="Botellas de vino en una bodega con poca luz, mostrando las condiciones ideales de almacenamiento" /><figcaption>El almacenamiento adecuado en un ambiente fresco, oscuro y húmedo es clave para el envejecimiento del Chianti Classico.</figcaption></figure></section>
+            </div>
+
+            <div class="share-section">
+                <span class="share-label">Share this article</span>
+                <div class="share-group">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/what-is-chianti-classico.html"
+                        target="_blank" class="share-icon-btn" title="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/what-is-chianti-classico.html&text=¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana"
+                        target="_blank" class="share-icon-btn" title="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/what-is-chianti-classico.html"
+                        target="_blank" class="share-icon-btn" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana%20https://yas.wine/blog/what-is-chianti-classico.html"
+                        target="_blank" class="share-icon-btn" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://yas.wine/blog/what-is-chianti-classico.html&text=¿Qué es el Chianti Classico? Tu guía esencial para el vino icónico de la Toscana"
+                        target="_blank" class="share-icon-btn" title="Share on Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z" />
+                        </svg>
+                    </a>
+                    <div class="share-icon-btn" onclick="copyUrl()" title="Copy Link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function copyUrl() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            </script>
+
+            <div class="cta-box">
+                <h2>Ready to transform your brand?</h2>
+                <p>Join 500+ Shopify stores using YAS Wine to scale their content production.</p>
+                <a href="https://web.yas.wine" class="btn btn-primary"
+                    style="padding: 16px 40px; font-size: 18px;">Try for Free</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 YAS Wine. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
+        });
+    </script>
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+</body>
+
+</html>
