@@ -74,38 +74,79 @@
 
     .empty{padding:34px 18px;color:var(--dim);text-align:center}
 
+    .share-section{margin-top:80px;margin-bottom:40px;text-align:center}
+    .share-label{display:block;color:var(--dim);margin-bottom:14px;font-size:15px}
+    .share-group{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .share-icon-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--glass-border);background:rgba(255,255,255,.03);display:inline-flex;align-items:center;justify-content:center;color:var(--dim);text-decoration:none;cursor:pointer}
+    .share-icon-btn:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px)}
+    .share-icon-btn svg{width:18px;height:18px;fill:currentColor}
+
     footer{border-top:1px solid var(--glass-border);padding:40px 0;text-align:center;color:var(--dim);font-size:14px;margin-top:28px}
     footer a{color:var(--dim);text-decoration:none;margin:0 10px}
 
     @media (max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.blog-grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:740px){.cards{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.logo-img{height:52px}}
   </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
 </head>
 <body>
   <div class="fixed-bg"></div>
   <nav>
     <div class="nav-container">
-      <a class="logo" href="/"><img class="logo-img" src="/logo.png" alt="YAS Wine Logo" /></a>
-      <div class="nav-links"><a href="/">Home</a><a href="/blog/">Blog</a></div>
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
     </div>
   </nav>
 
   <header class="hero">
     <div class="container">
       <div class="hero-card">
-        <h1>Blog</h1>
-        <p>Latest resources and practical guides from YAS Wine.</p>
+        <h1>Resources &amp; Insights</h1>
+        <p>Explore practical guides, trend analysis, and actionable strategies from the YAS Wine blog.</p>
       </div>
     </div>
   </header>
 
   <section class="container grid">
     <div class="blog-grid">
+            <!-- FACTORY:best-wine-pairing-sushi-2026 -->
+            <a href="/blog/best-wine-pairing-sushi-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('best-wine-pairing-sushi-2026-hero.png');"></div>
+                <div class="card-content">
+                    <span class="category">Food Pairing</span>
+                    <h3 class="card-title">Best Wine Pairing for Sushi in 2026: A Sommelier&#x27;s Guide</h3>
+                    <p class="card-excerpt">Discover the ultimate wine pairings for sushi in 2026. This guide covers white, red, and sparkling wines to complement various sushi types, enhancing your dinin</p>
+                </div>
+            </a>
+
             <!-- FACTORY:what-is-glera-grape-2026 -->
             <a href="/blog/what-is-glera-grape-2026.html" class="blog-card">
                 <div class="card-image" style="background-image: url('what-is-glera-grape-2026-hero.png');"></div>
                 <div class="card-content">
-                    <span class="category">Viticulture</span>
+                    <span class="category">Grape Varieties</span>
                     <h3 class="card-title">What is Glera Grape? Unveiling the Heart of Prosecco in 2026</h3>
                     <p class="card-excerpt">Discover Glera, the white grape behind Prosecco, Italy&#x27;s iconic sparkling wine. Learn its history, characteristics, cultivation, and why it dominates global</p>
                 </div>
@@ -115,7 +156,7 @@
             <a href="/blog/best-wineries-toscana-2026.html" class="blog-card">
                 <div class="card-image" style="background-image: url('best-wineries-toscana-2026-hero.png');"></div>
                 <div class="card-content">
-                    <span class="category">Travel &amp; Gastronomy</span>
+                    <span class="category">Wineries &amp; Travel</span>
                     <h3 class="card-title">Discovering Toscana&#x27;s Best Wineries in 2026: An Essential Guide</h3>
                     <p class="card-excerpt">Explore Toscana&#x27;s top wineries for 2026. This guide covers iconic estates, hidden gems, and tips for planning an unforgettable wine-tasting journey in Tuscany.</p>
                 </div>
@@ -125,7 +166,7 @@
             <a href="/blog/what-is-chianti-classico.html" class="blog-card">
                 <div class="card-image" style="background-image: url('what-is-chianti-classico-hero.png');"></div>
                 <div class="card-content">
-                    <span class="category">Wine</span>
+                    <span class="category">Wine Regions</span>
                     <h3 class="card-title">What is Chianti Classico? Your Essential Guide to Tuscany&#x27;s Iconic Wine</h3>
                     <p class="card-excerpt">Discover Chianti Classico: the historic heart of Tuscany&#x27;s wine region. Learn about its grapes, unique taste, Black Rooster symbol, and DOCG rules: answer-first</p>
                 </div>
@@ -135,6 +176,23 @@
     </div>
     <div id="empty" class="empty">No posts yet. Create your first article in the factory.</div>
   </section>
+
+
+
+  <div class="share-section">
+    <span class="share-label">Spread the word about our blog</span>
+    <div class="share-group">
+      <a class="share-icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/" target="_blank" title="Share on LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <a class="share-icon-btn" href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/&text=Check+out+the+YAS+Wine+Blog" target="_blank" title="Share on X">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a class="share-icon-btn" href="https://t.me/share/url?url=https://yas.wine/blog/&text=Check+out+the+YAS+Wine+Blog" target="_blank" title="Share on Telegram">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z"/></svg>
+      </a>
+    </div>
+  </div>
 
   <footer>
     <p>© 2026 YAS Wine. All rights reserved.</p>
@@ -160,6 +218,8 @@
       if (grid.querySelector('a')) empty.style.display = 'none';
     });
   </script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
 </body>
 </html>
 

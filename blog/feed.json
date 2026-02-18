@@ -1,3 +1,26 @@
 {
-  "posts": []
+  "updatedAt": "migration",
+  "posts": [
+    {
+      "href": "/blog/what-is-glera-grape-2026.html",
+      "image": "/blog/what-is-glera-grape-2026-hero.png",
+      "category": "Grape Varieties",
+      "title": "What is Glera Grape? Unveiling the Heart of Prosecco in 2026",
+      "description": "Discover Glera, the white grape behind Prosecco, Italy&#x27;s iconic sparkling wine. Learn its history, characteristics, cultivation, and why it dominates global"
+    },
+    {
+      "href": "/blog/best-wineries-toscana-2026.html",
+      "image": "/blog/best-wineries-toscana-2026-hero.png",
+      "category": "Wineries & Travel",
+      "title": "Discovering Toscana&#x27;s Best Wineries in 2026: An Essential Guide",
+      "description": "Explore Toscana&#x27;s top wineries for 2026. This guide covers iconic estates, hidden gems, and tips for planning an unforgettable wine-tasting journey in Tuscany."
+    },
+    {
+      "href": "/blog/what-is-chianti-classico.html",
+      "image": "/blog/what-is-chianti-classico-hero.png",
+      "category": "Wine Regions",
+      "title": "What is Chianti Classico? Your Essential Guide to Tuscany&#x27;s Iconic Wine",
+      "description": "Discover Chianti Classico: the historic heart of Tuscany&#x27;s wine region. Learn about its grapes, unique taste, Black Rooster symbol, and DOCG rules: answer-first"
+    }
+  ]
 }

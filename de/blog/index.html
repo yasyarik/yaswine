@@ -80,13 +80,37 @@
     @media (max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.blog-grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:740px){.cards{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.logo-img{height:52px}}
   </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
 </head>
 <body>
   <div class="fixed-bg"></div>
   <nav>
     <div class="nav-container">
-      <a class="logo" href="/"><img class="logo-img" src="/logo.png" alt="YAS Wine Logo" /></a>
-      <div class="nav-links"><a href="/">Home</a><a href="/blog/">Blog</a></div>
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
     </div>
   </nav>
 
@@ -101,11 +125,21 @@
 
   <section class="container grid">
     <div class="blog-grid">
+            <!-- FACTORY-DE:best-wine-pairing-sushi-2026 -->
+            <a href="/de/blog/best-wine-pairing-sushi-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('/blog/best-wine-pairing-sushi-2026-hero.png');"></div>
+                <div class="card-content">
+                    <span class="category">Speisenbegleitung</span>
+                    <h3 class="card-title">Die beste Weinbegleitung für Sushi im Jahr 2026: Ein Sommelier-Guide</h3>
+                    <p class="card-excerpt">Entdecken Sie die ultimativen Weinbegleitungen für Sushi im Jahr 2026. Dieser Guide behandelt Weiß-, Rot- und Schaumweine, um verschiedene Sushi-Arten zu ergänzen und...</p>
+                </div>
+            </a>
+
             <!-- FACTORY-DE:what-is-glera-grape-2026 -->
             <a href="/de/blog/what-is-glera-grape-2026.html" class="blog-card">
                 <div class="card-image" style="background-image: url('/blog/what-is-glera-grape-2026-hero.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weinbau</span>
+                    <span class="category">Grape Varieties</span>
                     <h3 class="card-title">Die Glera-Traube: Das Herz des Prosecco im Jahr 2026 enthüllen</h3>
                     <p class="card-excerpt">Entdecken Sie Glera, die weiße Rebsorte hinter Prosecco, Italiens ikonischem Schaumwein. Erfahren Sie mehr über ihre Geschichte, Eigenschaften, den Anbau und warum sie...</p>
                 </div>
@@ -115,7 +149,7 @@
             <a href="/de/blog/best-wineries-toscana-2026.html" class="blog-card">
                 <div class="card-image" style="background-image: url('/blog/best-wineries-toscana-2026-hero.png');"></div>
                 <div class="card-content">
-                    <span class="category">Reisen &amp; Gastronomie</span>
+                    <span class="category">Wineries &amp; Travel</span>
                     <h3 class="card-title">Die besten Weingüter der Toskana 2026 entdecken: Ein unverzichtbarer Reiseführer</h3>
                     <p class="card-excerpt">Entdecken Sie die Top-Weingüter der Toskana für 2026. Dieser Reiseführer behandelt ikonische Güter, versteckte Juwelen und Tipps für die Planung einer unvergesslichen...</p>
                 </div>
@@ -125,7 +159,7 @@
             <a href="/de/blog/what-is-chianti-classico.html" class="blog-card">
                 <div class="card-image" style="background-image: url('/blog/what-is-chianti-classico-hero.png');"></div>
                 <div class="card-content">
-                    <span class="category">Wein</span>
+                    <span class="category">Wine Regions</span>
                     <h3 class="card-title">Was ist Chianti Classico? Ihr unverzichtbarer Leitfaden zu diesem ikonischen Wein der Toskana</h3>
                     <p class="card-excerpt">Entdecken Sie Chianti Classico: das historische Herzstück der Weinregion Toskana. Erfahren Sie mehr über seine Trauben, den einzigartigen Geschmack, das Symbol des Sch...</p>
                 </div>
@@ -160,6 +194,8 @@
       if (grid.querySelector('a')) empty.style.display = 'none';
     });
   </script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
 </body>
 </html>
 
