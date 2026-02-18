@@ -1,26 +1,103 @@
 {
-  "updatedAt": "migration",
+  "updatedAt": "manual-rebuild-square",
   "posts": [
     {
+      "href": "/blog/how-to-buy-winery-italy-2026.html",
+      "image": "/blog/how-to-buy-winery-italy-2026-img-1.png",
+      "category": "Wineries &amp; Travel",
+      "title": "How to Buy a Winery in Italy? A 2026 Investor&#x27;s Guide",
+      "description": "Unlock the secrets to buying a winery in Italy in 2026 with this expert guide. Learn about legalities, regions, financing, due diligence, and more for foreign"
+    },
+    {
+      "href": "/blog/winery-spain-architecture.html",
+      "image": "/blog/winery-spain-architecture-img-1.png",
+      "category": "Wineries &amp; Travel",
+      "title": "Iconic Spanish Winery Architecture: A Journey Through Design &amp; Terroir (2026)",
+      "description": "Explore Spain&#x27;s most iconic winery architecture in 2026. Discover how design, innovation, and terroir merge to create stunning, functional, and sustainable"
+    },
+    {
+      "href": "/blog/winery-bardoix-guide-2026.html",
+      "image": "/blog/winery-bardoix-guide-2026-img-1.png",
+      "category": "Wineries &amp; Travel",
+      "title": "Winery Bardoix 2026: An Essential Guide to Visiting and Tasting",
+      "description": "Discover Winery Bardoix in 2026. Explore its history, acclaimed wines, visitor experiences, and why it&#x27;s a must-visit destination for wine lovers: answer-first"
+    },
+    {
+      "href": "/blog/what-is-chianti-classico.html",
+      "image": "/blog/what-is-chianti-classico-img-1.png",
+      "category": "Wine Regions",
+      "title": "What is Chianti Classico? Your Essential Guide to Tuscany&#x27;s Iconic Wine (2026)",
+      "description": "Discover Chianti Classico: the historic heart of Tuscany&#x27;s wine region. Learn about its grapes, unique taste, Black Rooster symbol, and DOCG rules: answer-first"
+    },
+    {
       "href": "/blog/what-is-glera-grape-2026.html",
-      "image": "/blog/what-is-glera-grape-2026-hero.png",
+      "image": "/blog/what-is-glera-grape-2026-img-1.png",
       "category": "Grape Varieties",
       "title": "What is Glera Grape? Unveiling the Heart of Prosecco in 2026",
       "description": "Discover Glera, the white grape behind Prosecco, Italy&#x27;s iconic sparkling wine. Learn its history, characteristics, cultivation, and why it dominates global"
     },
     {
       "href": "/blog/best-wineries-toscana-2026.html",
-      "image": "/blog/best-wineries-toscana-2026-hero.png",
-      "category": "Wineries & Travel",
+      "image": "/blog/best-wineries-toscana-2026-img-1.png",
+      "category": "Wineries &amp; Travel",
       "title": "Discovering Toscana&#x27;s Best Wineries in 2026: An Essential Guide",
       "description": "Explore Toscana&#x27;s top wineries for 2026. This guide covers iconic estates, hidden gems, and tips for planning an unforgettable wine-tasting journey in Tuscany."
     },
     {
-      "href": "/blog/what-is-chianti-classico.html",
-      "image": "/blog/what-is-chianti-classico-hero.png",
+      "href": "/blog/best-wine-pairing-sushi-2026.html",
+      "image": "/blog/best-wine-pairing-sushi-2026-img-1.png",
+      "category": "Food Pairing",
+      "title": "Best Wine Pairing for Sushi in 2026: A Sommelier&#x27;s Expert Guide",
+      "description": "Discover the ultimate wine pairings for sushi in 2026. This expert guide covers ideal white, red, and sparkling wines to complement various sushi types, enhanci"
+    },
+    {
+      "href": "/blog/what-is-oldest-winery-spain-2026.html",
+      "image": "/blog/what-is-oldest-winery-spain-2026-img-1.png",
+      "category": "Wineries &amp; Travel",
+      "title": "What is the Oldest Winery in Spain? Uncovering Its Rich History (2026)",
+      "description": "Discover the ancient roots of Spanish winemaking. Explore the oldest winery in Spain, its historical significance, and enduring legacy in 2026: answer-first"
+    },
+    {
+      "href": "/blog/best-wineries-italy-2026.html",
+      "image": "/blog/best-wineries-italy-2026-img-1.png",
+      "category": "Wineries &amp; Travel",
+      "title": "Best Wineries in Italy 2026: An Expert&#x27;s Guide to Iconic Vineyards",
+      "description": "Discover Italy&#x27;s best wineries for 2026, from historic estates in Tuscany to innovative producers in Piedmont. Plan your unforgettable Italian wine journey now."
+    },
+    {
+      "href": "/blog/grillo-grape-wine-2026.html",
+      "image": "/blog/grillo-grape-wine-2026-img-1.png",
+      "category": "Wineries &amp; Travel",
+      "title": "Grillo Grape Wine in 2026: The Definitive Guide to Sicily&#x27;s Star White",
+      "description": "Explore Grillo grape wine in 2026, Sicily&#x27;s rising star white. Discover its history, unique flavor profile, ideal food pairings, and the best regions to experie"
+    },
+    {
+      "href": "/blog/best-puglia-wines-2026.html",
+      "image": "/blog/best-puglia-wines-2026-img-1.png",
+      "category": "Wineries &amp; Travel",
+      "title": "Discovering Puglia&#x27;s Best Wines in 2026: An Essential Guide",
+      "description": "Explore the finest Puglia wines for 2026, from robust reds like Primitivo and Negroamaro to crisp whites. This guide covers top varietals, regions, and pairings"
+    },
+    {
+      "href": "/blog/best-champagne-snacks-2026.html",
+      "image": "/blog/best-champagne-snacks-2026-img-1.png",
+      "category": "Food Pairing",
+      "title": "Best Champagne Snacks for 2026: Elevate Your Bubbly Experience",
+      "description": "Discover the best champagne snacks for 2026. Elevate your celebration with perfect pairings, from elegant canapés to gourmet bites, enhancing every sip: answer"
+    },
+    {
+      "href": "/blog/cava-wine-vs-prosecco-2026.html",
+      "image": "/blog/cava-wine-vs-prosecco-2026-img-1.png",
       "category": "Wine Regions",
-      "title": "What is Chianti Classico? Your Essential Guide to Tuscany&#x27;s Iconic Wine",
-      "description": "Discover Chianti Classico: the historic heart of Tuscany&#x27;s wine region. Learn about its grapes, unique taste, Black Rooster symbol, and DOCG rules: answer-first"
+      "title": "Cava Wine vs. Prosecco: Which Sparkling Wine Reigns Supreme in 2026?",
+      "description": "Uncover the key differences between Cava and Prosecco in 2026. Explore origins, grapes, production, and taste to choose your perfect sparkling wine: answer-firs"
+    },
+    {
+      "href": "/blog/how-to-choose-red-wine-glass-2026.html",
+      "image": "/blog/how-to-choose-red-wine-glass-2026-img-1.png",
+      "category": "Buying Guides",
+      "title": "How to Choose the Perfect Red Wine Glass in 2026: A Sommelier&#x27;s Guide",
+      "description": "Master red wine glass selection in 2026. Learn shapes, materials, and types for Bordeaux, Burgundy, and more to enhance your wine experience significantly."
     }
   ]
 }
