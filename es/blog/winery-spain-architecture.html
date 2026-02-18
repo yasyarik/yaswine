@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura Icónica de Bodegas Españolas: Un Viaje a (2026)</title>
+    <meta name="description" content="Explore la arquitectura más icónica de las bodegas de España en 2026. Descubra cómo el diseño, la innovación y el terroir se fusionan para crear espacios Learn ">
+
+    <meta property="og:title" content="Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)">
+    <meta property="og:description" content="Explore la arquitectura más icónica de las bodegas de España en 2026. Descubra cómo el diseño, la innovación y el terroir se fusionan para crear espacios Learn ">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yas.wine/blog/winery-spain-architecture.html">
+    <meta property="og:image" content="https://yas.wine//blog/winery-spain-architecture-hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-white: #ededed;
+            --text-dim: #a1a1aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: var(--bg-gradient);
+            overflow: hidden;
+        }
+
+        .fixed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
+            background-size: 200% 200%;
+            animation: gradientShift 18s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        #mainNav { 
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .nav-scrolled {
+            background: rgba(10, 5, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(10, 5, 20, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            margin-right: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(182, 58, 90, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        article {
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .post-header {
+            margin-bottom: 50px;
+        }
+
+        .post-category {
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-hero {
+            width: 100%;
+            min-height: 450px;
+            height: auto;
+            border-radius: 32px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        .post-content h2 {
+            font-size: 32px;
+            color: white;
+            margin: 50px 0 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            background: var(--glass-bg);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /* Factory-injected blocks (breadcrumbs + TOC) */
+        .breadcrumbs {
+            margin: 18px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .breadcrumbs a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumbs a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.25);
+        }
+        .breadcrumbs .sep {
+            opacity: 0.55;
+        }
+        .breadcrumbs .current {
+            color: white;
+            font-weight: 600;
+        }
+
+        .toc-box {
+            margin: 18px 0 28px;
+            padding: 18px 18px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+        }
+        .toc-title {
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .toc-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+        .toc-items li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc-items a {
+            display: block;
+            color: var(--accent-green);
+            text-decoration: none;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            padding: 6px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-items a:hover {
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
+            color: white;
+        }
+        .toc-h3 {
+            margin-left: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Links + images inside article */
+        .post-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
+        }
+        .post-content a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.10);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+        .post-content figure {
+            margin: 26px 0;
+        }
+        .post-content figcaption {
+            margin-top: 10px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+
+        /* Tables */
+        .post-content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 26px 0;
+        }
+        .post-content thead th {
+            background: rgba(182, 58, 90, 0.14);
+            color: white;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .post-content th,
+        .post-content td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .post-content td {
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+        .post-content th:last-child,
+        .post-content td:last-child {
+            border-right: none;
+        }
+        .post-content tbody tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+.share-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .share-label {
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .share-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .share-icon-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .share-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 30px;
+            }
+        }
+    </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)">
+<meta name="twitter:description" content="Explore la arquitectura más icónica de las bodegas de España en 2026. Descubra cómo el diseño, la innovación y el terroir se fusionan para crear espacios Learn ">
+<meta name="twitter:image" content="https://yas.wine/blog/winery-spain-architecture-hero.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://yas.wine/blog/winery-spain-architecture.html"}, "headline": "Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)", "description": "Explore la arquitectura más icónica de las bodegas de España en 2026. Descubra cómo el diseño, la innovación y el terroir se fusionan para crear espacios Learn ", "image": ["https://yas.wine/blog/winery-spain-architecture-hero.png"], "datePublished": "2026-02-18", "dateModified": "2026-02-18", "author": {"@type": "Organization", "name": "YAS Wine"}, "publisher": {"@type": "Organization", "name": "YAS Wine"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yas.wine/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yas.wine/blog/"}, {"@type": "ListItem", "position": 3, "name": "Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)", "item": "https://yas.wine/blog/winery-spain-architecture.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué región española es la más famosa por sus bodegas arquitectónicas?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Rioja Alavesa es ampliamente reconocida como la región española más famosa por sus bodegas arquitectónicas.</strong> Alberga diseños icónicos de arquitectos de renombre mundial como Frank Gehry (Marqués de Riscal) y Santiago Calatrava (Bodegas Ysios)."}}, {"@type": "Question", "name": "¿Quiénes son algunos arquitectos famosos que diseñaron bodegas en España?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Arquitectos notables que han diseñado bodegas en España incluyen a Frank Gehry, Santiago Calatrava y Richard Rogers.</strong> Sus innovadoras obras han transformado las bodegas en importantes hitos arquitectónicos."}}, {"@type": "Question", "name": "¿Qué son los sistemas de flujo por gravedad en las bodegas?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Los sistemas de flujo por gravedad son un principio de diseño en las bodegas que utilizan la gravedad para mover uvas, mosto y vino entre las diferentes etapas de producción.</strong> Este método suave minimiza el bombeo, lo que puede estresar el vino, preservando su calidad y delicados sabores."}}, {"@type": "Question", "name": "¿Puedo visitar estas bodegas arquitectónicas sin reserva?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Si bien algunas bodegas más pequeñas podrían aceptar visitas sin cita previa, es muy recomendable reservar su visita, tour y degustaciones con antelación, especialmente para las bodegas arquitectónicas famosas.</strong> Esto asegura la disponibilidad y una experiencia fluida."}}, {"@type": "Question", "name": "¿Cuál es la mejor época del año para visitar las bodegas arquitectónicas españolas?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>La mejor época para visitar las bodegas arquitectónicas españolas es típicamente durante la primavera (abril-junio) o el otoño (septiembre-octubre).</strong> Estas estaciones ofrecen un clima agradable para los recorridos, y el otoño le permite presenciar la vendimia."}}, {"@type": "Question", "name": "¿Las bodegas españolas se centran en la sostenibilidad en su diseño?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Sí, muchas bodegas españolas se centran cada vez más en el diseño sostenible, incorporando características como la eficiencia energética, cubiertas verdes, reciclaje de agua y el uso de materiales locales y ecológicos.</strong> Este compromiso refleja una creciente conciencia ambiental en la industria."}}]}</script>
+<link href="https://yas.wine/es/blog/winery-spain-architecture.html" rel="canonical"/><link href="https://yas.wine/blog/winery-spain-architecture.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/winery-spain-architecture.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/winery-spain-architecture.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/winery-spain-architecture.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/winery-spain-architecture.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/winery-spain-architecture.html" hreflang="x-default" rel="alternate"/></head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+    <main class="container">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+
+            <header class="post-header">
+                <span class="post-category">Bodegas y Viajes</span>
+                <h1 itemprop="headline">Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)</h1>
+                <div class="post-intro" style="margin-top:16px;"><p><strong>La arquitectura de las bodegas españolas es una cautivadora mezcla de tradición y diseño vanguardista, que refleja siglos de herencia vitivinícola a la vez que adopta la innovación de vanguardia.</strong> Esta fusión única crea espacios visualmente impresionantes y altamente funcionales que mejoran tanto el proceso de producción como la experiencia del visitante en 2026.</p></div>
+                <div class="post-meta">
+                    <time itemprop="datePublished" datetime="2026-02-18">Published 2026-02-18</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="post-hero" style="background-image: url('/blog/winery-spain-architecture-hero.png');"></div>
+
+            <div class="post-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)</span></nav><aside class="toc-box"><div class="toc-title">En esta página</div><ul class="toc-items"><li><a class="toc-h2" href="#por-qu-la-arquitectura-de-bodegas-espaolas-es-tan-nica">¿Por qué la Arquitectura de Bodegas Españolas es tan Única?</a></li><li><a class="toc-h2" href="#cmo-se-fusionan-tradicin-y-modernidad-en-la-arquitectura-de-bodegas-espaolas">¿Cómo se Fusionan Tradición y Modernidad en la Arquitectura de Bodegas Españolas?</a></li><li><a class="toc-h2" href="#regiones-icnicas-y-sus-joyas-arquitectnicas">Regiones Icónicas y sus Joyas Arquitectónicas</a></li><li><a class="toc-h2" href="#quines-son-los-arquitectos-visionarios-detrs-de-las-bodegas-de-espaa">¿Quiénes son los Arquitectos Visionarios Detrás de las Bodegas de España?</a></li><li><a class="toc-h2" href="#cmo-mejora-la-arquitectura-la-experiencia-del-vino">¿Cómo Mejora la Arquitectura la Experiencia del Vino?</a></li><li><a class="toc-h2" href="#cmo-adoptan-las-bodegas-espaolas-el-diseo-sostenible">¿Cómo Adoptan las Bodegas Españolas el Diseño Sostenible?</a></li><li><a class="toc-h2" href="#ms-all-de-la-esttica-principios-de-diseo-funcional">Más Allá de la Estética: Principios de Diseño Funcional</a></li><li><a class="toc-h2" href="#cules-son-los-estilos-arquitectnicos-clave-en-las-bodegas-espaolas">¿Cuáles son los Estilos Arquitectónicos Clave en las Bodegas Españolas?</a></li><li><a class="toc-h2" href="#planificando-su-ruta-arquitectnica-del-vino-en-espaa">Planificando su Ruta Arquitectónica del Vino en España</a></li><li><a class="toc-h2" href="#el-futuro-de-la-arquitectura-de-bodegas-en-espaa">El Futuro de la Arquitectura de Bodegas en España</a></li></ul></aside><section id="por-qu-la-arquitectura-de-bodegas-espaolas-es-tan-nica"><h2 id="por-qu-la-arquitectura-de-bodegas-espaolas-es-tan-nica">¿Por qué la Arquitectura de Bodegas Españolas es tan Única?</h2><p><strong>La arquitectura de las bodegas españolas destaca por su profunda conexión con el terroir, un rico tapiz cultural y un compromiso inquebrantable con el diseño innovador.</strong> Esta mezcla da como resultado estructuras que no son meramente edificios, sino partes integrales de la narrativa vitivinícola, muy similar al carácter distintivo que se encuentra en las fincas de <a href="/blog/what-is-chianti-classico.html">Chianti Classico</a>.</p><h3 id="diseo-impulsado-por-el-terroir">Diseño Impulsado por el Terroir</h3><p><strong>Muchas bodegas españolas están diseñadas para armonizar con su terroir específico, influyendo en todo, desde la elección de materiales hasta la orientación del edificio.</strong> Los arquitectos a menudo se inspiran en el paisaje circundante, utilizando piedra local, madera o tonos terrosos que se mezclan a la perfección con los viñedos.</p><h3 id="influencia-del-patrimonio-cultural">Influencia del Patrimonio Cultural</h3><p><strong>La herencia cultural española, incluidas las influencias moriscas, las tradiciones romanas y las prácticas de construcción regionales, informa profundamente la arquitectura de las bodegas.</strong> Elementos como arcos, patios y métodos de construcción específicos a menudo rinden homenaje a la rica historia de España.</p><h3 id="la-innovacin-como-principio-fundamental">La Innovación como Principio Fundamental</h3><p><strong>Los propietarios y arquitectos de bodegas españolas a menudo están a la vanguardia de la innovación, atreviéndose a experimentar con formas audaces, nuevos materiales y tecnologías sostenibles.</strong> Este impulso por la innovación empuja los límites del diseño tradicional de bodegas, contrastando incluso con las fincas tradicionales más pintorescas como las que se encuentran entre las <a href="/blog/best-wineries-toscana-2026.html">mejores bodegas de Toscana</a>.</p><figure><img src="winery-spain-architecture-img-1.png" alt="Vista exterior de la bodega Marqués de Riscal de Frank Gehry" /><figcaption>El diseño de Frank Gehry para Marqués de Riscal, una mezcla icónica de metal y piedra en Rioja Alavesa.</figcaption></figure></section><section id="cmo-se-fusionan-tradicin-y-modernidad-en-la-arquitectura-de-bodegas-espaolas"><h2 id="cmo-se-fusionan-tradicin-y-modernidad-en-la-arquitectura-de-bodegas-espaolas">¿Cómo se Fusionan Tradición y Modernidad en la Arquitectura de Bodegas Españolas?</h2><p><strong>Las bodegas españolas fusionan magistralmente tradiciones vitivinícolas centenarias con atrevidas expresiones arquitectónicas modernas.</strong> Este enfoque crea un lenguaje visual dinámico que respeta el pasado mientras mira firmemente hacia el futuro.</p><h3 id="bodegas-histricas-reimaginadas">Bodegas Históricas Reimaginadas</h3><p><strong>Muchas bodegas históricas han sido objeto de cuidadosas renovaciones que preservan su encanto original mientras integran elementos contemporáneos para la producción y el turismo.</strong> Esto a menudo implica la restauración de antiguas bodegas y la adición de modernos centros de visitantes o salas de cata.</p><h3 id="estructuras-vanguardistas">Estructuras Vanguardistas</h3><p><strong>España alberga numerosos diseños de bodegas vanguardistas que desafían la estética convencional, utilizando formas, materiales y colores poco convencionales.</strong> Estas estructuras a menudo se convierten en iconos arquitectónicos, atrayendo a visitantes de todo el mundo.</p><blockquote><p>"La arquitectura no es solo estética; se trata de crear espacios que cuenten una historia, mejoren un producto y respeten el medio ambiente. La arquitectura de las bodegas españolas ejemplifica este equilibrio de manera hermosa."</p><cite>— Arquitecto Renombrado</cite></blockquote><h3 id="materiales-y-tcnicas">Materiales y Técnicas</h3><p><strong>Los arquitectos frecuentemente utilizan una combinación de materiales locales tradicionales como piedra y madera junto con elementos modernos como acero, vidrio y paneles compuestos.</strong> Esta fusión refleja un compromiso tanto con la herencia como con el avance tecnológico.</p></section><section id="regiones-icnicas-y-sus-joyas-arquitectnicas"><h2 id="regiones-icnicas-y-sus-joyas-arquitectnicas">Regiones Icónicas y sus Joyas Arquitectónicas</h2><p><strong>España cuenta con varias regiones vinícolas reconocidas no solo por sus vinos excepcionales, sino también por su innovadora arquitectura de bodegas.</strong> Cada región ofrece una narrativa arquitectónica distinta que complementa su filosofía vitivinícola.</p><h3 id="obras-maestras-de-rioja-alavesa">Obras Maestras de Rioja Alavesa</h3><p><strong>Rioja Alavesa es, sin duda, el epicentro del enoturismo arquitectónico en España, con diseños de arquitectos de renombre mundial.</strong> Bodegas como Marqués de Riscal y Bodegas Ysios son ejemplos destacados.</p><h3 id="declaraciones-audaces-de-ribera-del-duero">Declaraciones Audaces de Ribera del Duero</h3><p><strong>Ribera del Duero exhibe bodegas que hacen audaces declaraciones arquitectónicas, a menudo integrándose a la perfección con el dramático paisaje.</strong> Bodegas Protos y Portia son notables por sus diseños contemporáneos. Estos diseños ofrecen un contraste contemporáneo con las fincas más tradicionales, aunque igualmente hermosas, exploradas en una guía de las <a href="/blog/best-wineries-toscana-2026.html">mejores bodegas de Toscana</a>.</p><h3 id="toques-modernistas-de-catalua">Toques Modernistas de Cataluña</h3><p><strong>Cataluña ofrece bodegas influenciadas por la arquitectura modernista, particularmente en regiones como el Penedès.</strong> Estos diseños a menudo presentan detalles intrincados, luz natural y una conexión con la herencia artística de la región.</p><h3 id="bodegas-catedralicias-de-jerez">Bodegas Catedralicias de Jerez</h3><p><strong>El Triángulo del Jerez, especialmente alrededor de Jerez, cuenta con magníficas bodegas 'catedralicias' con techos altos y vastos espacios diseñados para una óptima crianza del jerez.</strong> Estas estructuras tradicionales son a menudo maravillas arquitectónicas por derecho propio.</p></section><section id="quines-son-los-arquitectos-visionarios-detrs-de-las-bodegas-de-espaa"><h2 id="quines-son-los-arquitectos-visionarios-detrs-de-las-bodegas-de-espaa">¿Quiénes son los Arquitectos Visionarios Detrás de las Bodegas de España?</h2><p><strong>Algunos de los arquitectos más aclamados del mundo han prestado su genio creativo a las bodegas españolas, transformándolas en hitos arquitectónicos globales.</strong> Estas colaboraciones han elevado el diseño de bodegas a una forma de arte, atrayendo a entusiastas más allá de los amantes del vino.</p><h3 id="marqus-de-riscal-de-frank-gehry">Marqués de Riscal de Frank Gehry</h3><p><strong>El icónico diseño de Frank Gehry para Marqués de Riscal en Elciego, Rioja Alavesa, presenta un vibrante techo de cintas de titanio que refleja los colores del vino.</strong> Es una estructura caprichosa e instantáneamente reconocible, que simboliza una nueva era para el vino español.</p><h3 id="bodegas-ysios-de-santiago-calatrava">Bodegas Ysios de Santiago Calatrava</h3><p><strong>Santiago Calatrava diseñó Bodegas Ysios en Laguardia, Rioja Alavesa, con un llamativo techo ondulado que refleja las montañas de la Sierra de Cantabria.</strong> Su impresionante estructura crea una poderosa declaración visual contra el telón de fondo del viñedo.</p><figure><img src="winery-spain-architecture-img-2.png" alt="Vista exterior de la bodega Bodegas Ysios de Santiago Calatrava" /><figcaption>El techo ondulante de Bodegas Ysios de Santiago Calatrava, haciendo eco de las montañas circundantes.</figcaption></figure><h3 id="bodegas-protos-de-richard-rogers">Bodegas Protos de Richard Rogers</h3><p><strong>Richard Rogers Partnership creó Bodegas Protos en Peñafiel, Ribera del Duero, con un diseño que es a la vez moderno y profundamente integrado en el paisaje.</strong> El edificio presenta cinco parábolas conectadas que albergan diferentes áreas de producción.</p><h3 id="abada-retuerta-de-philippe-mazires">Abadía Retuerta de Philippe Mazières</h3><p><strong>Philippe Mazières dirigió la restauración y modernización de Abadía Retuerta en Sardón de Duero, Valladolid, transformando una abadía del siglo XII en una bodega de última generación y un hotel de lujo.</strong> Este proyecto fusiona bellamente la preservación histórica con la funcionalidad moderna.</p></section><section id="cmo-mejora-la-arquitectura-la-experiencia-del-vino"><h2 id="cmo-mejora-la-arquitectura-la-experiencia-del-vino">¿Cómo Mejora la Arquitectura la Experiencia del Vino?</h2><p><strong>La arquitectura de las bodegas mejora significativamente la experiencia del vino al crear entornos inmersivos que educan, inspiran y conectan a los visitantes con el proceso de elaboración del vino y la identidad de la marca.</strong> Desde visitas guiadas hasta salas de cata, el diseño juega un papel crucial.</p><h3 id="flujo-del-visitante-e-inmersin">Flujo del Visitante e Inmersión</h3><p><strong>El diseño arquitectónico guía a los visitantes a través de la bodega, desde los viñedos hasta las cavas, creando una narrativa que los sumerge en el viaje de elaboración del vino.</strong> Los diseños cuidadosos garantizan una experiencia fluida y atractiva.</p><h3 id="control-climtico-ptimo-y-produccin">Control Climático Óptimo y Producción</h3><p><strong>Más allá de la estética, elementos arquitectónicos como la orientación, los materiales y las cavas subterráneas son cruciales para mantener temperaturas y humedad óptimas.</strong> Esta precisión es vital para la calidad del vino, incluidas las condiciones de almacenamiento adecuadas para una variedad de vinos, incluso aquellos elaborados con la <a href="/blog/what-is-glera-grape-2026.html">uva Glera</a>.</p><h3 id="marca-e-identidad">Marca e Identidad</h3><p><strong>El estilo arquitectónico de una bodega a menudo se convierte en sinónimo de su marca, transmitiendo su filosofía, valores e incluso el carácter de sus vinos.</strong> Es una poderosa herramienta de marketing que deja una impresión duradera.</p><figure><img src="winery-spain-architecture-img-3.png" alt="Vista interior de la cava de barricas de Bodegas Protos" /><figcaption>La impresionante cava de barricas en Bodegas Protos, mostrando tanto funcionalidad como atractivo estético.</figcaption></figure></section><section id="cmo-adoptan-las-bodegas-espaolas-el-diseo-sostenible"><h2 id="cmo-adoptan-las-bodegas-espaolas-el-diseo-sostenible">¿Cómo Adoptan las Bodegas Españolas el Diseño Sostenible?</h2><p><strong>La sostenibilidad es un componente cada vez más vital de la arquitectura moderna de las bodegas españolas, integrando prácticas ecológicas desde la construcción hasta la operación.</strong> Este compromiso asegura la responsabilidad ambiental junto con un diseño exquisito.</p><h3 id="eficiencia-energtica-y-cubiertas-verdes">Eficiencia Energética y Cubiertas Verdes</h3><p><strong>Muchas bodegas nuevas incorporan estrategias de diseño pasivo, paneles solares y cubiertas verdes para reducir el consumo de energía para calefacción y refrigeración.</strong> Estas características minimizan el impacto ambiental y, a menudo, añaden a la estética del edificio.</p><h3 id="gestin-y-reciclaje-del-agua">Gestión y Reciclaje del Agua</h3><p><strong>Se implementan sistemas avanzados de gestión del agua, incluida la recolección de agua de lluvia y el reciclaje de aguas residuales, para conservar este valioso recurso.</strong> Esto es particularmente importante en las regiones a menudo áridas de España.</p><h3 id="materiales-locales-y-prcticas-ecolgicas">Materiales Locales y Prácticas Ecológicas</h3><p><strong>El uso de materiales de origen local y reciclados, junto con métodos de construcción que minimizan los residuos, reduce la huella de carbono de los edificios de las bodegas.</strong> Esto apoya las economías regionales y la preservación ecológica.</p></section><section id="ms-all-de-la-esttica-principios-de-diseo-funcional"><h2 id="ms-all-de-la-esttica-principios-de-diseo-funcional">Más Allá de la Estética: Principios de Diseño Funcional</h2><p><strong>La arquitectura de las bodegas españolas prioriza la funcionalidad, asegurando que una estética impresionante también sirva a las complejas y precisas demandas de la elaboración del vino.</strong> Los elementos de diseño a menudo se eligen por sus beneficios prácticos en la producción y el almacenamiento.</p><h3 id="sistemas-de-flujo-por-gravedad">Sistemas de Flujo por Gravedad</h3><p><strong>Muchas bodegas están diseñadas con sistemas de flujo por gravedad para mover uvas y vino suavemente, minimizando la necesidad de bombas y reduciendo el estrés sobre el producto.</strong> Este enfoque a menudo dicta estructuras de edificios de varios niveles o en terrazas.</p><h3 id="regulacin-de-temperatura-y-humedad">Regulación de Temperatura y Humedad</h3><p><strong>Las cavas subterráneas, las paredes gruesas y los sistemas de ventilación natural son cruciales para mantener temperaturas y humedad estables, ideales para la fermentación, el envejecimiento y el almacenamiento.</strong> Estos controles ambientales son primordiales para la calidad del vino.</p><h3 id="cavas-de-crianza-de-barricas">Cavas de Crianza de Barricas</h3><p><strong>Las cavas están meticulosamente diseñadas para albergar miles de barricas de roble, a menudo con iluminación, flujo de aire y control de temperatura específicos para asegurar condiciones de envejecimiento óptimas.</strong> La escala y el diseño de estos espacios son a menudo impresionantes.</p></section><section id="cules-son-los-estilos-arquitectnicos-clave-en-las-bodegas-espaolas"><h2 id="cules-son-los-estilos-arquitectnicos-clave-en-las-bodegas-espaolas">¿Cuáles son los Estilos Arquitectónicos Clave en las Bodegas Españolas?</h2><p><strong>Las bodegas españolas exhiben una diversa gama de estilos arquitectónicos, desde formas tradicionales arraigadas hasta diseños ultramodernos y vanguardistas.</strong> Este espectro refleja la naturaleza evolutiva de la viticultura y el diseño, atrayendo a una variedad de gustos.</p><table><thead><tr><th>Estilo Arquitectónico</th><th>Características Clave</th><th>Bodegas de Ejemplo</th></tr></thead><tbody><tr><td>Contemporáneo/Vanguardista</td><td>Formas audaces, materiales innovadores (titanio, acero), impacto visual llamativo, a menudo conceptual.</td><td>Marqués de Riscal, Bodegas Ysios, Bodegas Portia</td></tr><tr><td>Tradicional/Regional</td><td>Piedra local, terracota, elementos históricos, se integra con el paisaje, a menudo rústico o clásico.</td><td>Muchas bodegas familiares más pequeñas, fincas restauradas antiguas</td></tr><tr><td>Minimalista/Industrial</td><td>Líneas limpias, hormigón/acero expuesto, estética funcional, enfoque en la eficiencia, a menudo elegancia austera.</td><td>Bodegas Protos, algunas bodegas urbanas</td></tr><tr><td>Modernista (Catalán)</td><td>Influencias Art Nouveau, formas orgánicas, colores vibrantes, a menudo detalles intrincados.</td><td>Bodegas seleccionadas en Cataluña (p. ej., instalaciones de producción de Cava)</td></tr></tbody></table></section><section id="planificando-su-ruta-arquitectnica-del-vino-en-espaa"><h2 id="planificando-su-ruta-arquitectnica-del-vino-en-espaa">Planificando su Ruta Arquitectónica del Vino en España</h2><p><strong>Planificar una ruta arquitectónica del vino en España implica seleccionar regiones clave, comprender sus ofertas únicas y prepararse para una experiencia inmersiva.</strong> Un itinerario bien planificado maximizará su aprecio tanto por el vino como por el diseño, quizás incluso inspirando ideas para el <a href="/blog/best-wine-pairing-sushi-2026.html">mejor maridaje de vino para sushi</a> que podría disfrutar más tarde.</p><h3 id="eligiendo-su-ruta">Eligiendo su Ruta</h3><p><strong>Decidir su itinerario requiere investigar las regiones y bodegas específicas que desea visitar.</strong></p><ol><li><strong>Identifique Regiones Clave:</strong> Concéntrese en áreas como Rioja Alavesa (para Gehry, Calatrava), Ribera del Duero (para Rogers) o Jerez (para las bodegas catedralicias tradicionales).</li><li><strong>Investigue Bodegas:</strong> Busque bodegas individuales conocidas por su arquitectura y verifique sus políticas de visita y horarios de apertura.</li><li><strong>Considere la Logística:</strong> Tenga en cuenta el tiempo de viaje entre bodegas y regiones. A menudo se recomienda alquilar un coche para mayor flexibilidad.</li><li><strong>Reserve con Antelación:</strong> Muchas bodegas icónicas requieren reservas para tours y catas, especialmente durante la temporada alta.</li><li><strong>Planifique el Ritmo:</strong> No sobrecargue su horario. Deje tiempo para saborear la experiencia, explorar la arquitectura y disfrutar de las catas.</li></ol><h3 id="reservando-visitas">Reservando Visitas</h3><p><strong>Es crucial reservar sus tours y catas de bodegas con mucha antelación, particularmente para los sitios arquitectónicos de renombre mundial.</strong> Muchos ofrecen portales de reserva en línea, y algunos proporcionan tours arquitectónicos exclusivos.</p><h3 id="alojamiento-y-gastronoma">Alojamiento y Gastronomía</h3><p><strong>Integre su tour arquitectónico con la excepcional gastronomía de España y sus diversas opciones de alojamiento.</strong> Muchas regiones ofrecen hoteles boutique dentro o cerca de las bodegas, brindando una experiencia inmersiva completa.</p></section><section id="el-futuro-de-la-arquitectura-de-bodegas-en-espaa"><h2 id="el-futuro-de-la-arquitectura-de-bodegas-en-espaa">El Futuro de la Arquitectura de Bodegas en España</h2><p><strong>El futuro de la arquitectura de bodegas españolas probablemente verá una mayor integración de tecnología avanzada, un diseño experiencial mejorado y una continua adaptación a los desafíos del cambio climático.</strong> Espere estructuras más innovadoras y sostenibles que traspasen los límites, asegurando que España siga siendo líder en diseño de bodegas.</p><h3 id="integracin-tecnolgica">Integración Tecnológica</h3><p><strong>Las futuras bodegas probablemente incorporarán aún más tecnologías inteligentes para la vinificación de precisión, la gestión energética y la interacción con los visitantes.</strong> Pantallas digitales, tours de realidad aumentada y sistemas automatizados podrían convertirse en estándar.</p><h3 id="diseo-experiencial">Diseño Experiencial</h3><p><strong>El enfoque se desplazará cada vez más hacia la creación de experiencias multisensoriales que involucren a los visitantes más allá de la mera cata de vinos.</strong> Esto podría incluir instalaciones de arte, experiencias gastronómicas y exhibiciones educativas interactivas integradas en la arquitectura.</p><h3 id="adaptacin-al-cambio-climtico">Adaptación al Cambio Climático</h3><p><strong>Los arquitectos seguirán desarrollando soluciones innovadoras para combatir los efectos del cambio climático, como las temperaturas extremas y la escasez de agua.</strong> Espere más paisajes resistentes a la sequía, aislamiento térmico avanzado y técnicas de enfriamiento pasivo.</p></section>
+            </div>
+
+            <div class="share-section">
+                <span class="share-label">Share this article</span>
+                <div class="share-group">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/winery-spain-architecture.html"
+                        target="_blank" class="share-icon-btn" title="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/winery-spain-architecture.html&text=Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)"
+                        target="_blank" class="share-icon-btn" title="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/winery-spain-architecture.html"
+                        target="_blank" class="share-icon-btn" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)%20https://yas.wine/blog/winery-spain-architecture.html"
+                        target="_blank" class="share-icon-btn" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://yas.wine/blog/winery-spain-architecture.html&text=Arquitectura Icónica de Bodegas Españolas: Un Viaje a Través del Diseño y el Terroir (2026)"
+                        target="_blank" class="share-icon-btn" title="Share on Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z" />
+                        </svg>
+                    </a>
+                    <div class="share-icon-btn" onclick="copyUrl()" title="Copy Link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function copyUrl() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            </script>
+
+            
+
+        </article>
+    </main>
+
+    <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
+        });
+    </script>
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+
+</html>

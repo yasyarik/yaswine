@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikonische spanische Weingutarchitektur: Eine Reise durch</title>
+    <meta name="description" content="Entdecken Sie Spaniens ikonischste Weingutarchitektur im Jahr 2026. Erfahren Sie, wie Design, Innovation und Terroir verschmelzen, um beeindruckende Learn the s">
+
+    <meta property="og:title" content="Ikonische spanische Weingutarchitektur: Eine Reise durch Design &amp; Terroir (2026)">
+    <meta property="og:description" content="Entdecken Sie Spaniens ikonischste Weingutarchitektur im Jahr 2026. Erfahren Sie, wie Design, Innovation und Terroir verschmelzen, um beeindruckende Learn the s">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yas.wine/blog/winery-spain-architecture.html">
+    <meta property="og:image" content="https://yas.wine//blog/winery-spain-architecture-hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-white: #ededed;
+            --text-dim: #a1a1aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: var(--bg-gradient);
+            overflow: hidden;
+        }
+
+        .fixed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
+            background-size: 200% 200%;
+            animation: gradientShift 18s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        #mainNav { 
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .nav-scrolled {
+            background: rgba(10, 5, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(10, 5, 20, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            margin-right: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(182, 58, 90, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        article {
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .post-header {
+            margin-bottom: 50px;
+        }
+
+        .post-category {
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-hero {
+            width: 100%;
+            min-height: 450px;
+            height: auto;
+            border-radius: 32px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        .post-content h2 {
+            font-size: 32px;
+            color: white;
+            margin: 50px 0 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            background: var(--glass-bg);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /* Factory-injected blocks (breadcrumbs + TOC) */
+        .breadcrumbs {
+            margin: 18px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .breadcrumbs a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumbs a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.25);
+        }
+        .breadcrumbs .sep {
+            opacity: 0.55;
+        }
+        .breadcrumbs .current {
+            color: white;
+            font-weight: 600;
+        }
+
+        .toc-box {
+            margin: 18px 0 28px;
+            padding: 18px 18px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+        }
+        .toc-title {
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .toc-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+        .toc-items li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc-items a {
+            display: block;
+            color: var(--accent-green);
+            text-decoration: none;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            padding: 6px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-items a:hover {
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
+            color: white;
+        }
+        .toc-h3 {
+            margin-left: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Links + images inside article */
+        .post-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
+        }
+        .post-content a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.10);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+        .post-content figure {
+            margin: 26px 0;
+        }
+        .post-content figcaption {
+            margin-top: 10px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+
+        /* Tables */
+        .post-content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 26px 0;
+        }
+        .post-content thead th {
+            background: rgba(182, 58, 90, 0.14);
+            color: white;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .post-content th,
+        .post-content td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .post-content td {
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+        .post-content th:last-child,
+        .post-content td:last-child {
+            border-right: none;
+        }
+        .post-content tbody tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+.share-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .share-label {
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .share-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .share-icon-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .share-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 30px;
+            }
+        }
+    </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ikonische spanische Weingutarchitektur: Eine Reise durch Design &amp; Terroir (2026)">
+<meta name="twitter:description" content="Entdecken Sie Spaniens ikonischste Weingutarchitektur im Jahr 2026. Erfahren Sie, wie Design, Innovation und Terroir verschmelzen, um beeindruckende Learn the s">
+<meta name="twitter:image" content="https://yas.wine/blog/winery-spain-architecture-hero.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://yas.wine/blog/winery-spain-architecture.html"}, "headline": "Ikonische spanische Weingutarchitektur: Eine Reise durch Design & Terroir (2026)", "description": "Entdecken Sie Spaniens ikonischste Weingutarchitektur im Jahr 2026. Erfahren Sie, wie Design, Innovation und Terroir verschmelzen, um beeindruckende Learn the s", "image": ["https://yas.wine/blog/winery-spain-architecture-hero.png"], "datePublished": "2026-02-18", "dateModified": "2026-02-18", "author": {"@type": "Organization", "name": "YAS Wine"}, "publisher": {"@type": "Organization", "name": "YAS Wine"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yas.wine/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yas.wine/blog/"}, {"@type": "ListItem", "position": 3, "name": "Ikonische spanische Weingutarchitektur: Eine Reise durch Design & Terroir (2026)", "item": "https://yas.wine/blog/winery-spain-architecture.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welche spanische Region ist am bekanntesten für ihre architektonischen Weingüter?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Die Rioja Alavesa gilt als die bekannteste spanische Region für ihre architektonischen Weingüter.</strong> Sie beherbergt ikonische Designs von weltbekannten Architekten wie Frank Gehry (Marqués de Riscal) und Santiago Calatrava (Bodegas Ysios)."}}, {"@type": "Question", "name": "Wer sind einige berühmte Architekten, die Weingüter in Spanien entworfen haben?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Zu den namhaften Architekten, die Weingüter in Spanien entworfen haben, gehören Frank Gehry, Santiago Calatrava und Richard Rogers.</strong> Ihre innovativen Werke haben Weingüter in bedeutende architektonische Wahrzeichen verwandelt."}}, {"@type": "Question", "name": "Was sind Schwerkraftflusssysteme in Weingütern?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Schwerkraftflusssysteme sind ein Designprinzip in Weingütern, das die Schwerkraft nutzt, um Trauben, Most und Wein zwischen verschiedenen Produktionsstufen zu bewegen.</strong> Diese schonende Methode minimiert das Pumpen, das den Wein belasten könnte, und bewahrt so seine Qualität und zarten Aromen."}}, {"@type": "Question", "name": "Kann ich diese architektonischen Weingüter ohne Reservierung besuchen?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Obwohl einige kleinere Weingüter Spontanbesucher aufnehmen könnten, wird dringend empfohlen, Ihren Besuch, Ihre Führung und Ihre Verkostungsreservierungen im Voraus zu buchen, insbesondere für die berühmten architektonischen Weingüter.</strong> Dies sichert die Verfügbarkeit und ein reibungsloses Erlebnis."}}, {"@type": "Question", "name": "Wann ist die beste Jahreszeit, um spanische architektonische Weingüter zu besuchen?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Die beste Zeit, um spanische architektonische Weingüter zu besuchen, ist typischerweise im Frühling (April-Juni) oder Herbst (September-Oktober).</strong> Diese Jahreszeiten bieten angenehmes Wetter für Besichtigungen, und der Herbst ermöglicht es Ihnen, die Weinlese mitzuerleben."}}, {"@type": "Question", "name": "Konzentrieren sich spanische Weingüter in ihrem Design auf Nachhaltigkeit?", "acceptedAnswer": {"@type": "Answer", "text": "<strong>Ja, viele spanische Weingüter konzentrieren sich zunehmend auf nachhaltiges Design und integrieren Merkmale wie Energieeffizienz, Gründächer, Wasserkreislauf und die Verwendung lokaler, umweltfreundlicher Materialien.</strong> Dieses Engagement spiegelt ein wachsendes Umweltbewusstsein in der Branche wider."}}]}</script>
+<link href="https://yas.wine/de/blog/winery-spain-architecture.html" rel="canonical"/><link href="https://yas.wine/blog/winery-spain-architecture.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/winery-spain-architecture.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/winery-spain-architecture.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/winery-spain-architecture.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/winery-spain-architecture.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/winery-spain-architecture.html" hreflang="x-default" rel="alternate"/></head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+    <main class="container">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+
+            <header class="post-header">
+                <span class="post-category">Weingüter &amp; Reisen</span>
+                <h1 itemprop="headline">Ikonische spanische Weingutarchitektur: Eine Reise durch Design &amp; Terroir (2026)</h1>
+                <div class="post-intro" style="margin-top:16px;"><p><strong>Die spanische Weingutarchitektur ist eine fesselnde Mischung aus Tradition und avantgardistischem Design, die jahrhundertealtes Weinbauerbe widerspiegelt und gleichzeitig modernste Innovationen aufgreift.</strong> Diese einzigartige Fusion schafft optisch beeindruckende und hochfunktionale Räume, die sowohl den Produktionsprozess als auch das Besuchererlebnis im Jahr 2026 bereichern.</p></div>
+                <div class="post-meta">
+                    <time itemprop="datePublished" datetime="2026-02-18">Published 2026-02-18</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="post-hero" style="background-image: url('/blog/winery-spain-architecture-hero.png');"></div>
+
+            <div class="post-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">Ikonische spanische Weingutarchitektur: Eine Reise durch Design &amp; Terroir (2026)</span></nav><aside class="toc-box"><div class="toc-title">Auf dieser Seite</div><ul class="toc-items"><li><a class="toc-h2" href="#warum-ist-die-spanische-weingutarchitektur-so-einzigartig">Warum ist die spanische Weingutarchitektur so einzigartig?</a></li><li><a class="toc-h2" href="#wie-verschmelzen-tradition-und-moderne-in-der-spanischen-weingutarchitektur">Wie verschmelzen Tradition und Moderne in der spanischen Weingutarchitektur?</a></li><li><a class="toc-h2" href="#ikonische-regionen-und-ihre-architektonischen-juwelen">Ikonische Regionen und ihre architektonischen Juwelen</a></li><li><a class="toc-h2" href="#wer-sind-die-visionren-architekten-hinter-spaniens-weingtern">Wer sind die visionären Architekten hinter Spaniens Weingütern?</a></li><li><a class="toc-h2" href="#wie-verbessert-architektur-das-weinerlebnis">Wie verbessert Architektur das Weinerlebnis?</a></li><li><a class="toc-h2" href="#wie-integrieren-spanische-weingter-nachhaltiges-design">Wie integrieren spanische Weingüter nachhaltiges Design?</a></li><li><a class="toc-h2" href="#jenseits-der-sthetik-funktionale-designprinzipien">Jenseits der Ästhetik: Funktionale Designprinzipien</a></li><li><a class="toc-h2" href="#was-sind-die-wichtigsten-architektonischen-stile-in-spanischen-weingtern">Was sind die wichtigsten architektonischen Stile in spanischen Weingütern?</a></li><li><a class="toc-h2" href="#planung-ihrer-architektonischen-weintour-in-spanien">Planung Ihrer architektonischen Weintour in Spanien</a></li><li><a class="toc-h2" href="#die-zukunft-der-weingutarchitektur-in-spanien">Die Zukunft der Weingutarchitektur in Spanien</a></li></ul></aside><section id="warum-ist-die-spanische-weingutarchitektur-so-einzigartig"><h2 id="warum-ist-die-spanische-weingutarchitektur-so-einzigartig">Warum ist die spanische Weingutarchitektur so einzigartig?</h2><p><strong>Die spanische Weingutarchitektur zeichnet sich durch ihre tiefe Verbindung zum Terroir, einen reichen kulturellen Teppich und ein unerschütterliches Engagement für innovatives Design aus.</strong> Diese Mischung führt zu Strukturen, die nicht nur Gebäude sind, sondern integrale Bestandteile der Weinbaugeschichte, ähnlich dem unverwechselbaren Charakter, der in <a href="/blog/what-is-chianti-classico.html">Chianti Classico</a>-Gütern zu finden ist.</p><h3 id="terroir-basiertes-design">Terroir-basiertes Design</h3><p><strong>Viele spanische Weingüter sind so konzipiert, dass sie mit ihrem spezifischen Terroir harmonieren und alles von der Materialwahl bis zur Gebäudeausrichtung beeinflussen.</strong> Architekten lassen sich oft von der umgebenden Landschaft inspirieren und verwenden lokale Steine, Holz oder Erdtöne, die sich nahtlos in die Weinberge einfügen.</p><h3 id="einfluss-des-kulturerbes">Einfluss des Kulturerbes</h3><p><strong>Das spanische Kulturerbe, einschließlich maurischer Einflüsse, römischer Traditionen und regionaler Baupraktiken, prägt die Weingutarchitektur maßgeblich.</strong> Elemente wie Arkaden, Innenhöfe und spezifische Bauweisen zollen oft Spaniens reicher Geschichte Tribut.</p><h3 id="innovation-als-kernprinzip">Innovation als Kernprinzip</h3><p><strong>Spanische Weingutsbesitzer und Architekten stehen oft an der Spitze der Innovation und wagen es, mit kühnen Formen, neuen Materialien und nachhaltigen Technologien zu experimentieren.</strong> Dieser Innovationsdrang sprengt die Grenzen des traditionellen Weingutdesigns und steht im Gegensatz selbst zu den malerischsten traditionellen Gütern, wie sie unter <a href="/blog/best-wineries-toscana-2026.html">Toscana's besten Weingütern</a> zu finden sind.</p><figure><img src="winery-spain-architecture-img-1.png" alt="Außenansicht des Weinguts Marqués de Riscal von Frank Gehry" /><figcaption>Frank Gehrys Design für Marqués de Riscal, eine ikonische Mischung aus Metall und Stein in Rioja Alavesa.</figcaption></figure></section><section id="wie-verschmelzen-tradition-und-moderne-in-der-spanischen-weingutarchitektur"><h2 id="wie-verschmelzen-tradition-und-moderne-in-der-spanischen-weingutarchitektur">Wie verschmelzen Tradition und Moderne in der spanischen Weingutarchitektur?</h2><p><strong>Spanische Weingüter vereinen meisterhaft jahrhundertealte Weinbautraditionen mit wagemutigen modernen architektonischen Ausdrucksformen.</strong> Dieser Ansatz schafft eine dynamische visuelle Sprache, die die Vergangenheit respektiert und gleichzeitig entschlossen in die Zukunft blickt.</p><h3 id="historische-bodegas-neu-interpretiert">Historische Bodegas neu interpretiert</h3><p><strong>Viele historische Bodegas wurden sorgfältig renoviert, um ihren ursprünglichen Charme zu bewahren und gleichzeitig zeitgenössische Elemente für Produktion und Tourismus zu integrieren.</strong> Dies beinhaltet oft die Restaurierung alter Keller und das Hinzufügen moderner Besucherzentren oder Verkostungsräume.</p><h3 id="avantgardistische-strukturen">Avantgardistische Strukturen</h3><p><strong>Spanien beherbergt zahlreiche avantgardistische Weingutdesigns, die konventionelle Ästhetik herausfordern und unkonventionelle Formen, Materialien und Farben verwenden.</strong> Diese Strukturen werden oft zu architektonischen Ikonen, die Besucher weltweit anziehen.</p><blockquote><p>„Architektur ist nicht nur Ästhetik; es geht darum, Räume zu schaffen, die eine Geschichte erzählen, ein Produkt aufwerten und die Umwelt respektieren. Die spanische Weingutarchitektur veranschaulicht dieses Gleichgewicht wunderschön.“</p><cite>— Renommierter Architekt</cite></blockquote><h3 id="materialien-und-techniken">Materialien und Techniken</h3><p><strong>Architekten verwenden häufig eine Kombination aus traditionellen lokalen Materialien wie Stein und Holz zusammen mit modernen Elementen wie Stahl, Glas und Verbundplatten.</strong> Diese Fusion spiegelt ein Engagement für Erbe und technologischen Fortschritt wider.</p></section><section id="ikonische-regionen-und-ihre-architektonischen-juwelen"><h2 id="ikonische-regionen-und-ihre-architektonischen-juwelen">Ikonische Regionen und ihre architektonischen Juwelen</h2><p><strong>Spanien verfügt über mehrere Weinregionen, die nicht nur für ihre außergewöhnlichen Weine, sondern auch für ihre wegweisende Weingutarchitektur bekannt sind.</strong> Jede Region bietet eine eigene architektonische Erzählung, die ihre Weinphilosophie ergänzt.</p><h3 id="meisterwerke-der-rioja-alavesa">Meisterwerke der Rioja Alavesa</h3><p><strong>Rioja Alavesa ist wohl das Epizentrum des architektonischen Weintourismus in Spanien, mit Designs von weltbekannten Architekten.</strong> Bodegas wie Marqués de Riscal und Bodegas Ysios sind herausragende Beispiele.</p><h3 id="khne-statements-der-ribera-del-duero">Kühne Statements der Ribera del Duero</h3><p><strong>Ribera del Duero präsentiert Weingüter, die kühne architektonische Statements setzen und sich oft nahtlos in die dramatische Landschaft einfügen.</strong> Bodegas Protos und Portia sind bekannt für ihre zeitgenössischen Designs. Diese Designs bieten einen zeitgenössischen Kontrast zu den traditionelleren, aber ebenso schönen Gütern, die in einem Führer zu <a href="/blog/best-wineries-toscana-2026.html">Toscana's besten Weingütern</a> vorgestellt werden.</p><h3 id="kataloniens-modernistische-akzente">Kataloniens modernistische Akzente</h3><p><strong>Katalonien bietet Weingüter, die von der modernistischen Architektur beeinflusst sind, insbesondere in Regionen wie Penedès.</strong> Diese Designs zeichnen sich oft durch komplizierte Details, natürliches Licht und eine Verbindung zum künstlerischen Erbe der Region aus.</p><h3 id="jerez-kathedralen-weingter">Jerez' Kathedralen-Weingüter</h3><p><strong>Das Sherry-Dreieck, insbesondere um Jerez, beherbergt prächtige 'Kathedralen'-Weingüter mit hohen Decken und weitläufigen Räumen, die für eine optimale Sherry-Reifung konzipiert sind.</strong> Diese traditionellen Strukturen sind oft architektonische Wunderwerke für sich.</p></section><section id="wer-sind-die-visionren-architekten-hinter-spaniens-weingtern"><h2 id="wer-sind-die-visionren-architekten-hinter-spaniens-weingtern">Wer sind die visionären Architekten hinter Spaniens Weingütern?</h2><p><strong>Einige der weltweit renommiertesten Architekten haben ihr kreatives Genie in spanische Weingüter eingebracht und sie in globale architektonische Wahrzeichen verwandelt.</strong> Diese Kooperationen haben das Weingutdesign zu einer Kunstform erhoben und ziehen Enthusiasten über reine Weinliebhaber hinaus an.</p><h3 id="frank-gehrys-marqus-de-riscal">Frank Gehrys Marqués de Riscal</h3><p><strong>Frank Gehrys ikonisches Design für Marqués de Riscal in Elciego, Rioja Alavesa, besticht durch ein leuchtendes Titanbanddach, das die Farben des Weins widerspiegelt.</strong> Es ist eine verspielte und sofort erkennbare Struktur, die eine neue Ära für den spanischen Wein symbolisiert.</p><h3 id="santiago-calatravas-bodegas-ysios">Santiago Calatravas Bodegas Ysios</h3><p><strong>Santiago Calatrava entwarf Bodegas Ysios in Laguardia, Rioja Alavesa, mit einem markanten wellenförmigen Dach, das die Berge der Sierra de Cantabria widerspiegelt.</strong> Seine beeindruckende Struktur schafft ein starkes visuelles Statement vor der Kulisse der Weinberge.</p><figure><img src="winery-spain-architecture-img-2.png" alt="Außenansicht des Weinguts Bodegas Ysios von Santiago Calatrava" /><figcaption>Das wellenförmige Dach der Bodegas Ysios von Santiago Calatrava, das die umliegenden Berge widerspiegelt.</figcaption></figure><h3 id="richard-rogers-bodegas-protos">Richard Rogers' Bodegas Protos</h3><p><strong>Die Richard Rogers Partnership schuf Bodegas Protos in Peñafiel, Ribera del Duero, mit einem Design, das sowohl modern als auch tief in die Landschaft integriert ist.</strong> Das Gebäude weist fünf miteinander verbundene Parabeln auf, die verschiedene Produktionsbereiche beherbergen.</p><h3 id="philippe-mazires-abada-retuerta">Philippe Mazières' Abadía Retuerta</h3><p><strong>Philippe Mazières leitete die Restaurierung und Modernisierung der Abadía Retuerta in Sardón de Duero, Valladolid, und verwandelte eine Abtei aus dem 12. Jahrhundert in ein hochmodernes Weingut und Luxushotel.</strong> Dieses Projekt verbindet historische Bewahrung wunderschön mit moderner Funktionalität.</p></section><section id="wie-verbessert-architektur-das-weinerlebnis"><h2 id="wie-verbessert-architektur-das-weinerlebnis">Wie verbessert Architektur das Weinerlebnis?</h2><p><strong>Die Weingutarchitektur verbessert das Weinerlebnis erheblich, indem sie immersive Umgebungen schafft, die Besucher über den Weinbereitungsprozess und die Markenidentität aufklären, inspirieren und mit ihnen verbinden.</strong> Von geführten Touren bis zu Verkostungsräumen spielt das Design eine entscheidende Rolle.</p><h3 id="besucherfluss-und-immersion">Besucherfluss und Immersion</h3><p><strong>Architektonisches Design führt Besucher durch das Weingut, von den Weinbergen bis zu den Kellern, und schafft eine Erzählung, die sie in die Weinbereitungsreise eintauchen lässt.</strong> Durchdachte Grundrisse sorgen für ein nahtloses und fesselndes Erlebnis.</p><h3 id="optimale-klimatisierung-und-produktion">Optimale Klimatisierung und Produktion</h3><p><strong>Jenseits der Ästhetik sind architektonische Elemente wie Ausrichtung, Materialien und unterirdische Keller entscheidend für die Aufrechterhaltung optimaler Temperaturen und Luftfeuchtigkeit.</strong> Diese Präzision ist für die Qualität des Weins von entscheidender Bedeutung, einschließlich der Lagerbedingungen, die für eine Vielzahl von Weinen, selbst solche aus der <a href="/blog/what-is-glera-grape-2026.html">Glera-Traube</a>, geeignet sind.</p><h3 id="branding-und-identitt">Branding und Identität</h3><p><strong>Der architektonische Stil eines Weinguts wird oft zum Synonym für seine Marke und vermittelt deren Philosophie, Werte und sogar den Charakter seiner Weine.</strong> Es ist ein leistungsstarkes Marketinginstrument, das einen bleibenden Eindruck hinterlässt.</p><figure><img src="winery-spain-architecture-img-3.png" alt="Innenansicht des Fässerkellers der Bodegas Protos mit Holzfässern" /><figcaption>Der beeindruckende Fässerkeller der Bodegas Protos, der sowohl Funktion als auch Ästhetik vereint.</figcaption></figure></section><section id="wie-integrieren-spanische-weingter-nachhaltiges-design"><h2 id="wie-integrieren-spanische-weingter-nachhaltiges-design">Wie integrieren spanische Weingüter nachhaltiges Design?</h2><p><strong>Nachhaltigkeit ist ein zunehmend wichtiger Bestandteil der modernen spanischen Weingutarchitektur, die umweltfreundliche Praktiken von der Konstruktion bis zum Betrieb integriert.</strong> Dieses Engagement gewährleistet Umweltverantwortung neben exquisitem Design.</p><h3 id="energieeffizienz-und-grndcher">Energieeffizienz und Gründächer</h3><p><strong>Viele neue Weingüter integrieren passive Designstrategien, Solarpaneele und Gründächer, um den Energieverbrauch für Heizung und Kühlung zu senken.</strong> Diese Merkmale minimieren die Umweltbelastung und tragen oft zur Ästhetik des Gebäudes bei.</p><h3 id="wassermanagement-und-recycling">Wassermanagement und Recycling</h3><p><strong>Fortschrittliche Wassermanagementsysteme, einschließlich Regenwassernutzung und Abwasserrecycling, werden eingesetzt, um diese kostbare Ressource zu schonen.</strong> Dies ist besonders wichtig in Spaniens oft trockenen Regionen.</p><h3 id="lokale-materialien-und-umweltfreundliche-praktiken">Lokale Materialien und umweltfreundliche Praktiken</h3><p><strong>Die Verwendung von lokal gewonnenen und recycelten Materialien sowie Bauweisen, die Abfall minimieren, reduziert den CO2-Fußabdruck von Weingutsgebäuden.</strong> Dies unterstützt regionale Wirtschaften und den ökologischen Erhalt.</p></section><section id="jenseits-der-sthetik-funktionale-designprinzipien"><h2 id="jenseits-der-sthetik-funktionale-designprinzipien">Jenseits der Ästhetik: Funktionale Designprinzipien</h2><p><strong>Die spanische Weingutarchitektur priorisiert Funktionalität und stellt sicher, dass atemberaubende Ästhetik auch den komplexen und präzisen Anforderungen der Weinherstellung dient.</strong> Designelemente werden oft wegen ihrer praktischen Vorteile in Produktion und Lagerung gewählt.</p><h3 id="schwerkraftflusssysteme">Schwerkraftflusssysteme</h3><p><strong>Viele Weingüter sind mit Schwerkraftflusssystemen ausgestattet, um Trauben und Wein schonend zu bewegen, den Bedarf an Pumpen zu minimieren und die Belastung des Produkts zu reduzieren.</strong> Dieser Ansatz bedingt oft mehrstöckige oder terrassierte Gebäudestrukturen.</p><h3 id="temperatur-und-feuchtigkeitsregulierung">Temperatur- und Feuchtigkeitsregulierung</h3><p><strong>Unterirdische Keller, dicke Wände und natürliche Belüftungssysteme sind entscheidend für die Aufrechterhaltung stabiler Temperaturen und Luftfeuchtigkeit, ideal für Gärung, Reifung und Lagerung.</strong> Diese Umweltkontrollen sind für die Weinqualität von größter Bedeutung.</p><h3 id="fassreifekeller">Fassreifekeller</h3><p><strong>Keller sind sorgfältig entworfen, um Tausende von Eichenfässern zu beherbergen, oft mit spezifischer Beleuchtung, Luftzirkulation und Temperaturkontrolle, um optimale Reifebedingungen zu gewährleisten.</strong> Der Umfang und das Design dieser Räume sind oft atemberaubend.</p></section><section id="was-sind-die-wichtigsten-architektonischen-stile-in-spanischen-weingtern"><h2 id="was-sind-die-wichtigsten-architektonischen-stile-in-spanischen-weingtern">Was sind die wichtigsten architektonischen Stile in spanischen Weingütern?</h2><p><strong>Spanische Weingüter zeigen eine vielfältige Palette architektonischer Stile, von tief verwurzelten traditionellen Formen bis hin zu hochmodernen und avantgardistischen Designs.</strong> Dieses Spektrum spiegelt die sich entwickelnde Natur des Weinbaus und Designs wider und spricht verschiedene Geschmäcker an.</p><table><thead><tr><th>Architektonischer Stil</th><th>Hauptmerkmale</th><th>Beispiel-Weingüter</th></tr></thead><tbody><tr><td>Zeitgenössisch/Avantgarde</td><td>Kühne Formen, innovative Materialien (Titan, Stahl), beeindruckende visuelle Wirkung, oft konzeptuell.</td><td>Marqués de Riscal, Bodegas Ysios, Bodegas Portia</td></tr><tr><td>Traditionell/Regional</td><td>Lokaler Stein, Terrakotta, historische Elemente, fügt sich in die Landschaft ein, oft rustikal oder klassisch.</td><td>Viele kleinere Familienbodegas, ältere restaurierte Güter</td></tr><tr><td>Minimalistisch/Industriell</td><td>Klare Linien, unverkleideter Beton/Stahl, funktionale Ästhetik, Fokus auf Effizienz, oft schlichte Eleganz.</td><td>Bodegas Protos, einige städtische Weingüter</td></tr><tr><td>Modernistisch (Katalanisch)</td><td>Jugendstil-Einflüsse, organische Formen, lebendige Farben, oft filigrane Details.</td><td>Ausgewählte Weingüter in Katalonien (z.B. Cava-Produktionsstätten)</td></tr></tbody></table></section><section id="planung-ihrer-architektonischen-weintour-in-spanien"><h2 id="planung-ihrer-architektonischen-weintour-in-spanien">Planung Ihrer architektonischen Weintour in Spanien</h2><p><strong>Die Planung einer architektonischen Weintour in Spanien beinhaltet die Auswahl wichtiger Regionen, das Verständnis ihrer einzigartigen Angebote und die Vorbereitung auf ein immersives Erlebnis.</strong> Eine gut geplante Reiseroute maximiert Ihre Wertschätzung für Wein und Design und liefert vielleicht sogar Ideen für die <a href="/blog/best-wine-pairing-sushi-2026.html">beste Weinbegleitung für Sushi</a>, die Sie später genießen könnten.</p><h3 id="ihre-route-whlen">Ihre Route wählen</h3><p><strong>Die Entscheidung über Ihre Reiseroute erfordert Recherche über die Regionen und spezifischen Weingüter, die Sie besuchen möchten.</strong></p><ol><li><strong>Schlüsselregionen identifizieren:</strong> Konzentrieren Sie sich auf Gebiete wie Rioja Alavesa (für Gehry, Calatrava), Ribera del Duero (für Rogers) oder Jerez (für traditionelle Kathedralen-Bodegas).</li><li><strong>Weingüter recherchieren:</strong> Suchen Sie nach einzelnen Weingütern, die für ihre Architektur bekannt sind, und überprüfen Sie deren Besucherrichtlinien und Öffnungszeiten.</li><li><strong>Logistik berücksichtigen:</strong> Planen Sie Reisezeiten zwischen Weingütern und Regionen ein. Ein Mietwagen wird oft für Flexibilität empfohlen.</li><li><strong>Im Voraus buchen:</strong> Viele ikonische Weingüter erfordern Reservierungen für Touren und Verkostungen, besonders während der Hochsaison.</li><li><strong>Tempo planen:</strong> Überladen Sie Ihren Zeitplan nicht. Nehmen Sie sich Zeit, um das Erlebnis zu genießen, die Architektur zu erkunden und Verkostungen zu genießen.</li></ol><h3 id="besuche-buchen">Besuche buchen</h3><p><strong>Es ist entscheidend, Ihre Weingutstouren und Verkostungen weit im Voraus zu buchen, insbesondere für weltbekannte architektonische Stätten.</strong> Viele bieten Online-Buchungsportale an, und einige stellen exklusive Architekturtouren zur Verfügung.</p><h3 id="unterkunft-und-gastronomie">Unterkunft und Gastronomie</h3><p><strong>Verbinden Sie Ihre Architekturtour mit Spaniens außergewöhnlicher Gastronomie und vielfältigen Unterkunftsmöglichkeiten.</strong> Viele Regionen bieten Boutique-Hotels in oder in der Nähe von Weingütern, die ein umfassendes immersives Erlebnis bieten.</p></section><section id="die-zukunft-der-weingutarchitektur-in-spanien"><h2 id="die-zukunft-der-weingutarchitektur-in-spanien">Die Zukunft der Weingutarchitektur in Spanien</h2><p><strong>Die Zukunft der spanischen Weingutarchitektur wird voraussichtlich eine weitere Integration fortschrittlicher Technologie, ein verstärktes Erlebnisdesign und eine fortgesetzte Anpassung an die Herausforderungen des Klimawandels mit sich bringen.</strong> Erwarten Sie innovativere und nachhaltigere Strukturen, die Grenzen verschieben und sicherstellen, dass Spanien weiterhin führend im Weingutdesign bleibt.</p><h3 id="technologische-integration">Technologische Integration</h3><p><strong>Zukünftige Weingüter werden wahrscheinlich noch mehr intelligente Technologien für Präzisionsweinbau, Energiemanagement und Besucherinteraktion integrieren.</strong> Digitale Anzeigen, Augmented-Reality-Touren und automatisierte Systeme könnten zum Standard werden.</p><h3 id="erlebnisorientiertes-design">Erlebnisorientiertes Design</h3><p><strong>Der Fokus wird sich zunehmend auf die Schaffung multisensorischer Erlebnisse verlagern, die Besucher über die Weinverkostung hinaus ansprechen.</strong> Dazu könnten Kunstinstallationen, gastronomische Erlebnisse und interaktive Bildungsausstellungen gehören, die in die Architektur integriert sind.</p><h3 id="anpassung-an-den-klimawandel">Anpassung an den Klimawandel</h3><p><strong>Architekten werden weiterhin innovative Lösungen entwickeln, um den Auswirkungen des Klimawandels wie extremen Temperaturen und Wasserknappheit entgegenzuwirken.</strong> Erwarten Sie mehr trockenresistente Landschaften, fortschrittliche Wärmedämmung und passive Kühltechniken.</p></section>
+            </div>
+
+            <div class="share-section">
+                <span class="share-label">Share this article</span>
+                <div class="share-group">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/winery-spain-architecture.html"
+                        target="_blank" class="share-icon-btn" title="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/winery-spain-architecture.html&text=Ikonische spanische Weingutarchitektur: Eine Reise durch Design &amp; Terroir (2026)"
+                        target="_blank" class="share-icon-btn" title="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/winery-spain-architecture.html"
+                        target="_blank" class="share-icon-btn" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Ikonische spanische Weingutarchitektur: Eine Reise durch Design &amp; Terroir (2026)%20https://yas.wine/blog/winery-spain-architecture.html"
+                        target="_blank" class="share-icon-btn" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://yas.wine/blog/winery-spain-architecture.html&text=Ikonische spanische Weingutarchitektur: Eine Reise durch Design &amp; Terroir (2026)"
+                        target="_blank" class="share-icon-btn" title="Share on Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z" />
+                        </svg>
+                    </a>
+                    <div class="share-icon-btn" onclick="copyUrl()" title="Copy Link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function copyUrl() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            </script>
+
+            
+
+        </article>
+    </main>
+
+    <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
+        });
+    </script>
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+
+</html>
