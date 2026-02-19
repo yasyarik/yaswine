@@ -163,6 +163,16 @@ body { background: var(--bg-dark) !important; }
       <div class="filter-group" id="filterGroup"></div>
     </div>
     <div class="blog-grid">
+            <!-- FACTORY:aged-like-fine-wine-2026 -->
+            <a href="/blog/aged-like-fine-wine-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('aged-like-fine-wine-2026-img-1.png');"></div>
+                <div class="card-content">
+                    <span class="category">Buying Guides</span>
+                    <h3 class="card-title">Aged Like a Fine Wine: Unlocking the Secrets of Longevity in 2026</h3>
+                    <p class="card-excerpt">Discover how wines age, the factors influencing their longevity, and the best varietals to cellar in 2026. Learn to appreciate evolving flavors and aromas.</p>
+                </div>
+            </a>
+
             <!-- FACTORY:wine-gifts-men-2026 -->
             <a href="/blog/wine-gifts-men-2026.html" class="blog-card">
                 <div class="card-image" style="background-image: url('wine-gifts-men-2026-img-1.png');"></div>
@@ -400,7 +410,8 @@ function copyUrlBlog() {
       const PAGE_SIZE = 12;
       const grid = document.querySelector('.blog-grid');
       const empty = document.getElementById('empty');
-      const topFilters = document.getElementById('blogFilters');\n      const bottomPager = document.getElementById('blogPagination');
+      const topFilters = document.getElementById('blogFilters');
+      const bottomPager = document.getElementById('blogPagination');
       const filterGroup = document.getElementById('filterGroup');
       const pagerGroup = document.getElementById('pagerGroup');
       const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -526,7 +537,8 @@ function copyUrlBlog() {
         }
       } catch (_) {}
 
-      topFilters.style.display = 'flex';\n      bottomPager.style.display = 'flex';
+      topFilters.style.display = 'flex';
+      bottomPager.style.display = 'flex';
       render();
     }
 
