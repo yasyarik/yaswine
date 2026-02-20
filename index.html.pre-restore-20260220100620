@@ -1,0 +1,1314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YAS Wine Blog</title>
+    <meta name="description" content="Explore practical wine guides, grape deep-dives, food pairings, winery travel tips, and buying advice with clear, actionable insights.">
+
+<link rel="canonical" href="https://yas.wine/">
+    <link rel="alternate" hreflang="en" href="https://yas.wine/">
+    <link rel="alternate" hreflang="ru" href="https://yas.wine/ru/">
+    <link rel="alternate" hreflang="es" href="https://yas.wine/es/">
+    <link rel="alternate" hreflang="de" href="https://yas.wine/de/">
+    <link rel="alternate" hreflang="fr" href="https://yas.wine/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://yas.wine/">
+
+<link rel="icon" type="image/png" href="/logo-yas-wine.png" />
+  <style>
+    :root {
+      --bg-dark: #12070c;
+      --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+      --accent: #b63a5a;
+      --accent-hover: #962f49;
+      --glass-bg: rgba(255,255,255,.035);
+      --glass-border: rgba(255,255,255,.12);
+      --text: #f4edf0;
+      --dim: #cfbec5;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+    body{background:var(--bg-dark);color:var(--text);overflow-x:hidden}
+    .fixed-bg{position:fixed;inset:0;z-index:-1;background:var(--bg-gradient)}
+    .fixed-bg:before{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+      radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+      radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%);
+      background-size:200% 200%;animation:shift 34s ease infinite}
+    @keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+    .container{max-width:1280px;margin:0 auto;padding:0 24px}
+    nav{padding:24px 0;display:flex;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:20;transition:.25s}
+    nav.nav-scrolled{background:rgba(18,7,12,.85);backdrop-filter:blur(12px);padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-container{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;width:100%}
+    .logo{display:flex;align-items:center;text-decoration:none}
+    .logo-img{height:64px;width:auto;object-fit:contain}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end;row-gap:8px}
+    .nav-links a{color:var(--dim);text-decoration:none;font-size:13px;font-weight:700;white-space:nowrap}
+    .nav-links a:hover{color:#fff}
+
+    .hero{min-height:74vh;padding:120px 0 36px;display:flex;align-items:center}
+    .hero-wrap{display:grid;grid-template-columns:0.6fr 1fr;gap:26px;align-items:center;width:100%}
+    .hero h1{font-size:clamp(34px,6vw,58px);line-height:1.07;margin-bottom:12px}
+    .hero p{font-size:clamp(17px,2.1vw,20px);color:var(--dim)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 30px;border-radius:10px;font-weight:800;text-decoration:none;transition:.2s}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px)}
+    .hero-art{min-height:420px;border-radius:24px;border:1px solid var(--glass-border);background:rgba(255,255,255,.02);box-shadow:0 24px 70px rgba(0,0,0,.45);padding:14px;position:relative}
+    .hero-gallery{display:flex;gap:0;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding:0;scrollbar-width:none;-ms-overflow-style:none}
+    .hero-thumb{flex:0 0 100%;width:100%;aspect-ratio:1/1;scroll-snap-align:start;border-radius:16px;background:#2a1119 center/cover no-repeat;border:1px solid rgba(255,255,255,.12);display:block;position:relative;overflow:hidden}
+    .hero-thumb-title{position:absolute;right:10px;bottom:10px;max-width:84%;padding:8px 10px;border-radius:10px;background:rgba(18,7,12,.78);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(4px);color:#fff;font-size:13px;line-height:1.3;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .hero-nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid var(--glass-border);background:rgba(18,7,12,.88);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:4}
+    .hero-prev{left:10px}.hero-next{right:10px}
+    .hero-gallery::-webkit-scrollbar{display:none}
+
+    .section{margin-top:22px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:22px;padding:26px}
+    .section h2{font-size:36px;margin-bottom:10px}
+    .section p.lead{color:var(--dim);margin-bottom:20px}
+
+    .uc-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:stretch}
+    .uc-card{text-decoration:none;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);border-radius:20px;padding:20px 12px;display:flex;flex-direction:column;align-items:center;text-align:center;color:inherit;transition:.2s;min-height:236px}
+    .uc-card:hover{transform:translateY(-6px);border-color:var(--accent)}
+    .uc-card h3{font-size:17px;line-height:1.25;margin-bottom:8px}
+    .uc-card p{font-size:13px;color:var(--dim);line-height:1.4;min-height:56px}
+    .uc-card span{margin-top:12px;color:var(--accent);font-weight:700}
+    .cat-icon{width:62px;height:62px;border-radius:16px;margin-bottom:12px;padding:12px;background:linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.2);box-shadow:0 10px 30px rgba(0,0,0,.32);transition:transform .2s ease,border-color .2s ease}
+    .uc-card:hover .cat-icon{transform:translateY(-1px) scale(1.03);border-color:rgba(233,135,163,.7)}
+
+    .carousel-wrap{position:relative}
+    .slider-arrow{position:absolute;top:58%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid var(--glass-border);background:rgba(18,7,12,.85);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3}
+    #prev{left:-16px} #next{right:-16px}
+    .blog-carousel{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(320px,1fr);gap:14px;overflow-x:auto;scroll-behavior:smooth;padding-bottom:8px}
+    .blog-card{text-decoration:none;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);border-radius:22px;overflow:hidden;transition:.2s;color:inherit;height:585px;display:flex;flex-direction:column}
+    .blog-card:hover{transform:translateY(-8px);border-color:var(--accent)}
+    .blog-card .img{aspect-ratio:1/1;height:auto;background:#241018 center/124% no-repeat}
+    .blog-card .body{padding:22px;display:flex;flex-direction:column;flex:1}
+    .pill{display:inline-block;background:rgba(182,58,90,.16);color:#f4cad5;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:700;text-transform:uppercase}
+    .blog-card h3{margin:14px 0 10px;font-size:19px;line-height:1.32;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:76px}
+    .blog-card p{color:var(--dim);font-size:14px;margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;min-height:84px}
+    .read{color:var(--accent);font-size:14px;font-weight:700;margin-top:auto}
+
+    .cat-row{margin-top:24px}
+    .cat-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+    .cat-head h3{font-size:24px}
+    .cat-wrap{position:relative}
+    .cat-carousel{display:grid;grid-auto-flow:column;grid-auto-columns:320px;gap:14px;overflow-x:auto;scroll-behavior:smooth;padding:0 54px 8px}
+    .cat-arrow{position:absolute;top:54%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid var(--glass-border);background:rgba(18,7,12,.85);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:12;pointer-events:auto;transition:.2s}
+    .cat-arrow.prev{left:8px}.cat-arrow.next{right:8px}
+    .cat-arrow:hover{background:var(--accent);border-color:var(--accent)}
+
+    .featured-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch}
+    .featured-main{display:block;min-height:360px;border-radius:20px;overflow:hidden;position:relative;border:1px solid var(--glass-border);background:#2a1119 center/cover no-repeat;text-decoration:none;color:#fff}
+    .featured-overlay{position:absolute;inset:auto 0 0 0;padding:18px;background:linear-gradient(to top,rgba(8,4,6,.92),rgba(8,4,6,.14));}
+    .featured-overlay h3{font-size:28px;line-height:1.15;margin:0 0 8px}
+    .featured-overlay p{color:#eadbe1;font-size:14px;margin:0}
+    .featured-points{display:grid;gap:10px}
+    .point{padding:12px 14px;border:1px solid var(--glass-border);border-radius:14px;background:rgba(255,255,255,.03);font-size:14px;color:var(--dim)}
+
+    .tools-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+    .tool-card{border:1px solid var(--glass-border);border-radius:16px;background:rgba(255,255,255,.03);padding:14px}
+    .tool-card h3{font-size:17px;margin:0 0 8px}
+    .tool-card p{font-size:13px;color:var(--dim);margin:0 0 10px}
+    .tool-card select,.tool-card input{width:100%;padding:10px 11px;border-radius:10px;border:1px solid var(--glass-border);background:rgba(255,255,255,.03);color:var(--text);font-size:14px;margin-bottom:8px}
+    .tool-result{font-size:13px;color:#f4dde4;min-height:36px}
+
+    .paths-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+    .path-col{border:1px solid var(--glass-border);border-radius:16px;background:rgba(255,255,255,.03);padding:14px}
+    .path-col h3{font-size:18px;margin:0 0 8px}
+    .path-col ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    .path-col a{color:#f4edf0;text-decoration:none;font-size:14px;line-height:1.35}
+    .path-col a:hover{color:#fff;text-decoration:underline}
+
+    .insights-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .insight{border:1px solid var(--glass-border);border-radius:14px;background:rgba(255,255,255,.03);padding:14px}
+    .insight .k{font-size:28px;font-weight:800;line-height:1.1}
+    .insight .l{font-size:13px;color:var(--dim);margin-top:6px}
+
+    .sub-wrap{max-width:760px;margin:0 auto}
+    .sub-wrap form{display:grid;gap:12px}
+    .sub-wrap input,.sub-wrap textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--glass-border);background:rgba(255,255,255,.03);color:var(--text);font-size:15px}
+    .sub-wrap textarea{min-height:120px;resize:vertical}
+    .status{display:none;margin-bottom:10px;text-align:center;font-weight:700}
+
+    .pairing-layout{display:grid;grid-template-columns:.38fr .62fr;gap:16px;align-items:stretch}
+    .pairing-left{border:1px solid var(--glass-border);border-radius:16px;padding:16px;background:rgba(255,255,255,.03);position:sticky;top:92px;min-height:100%;display:grid;grid-template-rows:auto 1fr auto;gap:12px}
+    .pairing-seo{font-size:13px;color:var(--dim);line-height:1.55;margin:0 0 12px}
+    .dish-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+    .dish-tile{display:flex;gap:10px;align-items:center;border:1px solid var(--glass-border);background:rgba(255,255,255,.03);border-radius:12px;padding:10px;text-align:left;cursor:pointer;transition:all .18s ease;min-height:76px}
+    .dish-tile:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.24)}
+    .dish-tile.active{border-color:rgba(255,255,255,.42);box-shadow:0 0 0 1px rgba(255,255,255,.18) inset}
+    .dish-thumb{width:62px;height:62px;border-radius:12px;object-fit:cover;flex:0 0 62px;background:#2a1119}
+    .dish-name{font-size:14px;font-weight:700;line-height:1.3;color:#fff}
+
+    .style-tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:4px}
+    .style-tab{padding:11px 8px;border-radius:10px;border:1px solid var(--glass-border);background:rgba(255,255,255,.03);color:var(--text);font-size:13px;font-weight:700;cursor:pointer}
+    .style-tab.active{background:rgba(182,58,90,.35);border-color:rgba(255,255,255,.32)}
+
+    .pairing-right{display:grid;gap:12px;align-content:start}
+    .pairing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;grid-auto-rows:1fr}
+    .pair-card{border:1px solid var(--glass-border);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.03);cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;display:flex;flex-direction:column;min-height:385px}
+    .pair-card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.24);box-shadow:0 12px 28px rgba(0,0,0,.26)}
+    .pair-img{height:250px;background:#2a1119 center/contain no-repeat}
+    .pair-body{padding:10px;display:grid;gap:4px;align-content:start;flex:1}
+    .pair-body h3{font-size:15px;margin:0 0 5px;line-height:1.25}
+    .pair-body p{font-size:12px;color:var(--dim);margin:0 0 5px;line-height:1.35}
+    .pairing-note{color:#f0dce4;font-size:13px;margin:2px 0 0}
+
+    .route-layout{display:grid;grid-template-columns:.42fr .58fr;gap:12px;align-items:stretch;min-height:560px}
+    .route-map{height:560px;border-radius:16px;border:1px solid var(--glass-border);background:#1d0d13;position:relative;overflow:hidden}
+    .route-hero{position:absolute;inset:0;background:center/cover no-repeat;transform:scale(1.08);opacity:1;filter:none}
+    .route-legend{position:absolute;left:14px;right:14px;bottom:12px;display:grid;gap:8px}
+    .route-legend h4{margin:0;font-size:16px;color:#fff}
+    .route-info{height:560px;border:1px solid var(--glass-border);border-radius:16px;background:rgba(255,255,255,.03);padding:14px;display:flex;flex-direction:column;gap:10px}
+    .route-info h3{font-size:22px;margin:0 0 6px}
+    .route-info p{font-size:14px;color:var(--dim);margin:0}
+    .route-info ol{margin:0;padding-left:18px;display:grid;gap:6px;max-height:220px;overflow:auto}
+    .route-info li{font-size:14px;color:#f4edf0}
+    .route-list{display:grid;gap:8px;margin:6px 0 2px}
+    .route-item{width:100%;text-align:left;padding:10px 12px;border-radius:10px;border:1px solid var(--glass-border);background:rgba(255,255,255,.03);color:var(--text);font-weight:700;cursor:pointer}
+    .route-item.active{border-color:rgba(255,255,255,.34);background:rgba(182,58,90,.35)}
+    #routeShowMap{align-self:flex-start;margin-top:auto}
+    .route-info.map-open #routeShowMap{margin-top:0}
+    .route-embed{margin-top:10px;border:1px solid var(--glass-border);border-radius:12px;overflow:hidden;display:none;flex:1;min-height:0}
+    .route-embed.open{display:flex;flex-direction:column}
+    .route-embed-actions{display:flex;flex-wrap:wrap;gap:8px;padding:10px;border-bottom:1px solid var(--glass-border);background:rgba(255,255,255,.03)}
+    .route-embed-actions .btn{padding:10px 12px;font-size:13px}
+    .route-embed-actions .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+    .route-embed iframe{width:100%;height:auto;flex:1;min-height:0;border:0}
+    .route-info.map-open #routeTitle,
+    .route-info.map-open #routeDuration,
+    .route-info.map-open #routeStops,
+    .route-info.map-open #routeList{display:none}
+
+    .pulse-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .pulse-card{border:1px solid var(--glass-border);border-radius:14px;background:rgba(255,255,255,.03);padding:14px}
+    .pulse-value{font-size:34px;font-weight:800;line-height:1.05}
+    .pulse-label{font-size:13px;color:var(--dim);margin-top:6px}
+    .pulse-meta{font-size:12px;color:#e9c8d3;margin-top:8px}
+
+    footer{border-top:1px solid var(--glass-border);padding:40px 0;text-align:center;color:var(--dim);font-size:14px;margin-top:28px}
+    footer a{color:var(--dim);text-decoration:none;margin:0 10px}
+
+    @media (max-width:1280px){.uc-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+    @media (max-width:1120px){.hero-wrap{grid-template-columns:0.6fr 1fr;min-height:214px}.uc-card h3{font-size:15px}.uc-card p{font-size:12px;min-height:64px}.cat-icon{width:52px;height:52px;padding:10px}}
+    @media (max-width:900px){.uc-grid{grid-template-columns:repeat(2,1fr)}.pairing-layout{grid-template-columns:1fr}.pairing-left{position:static}.pairing-grid{grid-template-columns:1fr 1fr}.route-layout{grid-template-columns:1fr;min-height:unset}.route-map,.route-info{height:auto;min-height:420px}.pulse-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:740px){.cat-carousel{grid-auto-columns:280px;}.uc-grid{grid-template-columns:1fr}.logo-img{height:52px}.nav-links{gap:10px;justify-content:flex-start}.nav-links a{font-size:12px}.blog-carousel{grid-auto-columns:minmax(280px,1fr)}.hero-thumb{flex-basis:100%}.blog-card{height:500px}#prev,#next{display:none}.dish-grid{grid-template-columns:1fr}.pairing-grid,.pulse-grid{grid-template-columns:1fr}}
+  </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+</head>
+<body>
+  <div class="fixed-bg"></div>
+  <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a id="navHome" href="/">Home</a>
+        <a id="navBlog" href="/blog/">Blog</a>
+        <a id="navCategories" href="#coreCategories">Categories</a>
+        <a id="navFoodPairing" href="#catFoodPairing">Food Pairing</a>
+        <a id="navPairingLab" href="#pairingLabSection">Pairing Lab</a>
+        <a id="navWineries" href="#catWineriesTravel">Wineries &amp; Travel</a>
+        <a id="navRoutes" href="#routesSection">Route Maps</a>
+        <a id="navRegions" href="#catWineRegions">Wine Regions</a>
+        <a id="navPulse" href="#wineStatsSection">Wine Pulse</a>
+        <a id="navGrapes" href="#catGrapeVarieties">Grape Varieties</a>
+        <a id="navBuying" href="#catBuyingGuides">Buying Guides</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <h1 id="heroTitle">YAS Wine: practical insights about Wine</h1>
+        <p id="heroLead">Actionable guides and frameworks for Wine.</p>
+        <a class="btn btn-primary" id="heroCta" href="/blog/" style="margin-top:18px">Read latest posts</a>
+      </div>
+      <div class="hero-art"><button class="hero-nav hero-prev" id="heroPrev" aria-label="Previous">‹</button><button class="hero-nav hero-next" id="heroNext" aria-label="Next">›</button><div class="hero-gallery" id="heroGallery"><a href="/blog/aged-like-fine-wine-guide-2026.html" class="hero-thumb" style="background-image:url('/blog/aged-like-fine-wine-guide-2026-img-1.webp')" aria-label="Aged Like Fine Wine: A 2026 Guide to Longevity, Grapes &amp; Buying"><span class="hero-thumb-title">Aged Like Fine Wine: A 2026 Guide to Longevity, Grapes &amp; Buying</span></a><a href="/blog/unveiling-wine-gems-2026.html" class="hero-thumb" style="background-image:url('/blog/unveiling-wine-gems-2026-img-1.webp')" aria-label="Unearthing Unique Wines: The &#x27;Giraffe&#x27; of the Cellar and Memorable Pours"><span class="hero-thumb-title">Unearthing Unique Wines: The &#x27;Giraffe&#x27; of the Cellar and Memorable Pours</span></a><a href="/blog/italy-wine-growing-regions-2026.html" class="hero-thumb" style="background-image:url('/blog/italy-wine-growing-regions-2026-img-1.png')" aria-label="Italy&#x27;s Premier Wine Regions 2026: Grapes, Pairings &amp; Buying Guide"><span class="hero-thumb-title">Italy&#x27;s Premier Wine Regions 2026: Grapes, Pairings &amp; Buying Guide</span></a><a href="/blog/spanish-wine-regions-guide-2026.html" class="hero-thumb" style="background-image:url('/blog/spanish-wine-regions-guide-2026-img-1.png')" aria-label="Spanish Wine Regions 2026: An Expert Guide to Grapes, Wineries &amp; Buying"><span class="hero-thumb-title">Spanish Wine Regions 2026: An Expert Guide to Grapes, Wineries &amp; Buying</span></a><a href="/blog/global-grape-map-2026.html" class="hero-thumb" style="background-image:url('/blog/global-grape-map-2026-img-1.png')" aria-label="Global Grape Map 2026: An Essential Guide to Where Wine Grapes Grow"><span class="hero-thumb-title">Global Grape Map 2026: An Essential Guide to Where Wine Grapes Grow</span></a><a href="/blog/most-sour-wine-grapes-2026.html" class="hero-thumb" style="background-image:url('/blog/most-sour-wine-grapes-2026-img-1.png')" aria-label="The Most Sour Wine Grapes: A Sommelier&#x27;s Guide to Acidity in 2026"><span class="hero-thumb-title">The Most Sour Wine Grapes: A Sommelier&#x27;s Guide to Acidity in 2026</span></a><a href="/blog/how-to-pair-pinot-noir-dinner-2026.html" class="hero-thumb" style="background-image:url('/blog/how-to-pair-pinot-noir-dinner-2026-img-1.png')" aria-label="How to Pair Pinot Noir with Dinner in 2026: An Expert Guide"><span class="hero-thumb-title">How to Pair Pinot Noir with Dinner in 2026: An Expert Guide</span></a><a href="/blog/how-to-choose-red-wine-for-steak-2026.html" class="hero-thumb" style="background-image:url('/blog/how-to-choose-red-wine-for-steak-2026-img-1.png')" aria-label="How to Choose Red Wine for Steak in 2026: An Expert Sommelier&#x27;s Guide"><span class="hero-thumb-title">How to Choose Red Wine for Steak in 2026: An Expert Sommelier&#x27;s Guide</span></a><a href="/blog/what-is-glera-grape-2026.html" class="hero-thumb" style="background-image:url('/blog/what-is-glera-grape-2026-img-1.png')" aria-label="What is Glera Grape? Unveiling the Heart of Prosecco in 2026"><span class="hero-thumb-title">What is Glera Grape? Unveiling the Heart of Prosecco in 2026</span></a><a href="/blog/wine-country-gift-baskets-2026.html" class="hero-thumb" style="background-image:url('/blog/wine-country-gift-baskets-2026-img-1.png')" aria-label="The Ultimate Guide to Wine Country Gift Baskets in 2026"><span class="hero-thumb-title">The Ultimate Guide to Wine Country Gift Baskets in 2026</span></a><a href="/blog/aged-like-fine-wine-2026.html" class="hero-thumb" style="background-image:url('/blog/aged-like-fine-wine-2026-img-1.png')" aria-label="Aged Like a Fine Wine: Unlocking the Secrets of Longevity in 2026"><span class="hero-thumb-title">Aged Like a Fine Wine: Unlocking the Secrets of Longevity in 2026</span></a><a href="/blog/wine-gifts-men-2026.html" class="hero-thumb" style="background-image:url('/blog/wine-gifts-men-2026-img-1.png')" aria-label="Best Wine Gifts for Men in 2026: An Expert&#x27;s Guide to Thoughtful Presents"><span class="hero-thumb-title">Best Wine Gifts for Men in 2026: An Expert&#x27;s Guide to Thoughtful Presents</span></a></div></div>
+    </div>
+  </header>
+
+    <section class="section container" id="coreCategories">
+    <h2 id="coreCategoriesTitle">Core Wine Categories</h2>
+    <p class="lead" id="coreCategoriesLead">Every article belongs to one of these categories and is auto-grouped in carousels below.</p>
+    <div class="uc-grid">
+      <a class="uc-card" href="/blog/?category=Wineries%20%26%20Travel"><img class="cat-icon" src="/assets/category-icons/wineries-travel.svg" alt="Wineries and travel"><h3 id="catCard1Title">Wineries &amp; Travel</h3><p id="catCard1Desc">Routes, estates, cellar visits, and wine tourism plans.</p><span class="catExplore">Explore →</span></a>
+      <a class="uc-card" href="/blog/?category=Wine%20Regions"><img class="cat-icon" src="/assets/category-icons/wine-regions.svg" alt="Wine regions"><h3 id="catCard2Title">Wine Regions</h3><p id="catCard2Desc">Terroir, appellations, and region-by-region comparisons.</p><span class="catExplore">Explore →</span></a>
+      <a class="uc-card" href="/blog/?category=Grape%20Varieties"><img class="cat-icon" src="/assets/category-icons/grape-varieties.svg" alt="Grape varieties"><h3 id="catCard3Title">Grape Varieties</h3><p id="catCard3Desc">Profiles, flavor maps, and practical grape selection tips.</p><span class="catExplore">Explore →</span></a>
+      <a class="uc-card" href="/blog/?category=Food%20Pairing"><img class="cat-icon" src="/assets/category-icons/food-pairing.svg" alt="Food pairing"><h3 id="catCard4Title">Food Pairing</h3><p id="catCard4Desc">Meal pairings that improve taste and dining experience.</p><span class="catExplore">Explore →</span></a>
+      <a class="uc-card" href="/blog/?category=Buying%20Guides"><img class="cat-icon" src="/assets/category-icons/buying-guides.svg" alt="Buying guides"><h3 id="catCard5Title">Buying Guides</h3><p id="catCard5Desc">Actionable buying checklists and bottle selection guides.</p><span class="catExplore">Explore →</span></a>
+    </div>
+  </section>
+
+  <section class="section container" id="catFoodPairing">
+    <h2 id="foodPairingTitle">Food Pairing</h2>
+    <p class="lead" id="foodPairingLead">Latest posts in Food Pairing.</p>
+    <div id="categoryRowsFoodPairing"><div class="cat-row"><div class="cat-wrap"><button class="cat-arrow prev" data-target="catCarousel_food-pairing_0">‹</button><button class="cat-arrow next" data-target="catCarousel_food-pairing_0">›</button><div class="cat-carousel" id="catCarousel_food-pairing_0"><a class="blog-card" href="/blog/how-to-pair-pinot-noir-dinner-2026.html"><div class="img" style="background-image:url('/blog/how-to-pair-pinot-noir-dinner-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>How to Pair Pinot Noir with Dinner in 2026: An Expert Guide</h3><p>Master Pinot Noir food pairings in 2026 with this expert guide. Discover ideal dishes, regional differences, serving tips, and buying advice for perfect meals.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/how-to-choose-red-wine-for-steak-2026.html"><div class="img" style="background-image:url('/blog/how-to-choose-red-wine-for-steak-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>How to Choose Red Wine for Steak in 2026: An Expert Sommelier&#x27;s Guide</h3><p>Master the art of pairing red wine with steak in 2026. This guide covers top grape varieties, regions, expert tips, and buying advice for perfect matches: answe</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-wine-pizza-pairing-2026.html"><div class="img" style="background-image:url('/blog/best-wine-pizza-pairing-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>Best Wine and Pizza Pairing in 2026: A Sommelier&#x27;s Guide to Perfect Matches</h3><p>Discover the ultimate wine and pizza pairings for 2026. This expert guide helps you choose the perfect wine for every pizza, from classic Margherita to gourmet.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-wine-pairing-sushi-2026.html"><div class="img" style="background-image:url('/blog/best-wine-pairing-sushi-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>Best Wine Pairing for Sushi in 2026: A Sommelier&#x27;s Expert Guide</h3><p>Discover the ultimate wine pairings for sushi in 2026. This expert guide covers ideal white, red, and sparkling wines to complement various sushi types, enhanci</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-champagne-snacks-2026.html"><div class="img" style="background-image:url('/blog/best-champagne-snacks-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>Best Champagne Snacks for 2026: Elevate Your Bubbly Experience</h3><p>Discover the best champagne snacks for 2026. Elevate your celebration with perfect pairings, from elegant canapés to gourmet bites, enhancing every sip: answer</p><span class="read">Read More →</span></div></a></div></div></div></div><div class="body"><span class="pill">Food Pairing</span><h3>How to Pair Pinot Noir with Dinner in 2026: An Expert Guide</h3><p>Master Pinot Noir food pairings in 2026 with this expert guide. Discover ideal dishes, regional differences, serving tips, and buying advice for perfect meals.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/how-to-choose-red-wine-for-steak-2026.html"><div class="img" style="background-image:url('/blog/how-to-choose-red-wine-for-steak-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>How to Choose Red Wine for Steak in 2026: An Expert Sommelier&#x27;s Guide</h3><p>Master the art of pairing red wine with steak in 2026. This guide covers top grape varieties, regions, expert tips, and buying advice for perfect matches: answe</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-wine-pizza-pairing-2026.html"><div class="img" style="background-image:url('/blog/best-wine-pizza-pairing-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>Best Wine and Pizza Pairing in 2026: A Sommelier&#x27;s Guide to Perfect Matches</h3><p>Discover the ultimate wine and pizza pairings for 2026. This expert guide helps you choose the perfect wine for every pizza, from classic Margherita to gourmet.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-wine-pairing-sushi-2026.html"><div class="img" style="background-image:url('/blog/best-wine-pairing-sushi-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>Best Wine Pairing for Sushi in 2026: A Sommelier&#x27;s Expert Guide</h3><p>Discover the ultimate wine pairings for sushi in 2026. This expert guide covers ideal white, red, and sparkling wines to complement various sushi types, enhanci</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-champagne-snacks-2026.html"><div class="img" style="background-image:url('/blog/best-champagne-snacks-2026-img-1.png')"></div><div class="body"><span class="pill">Food Pairing</span><h3>Best Champagne Snacks for 2026: Elevate Your Bubbly Experience</h3><p>Discover the best champagne snacks for 2026. Elevate your celebration with perfect pairings, from elegant canapés to gourmet bites, enhancing every sip: answer</p><span class="read">Read More →</span></div></a></div></div></div></div>
+  </section>
+
+    <section class="section container" id="pairingLabSection">
+    <h2 id="pairingLabTitle">Food-to-Wine Pairing Lab</h2>
+    <p class="lead" id="pairingLabLead">Interactive pairing constructor: pick a dish and profile to get practical wine matches in seconds.</p>
+    <div class="pairing-layout">
+      <aside class="pairing-left">
+        <p class="pairing-seo" id="pairingSeoText">This interactive food pairing tool helps users choose wine by dish type, intensity, and flavor balance, improving dining decisions with practical, sommelier-style guidance.</p>
+        <div class="dish-grid" id="dishGrid"></div>
+        <div class="pairing-note" id="pairingNote"></div>
+        <div class="style-tabs" id="styleTabs">
+          <button type="button" class="style-tab active" data-style="balanced" id="styleBalanced">Balanced</button>
+          <button type="button" class="style-tab" data-style="fresh" id="styleFresh">Fresh & Light</button>
+          <button type="button" class="style-tab" data-style="rich" id="styleRich">Rich & Bold</button>
+        </div>
+      </aside>
+      <div class="pairing-right">
+        <div class="pairing-grid" id="pairingGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="catWineriesTravel">
+    <h2 id="wineriesTitle">Wineries &amp; Travel</h2>
+    <p class="lead" id="wineriesLead">Latest posts in Wineries &amp; Travel.</p>
+    <div id="categoryRowsWineriesTravel"><div class="cat-row"><div class="cat-wrap"><button class="cat-arrow prev" data-target="catCarousel_wineries-travel_1">‹</button><button class="cat-arrow next" data-target="catCarousel_wineries-travel_1">›</button><div class="cat-carousel" id="catCarousel_wineries-travel_1"><a class="blog-card" href="/blog/unveiling-wine-gems-2026.html"><div class="img" style="background-image:url('/blog/unveiling-wine-gems-2026-img-1.webp')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Unearthing Unique Wines: The &#x27;Giraffe&#x27; of the Cellar and Memorable Pours</h3><p>Explore unique wine varietals, regions, and unforgettable experiences in 2026. Discover wines that stand out with elegance and distinct character: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/how-to-buy-winery-italy-2026.html"><div class="img" style="background-image:url('/blog/how-to-buy-winery-italy-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>How to Buy a Winery in Italy? A 2026 Investor&#x27;s Guide</h3><p>Unlock the secrets to buying a winery in Italy in 2026 with this expert guide. Learn about legalities, regions, financing, due diligence, and more for foreign</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/winery-spain-architecture.html"><div class="img" style="background-image:url('/blog/winery-spain-architecture-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Iconic Spanish Winery Architecture: A Journey Through Design &amp; Terroir (2026)</h3><p>Explore Spain&#x27;s most iconic winery architecture in 2026. Discover how design, innovation, and terroir merge to create stunning, functional, and sustainable</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/winery-bardoix-guide-2026.html"><div class="img" style="background-image:url('/blog/winery-bardoix-guide-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Winery Bardoix 2026: An Essential Guide to Visiting and Tasting</h3><p>Discover Winery Bardoix in 2026. Explore its history, acclaimed wines, visitor experiences, and why it&#x27;s a must-visit destination for wine lovers: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-wineries-toscana-2026.html"><div class="img" style="background-image:url('/blog/best-wineries-toscana-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Discovering Toscana&#x27;s Best Wineries in 2026: An Essential Guide</h3><p>Explore Toscana&#x27;s top wineries for 2026. This guide covers iconic estates, hidden gems, and tips for planning an unforgettable wine-tasting journey in Tuscany.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/what-is-oldest-winery-spain-2026.html"><div class="img" style="background-image:url('/blog/what-is-oldest-winery-spain-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>What is the Oldest Winery in Spain? Uncovering Its Rich History (2026)</h3><p>Discover the ancient roots of Spanish winemaking. Explore the oldest winery in Spain, its historical significance, and enduring legacy in 2026: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-wineries-italy-2026.html"><div class="img" style="background-image:url('/blog/best-wineries-italy-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Best Wineries in Italy 2026: An Expert&#x27;s Guide to Iconic Vineyards</h3><p>Discover Italy&#x27;s best wineries for 2026, from historic estates in Tuscany to innovative producers in Piedmont. Plan your unforgettable Italian wine journey now.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/grillo-grape-wine-2026.html"><div class="img" style="background-image:url('/blog/grillo-grape-wine-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Grillo Grape Wine in 2026: The Definitive Guide to Sicily&#x27;s Star White</h3><p>Explore Grillo grape wine in 2026, Sicily&#x27;s rising star white. Discover its history, unique flavor profile, ideal food pairings, and the best regions to experie</p><span class="read">Read More →</span></div></a></div></div></div></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Unearthing Unique Wines: The &#x27;Giraffe&#x27; of the Cellar and Memorable Pours</h3><p>Explore unique wine varietals, regions, and unforgettable experiences in 2026. Discover wines that stand out with elegance and distinct character: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/how-to-buy-winery-italy-2026.html"><div class="img" style="background-image:url('/blog/how-to-buy-winery-italy-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>How to Buy a Winery in Italy? A 2026 Investor&#x27;s Guide</h3><p>Unlock the secrets to buying a winery in Italy in 2026 with this expert guide. Learn about legalities, regions, financing, due diligence, and more for foreign</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/winery-spain-architecture.html"><div class="img" style="background-image:url('/blog/winery-spain-architecture-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Iconic Spanish Winery Architecture: A Journey Through Design &amp; Terroir (2026)</h3><p>Explore Spain&#x27;s most iconic winery architecture in 2026. Discover how design, innovation, and terroir merge to create stunning, functional, and sustainable</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/winery-bardoix-guide-2026.html"><div class="img" style="background-image:url('/blog/winery-bardoix-guide-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Winery Bardoix 2026: An Essential Guide to Visiting and Tasting</h3><p>Discover Winery Bardoix in 2026. Explore its history, acclaimed wines, visitor experiences, and why it&#x27;s a must-visit destination for wine lovers: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-wineries-toscana-2026.html"><div class="img" style="background-image:url('/blog/best-wineries-toscana-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Discovering Toscana&#x27;s Best Wineries in 2026: An Essential Guide</h3><p>Explore Toscana&#x27;s top wineries for 2026. This guide covers iconic estates, hidden gems, and tips for planning an unforgettable wine-tasting journey in Tuscany.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/what-is-oldest-winery-spain-2026.html"><div class="img" style="background-image:url('/blog/what-is-oldest-winery-spain-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>What is the Oldest Winery in Spain? Uncovering Its Rich History (2026)</h3><p>Discover the ancient roots of Spanish winemaking. Explore the oldest winery in Spain, its historical significance, and enduring legacy in 2026: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/best-wineries-italy-2026.html"><div class="img" style="background-image:url('/blog/best-wineries-italy-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Best Wineries in Italy 2026: An Expert&#x27;s Guide to Iconic Vineyards</h3><p>Discover Italy&#x27;s best wineries for 2026, from historic estates in Tuscany to innovative producers in Piedmont. Plan your unforgettable Italian wine journey now.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/grillo-grape-wine-2026.html"><div class="img" style="background-image:url('/blog/grillo-grape-wine-2026-img-1.png')"></div><div class="body"><span class="pill">Wineries &amp; Travel</span><h3>Grillo Grape Wine in 2026: The Definitive Guide to Sicily&#x27;s Star White</h3><p>Explore Grillo grape wine in 2026, Sicily&#x27;s rising star white. Discover its history, unique flavor profile, ideal food pairings, and the best regions to experie</p><span class="read">Read More →</span></div></a></div></div></div></div>
+  </section>
+
+  <section class="section container" id="routesSection">
+    <h2 id="routesTitle">Winery Route Maps</h2>
+    <p class="lead" id="routesLead">Real travel routes through iconic wine regions with stop-by-stop plans.</p>
+    <div class="route-layout">
+      <div class="route-info" id="routeInfo">
+        <h3 id="routeDetailsTitle">Route Details</h3>
+        <div class="route-list" id="routeList"></div>
+        <h3 id="routeTitle">Route</h3>
+        <p id="routeDuration"></p>
+        <ol id="routeStops"></ol>
+        <button id="routeShowMap" class="btn btn-primary" type="button">Show map here</button>
+        <div class="route-embed" id="routeEmbed">
+          <div class="route-embed-actions">
+            <button id="routeShare" class="btn" type="button">Share</button>
+            <button id="routeSendPhone" class="btn" type="button">Send to phone</button>
+            <button id="routeOpenNew" class="btn" type="button">Open in new tab</button>
+          </div>
+          <iframe id="routeFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src=""></iframe>
+        </div>
+      </div>
+      <a class="route-map" id="routeMap" href="#" target="_blank" rel="noopener"></a>
+    </div>
+  </section>
+
+  <section class="section container" id="catWineRegions">
+    <h2 id="regionsTitle">Wine Regions</h2>
+    <p class="lead" id="regionsLead">Latest posts in Wine Regions.</p>
+    <div id="categoryRowsWineRegions"><div class="cat-row"><div class="cat-wrap"><button class="cat-arrow prev" data-target="catCarousel_wine-regions_2">‹</button><button class="cat-arrow next" data-target="catCarousel_wine-regions_2">›</button><div class="cat-carousel" id="catCarousel_wine-regions_2"><a class="blog-card" href="/blog/italy-wine-growing-regions-2026.html"><div class="img" style="background-image:url('/blog/italy-wine-growing-regions-2026-img-1.png')"></div><div class="body"><span class="pill">Wine Regions</span><h3>Italy&#x27;s Premier Wine Regions 2026: Grapes, Pairings &amp; Buying Guide</h3><p>Explore Italy&#x27;s top wine regions in 2026, from Piedmont to Sicily. Discover key grapes, ideal food pairings, renowned wineries, and essential buying tips: answe</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/spanish-wine-regions-guide-2026.html"><div class="img" style="background-image:url('/blog/spanish-wine-regions-guide-2026-img-1.png')"></div><div class="body"><span class="pill">Wine Regions</span><h3>Spanish Wine Regions 2026: An Expert Guide to Grapes, Wineries &amp; Buying</h3><p>Explore Spain&#x27;s diverse wine regions in 2026, from Rioja to Priorat. Discover key grapes, top wineries, expert food pairings, and essential buying tips for any</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/what-is-chianti-classico.html"><div class="img" style="background-image:url('/blog/what-is-chianti-classico-img-1.png')"></div><div class="body"><span class="pill">Wine Regions</span><h3>What is Chianti Classico? Your Essential Guide to Tuscany&#x27;s Iconic Wine (2026)</h3><p>Discover Chianti Classico: the historic heart of Tuscany&#x27;s wine region. Learn about its grapes, unique taste, Black Rooster symbol, and DOCG rules: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/cava-wine-vs-prosecco-2026.html"><div class="img" style="background-image:url('/blog/cava-wine-vs-prosecco-2026-img-1.png')"></div><div class="body"><span class="pill">Wine Regions</span><h3>Cava Wine vs. Prosecco: Which Sparkling Wine Reigns Supreme in 2026?</h3><p>Uncover the key differences between Cava and Prosecco in 2026. Explore origins, grapes, production, and taste to choose your perfect sparkling wine: answer-firs</p><span class="read">Read More →</span></div></a></div></div></div></div><div class="body"><span class="pill">Wine Regions</span><h3>Italy&#x27;s Premier Wine Regions 2026: Grapes, Pairings &amp; Buying Guide</h3><p>Explore Italy&#x27;s top wine regions in 2026, from Piedmont to Sicily. Discover key grapes, ideal food pairings, renowned wineries, and essential buying tips: answe</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/spanish-wine-regions-guide-2026.html"><div class="img" style="background-image:url('/blog/spanish-wine-regions-guide-2026-img-1.png')"></div><div class="body"><span class="pill">Wine Regions</span><h3>Spanish Wine Regions 2026: An Expert Guide to Grapes, Wineries &amp; Buying</h3><p>Explore Spain&#x27;s diverse wine regions in 2026, from Rioja to Priorat. Discover key grapes, top wineries, expert food pairings, and essential buying tips for any</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/what-is-chianti-classico.html"><div class="img" style="background-image:url('/blog/what-is-chianti-classico-img-1.png')"></div><div class="body"><span class="pill">Wine Regions</span><h3>What is Chianti Classico? Your Essential Guide to Tuscany&#x27;s Iconic Wine (2026)</h3><p>Discover Chianti Classico: the historic heart of Tuscany&#x27;s wine region. Learn about its grapes, unique taste, Black Rooster symbol, and DOCG rules: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/cava-wine-vs-prosecco-2026.html"><div class="img" style="background-image:url('/blog/cava-wine-vs-prosecco-2026-img-1.png')"></div><div class="body"><span class="pill">Wine Regions</span><h3>Cava Wine vs. Prosecco: Which Sparkling Wine Reigns Supreme in 2026?</h3><p>Uncover the key differences between Cava and Prosecco in 2026. Explore origins, grapes, production, and taste to choose your perfect sparkling wine: answer-firs</p><span class="read">Read More →</span></div></a></div></div></div></div>
+  </section>
+
+  <section class="section container" id="wineStatsSection">
+    <h2 id="pulseTitle">Wine World Pulse</h2>
+    <p class="lead" id="pulseLead">Interesting live-style numbers from the global wine market and travel scene.</p>
+    <div class="pulse-grid" id="pulseGrid"></div>
+  </section>
+
+  <section class="section container" id="catGrapeVarieties">
+    <h2 id="grapesTitle">Grape Varieties</h2>
+    <p class="lead" id="grapesLead">Latest posts in Grape Varieties.</p>
+    <div id="categoryRowsGrapeVarieties"><div class="cat-row"><div class="cat-wrap"><button class="cat-arrow prev" data-target="catCarousel_grape-varieties_3">‹</button><button class="cat-arrow next" data-target="catCarousel_grape-varieties_3">›</button><div class="cat-carousel" id="catCarousel_grape-varieties_3"><a class="blog-card" href="/blog/global-grape-map-2026.html"><div class="img" style="background-image:url('/blog/global-grape-map-2026-img-1.png')"></div><div class="body"><span class="pill">Grape Varieties</span><h3>Global Grape Map 2026: An Essential Guide to Where Wine Grapes Grow</h3><p>Explore the global map of wine grape cultivation in 2026. This guide details key regions, popular varietals, climate impacts, and expert buying advice: answer-f</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/most-sour-wine-grapes-2026.html"><div class="img" style="background-image:url('/blog/most-sour-wine-grapes-2026-img-1.png')"></div><div class="body"><span class="pill">Grape Varieties</span><h3>The Most Sour Wine Grapes: A Sommelier&#x27;s Guide to Acidity in 2026</h3><p>Discover the most sour wine grapes, their defining characteristics, and how high acidity influences taste, food pairings, and regional expressions in 2026.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/what-is-glera-grape-2026.html"><div class="img" style="background-image:url('/blog/what-is-glera-grape-2026-img-1.png')"></div><div class="body"><span class="pill">Grape Varieties</span><h3>What is Glera Grape? Unveiling the Heart of Prosecco in 2026</h3><p>Glera is the quintessential white grape for Prosecco, celebrated for its crisp acidity and vibrant aromatics, driving global sparkling wine trends by 2026.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/tempranillo-grape-wine-guide-2026.html"><div class="img" style="background-image:url('/blog/tempranillo-grape-wine-guide-2026-img-1.png')"></div><div class="body"><span class="pill">Grape Varieties</span><h3>Tempranillo Wine Guide 2026: Spain&#x27;s Noble Grape Explored</h3><p>Discover Tempranillo wine in 2026, Spain&#x27;s iconic red grape. Explore its regions, flavor profiles, aging classifications, and perfect food pairings: answer-firs</p><span class="read">Read More →</span></div></a></div></div></div></div><div class="body"><span class="pill">Grape Varieties</span><h3>Global Grape Map 2026: An Essential Guide to Where Wine Grapes Grow</h3><p>Explore the global map of wine grape cultivation in 2026. This guide details key regions, popular varietals, climate impacts, and expert buying advice: answer-f</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/most-sour-wine-grapes-2026.html"><div class="img" style="background-image:url('/blog/most-sour-wine-grapes-2026-img-1.png')"></div><div class="body"><span class="pill">Grape Varieties</span><h3>The Most Sour Wine Grapes: A Sommelier&#x27;s Guide to Acidity in 2026</h3><p>Discover the most sour wine grapes, their defining characteristics, and how high acidity influences taste, food pairings, and regional expressions in 2026.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/what-is-glera-grape-2026.html"><div class="img" style="background-image:url('/blog/what-is-glera-grape-2026-img-1.png')"></div><div class="body"><span class="pill">Grape Varieties</span><h3>What is Glera Grape? Unveiling the Heart of Prosecco in 2026</h3><p>Glera is the quintessential white grape for Prosecco, celebrated for its crisp acidity and vibrant aromatics, driving global sparkling wine trends by 2026.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/tempranillo-grape-wine-guide-2026.html"><div class="img" style="background-image:url('/blog/tempranillo-grape-wine-guide-2026-img-1.png')"></div><div class="body"><span class="pill">Grape Varieties</span><h3>Tempranillo Wine Guide 2026: Spain&#x27;s Noble Grape Explored</h3><p>Discover Tempranillo wine in 2026, Spain&#x27;s iconic red grape. Explore its regions, flavor profiles, aging classifications, and perfect food pairings: answer-firs</p><span class="read">Read More →</span></div></a></div></div></div></div>
+  </section>
+
+  <section class="section container" id="catBuyingGuides">
+    <h2 id="buyingTitle">Buying Guides</h2>
+    <p class="lead" id="buyingLead">Latest posts in Buying Guides.</p>
+    <div id="categoryRowsBuyingGuides"><div class="cat-row"><div class="cat-wrap"><button class="cat-arrow prev" data-target="catCarousel_buying-guides_4">‹</button><button class="cat-arrow next" data-target="catCarousel_buying-guides_4">›</button><div class="cat-carousel" id="catCarousel_buying-guides_4"><a class="blog-card" href="/blog/aged-like-fine-wine-guide-2026.html"><div class="img" style="background-image:url('/blog/aged-like-fine-wine-guide-2026-img-1.webp')"></div><div class="body"><span class="pill">Buying Guides</span><h3>Aged Like Fine Wine: A 2026 Guide to Longevity, Grapes &amp; Buying</h3><p>Unlock the secrets of aged wines in 2026 with this expert guide. Discover age-worthy grapes, top regions, ideal pairings, and essential buying tips for collecto</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/wine-country-gift-baskets-2026.html"><div class="img" style="background-image:url('/blog/wine-country-gift-baskets-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>The Ultimate Guide to Wine Country Gift Baskets in 2026</h3><p>Discover the best wine country gift baskets for any occasion in 2026. This guide covers selection, customization, and top regions for thoughtful presents: answe</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/aged-like-fine-wine-2026.html"><div class="img" style="background-image:url('/blog/aged-like-fine-wine-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>Aged Like a Fine Wine: Unlocking the Secrets of Longevity in 2026</h3><p>Discover how wines age, the factors influencing their longevity, and the best varietals to cellar in 2026. Learn to appreciate evolving flavors and aromas.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/wine-gifts-men-2026.html"><div class="img" style="background-image:url('/blog/wine-gifts-men-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>Best Wine Gifts for Men in 2026: An Expert&#x27;s Guide to Thoughtful Presents</h3><p>Discover the best wine gifts for men in 2026, from premium bottles to essential accessories. Find the perfect present for every wine enthusiast, enhancing their</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/wine-gifts-for-her-2026.html"><div class="img" style="background-image:url('/blog/wine-gifts-for-her-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>Best Wine Gifts for Her in 2026: The Ultimate Guide to Thoughtful Presents</h3><p>Discover the ultimate wine gifts for her in 2026, from elegant bottles to luxurious accessories. Find perfect presents for every wine-loving woman: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/how-to-choose-red-wine-glass-2026.html"><div class="img" style="background-image:url('/blog/how-to-choose-red-wine-glass-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>How to Choose the Perfect Red Wine Glass in 2026: A Sommelier&#x27;s Guide</h3><p>Master red wine glass selection in 2026. Learn shapes, materials, and types for Bordeaux, Burgundy, and more to enhance your wine experience significantly.</p><span class="read">Read More →</span></div></a></div></div></div></div><div class="body"><span class="pill">Buying Guides</span><h3>Aged Like Fine Wine: A 2026 Guide to Longevity, Grapes &amp; Buying</h3><p>Unlock the secrets of aged wines in 2026 with this expert guide. Discover age-worthy grapes, top regions, ideal pairings, and essential buying tips for collecto</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/wine-country-gift-baskets-2026.html"><div class="img" style="background-image:url('/blog/wine-country-gift-baskets-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>The Ultimate Guide to Wine Country Gift Baskets in 2026</h3><p>Discover the best wine country gift baskets for any occasion in 2026. This guide covers selection, customization, and top regions for thoughtful presents: answe</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/aged-like-fine-wine-2026.html"><div class="img" style="background-image:url('/blog/aged-like-fine-wine-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>Aged Like a Fine Wine: Unlocking the Secrets of Longevity in 2026</h3><p>Discover how wines age, the factors influencing their longevity, and the best varietals to cellar in 2026. Learn to appreciate evolving flavors and aromas.</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/wine-gifts-men-2026.html"><div class="img" style="background-image:url('/blog/wine-gifts-men-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>Best Wine Gifts for Men in 2026: An Expert&#x27;s Guide to Thoughtful Presents</h3><p>Discover the best wine gifts for men in 2026, from premium bottles to essential accessories. Find the perfect present for every wine enthusiast, enhancing their</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/wine-gifts-for-her-2026.html"><div class="img" style="background-image:url('/blog/wine-gifts-for-her-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>Best Wine Gifts for Her in 2026: The Ultimate Guide to Thoughtful Presents</h3><p>Discover the ultimate wine gifts for her in 2026, from elegant bottles to luxurious accessories. Find perfect presents for every wine-loving woman: answer-first</p><span class="read">Read More →</span></div></a><a class="blog-card" href="/blog/how-to-choose-red-wine-glass-2026.html"><div class="img" style="background-image:url('/blog/how-to-choose-red-wine-glass-2026-img-1.png')"></div><div class="body"><span class="pill">Buying Guides</span><h3>How to Choose the Perfect Red Wine Glass in 2026: A Sommelier&#x27;s Guide</h3><p>Master red wine glass selection in 2026. Learn shapes, materials, and types for Bordeaux, Burgundy, and more to enhance your wine experience significantly.</p><span class="read">Read More →</span></div></a></div></div></div></div>
+  </section>
+
+  <section class="section container">
+    <h2 id="subscribeTitle">Subscribe</h2>
+    <p class="lead" id="subscribeLead">Get new insights by email. We send only useful updates.</p>
+    <div class="sub-wrap">
+      <form id="subscribeForm">
+        <input id="name" name="name" placeholder="Name" required type="text" />
+        <input id="email" name="email" placeholder="Email address" required type="email" />
+        <textarea id="message" name="message" placeholder="Topics you care about (optional)"></textarea>
+        <div id="subStatus" class="status"></div>
+        <button class="btn btn-primary" id="subscribeBtn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p id="footerCopy">© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a id="footerTerms" href="/policy/terms/">Terms of Service</a> |
+      <a id="footerPrivacy" href="/policy/privacy/">Privacy Policy</a> |
+      <a id="footerRefund" href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function(){
+      const nav = document.querySelector('nav');
+      if (!nav) return;
+      if (window.scrollY > 20) nav.classList.add('nav-scrolled'); else nav.classList.remove('nav-scrolled');
+    });
+    const CATEGORY_ORDER = [
+      'Wineries & Travel',
+      'Wine Regions',
+      'Grape Varieties',
+      'Food Pairing',
+      'Buying Guides'
+    ];
+    const LOCALE = (document.documentElement.lang || 'en').toLowerCase();
+    const PAGE_PREFIX = LOCALE === 'en' ? '' : `/${LOCALE}`;
+    const BLOG_URL = `${PAGE_PREFIX}/blog/`;
+
+    const I18N = {
+      en: { navHome:'Home', navBlog:'Blog', navCategories:'Categories', navFoodPairing:'Food Pairing', navPairingLab:'Pairing Lab', navWineries:'Wineries & Travel', navRoutes:'Route Maps', navRegions:'Wine Regions', navPulse:'Wine Pulse', navGrapes:'Grape Varieties', navBuying:'Buying Guides', heroTitle:'YAS Wine: practical insights about Wine', heroLead:'Actionable guides and frameworks for Wine.', heroCta:'Read latest posts', coreCategoriesTitle:'Core Wine Categories', coreCategoriesLead:'Every article belongs to one of these categories and is auto-grouped in carousels below.', catCard1Title:'Wineries & Travel', catCard1Desc:'Routes, estates, cellar visits, and wine tourism plans.', catCard2Title:'Wine Regions', catCard2Desc:'Terroir, appellations, and region-by-region comparisons.', catCard3Title:'Grape Varieties', catCard3Desc:'Profiles, flavor maps, and practical grape selection tips.', catCard4Title:'Food Pairing', catCard4Desc:'Meal pairings that improve taste and dining experience.', catCard5Title:'Buying Guides', catCard5Desc:'Actionable buying checklists and bottle selection guides.', catExplore:'Explore →', foodPairingTitle:'Food Pairing', foodPairingLead:'Latest posts in Food Pairing.', pairingLabTitle:'Food-to-Wine Pairing Lab', pairingLabLead:'Interactive pairing constructor: pick a dish and profile to get practical wine matches in seconds.', pairingSeoText:'This interactive food pairing tool helps users choose wine by dish type, intensity, and flavor balance, improving dining decisions with practical, sommelier-style guidance.', styleBalanced:'Balanced', styleFresh:'Fresh & Light', styleRich:'Rich & Bold', wineriesTitle:'Wineries & Travel', wineriesLead:'Latest posts in Wineries & Travel.', routesTitle:'Winery Route Maps', routesLead:'Real travel routes through iconic wine regions with stop-by-stop plans.', routeDetailsTitle:'Route Details', regionsTitle:'Wine Regions', regionsLead:'Latest posts in Wine Regions.', pulseTitle:'Wine World Pulse', pulseLead:'Interesting live-style numbers from the global wine market and travel scene.', grapesTitle:'Grape Varieties', grapesLead:'Latest posts in Grape Varieties.', buyingTitle:'Buying Guides', buyingLead:'Latest posts in Buying Guides.', subscribeTitle:'Subscribe', subscribeLead:'Get new insights by email. We send only useful updates.', namePh:'Name', emailPh:'Email address', messagePh:'Topics you care about (optional)', subscribeBtn:'Subscribe', readMore:'Read More →', fallbackTitle:'No posts yet', fallbackDesc:'First generated article will appear here.', untitled:'Untitled', post:'Post', sending:'Sending...', subscribed:'Subscribed successfully!', subscribeFail:'Failed to subscribe. Try again.', routeShow:'Show map here', routeHide:'Hide map', routeShare:'Share', routeSendPhone:'Send to phone', routeOpenNew:'Open in new tab', labelBottle:'Bottle', pairingTemplate:'6 bottle picks for {dish} ({style}).', noPairingTitle:'No pairing data yet', noPairingBody:'Please choose another dish/profile.', categoryMap:{'Wineries & Travel':'Wineries & Travel','Wine Regions':'Wine Regions','Grape Varieties':'Grape Varieties','Food Pairing':'Food Pairing','Buying Guides':'Buying Guides'}, dishMap:{steak:'Steak',salmon:'Salmon',sushi:'Sushi',pizza:'Pizza','mushroom-pasta':'Mushroom Pasta','cheese-board':'Cheese Board',burger:'Burger','roast-chicken':'Roast Chicken','bbq-ribs':'BBQ Ribs','seafood-pasta':'Seafood Pasta',oysters:'Oysters',crab:'Crab'} },
+      ru: { navHome:'Главная', navBlog:'Блог', navCategories:'Категории', navFoodPairing:'Сочетания', navPairingLab:'Pairing Lab', navWineries:'Винодельни и путешествия', navRoutes:'Маршруты', navRegions:'Регионы', navPulse:'Пульс вина', navGrapes:'Сорта винограда', navBuying:'Гайды по покупке', heroTitle:'YAS Wine: практичные инсайты о мире вина', heroLead:'Понятные и прикладные гиды по вину.', heroCta:'Читать свежие статьи', coreCategoriesTitle:'Ключевые винные категории', coreCategoriesLead:'Каждая статья относится к одной из категорий и автоматически попадает в карусели ниже.', catCard1Title:'Винодельни и путешествия', catCard1Desc:'Маршруты, хозяйства, визиты в погреба и винный туризм.', catCard2Title:'Винные регионы', catCard2Desc:'Терруар, аппелласьоны и сравнение регионов.', catCard3Title:'Сорта винограда', catCard3Desc:'Профили сортов, вкусовые карты и практичные рекомендации.', catCard4Title:'Сочетания с едой', catCard4Desc:'Подбор вина к блюдам для лучшего вкуса и опыта.', catCard5Title:'Гайды по покупке', catCard5Desc:'Чек-листы и практические советы по выбору бутылки.', catExplore:'Смотреть →', foodPairingTitle:'Сочетания с едой', foodPairingLead:'Новые материалы в категории «Сочетания с едой».', pairingLabTitle:'Food-to-Wine Pairing Lab', pairingLabLead:'Интерактивный конструктор: выберите блюдо и стиль, чтобы получить практичные рекомендации по вину.', pairingSeoText:'Этот интерактивный инструмент помогает выбрать вино по типу блюда, интенсивности и балансу вкуса.', styleBalanced:'Сбалансированный', styleFresh:'Свежий и лёгкий', styleRich:'Насыщенный', wineriesTitle:'Винодельни и путешествия', wineriesLead:'Новые материалы в категории «Винодельни и путешествия».', routesTitle:'Карты винных маршрутов', routesLead:'Реальные маршруты по ключевым винным регионам с планом остановок.', routeDetailsTitle:'Детали маршрута', regionsTitle:'Винные регионы', regionsLead:'Новые материалы в категории «Винные регионы».', pulseTitle:'Пульс винного мира', pulseLead:'Интересные цифры о глобальном рынке вина и винном туризме.', grapesTitle:'Сорта винограда', grapesLead:'Новые материалы в категории «Сорта винограда».', buyingTitle:'Гайды по покупке', buyingLead:'Новые материалы в категории «Гайды по покупке».', subscribeTitle:'Подписка', subscribeLead:'Получайте новые полезные материалы по email.', namePh:'Имя', emailPh:'Email', messagePh:'Какие темы вам интересны (необязательно)', subscribeBtn:'Подписаться', readMore:'Читать →', fallbackTitle:'Пока нет статей', fallbackDesc:'Первая сгенерированная статья появится здесь.', untitled:'Без названия', post:'Пост', sending:'Отправка...', subscribed:'Подписка оформлена!', subscribeFail:'Не удалось подписаться. Попробуйте снова.', routeShow:'Показать карту', routeHide:'Скрыть карту', routeShare:'Поделиться', routeSendPhone:'Отправить на телефон', routeOpenNew:'Открыть в новой вкладке', labelBottle:'Бутылка', pairingTemplate:'6 рекомендаций к блюду {dish} ({style}).', noPairingTitle:'Пока нет данных', noPairingBody:'Выберите другое блюдо или стиль.', categoryMap:{'Wineries & Travel':'Винодельни и путешествия','Wine Regions':'Винные регионы','Grape Varieties':'Сорта винограда','Food Pairing':'Сочетания с едой','Buying Guides':'Гайды по покупке'}, dishMap:{steak:'Стейк',salmon:'Лосось',sushi:'Суши',pizza:'Пицца','mushroom-pasta':'Паста с грибами','cheese-board':'Сырная тарелка',burger:'Бургер','roast-chicken':'Запечённая курица','bbq-ribs':'Рёбрышки BBQ','seafood-pasta':'Паста с морепродуктами',oysters:'Устрицы',crab:'Краб'} },
+      es: { navHome:'Inicio', navBlog:'Blog', navCategories:'Categorías', navFoodPairing:'Maridaje', navPairingLab:'Laboratorio', navWineries:'Bodegas y viajes', navRoutes:'Rutas', navRegions:'Regiones', navPulse:'Pulse del vino', navGrapes:'Variedades', navBuying:'Guías de compra', heroTitle:'YAS Wine: insights prácticos sobre vino', heroLead:'Guías claras y accionables para el mundo del vino.', heroCta:'Leer artículos recientes', coreCategoriesTitle:'Categorías clave de vino', coreCategoriesLead:'Cada artículo pertenece a una categoría y se agrupa automáticamente en los carruseles.', catCard1Title:'Bodegas y viajes', catCard1Desc:'Rutas, bodegas, visitas y planes de enoturismo.', catCard2Title:'Regiones vinícolas', catCard2Desc:'Terroir, denominaciones y comparativas por región.', catCard3Title:'Variedades de uva', catCard3Desc:'Perfiles, mapas de sabor y consejos prácticos.', catCard4Title:'Maridaje', catCard4Desc:'Combinaciones de comida y vino para mejorar la experiencia.', catCard5Title:'Guías de compra', catCard5Desc:'Checklists y guías prácticas para elegir botella.', catExplore:'Explorar →', foodPairingTitle:'Maridaje', foodPairingLead:'Últimos posts en Maridaje.', pairingLabTitle:'Food-to-Wine Pairing Lab', pairingLabLead:'Constructor interactivo: elige plato y estilo para obtener recomendaciones de vino.', pairingSeoText:'Esta herramienta interactiva ayuda a elegir vino por tipo de plato, intensidad y equilibrio.', styleBalanced:'Equilibrado', styleFresh:'Fresco y ligero', styleRich:'Intenso', wineriesTitle:'Bodegas y viajes', wineriesLead:'Últimos posts en Bodegas y viajes.', routesTitle:'Mapas de rutas de bodegas', routesLead:'Rutas reales por regiones emblemáticas del vino con paradas detalladas.', routeDetailsTitle:'Detalles de la ruta', regionsTitle:'Regiones vinícolas', regionsLead:'Últimos posts en Regiones vinícolas.', pulseTitle:'Wine World Pulse', pulseLead:'Cifras interesantes del mercado global del vino y turismo enológico.', grapesTitle:'Variedades de uva', grapesLead:'Últimos posts en Variedades de uva.', buyingTitle:'Guías de compra', buyingLead:'Últimos posts en Guías de compra.', subscribeTitle:'Suscripción', subscribeLead:'Recibe nuevos insights por email. Solo contenido útil.', namePh:'Nombre', emailPh:'Correo electrónico', messagePh:'Temas que te interesan (opcional)', subscribeBtn:'Suscribirse', readMore:'Leer más →', fallbackTitle:'Aún no hay posts', fallbackDesc:'El primer artículo generado aparecerá aquí.', untitled:'Sin título', post:'Post', sending:'Enviando...', subscribed:'¡Suscripción exitosa!', subscribeFail:'No se pudo suscribir. Inténtalo de nuevo.', routeShow:'Mostrar mapa', routeHide:'Ocultar mapa', routeShare:'Compartir', routeSendPhone:'Enviar al móvil', routeOpenNew:'Abrir en nueva pestaña', labelBottle:'Botella', pairingTemplate:'6 recomendaciones para {dish} ({style}).', noPairingTitle:'Aún no hay datos', noPairingBody:'Elige otro plato o perfil.', categoryMap:{'Wineries & Travel':'Bodegas y viajes','Wine Regions':'Regiones vinícolas','Grape Varieties':'Variedades de uva','Food Pairing':'Maridaje','Buying Guides':'Guías de compra'}, dishMap:{steak:'Bistec',salmon:'Salmón',sushi:'Sushi',pizza:'Pizza','mushroom-pasta':'Pasta de setas','cheese-board':'Tabla de quesos',burger:'Hamburguesa','roast-chicken':'Pollo asado','bbq-ribs':'Costillas BBQ','seafood-pasta':'Pasta de mariscos',oysters:'Ostras',crab:'Cangrejo'} },
+      de: { navHome:'Start', navBlog:'Blog', navCategories:'Kategorien', navFoodPairing:'Food Pairing', navPairingLab:'Pairing Lab', navWineries:'Weingüter & Reisen', navRoutes:'Routen', navRegions:'Weinregionen', navPulse:'Wine Pulse', navGrapes:'Rebsorten', navBuying:'Kaufberatung', heroTitle:'YAS Wine: praktische Insights über Wein', heroLead:'Klare, anwendbare Guides rund um Wein.', heroCta:'Neueste Beiträge lesen', coreCategoriesTitle:'Kernkategorien Wein', coreCategoriesLead:'Jeder Beitrag gehört zu einer Kategorie und wird automatisch in den Karussells gruppiert.', catCard1Title:'Weingüter & Reisen', catCard1Desc:'Routen, Weingüter, Kellerbesuche und Weintourismus.', catCard2Title:'Weinregionen', catCard2Desc:'Terroir, Appellationen und Regionsvergleiche.', catCard3Title:'Rebsorten', catCard3Desc:'Sortenprofile, Geschmacksprofile und Praxistipps.', catCard4Title:'Food Pairing', catCard4Desc:'Weinempfehlungen zu Speisen für ein besseres Genusserlebnis.', catCard5Title:'Kaufberatung', catCard5Desc:'Praktische Checklisten für den Flaschenkauf.', catExplore:'Entdecken →', foodPairingTitle:'Food Pairing', foodPairingLead:'Neueste Beiträge in Food Pairing.', pairingLabTitle:'Food-to-Wine Pairing Lab', pairingLabLead:'Interaktiver Konfigurator: Gericht und Stil wählen, passende Weine erhalten.', pairingSeoText:'Dieses interaktive Tool hilft bei der Weinauswahl nach Gericht, Intensität und Geschmacksbalance.', styleBalanced:'Ausgewogen', styleFresh:'Frisch & leicht', styleRich:'Kräftig', wineriesTitle:'Weingüter & Reisen', wineriesLead:'Neueste Beiträge in Weingüter & Reisen.', routesTitle:'Weinrouten-Karten', routesLead:'Reale Reiserouten durch ikonische Weinregionen mit Stop-by-Stop-Plan.', routeDetailsTitle:'Routendetails', regionsTitle:'Weinregionen', regionsLead:'Neueste Beiträge in Weinregionen.', pulseTitle:'Wine World Pulse', pulseLead:'Spannende Kennzahlen aus Weinmarkt und Weintourismus.', grapesTitle:'Rebsorten', grapesLead:'Neueste Beiträge in Rebsorten.', buyingTitle:'Kaufberatung', buyingLead:'Neueste Beiträge in Kaufberatung.', subscribeTitle:'Abonnieren', subscribeLead:'Neue Insights per E-Mail. Nur nützliche Updates.', namePh:'Name', emailPh:'E-Mail-Adresse', messagePh:'Themen, die dich interessieren (optional)', subscribeBtn:'Abonnieren', readMore:'Weiterlesen →', fallbackTitle:'Noch keine Beiträge', fallbackDesc:'Der erste generierte Beitrag erscheint hier.', untitled:'Ohne Titel', post:'Beitrag', sending:'Senden...', subscribed:'Erfolgreich abonniert!', subscribeFail:'Abonnement fehlgeschlagen. Bitte erneut versuchen.', routeShow:'Karte anzeigen', routeHide:'Karte ausblenden', routeShare:'Teilen', routeSendPhone:'An Telefon senden', routeOpenNew:'Im neuen Tab öffnen', labelBottle:'Flasche', pairingTemplate:'6 Flaschenempfehlungen für {dish} ({style}).', noPairingTitle:'Noch keine Daten', noPairingBody:'Bitte anderes Gericht oder Profil wählen.', categoryMap:{'Wineries & Travel':'Weingüter & Reisen','Wine Regions':'Weinregionen','Grape Varieties':'Rebsorten','Food Pairing':'Food Pairing','Buying Guides':'Kaufberatung'}, dishMap:{steak:'Steak',salmon:'Lachs',sushi:'Sushi',pizza:'Pizza','mushroom-pasta':'Pilz-Pasta','cheese-board':'Käseplatte',burger:'Burger','roast-chicken':'Brathähnchen','bbq-ribs':'BBQ-Rippchen','seafood-pasta':'Meeresfrüchte-Pasta',oysters:'Austern',crab:'Krabbe'} },
+      fr: { navHome:'Accueil', navBlog:'Blog', navCategories:'Catégories', navFoodPairing:'Accords mets-vins', navPairingLab:'Pairing Lab', navWineries:'Domaines & voyages', navRoutes:'Itinéraires', navRegions:'Régions', navPulse:'Pulse du vin', navGrapes:'Cépages', navBuying:'Guides d’achat', heroTitle:'YAS Wine : insights pratiques sur le vin', heroLead:'Guides concrets et actionnables autour du vin.', heroCta:'Lire les derniers articles', coreCategoriesTitle:'Catégories vin essentielles', coreCategoriesLead:'Chaque article appartient à une catégorie et est regroupé automatiquement dans les carrousels.', catCard1Title:'Domaines & voyages', catCard1Desc:'Itinéraires, domaines, visites de caves et œnotourisme.', catCard2Title:'Régions viticoles', catCard2Desc:'Terroir, appellations et comparaisons régionales.', catCard3Title:'Cépages', catCard3Desc:'Profils, cartes aromatiques et conseils pratiques.', catCard4Title:'Accords mets-vins', catCard4Desc:'Associations vin-plat pour une meilleure expérience gustative.', catCard5Title:'Guides d’achat', catCard5Desc:'Check-lists et conseils pratiques pour choisir une bouteille.', catExplore:'Explorer →', foodPairingTitle:'Accords mets-vins', foodPairingLead:'Derniers articles dans Accords mets-vins.', pairingLabTitle:'Food-to-Wine Pairing Lab', pairingLabLead:'Constructeur interactif : choisissez un plat et un style pour obtenir des recommandations.', pairingSeoText:'Cet outil interactif aide à choisir le vin selon le plat, l’intensité et l’équilibre des saveurs.', styleBalanced:'Équilibré', styleFresh:'Frais & léger', styleRich:'Riche & puissant', wineriesTitle:'Domaines & voyages', wineriesLead:'Derniers articles dans Domaines & voyages.', routesTitle:'Cartes des itinéraires œnologiques', routesLead:'Itinéraires réels dans les régions emblématiques avec étapes détaillées.', routeDetailsTitle:'Détails de l’itinéraire', regionsTitle:'Régions viticoles', regionsLead:'Derniers articles dans Régions viticoles.', pulseTitle:'Wine World Pulse', pulseLead:'Chiffres intéressants du marché mondial du vin et du tourisme œnologique.', grapesTitle:'Cépages', grapesLead:'Derniers articles dans Cépages.', buyingTitle:'Guides d’achat', buyingLead:'Derniers articles dans Guides d’achat.', subscribeTitle:'Abonnement', subscribeLead:'Recevez de nouveaux insights par email. Uniquement des contenus utiles.', namePh:'Nom', emailPh:'Adresse email', messagePh:'Sujets qui vous intéressent (optionnel)', subscribeBtn:'S’abonner', readMore:'Lire la suite →', fallbackTitle:'Pas encore d’articles', fallbackDesc:'Le premier article généré apparaîtra ici.', untitled:'Sans titre', post:'Article', sending:'Envoi...', subscribed:'Abonnement réussi !', subscribeFail:'Échec de l’abonnement. Réessayez.', routeShow:'Afficher la carte', routeHide:'Masquer la carte', routeShare:'Partager', routeSendPhone:'Envoyer au téléphone', routeOpenNew:'Ouvrir dans un nouvel onglet', labelBottle:'Bouteille', pairingTemplate:'6 recommandations de bouteilles pour {dish} ({style}).', noPairingTitle:'Pas encore de données', noPairingBody:'Choisissez un autre plat ou profil.', categoryMap:{'Wineries & Travel':'Domaines & voyages','Wine Regions':'Régions viticoles','Grape Varieties':'Cépages','Food Pairing':'Accords mets-vins','Buying Guides':'Guides d’achat'}, dishMap:{steak:'Steak',salmon:'Saumon',sushi:'Sushi',pizza:'Pizza','mushroom-pasta':'Pâtes aux champignons','cheese-board':'Plateau de fromages',burger:'Burger','roast-chicken':'Poulet rôti','bbq-ribs':'Travers BBQ','seafood-pasta':'Pâtes aux fruits de mer',oysters:'Huîtres',crab:'Crabe'} }
+    };
+    const L = I18N[LOCALE] || I18N.en;
+    const t = (k, fb='') => (L && L[k]) || fb || (I18N.en[k] || '');
+    const categoryLabel = (cat) => (L.categoryMap && L.categoryMap[cat]) || cat;
+
+    const fallback = [{title:t('fallbackTitle','No posts yet'), description:t('fallbackDesc','First generated article will appear here.'), href:BLOG_URL, image:'/hero-yas-wine.png', category:'Buying Guides'}];
+
+    function applyLandingI18n(){
+      const setText = (id, key) => { const el = document.getElementById(id); if (el) el.textContent = t(key, el.textContent); };
+      ['navHome','navBlog','navCategories','navFoodPairing','navPairingLab','navWineries','navRoutes','navRegions','navPulse','navGrapes','navBuying','heroTitle','heroLead','heroCta','coreCategoriesTitle','coreCategoriesLead','catCard1Title','catCard1Desc','catCard2Title','catCard2Desc','catCard3Title','catCard3Desc','catCard4Title','catCard4Desc','catCard5Title','catCard5Desc','foodPairingTitle','foodPairingLead','pairingLabTitle','pairingLabLead','pairingSeoText','styleBalanced','styleFresh','styleRich','wineriesTitle','wineriesLead','routesTitle','routesLead','routeDetailsTitle','regionsTitle','regionsLead','pulseTitle','pulseLead','grapesTitle','grapesLead','buyingTitle','buyingLead','subscribeTitle','subscribeLead','subscribeBtn'].forEach(id => setText(id, id));
+      document.querySelectorAll('.catExplore').forEach(el => { el.textContent = t('catExplore', el.textContent); });
+      const pairingLabForced = {ru:'Лаборатория сочетания еды и вина', es:'Laboratorio de maridaje comida-vino', de:'Food-&-Wine-Pairing-Labor', fr:"Laboratoire d'accords mets-vins"};
+      const plt = document.getElementById('pairingLabTitle');
+      if (plt && pairingLabForced[LOCALE]) plt.textContent = pairingLabForced[LOCALE];
+      const name = document.getElementById('name'); if (name) name.placeholder = t('namePh', name.placeholder);
+      const email = document.getElementById('email'); if (email) email.placeholder = t('emailPh', email.placeholder);
+      const msg = document.getElementById('message'); if (msg) msg.placeholder = t('messagePh', msg.placeholder);
+      const home = document.getElementById('navHome'); if (home) home.href = `${PAGE_PREFIX}/` || '/';
+      const blog = document.getElementById('navBlog'); if (blog) blog.href = BLOG_URL;
+      const cta = document.getElementById('heroCta'); if (cta) cta.href = BLOG_URL;
+      const rf = document.getElementById('routeShowMap'); if (rf) rf.textContent = t('routeShow', rf.textContent);
+      const rs = document.getElementById('routeShare'); if (rs) rs.textContent = t('routeShare', rs.textContent);
+      const rsp = document.getElementById('routeSendPhone'); if (rsp) rsp.textContent = t('routeSendPhone', rsp.textContent);
+      const ron = document.getElementById('routeOpenNew'); if (ron) ron.textContent = t('routeOpenNew', ron.textContent);
+    }
+
+    function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+    function normalizeCategory(c){
+      const t = String(c||'').toLowerCase();
+      if (t.includes('winery') || t.includes('travel') || t.includes('vineyard') || t.includes('gastronomy')) return 'Wineries & Travel';
+      if (t.includes('region') || t.includes('terroir') || t === 'wine') return 'Wine Regions';
+      if (t.includes('grape') || t.includes('variet') || t.includes('viticulture')) return 'Grape Varieties';
+      if (t.includes('pair') || t.includes('food')) return 'Food Pairing';
+      return 'Buying Guides';
+    }
+    function normalizeImgPath(img){
+      let v = String(img || '').trim();
+      if (!v) return '/hero-yas-wine.png';
+      if (v.startsWith('//blog/')) v = v.replace(/^\/\/blog\//, '/blog/');
+      if (v.startsWith('blog/')) v = '/' + v;
+      return v;
+    }
+    function optimizedImg(img){
+      const v = normalizeImgPath(img);
+      if (/^\/blog\/.*-img-1\.png$/i.test(v)) return v.replace(/\.png$/i, '.webp');
+      return v;
+    }
+    function card(p){
+      const href = p.href || BLOG_URL;
+      const img = optimizedImg(p.image || '/hero-yas-wine.png');
+      const tTitle = esc(decodeHtml(p.title || t('untitled','Untitled')));
+      const d = esc(decodeHtml(p.description || ''));
+      const c = esc(categoryLabel(normalizeCategory(p.category)));
+      return `<a class="blog-card" href="${href}"><div class="img" style="background-image:url('${img}')"></div><div class="body"><span class="pill">${c}</span><h3>${tTitle}</h3><p>${d}</p><span class="read">${esc(t('readMore','Read More →'))}</span></div></a>`;
+    }
+    function renderHeroGallery(posts){
+      const host = document.getElementById('heroGallery');
+      if (!host) return;
+      const list = (posts || []).slice(0, 12);
+      if (!list.length) {
+        host.innerHTML = '<div class=\"hero-thumb\" style=\"background-image:url(\\\'/hero-yas-wine.png\\\')\"></div>'.repeat(6);
+        return;
+      }
+      host.innerHTML = list.map(p => {
+        const img = optimizedImg(p.image || '/hero-yas-wine.png');
+        const title = esc(decodeHtml(p.title || t('post','Post')));
+        return `<a href="${p.href || BLOG_URL}" class="hero-thumb" style="background-image:url('${img}')" aria-label="${title}"><span class="hero-thumb-title">${title}</span></a>`;
+      }).join('');
+    }
+
+    function initHeroSlider(){
+      const wrap = document.getElementById('heroGallery');
+      const prev = document.getElementById('heroPrev');
+      const next = document.getElementById('heroNext');
+      if (!wrap || !prev || !next) return;
+      const step = () => Math.max(280, wrap.clientWidth);
+      prev.onclick = () => wrap.scrollBy({ left: -step(), behavior: 'smooth' });
+      next.onclick = () => wrap.scrollBy({ left: step(), behavior: 'smooth' });
+    }
+
+    function renderCategoryRows(posts){
+      const by = {};
+      CATEGORY_ORDER.forEach(c => by[c] = []);
+      (posts || []).forEach(p => {
+        const c = normalizeCategory(p.category);
+        by[c].push(p);
+      });
+
+      const mounts = [
+        { cat: 'Food Pairing', hostId: 'categoryRowsFoodPairing', key: 'food-pairing' },
+        { cat: 'Wineries & Travel', hostId: 'categoryRowsWineriesTravel', key: 'wineries-travel' },
+        { cat: 'Wine Regions', hostId: 'categoryRowsWineRegions', key: 'wine-regions' },
+        { cat: 'Grape Varieties', hostId: 'categoryRowsGrapeVarieties', key: 'grape-varieties' },
+        { cat: 'Buying Guides', hostId: 'categoryRowsBuyingGuides', key: 'buying-guides' },
+      ];
+
+      mounts.forEach((m, i) => {
+        const host = document.getElementById(m.hostId);
+        if (!host) return;
+        const items = (by[m.cat] && by[m.cat].length) ? by[m.cat].slice(0, 8) : fallback;
+        const id = `catCarousel_${m.key}_${i}`;
+        host.innerHTML = `<div class="cat-row"><div class="cat-wrap"><button class="cat-arrow prev" data-target="${id}">‹</button><button class="cat-arrow next" data-target="${id}">›</button><div class="cat-carousel" id="${id}">${items.map(card).join('')}</div></div></div>`;
+      });
+
+      document.querySelectorAll('.cat-arrow').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-target');
+          const c = document.getElementById(id);
+          if (!c) return;
+          const left = btn.classList.contains('prev') ? -340 : 340;
+          c.scrollBy({left, behavior:'smooth'});
+        });
+      });
+
+      // delegated fallback: keeps arrows functional after dynamic rerenders
+      if (!window.__catArrowDelegated) {
+        window.__catArrowDelegated = true;
+        document.addEventListener('click', (e) => {
+          const btn = e.target && e.target.closest ? e.target.closest('.cat-arrow') : null;
+          if (!btn) return;
+          e.preventDefault();
+          e.stopPropagation();
+          const id = btn.getAttribute('data-target');
+          const c = document.getElementById(id);
+          if (!c) return;
+          const left = btn.classList.contains('prev') ? -340 : 340;
+          c.scrollBy({ left, behavior: 'smooth' });
+        }, true);
+      }
+    }
+
+    function renderPairingLab(){
+      const img = (n) => `/assets/generated/pairings/pair-${String(n).padStart(2, '0')}.webp`;
+      const dishThumb = {
+        steak:'/assets/generated/dishes/steak.webp',
+        salmon:'/assets/generated/dishes/salmon.webp',
+        sushi:'/assets/generated/dishes/sushi.webp',
+        pizza:'/assets/generated/dishes/pizza.webp',
+        'mushroom-pasta':'/assets/generated/dishes/mushroom-pasta.webp',
+        'cheese-board':'/assets/generated/dishes/cheese-board.webp',
+        burger:'/assets/generated/dishes/burger.webp',
+        'roast-chicken':'/assets/generated/dishes/roast-chicken.webp',
+        'bbq-ribs':'/assets/generated/dishes/bbq-ribs.webp',
+        'seafood-pasta':'/assets/generated/dishes/seafood-pasta.webp',
+        oysters:'/assets/generated/dishes/oysters.webp',
+        crab:'/assets/generated/dishes/crab.webp'
+      };
+
+      const DISHES = [
+        {id:'steak',label:(L.dishMap && L.dishMap.steak) || 'Steak'},
+        {id:'salmon',label:(L.dishMap && L.dishMap.salmon) || 'Salmon'},
+        {id:'sushi',label:(L.dishMap && L.dishMap.sushi) || 'Sushi'},
+        {id:'pizza',label:(L.dishMap && L.dishMap.pizza) || 'Pizza'},
+        {id:'mushroom-pasta',label:(L.dishMap && L.dishMap['mushroom-pasta']) || 'Mushroom Pasta'},
+        {id:'cheese-board',label:(L.dishMap && L.dishMap['cheese-board']) || 'Cheese Board'},
+        {id:'burger',label:(L.dishMap && L.dishMap.burger) || 'Burger'},
+        {id:'roast-chicken',label:(L.dishMap && L.dishMap['roast-chicken']) || 'Roast Chicken'},
+        {id:'bbq-ribs',label:(L.dishMap && L.dishMap['bbq-ribs']) || 'BBQ Ribs'},
+        {id:'seafood-pasta',label:(L.dishMap && L.dishMap['seafood-pasta']) || 'Seafood Pasta'},
+        {id:'oysters',label:(L.dishMap && L.dishMap.oysters) || 'Oysters'},
+        {id:'crab',label:(L.dishMap && L.dishMap.crab) || 'Crab'}
+      ];
+
+      const PAIRINGS = {
+        steak: {
+          balanced: [
+            {wine:'Cabernet Sauvignon', bottle:'Decoy Cabernet Sauvignon', region:'Napa Valley, USA', note:'Structured tannins match protein and fat.', image:img(1)},
+            {wine:'Malbec', bottle:'Catena Malbec', region:'Mendoza, Argentina', note:'Dark fruit and grip for grilled crust.', image:img(2)},
+            {wine:'Tempranillo Reserva', bottle:'Marques de Riscal Reserva', region:'Rioja, Spain', note:'Oak spice matches char and herbs.', image:img(3)},
+            {wine:'Sangiovese', bottle:'Ruffino Chianti Classico', region:'Tuscany, Italy', note:'Acidity refreshes palate between bites.', image:img(4)},
+            {wine:'Merlot', bottle:'Duckhorn Merlot', region:'Napa Valley, USA', note:'Softer tannin for medium cuts.', image:img(5)},
+            {wine:'Carmenere', bottle:'Montes Purple Angel', region:'Colchagua, Chile', note:'Savory profile supports smoke.', image:img(6)}
+          ],
+          fresh: [
+            {wine:'Pinot Noir', bottle:'Meiomi Pinot Noir', region:'California, USA', note:'Lighter body for lean cuts.', image:img(7)},
+            {wine:'Gamay', bottle:'Louis Jadot Beaujolais', region:'Beaujolais, France', note:'Low tannin and bright fruit.', image:img(8)},
+            {wine:'Barbera', bottle:'Vietti Barbera d Asti', region:'Piedmont, Italy', note:'High acidity cuts fat.', image:img(9)},
+            {wine:'Grenache', bottle:'Cotes du Rhone Villages', region:'Rhone, France', note:'Juicy fruit and mild spice.', image:img(10)},
+            {wine:'Frappato', bottle:'Arianna Occhipinti Frappato', region:'Sicily, Italy', note:'Aromatic and fresh profile.', image:img(11)},
+            {wine:'Zweigelt', bottle:'Rosi Schuster Zweigelt', region:'Burgenland, Austria', note:'Crisp cherry and pepper.', image:img(12)}
+          ],
+          rich: [
+            {wine:'Syrah', bottle:'E Guigal Crozes Hermitage', region:'Northern Rhone, France', note:'Pepper and smoke reinforce grill flavor.', image:img(13)},
+            {wine:'Nero d Avola', bottle:'Planeta Nero d Avola', region:'Sicily, Italy', note:'Bold fruit and spice for fatty cuts.', image:img(14)},
+            {wine:'Aglianico', bottle:'Mastroberardino Radici', region:'Campania, Italy', note:'High tannin for charred steak.', image:img(15)},
+            {wine:'Shiraz', bottle:'Penfolds Bin 28', region:'South Australia', note:'Full body handles marbling.', image:img(16)},
+            {wine:'Petit Verdot Blend', bottle:'Bodega Norton Privada', region:'Mendoza, Argentina', note:'Dense texture for intense meat.', image:img(17)},
+            {wine:'Tannat', bottle:'Garzon Tannat Reserve', region:'Maldonado, Uruguay', note:'Powerful structure for rich cuts.', image:img(18)}
+          ]
+        },
+        salmon: {
+          balanced: [
+            {wine:'Pinot Noir', bottle:'Cloudline Pinot Noir', region:'Oregon, USA', note:'Light tannin supports oily fish.', image:img(19)},
+            {wine:'Chardonnay', bottle:'Louis Jadot Chablis', region:'Chablis, France', note:'Minerality and acidity with grilled salmon.', image:img(20)},
+            {wine:'Rose', bottle:'Whispering Angel Rose', region:'Provence, France', note:'Bridge pairing for herbs and glaze.', image:img(21)},
+            {wine:'Gruner Veltliner', bottle:'Nigl Gruner Veltliner', region:'Kremstal, Austria', note:'Citrus and pepper brighten fish.', image:img(22)},
+            {wine:'Etna Bianco', bottle:'Benanti Etna Bianco', region:'Sicily, Italy', note:'Volcanic minerality and precision.', image:img(23)},
+            {wine:'Godello', bottle:'Avancia Godello', region:'Valdeorras, Spain', note:'Round texture, clean finish.', image:img(24)}
+          ],
+          fresh: [
+            {wine:'Sauvignon Blanc', bottle:'Cloudy Bay Sauvignon Blanc', region:'Marlborough, New Zealand', note:'Citrus profile for lemon and herbs.', image:img(1)},
+            {wine:'Albarino', bottle:'Pazo de Senorans Albarino', region:'Rias Baixas, Spain', note:'Saline style for seafood notes.', image:img(2)},
+            {wine:'Vermentino', bottle:'Argiolas Vermentino', region:'Sardinia, Italy', note:'Fresh Mediterranean herbs.', image:img(3)},
+            {wine:'Txakoli', bottle:'Ameztoi Txakoli', region:'Basque Country, Spain', note:'Very crisp and light.', image:img(4)},
+            {wine:'Muscadet', bottle:'Domaine de la Pepiere', region:'Loire, France', note:'Lean for delicate fish texture.', image:img(5)},
+            {wine:'Assyrtiko', bottle:'Gaia Assyrtiko', region:'Santorini, Greece', note:'High acidity for citrus dishes.', image:img(6)}
+          ],
+          rich: [
+            {wine:'Viognier', bottle:'Yalumba Viognier', region:'Eden Valley, Australia', note:'Broader texture with creamy sauces.', image:img(7)},
+            {wine:'White Rioja', bottle:'Muga Blanco', region:'Rioja, Spain', note:'Subtle oak for roasted salmon.', image:img(8)},
+            {wine:'Chenin Blanc', bottle:'Vouvray Sec', region:'Loire, France', note:'Depth and acidity together.', image:img(9)},
+            {wine:'Marsanne Roussanne', bottle:'Tablas Creek Esprit Blanc', region:'Paso Robles, USA', note:'Richer body for butter sauces.', image:img(10)},
+            {wine:'Fiano', bottle:'Mastroberardino Fiano', region:'Campania, Italy', note:'Textural white with seared fish.', image:img(11)},
+            {wine:'Orange Wine', bottle:'Radikon Oslavje', region:'Friuli, Italy', note:'Grip for umami toppings.', image:img(12)}
+          ]
+        },
+        sushi: {
+          balanced: [
+            {wine:'Riesling Dry', bottle:'Dr Loosen Dry Riesling', region:'Mosel, Germany', note:'Acidity and aromatics with fish and rice.', image:img(13)},
+            {wine:'Champagne Brut', bottle:'Billecart Salmon Brut Reserve', region:'Champagne, France', note:'Bubbles cleanse palate.', image:img(14)},
+            {wine:'Albarino', bottle:'Martin Codax Albarino', region:'Rias Baixas, Spain', note:'Saline freshness for raw fish.', image:img(15)},
+            {wine:'Sancerre', bottle:'Domaine Vacheron Sancerre', region:'Loire, France', note:'Mineral citrus profile.', image:img(16)},
+            {wine:'Pinot Noir', bottle:'Drouhin Bourgogne Rouge', region:'Burgundy, France', note:'Great with tuna and soy.', image:img(17)},
+            {wine:'Rose Brut', bottle:'Ferrari Rose', region:'Trento, Italy', note:'Versatile for mixed platters.', image:img(18)}
+          ],
+          fresh: [
+            {wine:'Muscadet', bottle:'Domaine de la Pepiere', region:'Loire, France', note:'Lean and saline for nigiri.', image:img(19)},
+            {wine:'Txakoli', bottle:'Ameztoi Txakoli', region:'Basque Country, Spain', note:'Low alcohol and crisp.', image:img(20)},
+            {wine:'Sauvignon Blanc', bottle:'Greywacke Sauvignon Blanc', region:'Marlborough, New Zealand', note:'Herbal citrus style.', image:img(21)},
+            {wine:'Vinho Verde', bottle:'Anselmo Mendes Contacto', region:'Minho, Portugal', note:'Light and lively texture.', image:img(22)},
+            {wine:'Cava Brut Nature', bottle:'Recaredo Terrers', region:'Penedes, Spain', note:'Dry bubbles for tempura fat.', image:img(23)},
+            {wine:'Assyrtiko', bottle:'Gaia Wild Ferment', region:'Santorini, Greece', note:'Salinity and acidity for umami.', image:img(24)}
+          ],
+          rich: [
+            {wine:'Champagne Blanc de Noirs', bottle:'Bollinger Special Cuvee', region:'Champagne, France', note:'Structured sparkling for rich toppings.', image:img(1)},
+            {wine:'Chenin Blanc', bottle:'Huet Vouvray Sec', region:'Loire, France', note:'Body plus acidity for creamy sauces.', image:img(2)},
+            {wine:'White Burgundy', bottle:'Louis Michel Chablis Premier Cru', region:'Burgundy, France', note:'Textural white for buttery fish.', image:img(3)},
+            {wine:'Rose Champagne', bottle:'Ruinart Rose', region:'Champagne, France', note:'Red fruit profile for salmon rolls.', image:img(4)},
+            {wine:'Orange Wine', bottle:'Gravner Ribolla', region:'Friuli, Italy', note:'Grip supports soy depth.', image:img(5)},
+            {wine:'Light Pinot Noir', bottle:'Au Bon Climat Pinot Noir', region:'Santa Barbara, USA', note:'For richer fish and soy.', image:img(6)}
+          ]
+        },
+        pizza: {
+          balanced: [
+            {wine:'Chianti Classico', bottle:'Fontodi Chianti Classico', region:'Tuscany, Italy', note:'Tomato acidity meets Sangiovese acidity.', image:img(7)},
+            {wine:'Barbera', bottle:'Vietti Barbera d Asti', region:'Piedmont, Italy', note:'Low tannin and high freshness.', image:img(8)},
+            {wine:'Montepulciano d Abruzzo', bottle:'Masciarelli Montepulciano', region:'Abruzzo, Italy', note:'Fruit forward pizza match.', image:img(9)},
+            {wine:'Nero d Avola', bottle:'Donnafugata Sherazade', region:'Sicily, Italy', note:'Soft spice with meat toppings.', image:img(10)},
+            {wine:'Lambrusco Secco', bottle:'Medici Ermete Concerto', region:'Emilia Romagna, Italy', note:'Sparkling red refreshes cheese fat.', image:img(11)},
+            {wine:'Valpolicella Classico', bottle:'Allegrini Valpolicella', region:'Veneto, Italy', note:'Light red cherry profile.', image:img(12)}
+          ],
+          fresh: [
+            {wine:'Frappato', bottle:'COS Frappato', region:'Sicily, Italy', note:'Chilled light red for margherita.', image:img(13)},
+            {wine:'Rose', bottle:'Cerasuolo d Abruzzo', region:'Abruzzo, Italy', note:'Bright for vegetable toppings.', image:img(14)},
+            {wine:'Verdicchio', bottle:'Bucci Verdicchio', region:'Marche, Italy', note:'Great for white pizza.', image:img(15)},
+            {wine:'Dolcetto', bottle:'GD Vajra Dolcetto', region:'Piedmont, Italy', note:'Soft tannin and fresh fruit.', image:img(16)},
+            {wine:'Cava Brut', bottle:'Gramona Imperial', region:'Penedes, Spain', note:'Cuts richness on cheesy slices.', image:img(17)},
+            {wine:'Pinot Grigio', bottle:'Jermann Pinot Grigio', region:'Friuli, Italy', note:'For lighter bianca pizzas.', image:img(18)}
+          ],
+          rich: [
+            {wine:'Aglianico', bottle:'Feudi di San Gregorio Taurasi', region:'Campania, Italy', note:'For spicy sausage and aged cheese.', image:img(19)},
+            {wine:'Primitivo', bottle:'Tormaresca Primitivo', region:'Puglia, Italy', note:'Ripe fruit for smoky toppings.', image:img(20)},
+            {wine:'Syrah', bottle:'Cortona Syrah', region:'Tuscany, Italy', note:'Peppery depth for meat heavy pizza.', image:img(21)},
+            {wine:'Amarone', bottle:'Tommasi Amarone', region:'Veneto, Italy', note:'Concentrated style for intense flavors.', image:img(22)},
+            {wine:'Shiraz', bottle:'Torbreck Woodcutters Shiraz', region:'Barossa, Australia', note:'Bold match for BBQ pizza styles.', image:img(23)},
+            {wine:'Cabernet Franc', bottle:'Olga Raffault Chinon', region:'Loire, France', note:'Savory for mushroom and meat pizza.', image:img(24)}
+          ]
+        },
+        'mushroom-pasta': {
+          balanced: [
+            {wine:'Pinot Noir', bottle:'Domaine Faiveley Bourgogne Rouge', region:'Burgundy, France', note:'Earthy profile mirrors mushroom notes.', image:img(1)},
+            {wine:'Nebbiolo', bottle:'Produttori del Barbaresco', region:'Piedmont, Italy', note:'Aromatic complexity with umami.', image:img(2)},
+            {wine:'Chardonnay', bottle:'Meursault style Chardonnay', region:'Burgundy, France', note:'If cream and butter dominate.', image:img(3)},
+            {wine:'Sangiovese', bottle:'Rosso di Montalcino', region:'Tuscany, Italy', note:'Acidity balances richness.', image:img(4)},
+            {wine:'Gamay', bottle:'Morgon Cru Beaujolais', region:'Beaujolais, France', note:'Fresh fruit with low tannin.', image:img(5)},
+            {wine:'Etna Rosso', bottle:'Benanti Etna Rosso', region:'Sicily, Italy', note:'Mineral red for wild mushrooms.', image:img(6)}
+          ],
+          fresh: [
+            {wine:'Frappato', bottle:'Planeta Frappato', region:'Sicily, Italy', note:'Light and aromatic for herb sauces.', image:img(7)},
+            {wine:'Gruner Veltliner', bottle:'FX Pichler Gruner', region:'Wachau, Austria', note:'Peppery white for olive oil pasta.', image:img(8)},
+            {wine:'Soave Classico', bottle:'Pieropan Soave', region:'Veneto, Italy', note:'Floral freshness for lighter sauces.', image:img(9)},
+            {wine:'Barbera', bottle:'Braida Barbera', region:'Piedmont, Italy', note:'Bright acidity cuts cream texture.', image:img(10)},
+            {wine:'Rose', bottle:'Bandol Rose', region:'Provence, France', note:'Clean with roasted mushroom notes.', image:img(11)},
+            {wine:'Vermentino', bottle:'Argiolas Vermentino', region:'Sardinia, Italy', note:'Herbal citrus for garlic-forward sauces.', image:img(12)}
+          ],
+          rich: [
+            {wine:'Barolo', bottle:'Vietti Castiglione Barolo', region:'Piedmont, Italy', note:'Structure for truffle and porcini.', image:img(13)},
+            {wine:'Amarone', bottle:'Allegrini Amarone', region:'Veneto, Italy', note:'Concentrated fruit for savory pasta.', image:img(14)},
+            {wine:'Syrah', bottle:'Hermitage Syrah', region:'Rhone, France', note:'Spice for rich mushroom ragout.', image:img(15)},
+            {wine:'Aglianico', bottle:'Taurasi DOCG', region:'Campania, Italy', note:'Powerful tannin with intense umami.', image:img(16)},
+            {wine:'Orange Wine', bottle:'Radikon Ribolla', region:'Friuli, Italy', note:'Textural grip with earthy sauces.', image:img(17)},
+            {wine:'Oaked Chardonnay', bottle:'Ramey Chardonnay', region:'Sonoma, USA', note:'Rich white for parmesan heavy pasta.', image:img(18)}
+          ]
+        },
+        'cheese-board': {
+          balanced: [
+            {wine:'Champagne Brut', bottle:'Pol Roger Brut Reserve', region:'Champagne, France', note:'Universal pairing for mixed textures.', image:img(19)},
+            {wine:'Tempranillo Reserva', bottle:'La Rioja Alta Vina Alberdi', region:'Rioja, Spain', note:'Aged red with hard cheeses.', image:img(20)},
+            {wine:'Sauvignon Blanc', bottle:'Sancerre Blanc', region:'Loire, France', note:'Goat cheese classic pairing.', image:img(21)},
+            {wine:'Pinot Noir', bottle:'Louis Jadot Bourgogne Rouge', region:'Burgundy, France', note:'Soft red for mixed board.', image:img(22)},
+            {wine:'Chenin Blanc', bottle:'Vouvray Demi Sec', region:'Loire, France', note:'Semi-hard and washed rind match.', image:img(23)},
+            {wine:'Dry Rose', bottle:'Tavel Rose', region:'Rhone, France', note:'Versatile bridge style.', image:img(24)}
+          ],
+          fresh: [
+            {wine:'Muscadet', bottle:'Sevre et Maine Sur Lie', region:'Loire, France', note:'Fresh acid with young goat cheese.', image:img(1)},
+            {wine:'Albarino', bottle:'Pazo de Senorans', region:'Rias Baixas, Spain', note:'Saline citrus with fresh cheeses.', image:img(2)},
+            {wine:'Cava Brut Nature', bottle:'Recaredo Terrers', region:'Penedes, Spain', note:'Dry bubbles cleanse creamy cheeses.', image:img(3)},
+            {wine:'Txakoli', bottle:'Ameztoi', region:'Basque Country, Spain', note:'Light and crisp for mild boards.', image:img(4)},
+            {wine:'Soave', bottle:'Pieropan Soave Classico', region:'Veneto, Italy', note:'Floral notes for soft cheeses.', image:img(5)},
+            {wine:'Riesling Kabinett', bottle:'JJ Prum Kabinett', region:'Mosel, Germany', note:'Acid line for tangy cheese.', image:img(6)}
+          ],
+          rich: [
+            {wine:'Sauternes', bottle:'Chateau Suduiraut', region:'Bordeaux, France', note:'Blue cheese and sweet wine classic.', image:img(7)},
+            {wine:'Port Tawny', bottle:'Taylor 10 Year Tawny', region:'Douro, Portugal', note:'Aged cheddar and nutty hard cheeses.', image:img(8)},
+            {wine:'Amarone', bottle:'Masi Costasera Amarone', region:'Veneto, Italy', note:'Powerful red for aged hard cheese.', image:img(9)},
+            {wine:'Barolo', bottle:'GD Vajra Albe Barolo', region:'Piedmont, Italy', note:'Tannin for mature cheeses.', image:img(10)},
+            {wine:'Sherry Oloroso', bottle:'Lustau Oloroso', region:'Jerez, Spain', note:'Oxidative richness with umami cheese.', image:img(11)},
+            {wine:'Vintage Port', bottle:'Dow Vintage Port', region:'Douro, Portugal', note:'Best with blue and very salty cheeses.', image:img(12)}
+          ]
+        },
+        burger: {
+          balanced: [
+            {wine:'Malbec', bottle:'Catena Malbec', region:'Mendoza, Argentina', note:'Juicy fruit and grill-friendly tannins.', image:img(2)},
+            {wine:'Tempranillo Reserva', bottle:'Marques de Riscal Reserva', region:'Rioja, Spain', note:'Oak spice matches char and smoke.', image:img(3)},
+            {wine:'Merlot', bottle:'Duckhorn Merlot', region:'Napa Valley, USA', note:'Round texture with classic cheeseburger.', image:img(5)},
+            {wine:'Barbera', bottle:'Vietti Barbera d Asti', region:'Piedmont, Italy', note:'Acidity cuts fat and sauces.', image:img(9)},
+            {wine:'Chianti Classico', bottle:'Fontodi Chianti Classico', region:'Tuscany, Italy', note:'Great with tomato and herb toppings.', image:img(7)},
+            {wine:'Lambrusco Secco', bottle:'Medici Ermete Concerto', region:'Emilia Romagna, Italy', note:'Sparkling red refreshes rich bites.', image:img(11)}
+          ],
+          fresh: [
+            {wine:'Pinot Noir', bottle:'Meiomi Pinot Noir', region:'California, USA', note:'For lean patties and lighter burgers.', image:img(7)},
+            {wine:'Gamay', bottle:'Louis Jadot Beaujolais', region:'Beaujolais, France', note:'Low tannin and bright fruit.', image:img(8)},
+            {wine:'Frappato', bottle:'COS Frappato', region:'Sicily, Italy', note:'Chillable red with freshness.', image:img(13)},
+            {wine:'Rose', bottle:'Cerasuolo d Abruzzo', region:'Abruzzo, Italy', note:'Great for chicken or veggie burgers.', image:img(14)},
+            {wine:'Cava Brut', bottle:'Gramona Imperial', region:'Penedes, Spain', note:'Bubbles clean palate after cheese.', image:img(17)},
+            {wine:'Dolcetto', bottle:'GD Vajra Dolcetto', region:'Piedmont, Italy', note:'Soft and easy everyday pairing.', image:img(16)}
+          ],
+          rich: [
+            {wine:'Syrah', bottle:'E Guigal Crozes Hermitage', region:'Northern Rhone, France', note:'Pepper profile with charred burgers.', image:img(13)},
+            {wine:'Shiraz', bottle:'Penfolds Bin 28', region:'South Australia', note:'Bold match for smoked patties.', image:img(16)},
+            {wine:'Aglianico', bottle:'Mastroberardino Radici', region:'Campania, Italy', note:'Tannic structure for fatty burgers.', image:img(15)},
+            {wine:'Primitivo', bottle:'Tormaresca Primitivo', region:'Puglia, Italy', note:'Ripe fruit for BBQ sauce.', image:img(20)},
+            {wine:'Cabernet Sauvignon', bottle:'Decoy Cabernet Sauvignon', region:'Napa Valley, USA', note:'Classic power with beef and cheddar.', image:img(1)},
+            {wine:'Tannat', bottle:'Garzon Tannat Reserve', region:'Maldonado, Uruguay', note:'For very rich double burgers.', image:img(18)}
+          ]
+        },
+        'roast-chicken': {
+          balanced: [
+            {wine:'Chardonnay', bottle:'Louis Jadot Chablis', region:'Chablis, France', note:'Balanced white for roasted bird.', image:img(20)},
+            {wine:'Pinot Noir', bottle:'Cloudline Pinot Noir', region:'Oregon, USA', note:'Light red for herb roasted chicken.', image:img(19)},
+            {wine:'Sauvignon Blanc', bottle:'Cloudy Bay Sauvignon Blanc', region:'Marlborough, New Zealand', note:'Acid lift for lemon herbs.', image:img(1)},
+            {wine:'Vermentino', bottle:'Argiolas Vermentino', region:'Sardinia, Italy', note:'Mediterranean herb synergy.', image:img(3)},
+            {wine:'Soave Classico', bottle:'Pieropan Soave', region:'Veneto, Italy', note:'Floral fresh profile.', image:img(9)},
+            {wine:'Rose', bottle:'Whispering Angel Rose', region:'Provence, France', note:'Versatile mid-body option.', image:img(21)}
+          ],
+          fresh: [
+            {wine:'Albarino', bottle:'Pazo de Senorans Albarino', region:'Rias Baixas, Spain', note:'Crisp style for lighter roast.', image:img(2)},
+            {wine:'Txakoli', bottle:'Ameztoi Txakoli', region:'Basque Country, Spain', note:'Very bright and clean.', image:img(4)},
+            {wine:'Muscadet', bottle:'Domaine de la Pepiere', region:'Loire, France', note:'Lean profile for simple roast.', image:img(5)},
+            {wine:'Vinho Verde', bottle:'Anselmo Mendes Contacto', region:'Minho, Portugal', note:'Light and refreshing.', image:img(22)},
+            {wine:'Pinot Grigio', bottle:'Jermann Pinot Grigio', region:'Friuli, Italy', note:'Neutral, food-friendly white.', image:img(18)},
+            {wine:'Cava Brut Nature', bottle:'Recaredo Terrers', region:'Penedes, Spain', note:'Dry bubbles with crispy skin.', image:img(23)}
+          ],
+          rich: [
+            {wine:'Viognier', bottle:'Yalumba Viognier', region:'Eden Valley, Australia', note:'Richer white for buttery sauces.', image:img(7)},
+            {wine:'White Rioja', bottle:'Muga Blanco', region:'Rioja, Spain', note:'Oak touch with roasted notes.', image:img(8)},
+            {wine:'Marsanne Roussanne', bottle:'Tablas Creek Esprit Blanc', region:'Paso Robles, USA', note:'Texture for creamy jus.', image:img(10)},
+            {wine:'Chenin Blanc', bottle:'Vouvray Sec', region:'Loire, France', note:'Weight plus freshness.', image:img(9)},
+            {wine:'Oaked Chardonnay', bottle:'Ramey Chardonnay', region:'Sonoma, USA', note:'Rich profile for heavier sides.', image:img(18)},
+            {wine:'Orange Wine', bottle:'Radikon Oslavje', region:'Friuli, Italy', note:'Textural match for roasted skin.', image:img(12)}
+          ]
+        },
+        'bbq-ribs': {
+          balanced: [
+            {wine:'Zinfandel style Shiraz', bottle:'Torbreck Woodcutters Shiraz', region:'Barossa, Australia', note:'Sweet smoke and spice harmony.', image:img(23)},
+            {wine:'Tempranillo Reserva', bottle:'Marques de Riscal Reserva', region:'Rioja, Spain', note:'Oak spice for barbecue glaze.', image:img(3)},
+            {wine:'Malbec', bottle:'Catena Malbec', region:'Mendoza, Argentina', note:'Juicy fruit with char.', image:img(2)},
+            {wine:'Carmenere', bottle:'Montes Purple Angel', region:'Colchagua, Chile', note:'Savory pepper for smoky meat.', image:img(6)},
+            {wine:'Primitivo', bottle:'Tormaresca Primitivo', region:'Puglia, Italy', note:'Ripe profile with sweet sauce.', image:img(20)},
+            {wine:'Syrah', bottle:'Cortona Syrah', region:'Tuscany, Italy', note:'Peppery structure for ribs.', image:img(21)}
+          ],
+          fresh: [
+            {wine:'Lambrusco Secco', bottle:'Medici Ermete Concerto', region:'Emilia Romagna, Italy', note:'Sparkling red resets palate.', image:img(11)},
+            {wine:'Barbera', bottle:'Vietti Barbera d Asti', region:'Piedmont, Italy', note:'Acid cut through sweet glaze.', image:img(8)},
+            {wine:'Gamay', bottle:'Louis Jadot Beaujolais', region:'Beaujolais, France', note:'Lighter red for less heavy ribs.', image:img(8)},
+            {wine:'Rose', bottle:'Bandol Rose', region:'Provence, France', note:'Smoky pork with freshness.', image:img(11)},
+            {wine:'Cava Brut', bottle:'Gramona Imperial', region:'Penedes, Spain', note:'For sticky sauces and crunch.', image:img(17)},
+            {wine:'Pinot Noir', bottle:'Meiomi Pinot Noir', region:'California, USA', note:'Soft tannin for gentle smoke.', image:img(7)}
+          ],
+          rich: [
+            {wine:'Shiraz', bottle:'Penfolds Bin 28', region:'South Australia', note:'Big fruit and spice for heavy BBQ.', image:img(16)},
+            {wine:'Aglianico', bottle:'Mastroberardino Radici', region:'Campania, Italy', note:'Tannin and power for fatty ribs.', image:img(15)},
+            {wine:'Tannat', bottle:'Garzon Tannat Reserve', region:'Maldonado, Uruguay', note:'Strong structure with smoked meat.', image:img(18)},
+            {wine:'Amarone', bottle:'Tommasi Amarone', region:'Veneto, Italy', note:'Concentrated style for rich glaze.', image:img(22)},
+            {wine:'Cabernet Sauvignon', bottle:'Decoy Cabernet Sauvignon', region:'Napa Valley, USA', note:'Classic pairing with beef ribs.', image:img(1)},
+            {wine:'Petit Verdot Blend', bottle:'Bodega Norton Privada', region:'Mendoza, Argentina', note:'Dense body for intense barbecue.', image:img(17)}
+          ]
+        },
+        'seafood-pasta': {
+          balanced: [
+            {wine:'Albarino', bottle:'Pazo de Senorans Albarino', region:'Rias Baixas, Spain', note:'Saline freshness for shellfish pasta.', image:img(2)},
+            {wine:'Vermentino', bottle:'Argiolas Vermentino', region:'Sardinia, Italy', note:'Herbal citrus for seafood sauces.', image:img(3)},
+            {wine:'Etna Bianco', bottle:'Benanti Etna Bianco', region:'Sicily, Italy', note:'Mineral precision for seafood dishes.', image:img(23)},
+            {wine:'Godello', bottle:'Avancia Godello', region:'Valdeorras, Spain', note:'Round texture and clean finish.', image:img(24)},
+            {wine:'Chardonnay', bottle:'Louis Jadot Chablis', region:'Chablis, France', note:'Crisp classic with seafood cream pasta.', image:img(20)},
+            {wine:'Rose', bottle:'Whispering Angel Rose', region:'Provence, France', note:'Versatile with tomato seafood pasta.', image:img(21)}
+          ],
+          fresh: [
+            {wine:'Muscadet', bottle:'Domaine de la Pepiere', region:'Loire, France', note:'Lean and saline for delicate seafood.', image:img(5)},
+            {wine:'Txakoli', bottle:'Ameztoi Txakoli', region:'Basque Country, Spain', note:'High freshness and low weight.', image:img(4)},
+            {wine:'Sauvignon Blanc', bottle:'Cloudy Bay Sauvignon Blanc', region:'Marlborough, New Zealand', note:'Citrus lift for herb sauces.', image:img(1)},
+            {wine:'Vinho Verde', bottle:'Anselmo Mendes Contacto', region:'Minho, Portugal', note:'Light and refreshing style.', image:img(22)},
+            {wine:'Assyrtiko', bottle:'Gaia Assyrtiko', region:'Santorini, Greece', note:'Acid backbone for lemon seafood pasta.', image:img(6)},
+            {wine:'Cava Brut Nature', bottle:'Recaredo Terrers', region:'Penedes, Spain', note:'Bubbles with fried seafood toppings.', image:img(23)}
+          ],
+          rich: [
+            {wine:'Viognier', bottle:'Yalumba Viognier', region:'Eden Valley, Australia', note:'Richer white for buttery seafood pasta.', image:img(7)},
+            {wine:'White Rioja', bottle:'Muga Blanco', region:'Rioja, Spain', note:'Oak touch with roasted seafood.', image:img(8)},
+            {wine:'Chenin Blanc', bottle:'Vouvray Sec', region:'Loire, France', note:'Depth with seafood cream sauces.', image:img(9)},
+            {wine:'Marsanne Roussanne', bottle:'Tablas Creek Esprit Blanc', region:'Paso Robles, USA', note:'Broad profile for richer sauces.', image:img(10)},
+            {wine:'Orange Wine', bottle:'Radikon Oslavje', region:'Friuli, Italy', note:'Textural complexity for umami seafood.', image:img(12)},
+            {wine:'Champagne Blanc de Noirs', bottle:'Bollinger Special Cuvee', region:'Champagne, France', note:'Luxury pairing with rich seafood pasta.', image:img(1)}
+          ]
+        }
+      };
+
+      PAIRINGS.oysters = {
+        balanced: [
+          {wine:'Champagne Brut', bottle:'Billecart Salmon Brut Reserve', region:'Champagne, France', note:'Classic oyster pairing with high acidity and fine bubbles.', image:img(14)},
+          {wine:'Muscadet', bottle:'Domaine de la Pepiere', region:'Loire, France', note:'Saline and lean profile for raw oysters.', image:img(19)},
+          {wine:'Albarino', bottle:'Martin Codax Albarino', region:'Rias Baixas, Spain', note:'Citrus-saline style aligns with shellfish sweetness.', image:img(15)},
+          {wine:'Assyrtiko', bottle:'Gaia Wild Ferment', region:'Santorini, Greece', note:'Mineral edge for briny oyster texture.', image:img(24)},
+          {wine:'Chardonnay', bottle:'Louis Jadot Chablis', region:'Chablis, France', note:'Taut mineral Chardonnay works with oysters.', image:img(20)},
+          {wine:'Cava Brut Nature', bottle:'Recaredo Terrers', region:'Penedes, Spain', note:'Dry sparkling option for mixed shellfish platters.', image:img(23)}
+        ],
+        fresh: [
+          {wine:'Muscadet', bottle:'Domaine de la Pepiere', region:'Loire, France', note:'Best for very clean, citrus-forward oyster service.', image:img(5)},
+          {wine:'Txakoli', bottle:'Ameztoi Txakoli', region:'Basque Country, Spain', note:'Very crisp and low alcohol profile.', image:img(4)},
+          {wine:'Vinho Verde', bottle:'Anselmo Mendes Contacto', region:'Minho, Portugal', note:'Light and refreshing with briny seafood.', image:img(22)},
+          {wine:'Sauvignon Blanc', bottle:'Cloudy Bay Sauvignon Blanc', region:'Marlborough, New Zealand', note:'Herbal citrus style for mignonette sauces.', image:img(1)},
+          {wine:'Albarino', bottle:'Pazo de Senorans Albarino', region:'Rias Baixas, Spain', note:'Salinity and freshness for chilled oysters.', image:img(2)},
+          {wine:'Cava Brut Nature', bottle:'Recaredo Terrers', region:'Penedes, Spain', note:'Cleanses palate between oysters.', image:img(3)}
+        ],
+        rich: [
+          {wine:'Champagne Blanc de Noirs', bottle:'Bollinger Special Cuvee', region:'Champagne, France', note:'Richer sparkling style for baked oysters.', image:img(1)},
+          {wine:'White Rioja', bottle:'Muga Blanco', region:'Rioja, Spain', note:'Subtle oak for grilled oyster preparations.', image:img(8)},
+          {wine:'Chenin Blanc', bottle:'Vouvray Sec', region:'Loire, France', note:'More body for butter-based oyster dishes.', image:img(9)},
+          {wine:'Viognier', bottle:'Yalumba Viognier', region:'Eden Valley, Australia', note:'Richer texture for warm oyster recipes.', image:img(7)},
+          {wine:'Marsanne Roussanne', bottle:'Tablas Creek Esprit Blanc', region:'Paso Robles, USA', note:'Broad palate for creamy oyster sauces.', image:img(10)},
+          {wine:'Orange Wine', bottle:'Radikon Oslavje', region:'Friuli, Italy', note:'Textural option for charred oysters.', image:img(12)}
+        ]
+      };
+
+      PAIRINGS.crab = {
+        balanced: [
+          {wine:'Chardonnay', bottle:'Louis Jadot Chablis', region:'Chablis, France', note:'Balanced mineral style for crab meat sweetness.', image:img(20)},
+          {wine:'Albarino', bottle:'Pazo de Senorans Albarino', region:'Rias Baixas, Spain', note:'Seafood-friendly salinity and citrus.', image:img(2)},
+          {wine:'Godello', bottle:'Avancia Godello', region:'Valdeorras, Spain', note:'Round mid-palate for crab texture.', image:img(24)},
+          {wine:'Etna Bianco', bottle:'Benanti Etna Bianco', region:'Sicily, Italy', note:'Mineral precision with sweet crab flesh.', image:img(23)},
+          {wine:'Rose', bottle:'Whispering Angel Rose', region:'Provence, France', note:'Versatile for chilled crab salads.', image:img(21)},
+          {wine:'Champagne Brut', bottle:'Pol Roger Brut Reserve', region:'Champagne, France', note:'Classic shellfish and bubbles pairing.', image:img(19)}
+        ],
+        fresh: [
+          {wine:'Muscadet', bottle:'Domaine de la Pepiere', region:'Loire, France', note:'Lean and crisp for delicate crab dishes.', image:img(5)},
+          {wine:'Sauvignon Blanc', bottle:'Cloudy Bay Sauvignon Blanc', region:'Marlborough, New Zealand', note:'Zesty profile for lemon crab recipes.', image:img(1)},
+          {wine:'Txakoli', bottle:'Ameztoi Txakoli', region:'Basque Country, Spain', note:'High freshness for chilled crab.', image:img(4)},
+          {wine:'Vinho Verde', bottle:'Anselmo Mendes Contacto', region:'Minho, Portugal', note:'Light style for simple seafood service.', image:img(22)},
+          {wine:'Assyrtiko', bottle:'Gaia Assyrtiko', region:'Santorini, Greece', note:'Acid backbone and saline edge.', image:img(6)},
+          {wine:'Cava Brut Nature', bottle:'Recaredo Terrers', region:'Penedes, Spain', note:'Dry sparkling with crab fritters.', image:img(23)}
+        ],
+        rich: [
+          {wine:'Viognier', bottle:'Yalumba Viognier', region:'Eden Valley, Australia', note:'Richer white for butter crab sauces.', image:img(7)},
+          {wine:'White Rioja', bottle:'Muga Blanco', region:'Rioja, Spain', note:'Subtle oak for roasted crab.', image:img(8)},
+          {wine:'Chenin Blanc', bottle:'Vouvray Sec', region:'Loire, France', note:'Body plus acidity for creamy crab pasta.', image:img(9)},
+          {wine:'Marsanne Roussanne', bottle:'Tablas Creek Esprit Blanc', region:'Paso Robles, USA', note:'Broad palate for rich shellfish dishes.', image:img(10)},
+          {wine:'Champagne Blanc de Noirs', bottle:'Bollinger Special Cuvee', region:'Champagne, France', note:'Structured bubbles for warm crab dishes.', image:img(1)},
+          {wine:'Orange Wine', bottle:'Radikon Oslavje', region:'Friuli, Italy', note:'Textural match for spicy crab preparations.', image:img(12)}
+        ]
+      };
+
+      const dishGrid = document.getElementById('dishGrid');
+      const styleTabs = document.getElementById('styleTabs');
+      const grid = document.getElementById('pairingGrid');
+      const note = document.getElementById('pairingNote');
+      if (!dishGrid || !styleTabs || !grid || !note) return;
+
+      const DISH_KEY='pairingDish';
+      const STYLE_KEY='pairingStyle';
+      let currentDish = localStorage.getItem(DISH_KEY) || 'steak';
+      let profile = localStorage.getItem(STYLE_KEY) || 'balanced';
+      if (!DISHES.some(d => d.id === currentDish)) currentDish = 'steak';
+      if (!['balanced','fresh','rich'].includes(profile)) profile = 'balanced';
+
+      function renderDishTiles(){
+        dishGrid.innerHTML = DISHES.map(d => `
+          <button type="button" class="dish-tile ${d.id===currentDish?'active':''}" data-dish="${d.id}">
+            <img class="dish-thumb" src="${optimizedImg(dishThumb[d.id] || '/logo.png')}" alt="${esc(d.label)}" />
+            <span class="dish-name">${esc(d.label)}</span>
+          </button>`).join('');
+
+        dishGrid.querySelectorAll('.dish-tile').forEach(btn => {
+          btn.addEventListener('click', () => {
+            currentDish = btn.getAttribute('data-dish') || 'steak';
+            localStorage.setItem(DISH_KEY, currentDish);
+            renderDishTiles();
+            renderCards();
+          });
+        });
+      }
+
+      // Canonical wine-type DB (from verified CSV): one wine type -> one bottle -> one file.
+            const WINE_TYPE_DB = {
+        'aglianico': { wine: 'Aglianico', bottle: 'Mastroberardino Radici', file: 'pair-25.png' },
+        'albarino': { wine: 'Albarino', bottle: 'Pazo de Senorans Albarino', file: 'pair-26.png' },
+        'amarone': { wine: 'Amarone', bottle: 'Tommasi Amarone', file: 'pair-27.png' },
+        'assyrtiko': { wine: 'Assyrtiko', bottle: 'Gaia Assyrtiko', file: 'pair-24.webp' },
+        'barbera': { wine: 'Barbera', bottle: 'Vietti Barbera d Asti', file: 'pair-09.webp' },
+        'barolo': { wine: 'Barolo', bottle: 'GD Vajra Albe Barolo', file: 'pair-28.png' },
+        'cabernet franc': { wine: 'Cabernet Franc', bottle: 'Olga Raffault Chinon', file: 'pair-29.png' },
+        'cabernet sauvignon': { wine: 'Cabernet Sauvignon', bottle: 'Decoy Cabernet Sauvignon', file: 'pair-01.webp' },
+        'carmenere': { wine: 'Carmenere', bottle: 'Montes Purple Angel', file: 'pair-06.webp' },
+        'cava brut': { wine: 'Cava Brut', bottle: 'Gramona Imperial', file: 'pair-30.png' },
+        'cava brut nature': { wine: 'Cava Brut Nature', bottle: 'Recaredo Terrers', file: 'pair-31.png' },
+        'champagne blanc de noirs': { wine: 'Champagne Blanc de Noirs', bottle: 'Bollinger Special Cuvee', file: 'pair-32.png' },
+        'champagne brut': { wine: 'Champagne Brut', bottle: 'Billecart Salmon Brut Reserve', file: 'pair-33.png' },
+        'chardonnay': { wine: 'Chardonnay', bottle: 'Louis Jadot Chablis', file: 'pair-19.webp' },
+        'chenin blanc': { wine: 'Chenin Blanc', bottle: 'Vouvray Sec', file: 'pair-34.png' },
+        'chianti classico': { wine: 'Chianti Classico', bottle: 'Fontodi Chianti Classico', file: 'pair-35.png' },
+        'dolcetto': { wine: 'Dolcetto', bottle: 'GD Vajra Dolcetto', file: 'pair-36.png' },
+        'etna bianco': { wine: 'Etna Bianco', bottle: 'Benanti Etna Bianco', file: 'pair-37.png' },
+        'etna rosso': { wine: 'Etna Rosso', bottle: 'Benanti Etna Rosso', file: 'pair-38.png' },
+        'fiano': { wine: 'Fiano', bottle: 'Mastroberardino Fiano', file: 'pair-39.png' },
+        'frappato': { wine: 'Frappato', bottle: 'COS Frappato', file: 'pair-11.webp' },
+        'gamay': { wine: 'Gamay', bottle: 'Louis Jadot Beaujolais', file: 'pair-08.webp' },
+        'godello': { wine: 'Godello', bottle: 'Avancia Godello', file: 'pair-23.webp' },
+        'grenache': { wine: 'Grenache', bottle: 'Cotes du Rhone Villages', file: 'pair-10.webp' },
+        'gruner veltliner': { wine: 'Gruner Veltliner', bottle: 'Nigl Gruner Veltliner', file: 'pair-21.webp' },
+        'lambrusco secco': { wine: 'Lambrusco Secco', bottle: 'Medici Ermete Concerto', file: 'pair-40.png' },
+        'light pinot noir': { wine: 'Light Pinot Noir', bottle: 'Au Bon Climat Pinot Noir', file: 'pair-41.png' },
+        'malbec': { wine: 'Malbec', bottle: 'Catena Malbec', file: 'pair-02.webp' },
+        'marsanne roussanne': { wine: 'Marsanne Roussanne', bottle: 'Tablas Creek Esprit Blanc', file: 'pair-42.png' },
+        'merlot': { wine: 'Merlot', bottle: 'Duckhorn Merlot', file: 'pair-05.webp' },
+        'montepulciano d abruzzo': { wine: 'Montepulciano d Abruzzo', bottle: 'Masciarelli Montepulciano', file: 'pair-43.png' },
+        'muscadet': { wine: 'Muscadet', bottle: 'Domaine de la Pepiere', file: 'pair-44.png' },
+        'nebbiolo': { wine: 'Nebbiolo', bottle: 'Produttori del Barbaresco', file: 'pair-45.png' },
+        'nero d avola': { wine: 'Nero d Avola', bottle: 'Planeta Nero d Avola', file: 'pair-14.webp' },
+        'oaked chardonnay': { wine: 'Oaked Chardonnay', bottle: 'Ramey Chardonnay', file: 'pair-46.png' },
+        'orange wine': { wine: 'Orange Wine', bottle: 'Radikon Oslavje', file: 'pair-47.png' },
+        'petit verdot blend': { wine: 'Petit Verdot Blend', bottle: 'Bodega Norton Privada', file: 'pair-17.webp' },
+        'pinot grigio': { wine: 'Pinot Grigio', bottle: 'Jermann Pinot Grigio', file: 'pair-48.png' },
+        'pinot noir': { wine: 'Pinot Noir', bottle: 'Meiomi Pinot Noir', file: 'pair-07.webp' },
+        'port tawny': { wine: 'Port Tawny', bottle: 'Taylor 10 Year Tawny', file: 'pair-49.png' },
+        'primitivo': { wine: 'Primitivo', bottle: 'Tormaresca Primitivo', file: 'pair-50.png' },
+        'riesling dry': { wine: 'Riesling Dry', bottle: 'Dr Loosen Dry Riesling', file: 'pair-51.png' },
+        'riesling kabinett': { wine: 'Riesling Kabinett', bottle: 'JJ Prum Kabinett', file: 'pair-52.png' },
+        'rose': { wine: 'Rose', bottle: 'Whispering Angel Rose', file: 'pair-20.webp' },
+        'sancerre': { wine: 'Sancerre', bottle: 'Domaine Vacheron Sancerre', file: 'pair-53.png' },
+        'sangiovese': { wine: 'Sangiovese', bottle: 'Ruffino Chianti Classico', file: 'pair-04.webp' },
+        'sauternes': { wine: 'Sauternes', bottle: 'Chateau Suduiraut', file: 'pair-54.png' },
+        'sauvignon blanc': { wine: 'Sauvignon Blanc', bottle: 'Greywacke Sauvignon Blanc', file: 'pair-21.webp' },
+        'sherry oloroso': { wine: 'Sherry Oloroso', bottle: 'Lustau Oloroso', file: 'pair-55.png' },
+        'shiraz': { wine: 'Shiraz', bottle: 'Torbreck Woodcutters Shiraz', file: 'pair-16.webp' },
+        'soave': { wine: 'Soave', bottle: 'Pieropan Soave Classico', file: 'pair-56.png' },
+        'soave classico': { wine: 'Soave Classico', bottle: 'Pieropan Soave', file: 'pair-57.png' },
+        'syrah': { wine: 'Syrah', bottle: 'Hermitage Syrah', file: 'pair-13.webp' },
+        'tannat': { wine: 'Tannat', bottle: 'Garzon Tannat Reserve', file: 'pair-18.webp' },
+        'tempranillo reserva': { wine: 'Tempranillo Reserva', bottle: 'Marques de Riscal Reserva', file: 'pair-03.webp' },
+        'txakoli': { wine: 'Txakoli', bottle: 'Ameztoi Txakoli', file: 'pair-58.png' },
+        'valpolicella classico': { wine: 'Valpolicella Classico', bottle: 'Allegrini Valpolicella', file: 'pair-59.png' },
+        'verdicchio': { wine: 'Verdicchio', bottle: 'Bucci Verdicchio', file: 'pair-60.png' },
+        'vermentino': { wine: 'Vermentino', bottle: 'Argiolas Vermentino', file: 'pair-61.png' },
+        'vinho verde': { wine: 'Vinho Verde', bottle: 'Anselmo Mendes Contacto', file: 'pair-62.png' },
+        'vintage port': { wine: 'Vintage Port', bottle: 'Dow Vintage Port', file: 'pair-63.png' },
+        'viognier': { wine: 'Viognier', bottle: 'Yalumba Viognier', file: 'pair-64.png' },
+        'white burgundy': { wine: 'White Burgundy', bottle: 'Louis Michel Chablis Premier Cru', file: 'pair-65.png' },
+        'white rioja': { wine: 'White Rioja', bottle: 'Muga Blanco', file: 'pair-66.png' },
+        'zweigelt': { wine: 'Zweigelt', bottle: 'Rosi Schuster Zweigelt', file: 'pair-12.webp' },
+      };
+
+      const WINE_TYPE_ALIASES = {
+        'zinfandel style shiraz': 'shiraz',
+        'meursault style chardonnay': 'chardonnay',
+        'dry rose': 'rose',
+        'rose brut': 'rose',
+        'rose champagne': 'rose'
+      };
+
+      function canonicalizeWineItem(item) {
+        const raw = String(item?.wine || '').toLowerCase().trim();
+        const key = WINE_TYPE_ALIASES[raw] || raw;
+        const canon = WINE_TYPE_DB[key];
+        if (!canon) return item;
+        return {
+          ...item,
+          wine: canon.wine,
+          bottle: canon.bottle,
+          image: `/assets/generated/pairings/${canon.file}`
+        };
+      }
+
+      function renderCards(){
+        const dishData = PAIRINGS[currentDish] || null;
+        const listRaw = dishData && dishData[profile] ? dishData[profile].slice(0, 6) : [];
+        const list = listRaw.map(canonicalizeWineItem);
+
+        if (!list.length) {
+          grid.innerHTML = `<article class="pair-card"><div class="pair-body"><h3>${esc(t('noPairingTitle','No pairing data yet'))}</h3><p>${esc(t('noPairingBody','Please choose another dish/profile.'))}</p></div></article>`;
+          note.textContent = '';
+          return;
+        }
+
+        grid.innerHTML = list.map(x => `
+          <article class="pair-card" data-link="/blog/?q=${encodeURIComponent(x.wine)}">
+            <div class="pair-img" style="background-image:url('${optimizedImg(x.image)}')"></div>
+            <div class="pair-body">
+              <h3>${esc(x.wine)}</h3>
+              <p><strong>${esc(t('labelBottle','Bottle'))}:</strong> ${esc(x.bottle)}</p>
+              <p>${esc(x.region)}</p>
+              <p>${esc(x.note)}</p>
+            </div>
+          </article>`).join('');
+
+        grid.querySelectorAll('.pair-card').forEach(cardEl => {
+          cardEl.addEventListener('click', () => {
+            const href = cardEl.getAttribute('data-link');
+            if (href) window.location.href = href;
+          });
+        });
+
+        const dishLabel = DISHES.find(d => d.id === currentDish)?.label || currentDish;
+        const profileLabel = styleTabs.querySelector(`.style-tab[data-style="${profile}"]`)?.textContent || profile;
+        note.textContent = t('pairingTemplate','6 bottle picks for {dish} ({style}).').replace('{dish}', dishLabel).replace('{style}', profileLabel);
+      }
+
+      styleTabs.querySelectorAll('.style-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          profile = tab.getAttribute('data-style') || 'balanced';
+          localStorage.setItem(STYLE_KEY, profile);
+          styleTabs.querySelectorAll('.style-tab').forEach(x => x.classList.remove('active'));
+          tab.classList.add('active');
+          renderCards();
+        });
+      });
+
+      renderDishTiles();
+      styleTabs.querySelectorAll('.style-tab').forEach(x => x.classList.toggle('active', x.getAttribute('data-style') === profile));
+      renderCards();
+    }
+
+    function renderRouteMap(){
+      const ROUTES = {
+        tuscany: {
+          title:'Tuscany Classics Route', duration:'2-3 days • ~190 km',
+          stops:['Florence','Greve in Chianti','Castellina','Montalcino','Montepulciano'],
+          link:'https://www.google.com/maps/dir/Florence/Greve+in+Chianti/Castellina+in+Chianti/Montalcino/Montepulciano',
+          hero:'/assets/generated/routes/route-tuscany-v2.webp',
+          preview:'Sunset drive across Chianti hills and historic estates.'
+        },
+        rioja: {
+          title:'Rioja Architecture & Cellars Route', duration:'1-2 days • ~95 km',
+          stops:['Logroño, La Rioja, Spain','Rioja Alavesa, Álava, Spain','Elciego, 01340, Álava, Spain','Haro, La Rioja, C. Balmes, 12, 26200 Haro'],
+          link:'https://www.google.com/maps/dir/Logro%C3%B1o/Laguardia/Elciego/Haro',
+          hero:'/assets/generated/routes/route-rioja.webp',
+          preview:'Modern bodegas, medieval towns, and classic Rioja tastings.'
+        },
+        douro: {
+          title:'Douro Valley Scenic Route', duration:'2 days • ~140 km',
+          stops:['Porto, Portugal','Peso da Régua, Portugal','Pinhão, Portugal','Lamego, Portugal'],
+          link:'https://www.google.com/maps/dir/Porto/Peso+da+R%C3%A9gua/Pinh%C3%A3o/Lamego',
+          hero:'/assets/generated/routes/route-douro-v2.webp',
+          preview:'Terraced vineyards, river viewpoints, and port wine houses.'
+        },
+        bordeaux: {
+          title:'Bordeaux Left & Right Bank Loop', duration:'2-3 days • ~160 km',
+          stops:['Bordeaux, France','Saint-Émilion, France','Pauillac, 33250, France','Margaux-Cantenac, 33460, France'],
+          link:'https://www.google.com/maps/dir/Bordeaux/Saint-%C3%89milion/Pauillac/Margaux',
+          hero:'/assets/generated/routes/route-bordeaux.webp',
+          preview:'Grand chateaux circuit across Left and Right Bank legends.'
+        }
+      };
+      const ROUTE_TEXT = {
+        ru: {
+          tuscany:{title:'Классический маршрут по Тоскане',duration:'2-3 дня • ~190 км',preview:'Закатная дорога по холмам Кьянти и историческим винодельням.'},
+          rioja:{title:'Риоха: архитектура и погреба',duration:'1-2 дня • ~95 км',preview:'Современные бодеги, средневековые города и классические дегустации Риохи.'},
+          douro:{title:'Живописный маршрут по Дору',duration:'2 дня • ~140 км',preview:'Террасные виноградники, виды на реку и дома портвейна.'},
+          bordeaux:{title:'Бордо: левый и правый берег',duration:'2-3 дня • ~160 км',preview:'Маршрут по великим шато Левого и Правого берега.'}
+        },
+        es: {
+          tuscany:{title:'Ruta clásica por la Toscana',duration:'2-3 días • ~190 km',preview:'Ruta al atardecer por las colinas de Chianti y bodegas históricas.'},
+          rioja:{title:'Rioja: arquitectura y bodegas',duration:'1-2 días • ~95 km',preview:'Bodegas modernas, pueblos medievales y catas clásicas de Rioja.'},
+          douro:{title:'Ruta escénica del Valle del Duero',duration:'2 días • ~140 km',preview:'Viñedos en terrazas, miradores al río y casas de oporto.'},
+          bordeaux:{title:'Burdeos: bucle margen izquierda y derecha',duration:'2-3 días • ~160 km',preview:'Circuito por grandes châteaux de ambas orillas.'}
+        },
+        de: {
+          tuscany:{title:'Klassische Toskana-Route',duration:'2-3 Tage • ~190 km',preview:'Sonnenuntergangsfahrt durch Chianti-Hügel und historische Weingüter.'},
+          rioja:{title:'Rioja: Architektur & Keller',duration:'1-2 Tage • ~95 km',preview:'Moderne Bodegas, mittelalterliche Orte und klassische Rioja-Verkostungen.'},
+          douro:{title:'Panorama-Route im Douro-Tal',duration:'2 Tage • ~140 km',preview:'Terrassenweinberge, Flussblicke und Portweinhäuser.'},
+          bordeaux:{title:'Bordeaux: Linkes & rechtes Ufer',duration:'2-3 Tage • ~160 km',preview:'Château-Runde über die Legenden beider Ufer.'}
+        },
+        fr: {
+          tuscany:{title:'Itinéraire classique en Toscane',duration:'2-3 jours • ~190 km',preview:'Route au coucher du soleil à travers les collines du Chianti et des domaines historiques.'},
+          rioja:{title:'Rioja : architecture & caves',duration:'1-2 jours • ~95 km',preview:'Bodegas modernes, villages médiévaux et dégustations classiques de Rioja.'},
+          douro:{title:'Route panoramique de la vallée du Douro',duration:'2 jours • ~140 km',preview:'Vignobles en terrasses, points de vue sur le fleuve et maisons de porto.'},
+          bordeaux:{title:'Bordeaux : boucle rive gauche / rive droite',duration:'2-3 jours • ~160 km',preview:'Circuit des grands châteaux des deux rives.'}
+        }
+      };
+      const routeLocale = ROUTE_TEXT[LOCALE];
+      if (routeLocale) {
+        Object.keys(routeLocale).forEach((k) => {
+          if (!ROUTES[k]) return;
+          ROUTES[k] = { ...ROUTES[k], ...routeLocale[k] };
+        });
+      }
+
+      const listHost = document.getElementById('routeList');
+      const map = document.getElementById('routeMap');
+      const info = document.getElementById('routeInfo');
+      const title = document.getElementById('routeTitle');
+      const dur = document.getElementById('routeDuration');
+      const stops = document.getElementById('routeStops');
+      const openBtn = document.getElementById('routeOpenNew');
+      const showMapBtn = document.getElementById('routeShowMap');
+      const shareBtn = document.getElementById('routeShare');
+      const sendBtn = document.getElementById('routeSendPhone');
+      const embed = document.getElementById('routeEmbed');
+      const frame = document.getElementById('routeFrame');
+      if (!listHost || !map || !info || !title || !dur || !stops || !openBtn || !showMapBtn || !shareBtn || !sendBtn || !embed || !frame) return;
+
+      const ROUTE_KEY = 'routeCurrent';
+      const ROUTE_EMBED_KEY = 'routeEmbedOpen';
+      let current = localStorage.getItem(ROUTE_KEY) || 'tuscany';
+      if (!ROUTES[current]) current = 'tuscany';
+      let embedOpen = localStorage.getItem(ROUTE_EMBED_KEY) === '1';
+      const buildRouteUrl = (route) => {
+        const path = route.stops.map(s => encodeURIComponent(s)).join('/');
+        return `https://www.google.com/maps/dir/${path}`;
+      };
+      const render = () => {
+        const key = current;
+        const r = ROUTES[key];
+        const routeUrl = buildRouteUrl(r);
+        title.textContent = r.title;
+        dur.textContent = r.duration;
+        stops.innerHTML = r.stops.map(x=>`<li>${esc(x)}</li>`).join('');
+        map.href = routeUrl;
+        const origin = encodeURIComponent(r.stops[0]);
+        const daddr = r.stops.slice(1).map(x => encodeURIComponent(x)).join('+to:');
+        frame.src = `https://maps.google.com/maps?output=embed&f=d&source=s_d&saddr=${origin}&daddr=${daddr}`;
+        map.innerHTML = `
+          <div class="route-hero" style="background-image:url('${r.hero}')"></div>
+          <div class="route-legend">
+            <h4>${esc(r.preview)}</h4>
+          </div>`;
+        listHost.querySelectorAll('.route-item').forEach(btn => btn.classList.toggle('active', btn.dataset.key === key));
+        embed.classList.toggle('open', embedOpen);
+        info.classList.toggle('map-open', embedOpen);
+        showMapBtn.textContent = embedOpen ? t('routeHide','Hide map') : t('routeShow','Show map here');
+      };
+
+      listHost.innerHTML = Object.entries(ROUTES).map(([key, r]) =>
+        `<button type="button" class="route-item${key === current ? ' active' : ''}" data-key="${key}">${esc(r.title)}</button>`
+      ).join('');
+      listHost.querySelectorAll('.route-item').forEach(btn => {
+        btn.addEventListener('click', () => {
+          current = btn.dataset.key || 'tuscany';
+          localStorage.setItem(ROUTE_KEY, current);
+          render();
+        });
+      });
+      showMapBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        embedOpen = !embedOpen;
+        localStorage.setItem(ROUTE_EMBED_KEY, embedOpen ? '1' : '0');
+        embed.classList.toggle('open', embedOpen);
+        info.classList.toggle('map-open', embedOpen);
+        showMapBtn.textContent = embedOpen ? t('routeHide','Hide map') : t('routeShow','Show map here');
+      });
+      shareBtn.addEventListener('click', async () => {
+        const r = ROUTES[current];
+        const routeUrl = buildRouteUrl(r);
+        const shareData = { title: r.title, text: r.preview, url: routeUrl };
+        try {
+          if (navigator.share) await navigator.share(shareData);
+          else if (navigator.clipboard && navigator.clipboard.writeText) await navigator.clipboard.writeText(routeUrl);
+        } catch (_) {}
+      });
+      sendBtn.addEventListener('click', () => {
+        const r = ROUTES[current];
+        const routeUrl = buildRouteUrl(r);
+        window.location.href = `sms:?body=${encodeURIComponent(r.title + ' - ' + routeUrl)}`;
+      });
+      openBtn.addEventListener('click', () => {
+        const r = ROUTES[current];
+        const routeUrl = buildRouteUrl(r);
+        window.open(routeUrl, '_blank', 'noopener');
+      });
+      render();
+    }
+
+    function renderWineStats(){
+      const STAT_LABELS = {
+        en: ['Global wine tourists / year','Annual sparkling wine market (USD)','Buyers choosing by food pairing','Growth in no/low alcohol segment'],
+        ru: ['Глобальный винный туризм / год','Рынок игристых вин в год (USD)','Покупатели, выбирающие по food pairing','Рост сегмента no/low alcohol'],
+        es: ['Turistas del vino globales / año','Mercado anual de vinos espumosos (USD)','Compradores que eligen por maridaje','Crecimiento del segmento sin/bajo alcohol'],
+        de: ['Globale Weintouristen / Jahr','Jährlicher Markt für Schaumwein (USD)','Käufer wählen nach Food Pairing','Wachstum im No/Low-Alcohol-Segment'],
+        fr: ['Touristes du vin mondiaux / an','Marché annuel des vins effervescents (USD)','Acheteurs guidés par les accords mets-vins','Croissance du segment sans/faible alcool']
+      };
+      const STAT_META = {
+        en: ['Source blend: OIV + UN Tourism estimates','Rounded industry estimate','Consumer trend studies','YoY category trend'],
+        ru: ['Оценка на основе OIV + UN Tourism','Округлённая рыночная оценка','Исследования потребительских трендов','Годовой тренд категории'],
+        es: ['Estimación combinada: OIV + UN Tourism','Estimación sectorial redondeada','Estudios de tendencia del consumidor','Tendencia interanual de la categoría'],
+        de: ['Schätzung auf Basis OIV + UN Tourism','Gerundete Branchenschätzung','Studien zu Verbrauchertrends','Jährlicher Kategorietrend'],
+        fr: ['Estimation combinée: OIV + UN Tourism','Estimation sectorielle arrondie','Études des tendances consommateurs','Tendance annuelle de la catégorie']
+      };
+      const labels = STAT_LABELS[LOCALE] || STAT_LABELS.en;
+      const metas = STAT_META[LOCALE] || STAT_META.en;
+      const stats = [
+        {value: 62, suffix:'M', label:labels[0], meta:metas[0]},
+        {value: 11.3, suffix:'B', label:labels[1], meta:metas[1]},
+        {value: 35, suffix:'%', label:labels[2], meta:metas[2]},
+        {value: 18, suffix:'%', label:labels[3], meta:metas[3]}
+      ];
+      const host = document.getElementById('pulseGrid');
+      if (!host) return;
+      host.innerHTML = stats.map((s,i)=>`<article class="pulse-card"><div class="pulse-value" data-target="${s.value}" data-suffix="${s.suffix}" id="pulse-${i}">0${s.suffix}</div><div class="pulse-label">${esc(s.label)}</div><div class="pulse-meta">${esc(s.meta)}</div></article>`).join('');
+
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      const animate = (el, target, suffix) => {
+        const start = performance.now();
+        const dur = 1400;
+        const tick = now => {
+          const p = Math.min(1, (now - start) / dur);
+          const val = target * ease(p);
+          const txt = (target >= 100 ? Math.round(val) : (Math.round(val * 10) / 10).toFixed(target % 1 ? 1 : 0));
+          el.textContent = `${txt}${suffix}`;
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if (!en.isIntersecting) return;
+          const el = en.target;
+          const target = Number(el.getAttribute('data-target') || 0);
+          const suffix = el.getAttribute('data-suffix') || '';
+          animate(el, target, suffix);
+          io.unobserve(el);
+        });
+      }, {threshold:0.45});
+      host.querySelectorAll('.pulse-value').forEach(el=>io.observe(el));
+    }
+
+    function safeRender(fn){
+      try { fn(); } catch (e) { console.error('[landing render]', e); }
+    }
+
+    function ensureContentVisible(){
+      const hostIds = ['categoryRowsFoodPairing','categoryRowsWineriesTravel','categoryRowsWineRegions','categoryRowsGrapeVarieties','categoryRowsBuyingGuides'];
+      const cardsOk = hostIds.every(id => {
+        const h = document.getElementById(id);
+        return h && h.querySelector('.blog-card');
+      });
+      const hg = document.getElementById('heroGallery');
+      const heroOk = !!(hg && hg.querySelector('.hero-thumb'));
+      if (cardsOk && heroOk) return;
+      const src = (Array.isArray(window.__landingPosts) && window.__landingPosts.length) ? window.__landingPosts : fallback;
+      safeRender(() => renderHeroGallery(src));
+      safeRender(() => renderCategoryRows(src));
+    }
+
+    function loadFeedAndRender(){
+      safeRender(() => renderHeroGallery(fallback));
+      safeRender(() => renderCategoryRows(fallback));
+      safeRender(() => renderPairingLab());
+      safeRender(() => { if (!window.__routeMapInitialized) { renderRouteMap(); window.__routeMapInitialized = true; } });
+      safeRender(() => renderWineStats());
+
+      const feedUrl = `${BLOG_URL}feed.json?v=` + Date.now();
+      return fetch(feedUrl, {cache:'no-store', headers:{'Cache-Control':'no-cache'}})
+        .then(r => r.ok ? r.json() : Promise.reject(new Error('feed '+r.status)))
+        .then(data => {
+          const posts = (data && Array.isArray(data.posts) && data.posts.length) ? data.posts : fallback;
+          const stamp = String((data && (data.updatedAt || data.generated_at)) || posts.length);
+          if (window.__feedStamp === stamp && window.__landingPosts && window.__landingPosts.length) { return window.__landingPosts; }
+          window.__feedStamp = stamp;
+          safeRender(() => renderHeroGallery(posts));
+          safeRender(() => renderCategoryRows(posts));
+          safeRender(() => renderPairingLab());
+          safeRender(() => { if (!window.__routeMapInitialized) { renderRouteMap(); window.__routeMapInitialized = true; } });
+          safeRender(() => renderWineStats());
+          window.__landingPosts = posts;
+          return posts;
+        })
+        .catch((e) => {
+          console.error('[landing feed]', e);
+          safeRender(() => renderHeroGallery(fallback));
+          safeRender(() => renderCategoryRows(fallback));
+          window.__landingPosts = fallback;
+          return fallback;
+        });
+    }
+
+    applyLandingI18n();
+    initHeroSlider();
+    loadFeedAndRender().then(() => { ensureContentVisible(); });
+    setInterval(() => {
+      loadFeedAndRender().then(() => { ensureContentVisible(); }).catch(() => { ensureContentVisible(); });
+    }, 45000);
+
+    document.getElementById('subscribeForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      const status = document.getElementById('subStatus');
+      btn.disabled = true; btn.innerText = t('sending','Sending...'); status.style.display = 'none';
+      const formData = new FormData(this);
+      fetch('https://formsubmit.co/ajax/info@yas.wine', {method:'POST', body:formData, headers:{'Accept':'application/json'}})
+        .then(r => { if (!r.ok) throw new Error('network'); return r.json().catch(()=>({})); })
+        .then(() => { status.style.display='block'; status.style.color='#34d399'; status.innerText=t('subscribed','Subscribed successfully!'); this.reset(); })
+        .catch(() => { status.style.display='block'; status.style.color='#fca5a5'; status.innerText=t('subscribeFail','Failed to subscribe. Try again.'); })
+        .finally(() => { btn.disabled=false; btn.innerText=t('subscribeBtn','Subscribe'); });
+    });
+  </script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+</html>

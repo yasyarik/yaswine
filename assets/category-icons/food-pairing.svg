@@ -1,0 +1,6 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'>
+  <rect x='7' y='7' width='50' height='50' rx='14' stroke='#F4DCE5' stroke-width='2'/>
+  <path d='M20 18v10M16 18v7M24 18v7M20 28v16' stroke='#F4DCE5' stroke-width='2.2' stroke-linecap='round'/>
+  <path d='M36 18c4 0 7 3.2 7 7.2V31h-7V18Z' stroke='#F4DCE5' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/>
+  <path d='M36 38h12' stroke='#E9A7BA' stroke-width='2.2' stroke-linecap='round'/>
+</svg>

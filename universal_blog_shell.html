@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YAS Wine Blog</title>
+    <meta name="description" content="YAS Wine Blog. Explore practical wine guides, grape deep-dives, food pairings, winery travel tips, and buying advice with clear, actionable insights.">
+
+<link rel="canonical" href="https://yas.wine/universal_blog_shell.html">
+
+<link rel="icon" type="image/png" href="/logo-yas-wine.png" />
+  <style>
+    :root {
+      --bg-dark: #12070c;
+      --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+      --accent: #b63a5a;
+      --accent-hover: #962f49;
+      --glass-bg: rgba(255,255,255,.035);
+      --glass-border: rgba(255,255,255,.12);
+      --text: #f4edf0;
+      --dim: #cfbec5;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+    body{background:var(--bg-dark);color:var(--text);overflow-x:hidden}
+    .fixed-bg{position:fixed;inset:0;z-index:-1;background:var(--bg-gradient)}
+    .fixed-bg:before{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+      radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+      radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%);
+      background-size:200% 200%;animation:shift 34s ease infinite}
+    @keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+    .container{max-width:1280px;margin:0 auto;padding:0 24px}
+    nav{padding:24px 0;display:flex;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:20;transition:.25s}
+    nav.nav-scrolled{background:rgba(18,7,12,.85);backdrop-filter:blur(12px);padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-container{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;width:100%}
+    .logo{display:flex;align-items:center;text-decoration:none}
+    .logo-img{height:64px;width:auto;object-fit:contain}
+    .nav-links{display:flex;gap:28px}
+    .nav-links a{color:var(--dim);text-decoration:none;font-size:14px;font-weight:600}
+    .nav-links a:hover{color:#fff}
+
+    .hero{min-height:74vh;padding:120px 0 36px;display:flex;align-items:center}
+    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;width:100%}
+    .hero h1{font-size:clamp(34px,6vw,58px);line-height:1.07;margin-bottom:12px}
+    .hero p{font-size:clamp(17px,2.1vw,20px);color:var(--dim)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 30px;border-radius:10px;font-weight:800;text-decoration:none;transition:.2s}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px)}
+    .hero-art{min-height:320px;border-radius:24px;border:1px solid var(--glass-border);background:#1b0c12 center/cover no-repeat;box-shadow:0 24px 70px rgba(0,0,0,.45)}
+
+    .section{margin-top:22px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:22px;padding:26px}
+    .section h2{font-size:36px;margin-bottom:10px}
+    .section p.lead{color:var(--dim);margin-bottom:20px}
+
+    .uc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .uc-card{text-decoration:none;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);border-radius:20px;padding:28px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;color:inherit;transition:.2s}
+    .uc-card:hover{transform:translateY(-6px);border-color:var(--accent)}
+    .uc-ico{font-size:42px;margin-bottom:14px}
+    .uc-card h3{font-size:20px;margin-bottom:10px}
+    .uc-card p{font-size:14px;color:var(--dim);min-height:40px}
+    .uc-card span{margin-top:12px;color:var(--accent);font-weight:700}
+
+    .carousel-wrap{position:relative}
+    .slider-arrow{position:absolute;top:58%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid var(--glass-border);background:rgba(18,7,12,.85);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3}
+    #prev{left:-16px} #next{right:-16px}
+    .blog-carousel{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(320px,1fr);gap:14px;overflow-x:auto;scroll-behavior:smooth;padding-bottom:8px}
+    .blog-card{text-decoration:none;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);border-radius:22px;overflow:hidden;transition:.2s;color:inherit}
+    .blog-card:hover{transform:translateY(-8px);border-color:var(--accent)}
+    .blog-card .img{height:200px;background:#241018 center/cover no-repeat}
+    .blog-card .body{padding:22px}
+    .pill{display:inline-block;background:rgba(182,58,90,.16);color:#f4cad5;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:700;text-transform:uppercase}
+    .blog-card h3{margin:14px 0 10px;font-size:19px;line-height:1.32}
+    .blog-card p{color:var(--dim);font-size:14px;margin-bottom:18px}
+    .read{color:var(--accent);font-size:14px;font-weight:700}
+
+    .sub-wrap{max-width:760px;margin:0 auto}
+    .sub-wrap form{display:grid;gap:12px}
+    .sub-wrap input,.sub-wrap textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--glass-border);background:rgba(255,255,255,.03);color:var(--text);font-size:15px}
+    .sub-wrap textarea{min-height:120px;resize:vertical}
+    .status{display:none;margin-bottom:10px;text-align:center;font-weight:700}
+
+    footer{border-top:1px solid var(--glass-border);padding:40px 0;text-align:center;color:var(--dim);font-size:14px;margin-top:28px}
+    footer a{color:var(--dim);text-decoration:none;margin:0 10px}
+
+    @media (max-width:1100px){.uc-grid{grid-template-columns:repeat(2,1fr)}.hero-wrap{grid-template-columns:1fr}}
+    @media (max-width:740px){.uc-grid{grid-template-columns:1fr}.logo-img{height:52px}.nav-links{gap:14px}.blog-carousel{grid-auto-columns:minmax(280px,1fr)}#prev,#next{display:none}}
+  </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+</head>
+<body>
+  <div class="fixed-bg"></div>
+  <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <h1>YAS Wine: practical insights about Wine</h1>
+        <p>Actionable guides and frameworks for Wine.</p>
+        <a class="btn btn-primary" href="/blog/" style="margin-top:18px">Read latest posts</a>
+      </div>
+      <div class="hero-art" style="background-image:url('/hero-yas-wine.png')"></div>
+    </div>
+  </header>
+
+  <section class="section container">
+    <h2>Built for Every E-commerce Business</h2>
+    <p class="lead">Choose your focus and scale content with a clear editorial structure.</p>
+    <div class="uc-grid">
+      <a class="uc-card" href="/blog/"><div class="uc-ico">📘</div><h3>Guides</h3><p>Step-by-step playbooks for practical execution.</p><span>Explore →</span></a>
+      <a class="uc-card" href="/blog/"><div class="uc-ico">📈</div><h3>Growth</h3><p>Conversion, acquisition, and scaling strategies.</p><span>Explore →</span></a>
+      <a class="uc-card" href="/blog/"><div class="uc-ico">🤖</div><h3>AI Workflows</h3><p>Automation-first systems for content operations.</p><span>Explore →</span></a>
+      <a class="uc-card" href="/blog/"><div class="uc-ico">🧠</div><h3>Insights</h3><p>Trends and lessons from real-world implementation.</p><span>Explore →</span></a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2>Resources & Insights</h2>
+    <p class="lead">Expert notes and practical frameworks from each new article.</p>
+    <div class="carousel-wrap">
+      <button class="slider-arrow" id="prev">‹</button>
+      <button class="slider-arrow" id="next">›</button>
+      <div class="blog-carousel" id="blogCarousel"></div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2>Subscribe</h2>
+    <p class="lead">Get new insights by email. We send only useful updates.</p>
+    <div class="sub-wrap">
+      <form id="subscribeForm">
+        <input id="name" name="name" placeholder="Name" required type="text" />
+        <input id="email" name="email" placeholder="Email address" required type="email" />
+        <textarea id="message" name="message" placeholder="Topics you care about (optional)"></textarea>
+        <div id="subStatus" class="status"></div>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function(){
+      const nav = document.querySelector('nav');
+      if (!nav) return;
+      if (window.scrollY > 20) nav.classList.add('nav-scrolled'); else nav.classList.remove('nav-scrolled');
+    });
+
+    const fallback = [{title:'No posts yet', description:'First generated article will appear here.', href:'/blog/', image:'/hero-yas-wine.png', category:'Update'}];
+
+    function esc(s){return String(s||'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+    function card(p){
+      const href = p.href || '/blog/';
+      const img = p.image || '/hero-yas-wine.png';
+      const t = esc(p.title || 'Untitled');
+      const d = esc(p.description || '');
+      const c = esc((p.category || 'Article').toLowerCase());
+      return `<a class="blog-card" href="${href}"><div class="img" style="background-image:url('${img}')"></div><div class="body"><span class="pill">${c}</span><h3>${t}</h3><p>${d}</p><span class="read">Read More →</span></div></a>`;
+    }
+
+    fetch('/blog/feed.json', {cache:'no-store'})
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => { const posts = (data && Array.isArray(data.posts) && data.posts.length) ? data.posts : fallback; document.getElementById('blogCarousel').innerHTML = posts.map(card).join(''); })
+      .catch(() => { document.getElementById('blogCarousel').innerHTML = fallback.map(card).join(''); });
+
+    const carousel = document.getElementById('blogCarousel');
+    document.getElementById('prev').addEventListener('click', () => carousel.scrollBy({ left: -360, behavior: 'smooth' }));
+    document.getElementById('next').addEventListener('click', () => carousel.scrollBy({ left: 360, behavior: 'smooth' }));
+
+    document.getElementById('subscribeForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      const status = document.getElementById('subStatus');
+      btn.disabled = true; btn.innerText = 'Sending...'; status.style.display = 'none';
+      const formData = new FormData(this);
+      fetch('https://formsubmit.co/ajax/info@yas.wine', {method:'POST', body:formData, headers:{'Accept':'application/json'}})
+        .then(r => { if (!r.ok) throw new Error('network'); return r.json().catch(()=>({})); })
+        .then(() => { status.style.display='block'; status.style.color='#34d399'; status.innerText='Subscribed successfully!'; this.reset(); })
+        .catch(() => { status.style.display='block'; status.style.color='#fca5a5'; status.innerText='Failed to subscribe. Try again.'; })
+        .finally(() => { btn.disabled=false; btn.innerText='Subscribe'; });
+    });
+  </script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+</html>

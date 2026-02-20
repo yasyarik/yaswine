@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | YAS Wine</title>
+    <meta name="description" content="Blog. Explore practical wine guides, grape deep-dives, food pairings, winery travel tips, and buying advice with clear, actionable insights.">
+
+<link rel="canonical" href="https://yas.wine/universal_blog_index.html">
+
+<link rel="icon" type="image/png" href="/logo.png" />
+  <style>
+    :root{
+      --bg-dark: #12070c;
+      --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+      --accent: #b63a5a;
+      --accent-hover: #962f49;
+      --glass-bg: rgba(255,255,255,.035);
+      --glass-border: rgba(255,255,255,.12);
+      --text: #f4edf0;
+      --dim: #cfbec5;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+    body{background:var(--bg-dark);color:var(--text);overflow-x:hidden}
+    .fixed-bg{position:fixed;inset:0;z-index:-1;background:var(--bg-gradient)}
+    .fixed-bg:before{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+      radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+      radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%);
+      background-size:200% 200%;animation:shift 34s ease infinite}
+    @keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+    .container{max-width:1280px;margin:0 auto;padding:0 24px}
+    nav{padding:24px 0;display:flex;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;right:0;z-index:20;transition:.25s}
+    nav.nav-scrolled{background:rgba(18,7,12,.85);backdrop-filter:blur(12px);padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-container{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;width:100%}
+    .logo{display:flex;align-items:center;text-decoration:none}
+    .logo-img{height:64px;width:auto;object-fit:contain}
+    .nav-links{display:flex;gap:22px}
+    .nav-links a{color:var(--dim);text-decoration:none;font-size:14px;font-weight:600}
+    .nav-links a:hover{color:#fff}
+
+    .hero{padding:120px 0 16px}
+    .hero-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:22px;padding:26px}
+    .hero h1{font-size:clamp(32px,5.2vw,52px);line-height:1.06;margin-bottom:10px}
+    .hero p{font-size:18px;color:var(--dim);max-width:70ch}
+
+    .grid{margin-top:18px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:22px;padding:16px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{text-decoration:none;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);border-radius:22px;overflow:hidden;transition:.2s;color:inherit}
+    .card:hover{transform:translateY(-8px);border-color:var(--accent)}
+    .thumb{height:190px;background:#241018 center/cover no-repeat}
+    .body{padding:18px 18px 20px}
+    .pill{display:inline-block;background:rgba(182,58,90,.16);color:#f4cad5;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+    .title{margin:12px 0 10px;font-size:18px;line-height:1.32}
+    .excerpt{color:var(--dim);font-size:14px;margin-bottom:16px}
+    .read{color:var(--accent);font-size:14px;font-weight:800}
+
+    .pager{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px;padding:0 2px 2px}
+    .pager-group{display:flex;gap:8px;flex-wrap:wrap}
+    .pager-btn{border:1px solid var(--glass-border);background:rgba(255,255,255,.02);color:#fff;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
+    .pager-btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+    .pager-btn.active{background:rgba(182,58,90,.16);border-color:var(--accent)}
+    .pager-load{background:var(--accent);border-color:transparent}
+    .pager-load:hover{background:var(--accent-hover);border-color:transparent}
+    .pager-meta{color:var(--dim);font-size:14px;font-weight:700}
+
+    .empty{padding:34px 18px;color:var(--dim);text-align:center}
+
+    footer{border-top:1px solid var(--glass-border);padding:40px 0;text-align:center;color:var(--dim);font-size:14px;margin-top:28px}
+    footer a{color:var(--dim);text-decoration:none;margin:0 10px}
+
+    @media (max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:740px){.cards{grid-template-columns:1fr}.logo-img{height:52px}}
+  </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+</head>
+<body>
+  <div class="fixed-bg"></div>
+  <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Blog</h1>
+        <p>Latest resources and practical guides from YAS Wine.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="container grid">
+    <div id="cards" class="cards"></div>
+    <div id="empty" class="empty" style="display:none">No posts yet. Create your first article in the factory.</div>
+    <div class="pager">
+      <div class="pager-group" id="pagerGroup"></div>
+      <button class="pager-btn pager-load" id="loadMoreBtn" type="button">Load more</button>
+      <div class="pager-meta" id="pagerMeta"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function(){
+      const nav = document.querySelector('nav');
+      if (!nav) return;
+      if (window.scrollY > 20) nav.classList.add('nav-scrolled'); else nav.classList.remove('nav-scrolled');
+    });
+
+    const PAGE_SIZE = 12;
+    let all = [];
+    let visible = PAGE_SIZE;
+
+    function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+    function card(p){
+      const href = p.href || '/blog/';
+      const img = p.image || '/hero_ai.jpg';
+      const t = esc(p.title || 'Untitled');
+      const d = esc(p.description || '');
+      const c = esc((p.category || 'Article').toLowerCase());
+      return `<a class="card" href="${href}">
+        <div class="thumb" style="background-image:url('${img}')"></div>
+        <div class="body">
+          <span class="pill">${c}</span>
+          <div class="title">${t}</div>
+          <div class="excerpt">${d}</div>
+          <span class="read">Read More →</span>
+        </div>
+      </a>`;
+    }
+
+    function syncUrlPage(page){
+      try{
+        const u = new URL(window.location.href);
+        if (page <= 1) u.searchParams.delete('page');
+        else u.searchParams.set('page', String(page));
+        window.history.replaceState({}, '', u.toString());
+      }catch(e){}
+    }
+
+    function currentPage(){
+      const p = Math.max(1, Math.ceil(visible / PAGE_SIZE));
+      return p;
+    }
+
+    function render(){
+      const cardsEl = document.getElementById('cards');
+      const emptyEl = document.getElementById('empty');
+      const pagerGroup = document.getElementById('pagerGroup');
+      const pagerMeta = document.getElementById('pagerMeta');
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+
+      const total = all.length;
+      const show = all.slice(0, visible);
+      cardsEl.innerHTML = show.map(card).join('');
+      emptyEl.style.display = total ? 'none' : 'block';
+
+      const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+      const p = Math.min(pages, currentPage());
+      pagerGroup.innerHTML = '';
+      for (let i=1;i<=pages;i++){
+        const b=document.createElement('button');
+        b.type='button';
+        b.className='pager-btn'+(i===p?' active':'');
+        b.textContent=String(i);
+        b.addEventListener('click', () => { visible = Math.min(total, i*PAGE_SIZE); syncUrlPage(i); render(); window.scrollTo({top:0,behavior:'smooth'}); });
+        pagerGroup.appendChild(b);
+      }
+
+      pagerMeta.textContent = total ? ('Showing ' + Math.min(visible, total) + ' of ' + total + ' posts') : '';
+      loadMoreBtn.disabled = visible >= total;
+      loadMoreBtn.style.opacity = (visible >= total) ? .55 : 1;
+    }
+
+    document.getElementById('loadMoreBtn').addEventListener('click', () => {
+      visible = Math.min(all.length, visible + PAGE_SIZE);
+      syncUrlPage(currentPage());
+      render();
+    });
+
+    fetch('/blog/feed.json', {cache:'no-store'})
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => {
+        all = (data && Array.isArray(data.posts)) ? data.posts : [];
+        const pageFromUrl = Number(new URL(window.location.href).searchParams.get('page') || '1');
+        if (Number.isFinite(pageFromUrl) && pageFromUrl > 1) visible = Math.min(all.length, pageFromUrl * PAGE_SIZE);
+        render();
+      })
+      .catch(() => { all = []; render(); });
+  </script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+</html>
+

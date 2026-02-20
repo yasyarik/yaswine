@@ -2,11 +2,10 @@ window.BLOG_THEME = {
   siteName: "YAS Wine",
   heroTitle: "Wine guides that are practical, modern, and easy to apply",
   heroSubtitle: "Tasting notes, food pairings, grape guides, and smart buying advice for the wine world.",
-  heroImage: "/hero_ai.jpg",
+  heroImage: "/hero-yas.png",
   aboutText: "YAS Wine is a focused publication for people who want to understand wine better, choose bottles with confidence, and pair wine with food like a pro.",
   topCategories: ["Wine Basics", "Grape Varieties", "Food Pairing", "Buying Guides", "Regions", "Trends"],
-  animationType: "drift",
-  animationSpeedSec: 28,
+  animationSpeedSec: 26,
   colors: {
     bg0: "#13080d",
     bg1: "#2b0f1b",

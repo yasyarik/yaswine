@@ -14,10 +14,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAS Wine: AI Photo & Video UGC Generator for Shopify</title>
+    <meta name="description" content="YAS Wine: AI Photo &amp; Video UGC Generator for Shopify. Explore practical wine guides, grape deep-dives, food pairings, winery travel tips, and buying advice.">
 
-    <meta name="description"
-        content="Scale your Shopify brand with YAS Wine: the #1 AI Photo & Video UGC Generator. Create professional product photoshoots, virtual try-ons, and TikTok-ready content in seconds. Cut costs by 90%.">
-    <meta name="keywords"
+<link rel="canonical" href="https://yas.wine/index_git.html">
+
+<meta name="keywords"
         content="AI product photography, UGC video generator, Shopify UGC app, virtual apparel model, AI try-on, automated product photoshoot, e-commerce content automation, TikTok ad creative tool, Amazon product photo AI">
     <meta name="author" content="YAS Wine Team">
 
@@ -35,10 +36,7 @@
     <meta name="twitter:title" content="YAS Wine: AI Photo & Video UGC Shopify App">
     <meta name="twitter:description" content="Generate high-converting Photo & Video UGC in seconds using AI.">
     <meta name="twitter:image" content="https://yas.wine/logo.png">
-
-    <link rel="canonical" href="https://yas.wine/">
-
-    <!-- Favicon -->
+<!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
     <link rel="manifest" href="manifest.json">
@@ -1595,6 +1593,26 @@
             right: 20px;
         }
     </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
 </head>
 
 <body>
@@ -1606,29 +1624,15 @@
 
 
     <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="logo.png" alt="YAS Wine Logo" class="logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="/#market">Localization</a>
-                <a href="/#virtual-showroom">Apparel</a>
-                <a href="/#placements">Placements</a>
-                <a href="/gallery/">Gallery</a>
-                <a href="/use-cases/">Use Cases</a>
-                <a href="/blog/">Blog</a>
-                <a href="/#pricing">Pricing</a>
-            </div>
-            <div style="display: flex; gap: 12px; align-items: center;">
-                <a href="https://web.yas.wine" class="btn btn-glass"
-                    style="padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">Try
-                    on Web</a>
-                <a href="https://apps.shopify.com/my-ugc-studio" class="btn btn-primary"
-                    style="padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">On
-                    Shopify</a>
-            </div>
-        </div>
-    </nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
 
     <header class="hero">
         <div class="container hero-container">
@@ -2377,10 +2381,14 @@
         </div>
     </section>
 
-    <footer
-        style="border-top: 1px solid var(--glass-border); padding: 40px 0; text-align: center; color: var(--text-dim); font-size: 14px;">
-        <p>&copy; 2025 YAS Wine. All rights reserved.</p>
-    </footer>
+    <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
 
 
     <script>
@@ -2687,6 +2695,8 @@
         };
     </script>
 <script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
 </body>
 
 </html>

@@ -4,6 +4,16 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
 <title>Mein UGC Studio</title>
+    <meta name="description" content="Mein UGC Studio. Praktische Wein-Guides zu Rebsorten, Regionen, Food-Pairing, Weintourismus und Kaufberatung mit klaren Empfehlungen.">
+
+<link rel="canonical" href="https://yas.wine/de/app.html">
+    <link rel="alternate" hreflang="en" href="https://yas.wine/app.html">
+    <link rel="alternate" hreflang="ru" href="https://yas.wine/ru/app.html">
+    <link rel="alternate" hreflang="es" href="https://yas.wine/es/app.html">
+    <link rel="alternate" hreflang="de" href="https://yas.wine/de/app.html">
+    <link rel="alternate" hreflang="fr" href="https://yas.wine/fr/app.html">
+    <link rel="alternate" hreflang="x-default" href="https://yas.wine/app.html">
+
 <style>
     /* Base Reset */
     body {
@@ -169,7 +179,28 @@
       font-size: 14px;
     }
   </style>
-<link href="https://yas.wine/de/app.html" rel="canonical"/><link href="https://yas.wine/app.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/app.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/app.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/app.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/app.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/app.html" hreflang="x-default" rel="alternate"/></head>
+<link href="https://yas.wine/de/app.html" rel="canonical"/><link href="https://yas.wine/app.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/app.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/app.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/app.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/app.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/app.html" hreflang="x-default" rel="alternate"/><style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+<meta property="og:url" content="https://yas.wine/de/app.html">
+</head>
 <body>
 <!-- Login Screen -->
 <div class="screen active" id="loginScreen">
@@ -560,5 +591,7 @@
     }
   </script>
 <script src="https://api.yas.wine/assistant.js?v=2"></script>
-<script defer="defer" src="/i18n-switcher.js?v=20260217-2"></script></body>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
 </html>

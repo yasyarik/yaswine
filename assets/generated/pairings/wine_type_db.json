@@ -1,0 +1,327 @@
+{
+  "cabernet sauvignon": {
+    "wine": "Cabernet Sauvignon",
+    "bottle": "Decoy Cabernet Sauvignon",
+    "file": "pair-01.webp"
+  },
+  "malbec": {
+    "wine": "Malbec",
+    "bottle": "Catena Malbec",
+    "file": "pair-02.webp"
+  },
+  "tempranillo reserva": {
+    "wine": "Tempranillo Reserva",
+    "bottle": "Marques de Riscal Reserva",
+    "file": "pair-03.webp"
+  },
+  "sangiovese": {
+    "wine": "Sangiovese",
+    "bottle": "Ruffino Chianti Classico",
+    "file": "pair-04.webp"
+  },
+  "merlot": {
+    "wine": "Merlot",
+    "bottle": "Duckhorn Merlot",
+    "file": "pair-05.webp"
+  },
+  "carmenere": {
+    "wine": "Carmenere",
+    "bottle": "Montes Purple Angel",
+    "file": "pair-06.webp"
+  },
+  "pinot noir": {
+    "wine": "Pinot Noir",
+    "bottle": "Meiomi Pinot Noir",
+    "file": "pair-07.webp"
+  },
+  "gamay": {
+    "wine": "Gamay",
+    "bottle": "Louis Jadot Beaujolais",
+    "file": "pair-08.webp"
+  },
+  "barbera": {
+    "wine": "Barbera",
+    "bottle": "Vietti Barbera d Asti",
+    "file": "pair-09.webp"
+  },
+  "grenache": {
+    "wine": "Grenache",
+    "bottle": "Cotes du Rhone Villages",
+    "file": "pair-10.webp"
+  },
+  "frappato": {
+    "wine": "Frappato",
+    "bottle": "COS Frappato",
+    "file": "pair-11.webp"
+  },
+  "zweigelt": {
+    "wine": "Zweigelt",
+    "bottle": "Rosi Schuster Zweigelt",
+    "file": "pair-12.webp"
+  },
+  "syrah": {
+    "wine": "Syrah",
+    "bottle": "Hermitage Syrah",
+    "file": "pair-13.webp"
+  },
+  "nero d avola": {
+    "wine": "Nero d Avola",
+    "bottle": "Planeta Nero d Avola",
+    "file": "pair-14.webp"
+  },
+  "shiraz": {
+    "wine": "Shiraz",
+    "bottle": "Torbreck Woodcutters Shiraz",
+    "file": "pair-16.webp"
+  },
+  "petit verdot blend": {
+    "wine": "Petit Verdot Blend",
+    "bottle": "Bodega Norton Privada",
+    "file": "pair-17.webp"
+  },
+  "tannat": {
+    "wine": "Tannat",
+    "bottle": "Garzon Tannat Reserve",
+    "file": "pair-18.webp"
+  },
+  "chardonnay": {
+    "wine": "Chardonnay",
+    "bottle": "Louis Jadot Chablis",
+    "file": "pair-19.webp"
+  },
+  "rose": {
+    "wine": "Rose",
+    "bottle": "Whispering Angel Rose",
+    "file": "pair-20.webp"
+  },
+  "gruner veltliner": {
+    "wine": "Gruner Veltliner",
+    "bottle": "Nigl Gruner Veltliner",
+    "file": "pair-21.webp"
+  },
+  "sauvignon blanc": {
+    "wine": "Sauvignon Blanc",
+    "bottle": "Greywacke Sauvignon Blanc",
+    "file": "pair-21.webp"
+  },
+  "godello": {
+    "wine": "Godello",
+    "bottle": "Avancia Godello",
+    "file": "pair-23.webp"
+  },
+  "assyrtiko": {
+    "wine": "Assyrtiko",
+    "bottle": "Gaia Assyrtiko",
+    "file": "pair-24.webp"
+  },
+  "aglianico": {
+    "wine": "Aglianico",
+    "bottle": "Mastroberardino Radici",
+    "file": "pair-25.png"
+  },
+  "albarino": {
+    "wine": "Albarino",
+    "bottle": "Pazo de Senorans Albarino",
+    "file": "pair-26.png"
+  },
+  "amarone": {
+    "wine": "Amarone",
+    "bottle": "Tommasi Amarone",
+    "file": "pair-27.png"
+  },
+  "barolo": {
+    "wine": "Barolo",
+    "bottle": "GD Vajra Albe Barolo",
+    "file": "pair-28.png"
+  },
+  "cabernet franc": {
+    "wine": "Cabernet Franc",
+    "bottle": "Olga Raffault Chinon",
+    "file": "pair-29.png"
+  },
+  "cava brut": {
+    "wine": "Cava Brut",
+    "bottle": "Gramona Imperial",
+    "file": "pair-30.png"
+  },
+  "cava brut nature": {
+    "wine": "Cava Brut Nature",
+    "bottle": "Recaredo Terrers",
+    "file": "pair-31.png"
+  },
+  "champagne blanc de noirs": {
+    "wine": "Champagne Blanc de Noirs",
+    "bottle": "Bollinger Special Cuvee",
+    "file": "pair-32.png"
+  },
+  "champagne brut": {
+    "wine": "Champagne Brut",
+    "bottle": "Billecart Salmon Brut Reserve",
+    "file": "pair-33.png"
+  },
+  "chenin blanc": {
+    "wine": "Chenin Blanc",
+    "bottle": "Vouvray Sec",
+    "file": "pair-34.png"
+  },
+  "chianti classico": {
+    "wine": "Chianti Classico",
+    "bottle": "Fontodi Chianti Classico",
+    "file": "pair-35.png"
+  },
+  "dolcetto": {
+    "wine": "Dolcetto",
+    "bottle": "GD Vajra Dolcetto",
+    "file": "pair-36.png"
+  },
+  "etna bianco": {
+    "wine": "Etna Bianco",
+    "bottle": "Benanti Etna Bianco",
+    "file": "pair-37.png"
+  },
+  "etna rosso": {
+    "wine": "Etna Rosso",
+    "bottle": "Benanti Etna Rosso",
+    "file": "pair-38.png"
+  },
+  "fiano": {
+    "wine": "Fiano",
+    "bottle": "Mastroberardino Fiano",
+    "file": "pair-39.png"
+  },
+  "lambrusco secco": {
+    "wine": "Lambrusco Secco",
+    "bottle": "Medici Ermete Concerto",
+    "file": "pair-40.png"
+  },
+  "light pinot noir": {
+    "wine": "Light Pinot Noir",
+    "bottle": "Au Bon Climat Pinot Noir",
+    "file": "pair-41.png"
+  },
+  "marsanne roussanne": {
+    "wine": "Marsanne Roussanne",
+    "bottle": "Tablas Creek Esprit Blanc",
+    "file": "pair-42.png"
+  },
+  "montepulciano d abruzzo": {
+    "wine": "Montepulciano d Abruzzo",
+    "bottle": "Masciarelli Montepulciano",
+    "file": "pair-43.png"
+  },
+  "muscadet": {
+    "wine": "Muscadet",
+    "bottle": "Domaine de la Pepiere",
+    "file": "pair-44.png"
+  },
+  "nebbiolo": {
+    "wine": "Nebbiolo",
+    "bottle": "Produttori del Barbaresco",
+    "file": "pair-45.png"
+  },
+  "oaked chardonnay": {
+    "wine": "Oaked Chardonnay",
+    "bottle": "Ramey Chardonnay",
+    "file": "pair-46.png"
+  },
+  "orange wine": {
+    "wine": "Orange Wine",
+    "bottle": "Radikon Oslavje",
+    "file": "pair-47.png"
+  },
+  "pinot grigio": {
+    "wine": "Pinot Grigio",
+    "bottle": "Jermann Pinot Grigio",
+    "file": "pair-48.png"
+  },
+  "port tawny": {
+    "wine": "Port Tawny",
+    "bottle": "Taylor 10 Year Tawny",
+    "file": "pair-49.png"
+  },
+  "primitivo": {
+    "wine": "Primitivo",
+    "bottle": "Tormaresca Primitivo",
+    "file": "pair-50.png"
+  },
+  "riesling dry": {
+    "wine": "Riesling Dry",
+    "bottle": "Dr Loosen Dry Riesling",
+    "file": "pair-51.png"
+  },
+  "riesling kabinett": {
+    "wine": "Riesling Kabinett",
+    "bottle": "JJ Prum Kabinett",
+    "file": "pair-52.png"
+  },
+  "sancerre": {
+    "wine": "Sancerre",
+    "bottle": "Domaine Vacheron Sancerre",
+    "file": "pair-53.png"
+  },
+  "sauternes": {
+    "wine": "Sauternes",
+    "bottle": "Chateau Suduiraut",
+    "file": "pair-54.png"
+  },
+  "sherry oloroso": {
+    "wine": "Sherry Oloroso",
+    "bottle": "Lustau Oloroso",
+    "file": "pair-55.png"
+  },
+  "soave": {
+    "wine": "Soave",
+    "bottle": "Pieropan Soave Classico",
+    "file": "pair-56.png"
+  },
+  "soave classico": {
+    "wine": "Soave Classico",
+    "bottle": "Pieropan Soave",
+    "file": "pair-57.png"
+  },
+  "txakoli": {
+    "wine": "Txakoli",
+    "bottle": "Ameztoi Txakoli",
+    "file": "pair-58.png"
+  },
+  "valpolicella classico": {
+    "wine": "Valpolicella Classico",
+    "bottle": "Allegrini Valpolicella",
+    "file": "pair-59.png"
+  },
+  "verdicchio": {
+    "wine": "Verdicchio",
+    "bottle": "Bucci Verdicchio",
+    "file": "pair-60.png"
+  },
+  "vermentino": {
+    "wine": "Vermentino",
+    "bottle": "Argiolas Vermentino",
+    "file": "pair-61.png"
+  },
+  "vinho verde": {
+    "wine": "Vinho Verde",
+    "bottle": "Anselmo Mendes Contacto",
+    "file": "pair-62.png"
+  },
+  "vintage port": {
+    "wine": "Vintage Port",
+    "bottle": "Dow Vintage Port",
+    "file": "pair-63.png"
+  },
+  "viognier": {
+    "wine": "Viognier",
+    "bottle": "Yalumba Viognier",
+    "file": "pair-64.png"
+  },
+  "white burgundy": {
+    "wine": "White Burgundy",
+    "bottle": "Louis Michel Chablis Premier Cru",
+    "file": "pair-65.png"
+  },
+  "white rioja": {
+    "wine": "White Rioja",
+    "bottle": "Muga Blanco",
+    "file": "pair-66.png"
+  }
+}

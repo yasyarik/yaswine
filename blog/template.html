@@ -14,9 +14,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{TITLE}} | YAS Wine</title>
-    <meta name="description" content="{{DESC}}">
-
-    <meta property="og:title" content="{{TITLE}}">
+    <meta name="robots" content="index, follow">
+<meta name="description" content="{{DESC}}">
+<meta property="og:title" content="{{TITLE}}">
     <meta property="og:description" content="{{DESC}}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://yas.wine/blog/{{SLUG}}.html">
@@ -29,10 +29,10 @@
         rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0a0514;
-            --bg-gradient: linear-gradient(135deg, #0a0514 0%, #1a0a2e 50%, #2d1b4e 100%);
-            --accent-green: #8b5cf6;
-            --accent-hover: #7c3aed;
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
             --glass-bg: rgba(255, 255, 255, 0.03);
             --glass-border: rgba(255, 255, 255, 0.1);
             --text-white: #ededed;
@@ -65,8 +65,8 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 15% 25%, rgba(139, 92, 246, 0.4) 0%, transparent 35%),
-                radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.45) 0%, transparent 35%);
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
             background-size: 200% 200%;
             animation: gradientShift 18s ease infinite;
         }
@@ -89,7 +89,11 @@
             padding: 0 24px;
         }
 
-        #mainNav { 
+        
+        main.container {
+            margin-top: 96px;
+        }
+#mainNav { 
             padding: 24px 0;
             display: flex;
             justify-content: space-between;
@@ -166,7 +170,7 @@
         }
 
         .dropdown-content a:hover {
-            background-color: rgba(139, 92, 246, 0.2);
+            background-color: rgba(182, 58, 90, 0.2);
         }
 
         .dropdown:hover .dropdown-content {
@@ -204,6 +208,11 @@
             display: inline-block;
             margin-bottom: 30px;
             font-weight: 600;
+        
+            position: relative;
+            z-index: 1205;
+            pointer-events: auto;
+            cursor: pointer;
         }
 
         .post-header {
@@ -337,8 +346,8 @@
             border: 1px solid rgba(255,255,255,0.06);
         }
         .toc-items a:hover {
-            background: rgba(139, 92, 246, 0.14);
-            border-color: rgba(139, 92, 246, 0.32);
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
             color: white;
         }
         .toc-h3 {
@@ -351,7 +360,7 @@
         .post-content a {
             color: var(--accent-green);
             text-decoration: none;
-            border-bottom: 1px solid rgba(139,92,246,0.35);
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
         }
         .post-content a:hover {
             color: white;
@@ -389,7 +398,7 @@
             margin: 26px 0;
         }
         .post-content thead th {
-            background: rgba(139, 92, 246, 0.14);
+            background: rgba(182, 58, 90, 0.14);
             color: white;
             font-weight: 800;
             font-size: 12px;
@@ -462,7 +471,7 @@
             background: var(--accent-green);
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
             border-color: rgba(255, 255, 255, 0.2);
         }
 
@@ -473,7 +482,7 @@
         }
 
         .cta-box {
-            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 100%);
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
             border-radius: 24px;
             padding: 50px;
             text-align: center;
@@ -501,6 +510,9 @@
         }
 
         @media (max-width: 768px) {
+            main.container {
+                margin-top: 74px;
+            }
             h1 {
                 font-size: 34px;
             }
@@ -514,28 +526,41 @@
             }
         }
     </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
 </head>
 
 <body>
     <div class="fixed-bg"></div>
 
-    <nav id="mainNav">
-        <div class="container"
-            style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1280px;">
-            <a href="/" class="logo">
-                <img src="../logo.png" alt="YAS Wine" class="logo-img">
-            </a>
-            <div class="nav-links"><a href="/#market">Localization</a><a href="/#virtual-showroom">Apparel</a><a href="/#placements">Placements</a><a href="/gallery/">Gallery</a><div class="dropdown"><a class="dropbtn" href="/use-cases/">Use Cases <span class="arrow">▼</span></a><div class="dropdown-content"><a href="/use-cases/amazon-fba.html">Amazon FBA</a><a href="/use-cases/apparel.html">Apparel</a><a href="/use-cases/tiktok-shop.html">TikTok Shop</a><a href="/use-cases/dropshipping.html">Dropshipping</a></div></div><div class="dropdown"><a class="dropbtn" href="/blog/">Blog <span class="arrow">▼</span></a><div class="dropdown-content"><a href="/blog/dropshipping-content-2026-sales-ai.html">Dropshipping Sales 2026</a><a href="/blog/ugc-content-dropshipping-2026.html">UGC for Dropshipping</a><a href="/blog/amazon-listing-optimization-ai-placements.html">Amazon Optimization</a><a href="/blog/tiktok-ads-2026-ai-ugc-vs-studio.html">TikTok Ads 2026</a><a href="/blog/how-to-save-90-percent-on-shopify-content.html">Save 90% on Content</a><a href="/blog/scaling-shopify-brand-with-ai.html">Scaling Shopify with AI</a></div></div><a href="/#pricing">Pricing</a></div>
-            <div style="display: flex; gap: 12px; align-items: center;">
-                <a href="https://web.yas.wine" class="btn"
-                    style="background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">Try
-                    on Web</a>
-                <a href="https://apps.shopify.com/my-ugc-studio" class="btn btn-primary"
-                    style="padding: 12px 24px; font-size: 14px; min-width: 140px; text-align: center; justify-content: center;">On
-                    Shopify</a>
-            </div>
-        </div>
-    </nav>
+    <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
 
     <main class="container">
         <article>
@@ -610,18 +635,19 @@
                 }
             </script>
 
-            <div class="cta-box">
-                <h2>Ready to transform your brand?</h2>
-                <p>Join 500+ Shopify stores using YAS Wine to scale their content production.</p>
-                <a href="https://web.yas.wine" class="btn btn-primary"
-                    style="padding: 16px 40px; font-size: 18px;">Try for Free</a>
-            </div>
+            {{CTA}}
+
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 YAS Wine. All rights reserved.</p>
-    </footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
 
     <script>
         window.addEventListener('scroll', () => {
@@ -630,7 +656,63 @@
             else nav.classList.remove('nav-scrolled');
         });
     </script>
+
+    <script>
+        function ensureTocBox() {
+            const root = document.querySelector('.post-content');
+            if (!root) return;
+            if (root.querySelector('.toc-box')) return;
+            const h2s = Array.from(root.querySelectorAll('h2[id]'));
+            if (!h2s.length) return;
+            const aside = document.createElement('aside');
+            aside.className = 'toc-box';
+            aside.setAttribute('aria-label', 'Table of contents');
+            const t = document.createElement('div');
+            t.className = 'toc-title';
+            t.textContent = 'On this page';
+            const ul = document.createElement('ul');
+            ul.className = 'toc-items';
+            h2s.forEach((h2, idx) => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#' + h2.id;
+                a.textContent = h2.textContent.trim();
+                li.appendChild(a);
+
+                const nxt = h2s[idx+1];
+                const sub = [];
+                let el = h2.nextElementSibling;
+                while (el && el !== nxt) {
+                    if (el.tagName === 'H3' && el.id) sub.push(el);
+                    el = el.nextElementSibling;
+                }
+                if (sub.length) {
+                    const ul2 = document.createElement('ul');
+                    ul2.className = 'toc-h3';
+                    sub.slice(0,3).forEach(h3 => {
+                        const li2 = document.createElement('li');
+                        const a2 = document.createElement('a');
+                        a2.href = '#' + h3.id;
+                        a2.textContent = h3.textContent.trim();
+                        li2.appendChild(a2);
+                        ul2.appendChild(li2);
+                    });
+                    li.appendChild(ul2);
+                }
+                ul.appendChild(li);
+            });
+            aside.appendChild(t);
+            aside.appendChild(ul);
+            const crumbs = root.querySelector('.breadcrumbs');
+            if (crumbs && crumbs.parentNode === root) crumbs.insertAdjacentElement('afterend', aside);
+            else root.prepend(aside);
+        }
+        document.addEventListener('DOMContentLoaded', ensureTocBox);
+    </script>
+
 <script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
 </body>
 
 </html>
