@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переработка винных бутылок в стаканы 2026: Практическое</title>
+    <meta name="robots" content="index, follow">
+<meta name="description" content="Превратите пустые винные бутылки в стильные стаканы и декор в 2026 году. Это руководство охватывает инструменты, техники, безопасность и креативные идеи для">
+<meta property="og:title" content="Переработка винных бутылок в стаканы 2026: Практическое руководство">
+    <meta property="og:description" content="Превратите пустые винные бутылки в стильные стаканы и декор в 2026 году. Это руководство охватывает инструменты, техники, безопасность и креативные идеи для">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html">
+    <meta property="og:image" content="https://yas.wine//logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-white: #ededed;
+            --text-dim: #a1a1aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: var(--bg-gradient);
+            overflow: hidden;
+        }
+
+        .fixed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
+            background-size: 200% 200%;
+            animation: gradientShift 18s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        
+        main.container {
+            margin-top: 96px;
+        }
+#mainNav { 
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .nav-scrolled {
+            background: rgba(10, 5, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(10, 5, 20, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            margin-right: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(182, 58, 90, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        article {
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        
+            position: relative;
+            z-index: 1205;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+
+        .post-header {
+            margin-bottom: 50px;
+        }
+
+        .post-category {
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-hero {
+            width: 100%;
+            min-height: 450px;
+            height: auto;
+            border-radius: 32px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        .post-content h2 {
+            font-size: 32px;
+            color: white;
+            margin: 50px 0 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            background: var(--glass-bg);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /* Factory-injected blocks (breadcrumbs + TOC) */
+        .breadcrumbs {
+            margin: 18px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .breadcrumbs a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumbs a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.25);
+        }
+        .breadcrumbs .sep {
+            opacity: 0.55;
+        }
+        .breadcrumbs .current {
+            color: white;
+            font-weight: 600;
+        }
+
+        .toc-box {
+            margin: 18px 0 28px;
+            padding: 18px 18px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+        }
+        .toc-title {
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .toc-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+        .toc-items li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc-items a {
+            display: block;
+            color: var(--accent-green);
+            text-decoration: none;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            padding: 6px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-items a:hover {
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
+            color: white;
+        }
+        .toc-h3 {
+            margin-left: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Links + images inside article */
+        .post-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
+        }
+        .post-content a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.10);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+        .post-content figure {
+            margin: 26px 0;
+        }
+        .post-content figcaption {
+            margin-top: 10px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+
+        /* Tables */
+        .post-content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 26px 0;
+        }
+        .post-content thead th {
+            background: rgba(182, 58, 90, 0.14);
+            color: white;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .post-content th,
+        .post-content td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .post-content td {
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+        .post-content th:last-child,
+        .post-content td:last-child {
+            border-right: none;
+        }
+        .post-content tbody tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+.share-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .share-label {
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .share-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .share-icon-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .share-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            main.container {
+                margin-top: 74px;
+            }
+            h1 {
+                font-size: 34px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 30px;
+            }
+        }
+    </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Переработка винных бутылок в стаканы 2026: Практическое руководство">
+<meta name="twitter:description" content="Превратите пустые винные бутылки в стильные стаканы и декор в 2026 году. Это руководство охватывает инструменты, техники, безопасность и креативные идеи для">
+<meta name="twitter:image" content="https://yas.wine/blog/upcycling-wine-bottle-glass-2026-hero.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://yas.wine/ru/blog/upcycling-wine-bottle-glass-2026.html"}, "headline": "Переработка винных бутылок в стаканы 2026: Практическое руководство", "description": "Превратите пустые винные бутылки в стильные стаканы и декор в 2026 году. Это руководство охватывает инструменты, техники, безопасность и креативные идеи для", "image": ["https://yas.wine/blog/upcycling-wine-bottle-glass-2026-hero.png"], "datePublished": "2026-02-20", "dateModified": "2026-02-20", "author": {"@type": "Organization", "name": "YAS Wine"}, "publisher": {"@type": "Organization", "name": "YAS Wine"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yas.wine/ru/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yas.wine/ru/blog/"}, {"@type": "ListItem", "position": 3, "name": "Переработка винных бутылок в стаканы 2026: Практическое руководство", "item": "https://yas.wine/ru/blog/upcycling-wine-bottle-glass-2026.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Безопасно ли пить из переработанных винных бокалов?", "acceptedAnswer": {"@type": "Answer", "text": "Да, пить из переработанных винных бокалов безопасно, при условии, что край был тщательно отшлифован и отполирован до гладкого состояния, исключающего любые острые края. Правильная обработка имеет решающее значение как для безопасности, так и для комфорта."}}, {"@type": "Question", "name": "Какие винные бутылки лучше всего подходят для переработки?", "acceptedAnswer": {"@type": "Answer", "text": "Бутылки в стиле Бордо и Бургундии, как правило, считаются идеальными из-за их постоянной формы и стекла средней или большой толщины. Бутылки из-под шампанского также хорошо подходят, но они толще и требуют больших усилий. Избегайте очень тонких или нерегулярных по форме бутылок."}}, {"@type": "Question", "name": "Как добиться гладкого края на переработанном стакане?", "acceptedAnswer": {"@type": "Answer", "text": "Достижение гладкого края включает многоэтапный процесс влажной шлифовки. Начните с наждачной бумаги крупной зернистости (например, 80-120 грит) для удаления основной шероховатости, затем постепенно переходите к более мелким зернистостям (220-400, затем 600-1000), пока край не станет полностью гладким и слегка скошенным."}}, {"@type": "Question", "name": "Могу ли я переработать любую стеклянную бутылку, а не только винные?", "acceptedAnswer": {"@type": "Answer", "text": "Да, многие типы стеклянных бутылок могут быть переработаны, включая пивные бутылки, бутылки из-под крепких спиртных напитков и даже некоторые бутылки из-под безалкогольных напитков. Ключевыми факторами являются толщина стекла, постоянство формы и способность обеспечить чистый разрез и разлом."}}, {"@type": "Question", "name": "Где я могу купить инструмент для резки стекла?", "acceptedAnswer": {"@type": "Answer", "text": "Инструменты для резки стеклянных бутылок широко доступны онлайн через платформы электронной коммерции и во многих магазинах для творчества или хозяйственных магазинах. Ищите модели, специально разработанные для стеклянных бутылок, которые обычно включают разметочное колесико и механизм для удержания бутылки неподвижно."}}, {"@type": "Question", "name": "Сколько времени занимает изготовление переработанного винного бокала?", "acceptedAnswer": {"@type": "Answer", "text": "Требуемое время может варьироваться в зависимости от опыта и толщины бутылки. В среднем, подготовка, разметка, разлом и тщательная шлифовка одной винной бутылки в стакан может занять от 30 минут до часа, исключая время на очистку самой бутылки."}}]}</script>
+<link href="https://yas.wine/ru/blog/upcycling-wine-bottle-glass-2026.html" rel="canonical"/><link href="https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/upcycling-wine-bottle-glass-2026.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/upcycling-wine-bottle-glass-2026.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/upcycling-wine-bottle-glass-2026.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/upcycling-wine-bottle-glass-2026.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html" hreflang="x-default" rel="alternate"/></head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+    <main class="container">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+
+            <header class="post-header">
+                <span class="post-category">Винодельни и путешествия</span>
+                <h1 itemprop="headline">Переработка винных бутылок в стаканы 2026: Практическое руководство</h1>
+                <div class="post-intro" style="margin-top:16px;"><p><strong>Переработка пустых винных бутылок в функциональные стаканы предлагает устойчивый и творческий способ продлить срок службы дорогих бутылок, сокращая отходы и создавая уникальную посуду для напитков.</strong> Этот процесс превращает то, что было бы выброшено, в персонализированные предметы, идеально подходящие для домашнего использования или в качестве продуманных подарков, отражая приверженность экологической ответственности и ремесленному мастерству.</p></div>
+                <div class="post-meta">
+                    <time itemprop="datePublished" datetime="2026-02-20">Published 2026-02-20</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="post-hero" style="background-image: url('/logo.png');"></div>
+
+            <div class="post-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">Переработка винных бутылок в стаканы 2026: Практическое руководство</span></nav><aside class="toc-box"><div class="toc-title">На этой странице</div><ul class="toc-items"><li><a class="toc-h2" href="#post">Зачем перерабатывать винные бутылки в стаканы?</a></li><li><a class="toc-h2" href="#post">Как выбрать правильную винную бутылку для переработки?</a></li><li><a class="toc-h2" href="#post">Какие основные инструменты нужны для создания винных бокалов своими руками?</a></li><li><a class="toc-h2" href="#post">Пошаговое руководство: как переработать винную бутылку в стакан</a></li><li><a class="toc-h2" href="#post">Безопасность прежде всего: меры предосторожности и лучшие практики</a></li><li><a class="toc-h2" href="#post">Как ухаживать за переработанными винными бокалами?</a></li><li><a class="toc-h2" href="#post">Креативное использование переработанных винных бокалов</a></li><li><a class="toc-h2" href="#post">Помимо стаканов: другие идеи по переработке винных бутылок</a></li><li><a class="toc-h2" href="#post">Где найти бутылки для переработки?</a></li><li><a class="toc-h2" href="#post">Устойчивые практики виноделия и переработка</a></li></ul></aside><section id="post"><h2 id="post">Зачем перерабатывать винные бутылки в стаканы?</h2>
+<p><strong>Переработка винных бутылок в стаканы приносит значительные экологические выгоды, позволяет выразить свою индивидуальность и предлагает экономичную альтернативу покупке новой стеклянной посуды.</strong> Это увлекательный DIY-проект, который соответствует принципам устойчивого образа жизни и прославляет историю каждой бутылки.</p>
+
+<h3 id="post">Экологические преимущества перепрофилирования</h3>
+<p><strong>Перепрофилирование винных бутылок значительно сокращает объем отходов на свалках и снижает энергопотребление, связанное с переработкой стекла и производством нового стекла.</strong> Каждая бутылка, выведенная из потока отходов, способствует оздоровлению планеты, сохраняя сырье и сокращая выбросы углерода.</p>
+
+<h3 id="post">Создание персонализированных сувениров и подарков</h3>
+<p><strong>Превращение винной бутылки из памятного урожая или особого случая в стакан создает уникальный сувенир, имеющий сентиментальную ценность.</strong> Эти персонализированные предметы становятся исключительными подарками, позволяя получателю буквально пить из части своих прошлых воспоминаний.</p>
+
+<h3 id="post">Экономичные решения для посуды</h3>
+<p><strong>Переработка предлагает очень экономичный способ приобрести стильную и долговечную посуду для напитков, часто за долю стоимости покупки новых, коммерчески производимых стаканов.</strong> При минимальных вложениях в инструменты вы можете создать полный набор индивидуальных стаканов.</p>
+
+</section><section id="post"><h2 id="post">Как выбрать правильную винную бутылку для переработки?</h2>
+<p><strong>Выбор подходящей винной бутылки имеет решающее значение для успешной переработки, учитывая такие факторы, как толщина стекла, форма и общее качество для безопасности и эстетики.</strong> Различные типы бутылок обладают уникальными характеристиками, которые влияют на процесс резки и конечный продукт.</p>
+
+<h3 id="post">Понимание формы и толщины бутылки</h3>
+<p><strong>Бутылки в стиле Бордо и Бургундии обычно предпочтительны для переработки благодаря их постоянной цилиндрической форме и прочной толщине стекла.</strong> Бутылки из-под шампанского также являются отличными кандидатами, хотя их более толстое стекло требует больше терпения и точности при резке.</p>
+
+<figure><img src="upcycling-wine-bottle-glass-2026-img-1.png" alt="Коллекция разнообразных винных бутылок, включая стили Бордо, Бургундии и Рейна, готовых к переработке." /><figcaption>Различные формы винных бутылок предлагают уникальные возможности для создания отличительных переработанных стаканов.</figcaption></figure>
+
+<h3 id="post">Цвет стекла и эстетические соображения</h3>
+<p><strong>Цвет бутылки значительно влияет на эстетику готового стакана: прозрачные, зеленые и янтарные бутылки предлагают отчетливую визуальную привлекательность.</strong> Учитывайте предполагаемое использование и личные предпочтения при выборе, так как светлые цвета лучше демонстрируют напитки, а темные добавляют деревенского шарма.</p>
+
+<h3 id="post">Поиск бутылок от конкретных виноделен</h3>
+<p><strong>Посещение местных или известных виноделен предоставляет прекрасную возможность найти уникальные и высококачественные бутылки, часто с отличительным брендингом или исторической значимостью.</strong> Винодельни в таких регионах, как <a href="/blog/italy-wine-growing-regions-2026.html">ведущие винодельческие регионы Италии</a> или <a href="/blog/spanish-wine-regions-guide-2026.html">разнообразные винодельческие регионы Испании</a>, часто предлагают бутылки, идеально подходящие для переработки, превращая их в сувенир о ваших путешествиях.</p>
+
+</section><section id="post"><h2 id="post">Какие основные инструменты нужны для создания винных бокалов своими руками?</h2>
+<p><strong>Успешная переработка винных бутылок требует нескольких ключевых инструментов для обеспечения чистых срезов, гладких краев и безопасного процесса.</strong> К ним относятся специализированные стеклорезы, абразивные материалы для шлифовки и необходимое защитное снаряжение.</p>
+
+<h3 id="post">Типы и функциональность стеклорезов</h3>
+<p><strong>Ручные стеклорезы для бутылок, обычно представляющие собой разметочные устройства с колесиком из карбида вольфрама, являются наиболее распространенными и доступными инструментами для домашних проектов по переработке.</strong> Электрические стеклорезы или ротационные инструменты с алмазными насадками также могут использоваться для более точных или сложных разрезов, хотя они требуют большего опыта.</p>
+
+<h3 id="post">Инструменты для шлифовки и финишной обработки</h3>
+<p><strong>Различные зернистости наждачной бумаги (от крупной до мелкой), алмазные ручные подушечки или инструмент Dremel с шлифовальной насадкой необходимы для сглаживания срезанного края стекла.</strong> Достижение полированного, безопасного ободка имеет решающее значение для удобства использования.</p>
+
+<h3 id="post">Защитное снаряжение для безопасной работы</h3>
+<p><strong>Всегда надевайте защитные очки для защиты глаз от осколков стекла и прочные перчатки для предотвращения порезов во время обращения и шлифовки.</strong> Также рекомендуется использовать пылезащитную маску, чтобы избежать вдыхания мелких частиц стекла.</p>
+
+<figure><img src="upcycling-wine-bottle-glass-2026-img-2.png" alt="Набор инструментов для резки и шлифовки стекла, включая резак для бутылок, наждачную бумагу и защитные перчатки, разложенные для проекта по переработке." /><figcaption>Правильные инструменты и средства безопасности являются основой успешного и безопасного проекта по переработке стекла.</figcaption></figure>
+
+</section><section id="post"><h2 id="post">Пошаговое руководство: как переработать винную бутылку в стакан</h2>
+<p><strong>Превращение винной бутылки в питьевой стакан включает точную последовательность шагов: разметку, разделение и тщательную обработку края.</strong> Тщательное следование этим инструкциям гарантирует высококачественный, безопасный и привлекательный конечный продукт.</p>
+
+<h3 id="post">Подготовка бутылки</h3>
+<p><strong>Тщательно очистите пустую винную бутылку, удалив все этикетки и остатки клея, чтобы обеспечить чистую поверхность для резки.</strong> Замачивание бутылок в горячей мыльной воде помогает ослабить стойкие этикетки, которые затем можно соскоблить неабразивной щеткой.</p>
+
+<h3 id="post">Разметка стекла</h3>
+<p><strong>Используя резак для бутылок, приложите постоянное, равномерное давление, чтобы нанести непрерывную линию вокруг бутылки на желаемой высоте.</strong> Идеальна одна целая, непрерывная линия; избегайте повторной разметки той же линии, так как это может привести к неровному разлому.</p>
+
+<h3 id="post">Разделение половин</h3>
+<p><strong>Применяйте чередующиеся циклы нагрева и охлаждения к размеченной линии, чтобы создать чистый разлом.</strong> Как правило, это включает наливание кипящей воды на разметочную линию, сразу же после чего следует холодная вода или кубик льда, повторяя до тех пор, пока стекло не разделится чисто.</p>
+
+<h3 id="post">Обработка края для безопасности и комфорта</h3><p><strong>Обработка края для безопасности и комфорта гарантирует, что стакан будет безопасным и приятным для питья.</strong></p>
+<ol>
+    <li><strong>Грубая шлифовка:</strong> Начните с наждачной бумаги крупной зернистости (например, 80-120 грит) или алмазной ручной подушечки. Смочите наждачную бумагу и край стакана. Аккуратно отшлифуйте новый срез круговыми движениями, чтобы удалить острые точки и создать небольшой фаску.</li>
+    <li><strong>Средняя шлифовка:</strong> Перейдите к наждачной бумаге средней зернистости (например, 220-400 грит). Продолжайте влажную шлифовку, сохраняя круговые движения, чтобы еще больше сгладить край и удалить оставшиеся шероховатости после начальной шлифовки.</li>
+    <li><strong>Тонкая шлифовка:</strong> Завершите тонкой наждачной бумагой (например, 600-1000 грит или выше). Этот шаг имеет решающее значение для достижения гладкого, полированного и безопасного для питья края. Продолжайте влажную шлифовку, пока край не станет полностью гладким на ощупь, как у магазинного стакана.</li>
+    <li><strong>Полировка (по желанию):</strong> Для очень гладкой, профессиональной отделки используйте полировальную пасту и войлочный круг на роторном инструменте или очень тонкую полировальную бумагу, чтобы отполировать край до легкого блеска.</li>
+</ol>
+
+</section><section id="post"><h2 id="post">Безопасность прежде всего: меры предосторожности и лучшие практики</h2>
+<p><strong>При работе со стеклом первостепенное значение имеет безопасность, требующая осторожного обращения, хорошо подготовленного рабочего места и соответствующего индивидуального защитного оборудования.</strong> Соблюдение правил безопасности предотвращает травмы и обеспечивает положительный опыт работы.</p>
+
+<h3 id="post">Обращение с острыми краями и осколками</h3>
+<p><strong>Проявляйте крайнюю осторожность при обращении со свежесрезанным стеклом, так как края невероятно острые, пока не будут отшлифованы.</strong> Всегда носите перчатки, устойчивые к порезам, и немедленно и безопасно утилизируйте осколки стекла, завернутые в плотную бумагу или картон.</p>
+
+<h3 id="post">Обеспечение надлежащей вентиляции и рабочего пространства</h3>
+<p><strong>Работайте в хорошо проветриваемом помещении, чтобы минимизировать вдыхание мелкой стеклянной пыли, образующейся во время шлифовки.</strong> Чистое, стабильное и свободное от беспорядка рабочее место помогает предотвратить несчастные случаи и позволяет выполнять точную работу.</p>
+
+<h3 id="post">Использование средств индивидуальной защиты (СИЗ)</h3>
+<p><strong>Всегда надевайте защитные очки, перчатки, устойчивые к порезам, и пылезащитную маску на всех этапах резки и шлифовки при переработке.</strong> Эти СИЗ являются важным барьером против потенциальных опасностей.</p>
+
+</section><section id="post"><h2 id="post">Как ухаживать за переработанными винными бокалами?</h2>
+<p><strong>Правильный уход и обслуживание обеспечат красоту и функциональность ваших переработанных винных бокалов на долгие годы.</strong> Несмотря на долговечность, они выигрывают от внимательной чистки и хранения.</p>
+
+<h3 id="post">Чистка переработанной стеклянной посуды</h3>
+<p><strong>Переработанные винные бокалы обычно можно мыть вручную с использованием средства для мытья посуды и воды, как и обычную стеклянную посуду.</strong> Для максимальной долговечности, особенно при наличии травленых или окрашенных узоров, рекомендуется ручная мойка вместо посудомоечных машин.</p>
+
+<h3 id="post">Советы по хранению для долговечности</h3>
+<p><strong>Храните переработанные стаканы вертикально в шкафу или на полке, избегая чрезмерного штабелирования, которое может привести к сколам или поломкам.</strong> Отношение к ним как к хрупким винным бокалам, таким как те, что обсуждались в <a href="/blog/how-to-choose-red-wine-glass-2026.html">как выбрать идеальный бокал для красного вина</a>, продлит их срок службы.</p>
+
+</section><section id="post"><h2 id="post">Креативное использование переработанных винных бокалов</h2>
+<p><strong>Помимо использования в качестве обычных сосудов для питья, переработанные винные бокалы могут быть перепрофилированы в различные декоративные и практичные предметы.</strong> Их уникальные формы позволяют им играть новые роли в доме.</p>
+
+<h3 id="post">Посуда для повседневного использования</h3>
+<p><strong>Используйте свои переработанные изделия в качестве повседневных стаканов для воды, сока, коктейлей или даже для неформального наливания вашего любимого <a href="/blog/grillo-grape-wine-2026.html">вина из винограда Грилло</a>.</strong> Они придают индивидуальный стиль любому приему пищи или собранию.</p>
+
+<h3 id="post">Подсвечники и чаши для свечей</h3>
+<p><strong>Нижняя половина переработанной винной бутылки с ее прочным основанием станет отличным и привлекательным подсвечником или чашей для свечей.</strong> Стекло красиво рассеивает свет, создавая теплую атмосферу.</p>
+
+<h3 id="post">Уникальные подарки и домашний декор</h3>
+<p><strong>Наполненные мелкими лакомствами, декоративными песками или крошечным суккулентом, переработанные стаканы станут очаровательными и продуманными подарками, часто более личными, чем купленные в магазине варианты.</strong> Они также служат уникальными декоративными элементами на полках или каминных полках.</p>
+
+</section><section id="post"><h2 id="post">Помимо стаканов: другие идеи по переработке винных бутылок</h2>
+<p><strong>Универсальность винных бутылок выходит далеко за рамки питьевых стаканов, предлагая многочисленные возможности для творческой переработки в другие полезные и декоративные предметы.</strong> Верхние половины также могут обрести новую жизнь.</p>
+
+<table>
+    <caption>Сравнительная пригодность типов винных бутылок для переработки</caption>
+    <thead>
+        <tr>
+            <th>Тип бутылки</th>
+            <th>Распространенные сорта винограда</th>
+            <th>Типичная форма</th>
+            <th>Толщина</th>
+            <th>Легкость резки</th>
+            <th>Лучше всего подходит для</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Бордо</td>
+            <td>Каберне Совиньон, Мерло</td>
+            <td>Прямые стенки с высокими плечами</td>
+            <td>Средне-толстая</td>
+            <td>Хорошая</td>
+            <td>Стаканы для питья, тумблеры</td>
+        </tr>
+        <tr>
+            <td>Бургундия</td>
+            <td>Пино Нуар, Шардоне</td>
+            <td>Наклонные плечи, широкое основание</td>
+            <td>Средняя</td>
+            <td>Хорошая</td>
+            <td>Стаканы для питья, маленькие вазы</td>
+        </tr>
+        <tr>
+            <td>Рейн (Хок)</td>
+            <td>Рислинг, Гевюрцтраминер</td>
+            <td>Высокая, тонкая, часто с рифленым горлышком</td>
+            <td>Тонкая</td>
+            <td>Умеренная</td>
+            <td>Элегантные вазы, подсвечники</td>
+        </tr>
+        <tr>
+            <td>Шампанское</td>
+            <td>Шардоне, Пино Нуар, Пино Менье</td>
+            <td>Толстое стекло, глубокое углубление, тяжелое основание</td>
+            <td>Очень толстая</td>
+            <td>Сложная</td>
+            <td>Прочные тумблеры, большие подсвечники</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="post">Вазы и кашпо</h3>
+<p><strong>Верхние половины винных бутылок с их изящными горлышками можно превратить в тонкие вазы для одного стебля или небольших букетов.</strong> Нижние секции, оставленные нетронутыми или разрезанные на разную высоту, станут очаровательными кашпо для трав или суккулентов.</p>
+
+<h3 id="post">Креативные осветительные приборы</h3>
+<p><strong>Винные бутылки могут быть перепрофилированы в уникальные абажуры, подвесные светильники или декоративные держатели для гирлянд, добавляя неповторимое свечение любому пространству.</strong> Это требует тщательной электромонтажной работы или использования светильников на батарейках.</p>
+
+<h3 id="post">Декоративные предметы и художественные проекты</h3>
+<p><strong>Помимо функциональных предметов, винные бутылки могут быть включены в различные художественные инсталляции, мозаики или садовые украшения.</strong> Их разнообразные формы и цвета предоставляют бесконечные возможности для художественного самовыражения.</p>
+
+</section><section id="post"><h2 id="post">Где найти бутылки для переработки?</h2>
+<p><strong>Получение постоянного запаса подходящих винных бутылок для переработки может быть достигнуто различными способами, от личного потребления до сотрудничества с местными заведениями.</strong> Продуманный поиск сырья обеспечивает его постоянный приток для ваших проектов.</p>
+
+<h3 id="post">Сбор в местных винодельнях и на виноградниках</h3>
+<p><strong>Многие винодельни готовы предоставить пустые бутылки, особенно если вы объясните свой проект по переработке, способствуя развитию сообщества и продвижению устойчивого развития.</strong> Это также дает возможность открыть для себя <a href="/blog/unveiling-wine-gems-2026.html">уникальные винные жемчужины</a>, бутылки которых станут отличными переработанными изделиями.</p>
+
+<h3 id="post">Партнерство с ресторанами и барами</h3>
+<p><strong>Рестораны и бары часто являются богатым источником пустых винных бутылок, часто имея большое количество для утилизации.</strong> Установление партнерства может обеспечить надежный и постоянный запас, что принесет пользу обеим сторонам.</p>
+
+<h3 id="post">Использование личных коллекций и мероприятий</h3>
+<p><strong>Ваше собственное потребление и бутылки с посиделок с друзьями и семьей являются естественной отправной точкой для сбора.</strong> Поощряйте других сохранять свои бутылки для вас, превращая их отходы в ваши ресурсы.</p>
+
+</section><section id="post"><h2 id="post">Устойчивые практики виноделия и переработка</h2>
+<p><strong>Переработка винных бутылок является неотъемлемой частью более широкого движения к устойчивым практикам виноделия, подчеркивая находчивость и экологическое сознание в винодельческой промышленности и среди потребителей.</strong> Это осязаемый способ участия в циркулярной экономике.</p>
+
+<blockquote>
+    <p><strong>"Каждая пустая бутылка таит в себе потенциал для новой истории. Переработка — это не просто ремесло; это ценность ресурсов и продление повествования о наслаждении и устойчивости за пределами последнего глотка."</strong> - <em>Взгляд сомелье на находчивость</em></p>
+</blockquote>
+
+<h3 id="post">Вклад в сокращение отходов</h3>
+<p><strong>Выбирая переработку, вы напрямую способствуете сокращению общего объема стеклянных отходов, попадающих на свалки или требующих энергоемких процессов переработки.</strong> Этот небольшой акт в совокупности оказывает значительное воздействие на окружающую среду.</p>
+
+<h3 id="post">Поддержка зеленых инициатив в винодельческой отрасли</h3>
+<p><strong>Ваше участие в переработке соответствует и поддерживает растущее число виноделен, внедряющих устойчивые практики виноградарства и производства.</strong> Это демонстрирует потребительский спрос на экологическую ответственность, влияя на тенденции в отрасли.</p>
+
+<figure><img src="upcycling-wine-bottle-glass-2026-img-3.png" alt="Красиво выполненное произведение искусства из разрезанных и полированных частей винных бутылок, демонстрирующее расширенные возможности переработки." /><figcaption>Винные бутылки могут быть превращены в потрясающее декоративное искусство, подчеркивая универсальность материала.</figcaption></figure>
+
+<h3 id="post">Роль потребителей в циркулярной экономике</h3>
+<p><strong>Потребители играют жизненно важную роль в развитии циркулярной экономики, активно участвуя в таких практиках, как переработка, выходя за рамки линейных моделей потребления «взять, произвести, выбросить».</strong> Этот проактивный подход замыкает цикл, максимально увеличивая полезность ресурсов.</p>
+</section>
+            </div>
+
+            <div class="share-section">
+                <span class="share-label">Share this article</span>
+                <div class="share-group">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html&text=Переработка винных бутылок в стаканы 2026: Практическое руководство"
+                        target="_blank" class="share-icon-btn" title="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Переработка винных бутылок в стаканы 2026: Практическое руководство%20https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html&text=Переработка винных бутылок в стаканы 2026: Практическое руководство"
+                        target="_blank" class="share-icon-btn" title="Share on Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z" />
+                        </svg>
+                    </a>
+                    <div class="share-icon-btn" onclick="copyUrl()" title="Copy Link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function copyUrl() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            </script>
+
+            
+
+        </article>
+    </main>
+
+    <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
+        });
+    </script>
+
+    <script>
+        function ensureTocBox() {
+            const root = document.querySelector('.post-content');
+            if (!root) return;
+            if (root.querySelector('.toc-box')) return;
+            const h2s = Array.from(root.querySelectorAll('h2[id]'));
+            if (!h2s.length) return;
+            const aside = document.createElement('aside');
+            aside.className = 'toc-box';
+            aside.setAttribute('aria-label', 'Table of contents');
+            const t = document.createElement('div');
+            t.className = 'toc-title';
+            t.textContent = 'On this page';
+            const ul = document.createElement('ul');
+            ul.className = 'toc-items';
+            h2s.forEach((h2, idx) => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#' + h2.id;
+                a.textContent = h2.textContent.trim();
+                li.appendChild(a);
+
+                const nxt = h2s[idx+1];
+                const sub = [];
+                let el = h2.nextElementSibling;
+                while (el && el !== nxt) {
+                    if (el.tagName === 'H3' && el.id) sub.push(el);
+                    el = el.nextElementSibling;
+                }
+                if (sub.length) {
+                    const ul2 = document.createElement('ul');
+                    ul2.className = 'toc-h3';
+                    sub.slice(0,3).forEach(h3 => {
+                        const li2 = document.createElement('li');
+                        const a2 = document.createElement('a');
+                        a2.href = '#' + h3.id;
+                        a2.textContent = h3.textContent.trim();
+                        li2.appendChild(a2);
+                        ul2.appendChild(li2);
+                    });
+                    li.appendChild(ul2);
+                }
+                ul.appendChild(li);
+            });
+            aside.appendChild(t);
+            aside.appendChild(ul);
+            const crumbs = root.querySelector('.breadcrumbs');
+            if (crumbs && crumbs.parentNode === root) crumbs.insertAdjacentElement('afterend', aside);
+            else root.prepend(aside);
+        }
+        document.addEventListener('DOMContentLoaded', ensureTocBox);
+    </script>
+
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+
+</html>

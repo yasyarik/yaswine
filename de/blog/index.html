@@ -1,18 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog | YAS Wine</title>
-    <meta name="description" content="Lies die neuesten YAS Wine Artikel zu Wein-Basics, Regionen, Pairing-Strategien, Geschenkideen und Weingut-Erlebnissen.">
+  <title>YAS Wine Blog &amp; Ressourcen: Aktuelle Weinguides und Insights</title>
+    <meta name="description" content="Lies aktuelle YAS Wine Beiträge zu Weinbasics, Regionen, Food-Pairing, Geschenkideen, Weinreisen und praktischer Kaufberatung.">
 
 <link rel="canonical" href="https://yas.wine/de/blog/">
-    <link rel="alternate" hreflang="en" href="https://yas.wine/blog/">
-    <link rel="alternate" hreflang="ru" href="https://yas.wine/ru/blog/">
-    <link rel="alternate" hreflang="es" href="https://yas.wine/es/blog/">
-    <link rel="alternate" hreflang="de" href="https://yas.wine/de/blog/">
-    <link rel="alternate" hreflang="fr" href="https://yas.wine/fr/blog/">
-    <link rel="alternate" hreflang="x-default" href="https://yas.wine/blog/">
+
+
+
+
 
 <link rel="icon" type="image/png" href="/logo.png" />
   <style>
@@ -55,13 +53,36 @@ nav{padding:24px 0;display:flex;justify-content:space-between;align-items:center
     .hero h1{font-size:clamp(32px,5.2vw,52px);line-height:1.06;margin-bottom:10px}
     .hero p{font-size:18px;color:var(--dim);max-width:70ch}
 
+
+    header.blog-header {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    header.blog-header h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #fff, #a1a1aa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header.blog-header p {
+      color: var(--dim);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
     .grid{margin-top:18px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:22px;padding:16px}
 
     /* Factory-inserted cards */
     .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .blog-card{text-decoration:none;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);border-radius:22px;overflow:hidden;transition:.2s;color:inherit;display:block}
     .blog-card:hover{transform:translateY(-8px);border-color:var(--accent)}
-    .card-image{height:190px;background:#241018 center/cover no-repeat}
+    .card-image{aspect-ratio:1/1;height:auto;background:#241018 center/cover no-repeat}
     .card-content{padding:18px 18px 20px}
     .category{display:inline-block;background:rgba(182,58,90,.16);color:#f4cad5;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
     .card-title{margin:12px 0 10px;font-size:18px;line-height:1.32;font-weight:900}
@@ -76,7 +97,10 @@ nav{padding:24px 0;display:flex;justify-content:space-between;align-items:center
     .excerpt{color:var(--dim);font-size:14px;margin-bottom:16px}
     .read{color:var(--accent);font-size:14px;font-weight:800}
 
+    .blog-filters{display:flex;justify-content:flex-start;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+    .blog-pagination{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px;padding:0 2px 2px}
     .pager{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px;padding:0 2px 2px}
+    .filter-group{display:flex;gap:8px;flex-wrap:wrap}
     .pager-group{display:flex;gap:8px;flex-wrap:wrap}
     .pager-btn{border:1px solid var(--glass-border);background:rgba(255,255,255,.02);color:#fff;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
     .pager-btn:hover{border-color:var(--accent);transform:translateY(-1px)}
@@ -86,6 +110,13 @@ nav{padding:24px 0;display:flex;justify-content:space-between;align-items:center
     .pager-meta{color:var(--dim);font-size:14px;font-weight:700}
 
     .empty{padding:34px 18px;color:var(--dim);text-align:center}
+
+    .share-section{margin-top:80px;margin-bottom:40px;text-align:center}
+    .share-label{display:block;color:var(--dim);margin-bottom:14px;font-size:15px}
+    .share-group{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .share-icon-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--glass-border);background:rgba(255,255,255,.03);display:inline-flex;align-items:center;justify-content:center;color:var(--dim);text-decoration:none;cursor:pointer}
+    .share-icon-btn:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px)}
+    .share-icon-btn svg{width:18px;height:18px;fill:currentColor}
 
     footer{border-top:1px solid var(--glass-border);padding:40px 0;text-align:center;color:var(--dim);font-size:14px;margin-top:28px}
     footer a{color:var(--dim);text-decoration:none;margin:0 10px}
@@ -113,6 +144,25 @@ body { background: var(--bg-dark) !important; }
     radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
 }
 </style>
+
+<link rel="alternate" hreflang="en" href="https://yas.wine/blog/">
+<link rel="alternate" hreflang="ru" href="https://yas.wine/ru/blog/">
+<link rel="alternate" hreflang="es" href="https://yas.wine/es/blog/">
+<link rel="alternate" hreflang="de" href="https://yas.wine/de/blog/">
+<link rel="alternate" hreflang="fr" href="https://yas.wine/fr/blog/">
+<link rel="alternate" hreflang="x-default" href="https://yas.wine/blog/">
+
+<meta property="og:title" content="YAS Wine Blog &amp; Ressourcen: Aktuelle Weinguides und Insights">
+<meta property="og:description" content="Lies aktuelle YAS Wine Beiträge zu Weinbasics, Regionen, Food-Pairing, Geschenkideen, Weinreisen und praktischer Kaufberatung.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yas.wine/de/blog/">
+<meta property="og:image" content="https://yas.wine/hero-yas-wine.png">
+<meta property="og:site_name" content="YAS Wine">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YAS Wine Blog &amp; Ressourcen: Aktuelle Weinguides und Insights">
+<meta name="twitter:description" content="Lies aktuelle YAS Wine Beiträge zu Weinbasics, Regionen, Food-Pairing, Geschenkideen, Weinreisen und praktischer Kaufberatung.">
+<meta name="twitter:image" content="https://yas.wine/hero-yas-wine.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "YAS Wine", "url": "https://yas.wine/de/blog/", "inLanguage": "de"}</script>
 </head>
 <body>
   <div class="fixed-bg"></div>
@@ -127,40 +177,51 @@ body { background: var(--bg-dark) !important; }
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="blog-header">
     <div class="container">
-      <div class="hero-card">
-        <h1>Blog</h1>
-        <p>Latest resources and practical guides from YAS Wine.</p>
-      </div>
+      <h1>Ressourcen & Einblicke</h1>
+      <p>Praktische Guides, Trendanalysen und umsetzbare Strategien aus dem YAS Wine Blog.</p>
     </div>
   </header>
 
   <section class="container grid">
+    <div class="blog-filters" id="blogFilters" style="display:none;">
+      <div class="filter-group" id="filterGroup"></div>
+    </div>
     <div class="blog-grid">
-            <!-- FACTORY-DE:aged-like-fine-wine-guide-2026 -->
-            <a href="/de/blog/aged-like-fine-wine-guide-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/aged-like-fine-wine-guide-2026-img-1.webp');"></div>
-                <div class="card-content">
-                    <span class="category">Kaufleitfäden</span>
-                    <h3 class="card-title">Gealtert wie guter Wein: Ein Leitfaden 2026 für Langlebigkeit, Rebsorten &amp; Kauf</h3>
-                    <p class="card-excerpt">Entdecken Sie die Geheimnisse gereifter Weine im Jahr 2026 mit diesem Expertenleitfaden. Erfahren Sie mehr über lagerfähige Rebsorten, Spitzenregionen, ideale Speisebe...</p>
-                </div>
-            </a>
-
-            <!-- FACTORY-DE:unveiling-wine-gems-2026 -->
-            <a href="/de/blog/unveiling-wine-gems-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/unveiling-wine-gems-2026-img-1.webp');"></div>
+            <!-- FACTORY-DE:upcycling-wine-bottle-glass-2026 -->
+            <a href="/de/blog/upcycling-wine-bottle-glass-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('/blog/upcycling-wine-bottle-glass-2026-img-1.webp');"></div>
                 <div class="card-content">
                     <span class="category">Weingüter &amp; Reisen</span>
-                    <h3 class="card-title">Einzigartige Weine entdecken: Die „Giraffe“ des Weinkellers und unvergessliche Ausschänke</h3>
-                    <p class="card-excerpt">Entdecken Sie einzigartige Weinsorten, Regionen und unvergessliche Erlebnisse im Jahr 2026. Entdecken Sie Weine, die durch Eleganz und einen unverwechselbaren Charakte...</p>
+                    <h3 class="card-title">Weinflaschen zu Gläsern upcyceln 2026: Ein praktischer Leitfaden</h3>
+                    <p class="card-excerpt">Verwandeln Sie leere Weinflaschen im Jahr 2026 in stilvolle Gläser und Dekorationsobjekte. Dieser Leitfaden behandelt Werkzeuge, Techniken, Sicherheit und kreative Ide...</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:italy-wine-growing-regions-2026 -->
-            <a href="/de/blog/italy-wine-growing-regions-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/italy-wine-growing-regions-2026-img-1.png');"></div>
+            <!-- FACTORY:aged-like-fine-wine-guide-2026 -->
+            <a href="/blog/aged-like-fine-wine-guide-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('aged-like-fine-wine-guide-2026-img-1.webp');"></div>
+                <div class="card-content">
+                    <span class="category">Buying Guides</span>
+                    <h3 class="card-title">Aged Like Fine Wine: A 2026 Guide to Longevity, Grapes &amp; Buying</h3>
+                    <p class="card-excerpt">Unlock the secrets of aged wines in 2026 with this expert guide. Discover age-worthy grapes, top regions, ideal pairings, and essential buying tips for collecto</p>
+                </div>
+            </a>
+
+            <!-- FACTORY:unveiling-wine-gems-2026 -->
+            <a href="/blog/unveiling-wine-gems-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('unveiling-wine-gems-2026-img-1.webp');"></div>
+                <div class="card-content">
+                    <span class="category">Wineries &amp; Travel</span>
+                    <h3 class="card-title">Unearthing Unique Wines: The &#x27;Giraffe&#x27; of the Cellar and Memorable Pours</h3>
+                    <p class="card-excerpt">Explore unique wine varietals, regions, and unforgettable experiences in 2026. Discover wines that stand out with elegance and distinct character: answer-first</p>
+                </div>
+            </a>
+
+            <!-- FACTORY:italy-wine-growing-regions-2026 -->
+            <a href="/blog/italy-wine-growing-regions-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('italy-wine-growing-regions-2026-img-1.png');"></div>
                 <div class="card-content">
                     <span class="category">Wine Regions</span>
                     <h3 class="card-title">Italy&#x27;s Premier Wine Regions 2026: Grapes, Pairings &amp; Buying Guide</h3>
@@ -168,109 +229,129 @@ body { background: var(--bg-dark) !important; }
                 </div>
             </a>
 
-            <!-- FACTORY-DE:spanish-wine-regions-guide-2026 -->
-            <a href="/de/blog/spanish-wine-regions-guide-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/spanish-wine-regions-guide-2026-img-1.png');"></div>
+            <!-- FACTORY:spanish-wine-regions-guide-2026 -->
+            <a href="/blog/spanish-wine-regions-guide-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('spanish-wine-regions-guide-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weinregionen</span>
-                    <h3 class="card-title">Spanische Weinregionen 2026: Ein Expertenführer zu Rebsorten, Weingütern &amp; Einkauf</h3>
-                    <p class="card-excerpt">Entdecken Sie Spaniens vielfältige Weinregionen im Jahr 2026, von Rioja bis Priorat. Erfahren Sie mehr über wichtige Rebsorten, Top-Weingüter, Experten-Speiseempfehlun...</p>
+                    <span class="category">Wine Regions</span>
+                    <h3 class="card-title">Spanish Wine Regions 2026: An Expert Guide to Grapes, Wineries &amp; Buying</h3>
+                    <p class="card-excerpt">Explore Spain&#x27;s diverse wine regions in 2026, from Rioja to Priorat. Discover key grapes, top wineries, expert food pairings, and essential buying tips for any</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:global-grape-map-2026 -->
-            <a href="/de/blog/global-grape-map-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/global-grape-map-2026-img-1.png');"></div>
+            <!-- FACTORY:global-grape-map-2026 -->
+            <a href="/blog/global-grape-map-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('global-grape-map-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Rebsorten</span>
-                    <h3 class="card-title">Globale Traubenkarte 2026: Ein unverzichtbarer Leitfaden zu den Anbaugebieten von Weintrauben</h3>
-                    <p class="card-excerpt">Entdecken Sie die globale Karte des Weintraubenanbaus im Jahr 2026. Dieser Leitfaden beschreibt die wichtigsten Regionen, beliebte Rebsorten, Klimaauswirkungen und Exp...</p>
+                    <span class="category">Grape Varieties</span>
+                    <h3 class="card-title">Global Grape Map 2026: An Essential Guide to Where Wine Grapes Grow</h3>
+                    <p class="card-excerpt">Explore the global map of wine grape cultivation in 2026. This guide details key regions, popular varietals, climate impacts, and expert buying advice: answer-f</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:what-is-glera-grape-2026 -->
-            <a href="/de/blog/what-is-glera-grape-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/what-is-glera-grape-2026-img-1.png');"></div>
+            <!-- FACTORY:most-sour-wine-grapes-2026 -->
+            <a href="/blog/most-sour-wine-grapes-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('most-sour-wine-grapes-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Rebsorten</span>
-                    <h3 class="card-title">Was ist die Glera-Traube? Das Herz des Prosecco im Jahr 2026 enthüllen</h3>
-                    <p class="card-excerpt">Glera ist die wichtigste weiße Rebsorte für Prosecco, geschätzt für ihre knackige Säure und lebhaften Aromen, die bis 2026 die globalen Trends bei Schaumweinen vorantr...</p>
+                    <span class="category">Grape Varieties</span>
+                    <h3 class="card-title">The Most Sour Wine Grapes: A Sommelier&#x27;s Guide to Acidity in 2026</h3>
+                    <p class="card-excerpt">Discover the most sour wine grapes, their defining characteristics, and how high acidity influences taste, food pairings, and regional expressions in 2026.</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:wine-country-gift-baskets-2026 -->
-            <a href="/de/blog/wine-country-gift-baskets-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/wine-country-gift-baskets-2026-img-1.png');"></div>
+            <!-- FACTORY:how-to-pair-pinot-noir-dinner-2026 -->
+            <a href="/blog/how-to-pair-pinot-noir-dinner-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('how-to-pair-pinot-noir-dinner-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Einkaufsführer</span>
-                    <h3 class="card-title">Der ultimative Leitfaden für Weinland-Geschenkkörbe im Jahr 2026</h3>
-                    <p class="card-excerpt">Entdecken Sie die besten Weinland-Geschenkkörbe für jeden Anlass im Jahr 2026. Dieser Leitfaden behandelt die Auswahl, Anpassung und Top-Regionen für durchdachte Gesch...</p>
+                    <span class="category">Food Pairing</span>
+                    <h3 class="card-title">How to Pair Pinot Noir with Dinner in 2026: An Expert Guide</h3>
+                    <p class="card-excerpt">Master Pinot Noir food pairings in 2026 with this expert guide. Discover ideal dishes, regional differences, serving tips, and buying advice for perfect meals.</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:aged-like-fine-wine-2026 -->
-            <a href="/de/blog/aged-like-fine-wine-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/aged-like-fine-wine-2026-img-1.png');"></div>
+            <!-- FACTORY:how-to-choose-red-wine-for-steak-2026 -->
+            <a href="/blog/how-to-choose-red-wine-for-steak-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('how-to-choose-red-wine-for-steak-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Kaufberatung</span>
-                    <h3 class="card-title">Gereift wie ein guter Wein: Die Geheimnisse der Langlebigkeit im Jahr 2026 lüften</h3>
-                    <p class="card-excerpt">Entdecken Sie, wie Weine reifen, welche Faktoren ihre Langlebigkeit beeinflussen und welche Rebsorten sich am besten für den Keller im Jahr 2026 eignen. Lernen Sie, si...</p>
+                    <span class="category">Food Pairing</span>
+                    <h3 class="card-title">How to Choose Red Wine for Steak in 2026: An Expert Sommelier&#x27;s Guide</h3>
+                    <p class="card-excerpt">Master the art of pairing red wine with steak in 2026. This guide covers top grape varieties, regions, expert tips, and buying advice for perfect matches: answe</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:wine-gifts-men-2026 -->
-            <a href="/de/blog/wine-gifts-men-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/wine-gifts-men-2026-img-1.png');"></div>
+            <!-- FACTORY:what-is-glera-grape-2026 -->
+            <a href="/blog/what-is-glera-grape-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('what-is-glera-grape-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Einkaufsführer</span>
-                    <h3 class="card-title">Die besten Weingeschenke für Männer im Jahr 2026: Ein Expertenleitfaden für aufmerksame Präsente</h3>
-                    <p class="card-excerpt">Entdecken Sie die besten Weingeschenke für Männer im Jahr 2026, von Premium-Flaschen bis zu unverzichtbaren Accessoires. Finden Sie das perfekte Präsent für jeden Wein...</p>
+                    <span class="category">Grape Varieties</span>
+                    <h3 class="card-title">What is Glera Grape? Unveiling the Heart of Prosecco in 2026</h3>
+                    <p class="card-excerpt">Glera is the quintessential white grape for Prosecco, celebrated for its crisp acidity and vibrant aromatics, driving global sparkling wine trends by 2026.</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:wine-gifts-for-her-2026 -->
-            <a href="/de/blog/wine-gifts-for-her-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/wine-gifts-for-her-2026-img-1.png');"></div>
+            <!-- FACTORY:wine-country-gift-baskets-2026 -->
+            <a href="/blog/wine-country-gift-baskets-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('wine-country-gift-baskets-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Kaufberatung</span>
-                    <h3 class="card-title">Die besten Weingeschenke für Sie im Jahr 2026: Der ultimative Leitfaden für aufmerksame Präsente</h3>
-                    <p class="card-excerpt">Entdecken Sie die ultimativen Weingeschenke für sie im Jahr 2026, von eleganten Flaschen bis hin zu luxuriösen Accessoires. Finden Sie die perfekten Geschenke für jede...</p>
+                    <span class="category">Buying Guides</span>
+                    <h3 class="card-title">The Ultimate Guide to Wine Country Gift Baskets in 2026</h3>
+                    <p class="card-excerpt">Discover the best wine country gift baskets for any occasion in 2026. This guide covers selection, customization, and top regions for thoughtful presents: answe</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:tempranillo-grape-wine-guide-2026 -->
-            <a href="/de/blog/tempranillo-grape-wine-guide-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/tempranillo-grape-wine-guide-2026-img-1.png');"></div>
+            <!-- FACTORY:aged-like-fine-wine-2026 -->
+            <a href="/blog/aged-like-fine-wine-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('aged-like-fine-wine-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Rebsorten</span>
-                    <h3 class="card-title">Tempranillo Weinführer 2026: Spaniens edle Traube erkundet</h3>
-                    <p class="card-excerpt">Entdecken Sie den Tempranillo-Wein im Jahr 2026, Spaniens ikonische rote Rebsorte. Erkunden Sie seine Regionen, Geschmacksprofile, Altersklassifizierungen und perfekte...</p>
+                    <span class="category">Buying Guides</span>
+                    <h3 class="card-title">Aged Like a Fine Wine: Unlocking the Secrets of Longevity in 2026</h3>
+                    <p class="card-excerpt">Discover how wines age, the factors influencing their longevity, and the best varietals to cellar in 2026. Learn to appreciate evolving flavors and aromas.</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:best-wine-pizza-pairing-2026 -->
-            <a href="/de/blog/best-wine-pizza-pairing-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/best-wine-pizza-pairing-2026-img-1.png');"></div>
+            <!-- FACTORY:wine-gifts-men-2026 -->
+            <a href="/blog/wine-gifts-men-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('wine-gifts-men-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Speisekombinationen</span>
-                    <h3 class="card-title">Das beste Wein- und Pizzapairing im Jahr 2026: Ein Sommelier-Leitfaden für perfekte Kombinationen</h3>
-                    <p class="card-excerpt">Entdecken Sie die ultimativen Wein- und Pizzapairings für 2026. Dieser Expertenleitfaden hilft Ihnen, den perfekten Wein für jede Pizza zu wählen, von der klassischen...</p>
+                    <span class="category">Buying Guides</span>
+                    <h3 class="card-title">Best Wine Gifts for Men in 2026: An Expert&#x27;s Guide to Thoughtful Presents</h3>
+                    <p class="card-excerpt">Discover the best wine gifts for men in 2026, from premium bottles to essential accessories. Find the perfect present for every wine enthusiast, enhancing their</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:what-is-chianti-classico -->
-            <a href="/de/blog/what-is-chianti-classico.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/what-is-chianti-classico-hero.png');"></div>
+            <!-- FACTORY:wine-gifts-for-her-2026 -->
+            <a href="/blog/wine-gifts-for-her-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('wine-gifts-for-her-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weinregionen</span>
-                    <h3 class="card-title">Was ist Chianti Classico? Ihr umfassender Leitfaden zu Toskanas ikonischem Wein (2026)</h3>
-                    <p class="card-excerpt">Entdecken Sie Chianti Classico: das historische Herz der Weinregion Toskana. Erfahren Sie mehr über seine Rebsorten, seinen einzigartigen Geschmack, das Symbol des Sch...</p>
+                    <span class="category">Buying Guides</span>
+                    <h3 class="card-title">Best Wine Gifts for Her in 2026: The Ultimate Guide to Thoughtful Presents</h3>
+                    <p class="card-excerpt">Discover the ultimate wine gifts for her in 2026, from elegant bottles to luxurious accessories. Find perfect presents for every wine-loving woman: answer-first</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:how-to-buy-winery-italy-2026 -->
-            <a href="/de/blog/how-to-buy-winery-italy-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/how-to-buy-winery-italy-2026-hero.png');"></div>
+            <!-- FACTORY:tempranillo-grape-wine-guide-2026 -->
+            <a href="/blog/tempranillo-grape-wine-guide-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('tempranillo-grape-wine-guide-2026-img-1.png');"></div>
+                <div class="card-content">
+                    <span class="category">Grape Varieties</span>
+                    <h3 class="card-title">Tempranillo Wine Guide 2026: Spain&#x27;s Noble Grape Explored</h3>
+                    <p class="card-excerpt">Discover Tempranillo wine in 2026, Spain&#x27;s iconic red grape. Explore its regions, flavor profiles, aging classifications, and perfect food pairings: answer-firs</p>
+                </div>
+            </a>
+
+            <!-- FACTORY:best-wine-pizza-pairing-2026 -->
+            <a href="/blog/best-wine-pizza-pairing-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('best-wine-pizza-pairing-2026-img-1.png');"></div>
+                <div class="card-content">
+                    <span class="category">Food Pairing</span>
+                    <h3 class="card-title">Best Wine and Pizza Pairing in 2026: A Sommelier&#x27;s Guide to Perfect Matches</h3>
+                    <p class="card-excerpt">Discover the ultimate wine and pizza pairings for 2026. This expert guide helps you choose the perfect wine for every pizza, from classic Margherita to gourmet.</p>
+                </div>
+            </a>
+
+            <!-- FACTORY:how-to-buy-winery-italy-2026 -->
+            <a href="/blog/how-to-buy-winery-italy-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('how-to-buy-winery-italy-2026-img-1.png');"></div>
                 <div class="card-content">
                     <span class="category">Wineries &amp; Travel</span>
                     <h3 class="card-title">How to Buy a Winery in Italy? A 2026 Investor&#x27;s Guide</h3>
@@ -278,120 +359,156 @@ body { background: var(--bg-dark) !important; }
                 </div>
             </a>
 
-            <!-- FACTORY-DE:winery-bardoix-guide-2026 -->
-            <a href="/de/blog/winery-bardoix-guide-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/winery-bardoix-guide-2026-hero.png');"></div>
+            <!-- FACTORY:winery-spain-architecture -->
+            <a href="/blog/winery-spain-architecture.html" class="blog-card">
+                <div class="card-image" style="background-image: url('winery-spain-architecture-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weingüter &amp; Reisen</span>
-                    <h3 class="card-title">Winery Bardoix 2026: Ein unverzichtbarer Leitfaden für Besuch und Verkostung</h3>
-                    <p class="card-excerpt">Entdecken Sie Winery Bardoix im Jahr 2026. Erfahren Sie mehr über ihre Geschichte, ihre prämierten Weine, die Besucherangebote und warum sie ein Muss für Weinliebhaber...</p>
+                    <span class="category">Wineries &amp; Travel</span>
+                    <h3 class="card-title">Iconic Spanish Winery Architecture: A Journey Through Design &amp; Terroir (2026)</h3>
+                    <p class="card-excerpt">Explore Spain&#x27;s most iconic winery architecture in 2026. Discover how design, innovation, and terroir merge to create stunning, functional, and sustainable</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:winery-spain-architecture -->
-            <a href="/de/blog/winery-spain-architecture.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/winery-spain-architecture-hero.png');"></div>
+            <!-- FACTORY:winery-bardoix-guide-2026 -->
+            <a href="/blog/winery-bardoix-guide-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('winery-bardoix-guide-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weingüter &amp; Reisen</span>
-                    <h3 class="card-title">Ikonische spanische Weingutarchitektur: Eine Reise durch Design &amp; Terroir (2026)</h3>
-                    <p class="card-excerpt">Entdecken Sie Spaniens ikonischste Weingutarchitektur im Jahr 2026. Erfahren Sie, wie Design, Innovation und Terroir verschmelzen, um beeindruckende, funktionale und n...</p>
+                    <span class="category">Wineries &amp; Travel</span>
+                    <h3 class="card-title">Winery Bardoix 2026: An Essential Guide to Visiting and Tasting</h3>
+                    <p class="card-excerpt">Discover Winery Bardoix in 2026. Explore its history, acclaimed wines, visitor experiences, and why it&#x27;s a must-visit destination for wine lovers: answer-first</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:best-wine-pairing-sushi-2026 -->
-            <a href="/de/blog/best-wine-pairing-sushi-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/best-wine-pairing-sushi-2026-hero.png');"></div>
+            <!-- FACTORY:what-is-chianti-classico -->
+            <a href="/blog/what-is-chianti-classico.html" class="blog-card">
+                <div class="card-image" style="background-image: url('what-is-chianti-classico-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Speisenbegleitung</span>
-                    <h3 class="card-title">Die beste Weinbegleitung zu Sushi im Jahr 2026: Ein Expertenrat vom Sommelier</h3>
-                    <p class="card-excerpt">Entdecken Sie die besten Weinbegleitungen zu Sushi im Jahr 2026. Dieser Expertenrat behandelt ideale Weiß-, Rot- und Schaumweine, um verschiedene Sushi-Arten zu ergänz...</p>
+                    <span class="category">Wine Regions</span>
+                    <h3 class="card-title">What is Chianti Classico? Your Essential Guide to Tuscany&#x27;s Iconic Wine (2026)</h3>
+                    <p class="card-excerpt">Discover Chianti Classico: the historic heart of Tuscany&#x27;s wine region. Learn about its grapes, unique taste, Black Rooster symbol, and DOCG rules: answer-first</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:best-wineries-toscana-2026 -->
-            <a href="/de/blog/best-wineries-toscana-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/best-wineries-toscana-2026-hero.png');"></div>
+            <!-- FACTORY:best-wineries-toscana-2026 -->
+            <a href="/blog/best-wineries-toscana-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('best-wineries-toscana-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weingüter &amp; Reisen</span>
-                    <h3 class="card-title">Die besten Weingüter der Toskana 2026 entdecken: Ein unverzichtbarer Reiseführer</h3>
-                    <p class="card-excerpt">Entdecken Sie die besten Weingüter der Toskana für 2026. Dieser Reiseführer stellt ikonische Güter, versteckte Juwelen und Tipps für die Planung einer unvergesslichen...</p>
+                    <span class="category">Wineries &amp; Travel</span>
+                    <h3 class="card-title">Discovering Toscana&#x27;s Best Wineries in 2026: An Essential Guide</h3>
+                    <p class="card-excerpt">Explore Toscana&#x27;s top wineries for 2026. This guide covers iconic estates, hidden gems, and tips for planning an unforgettable wine-tasting journey in Tuscany.</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:grillo-grape-wine-2026 -->
-            <a href="/de/blog/grillo-grape-wine-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/grillo-grape-wine-2026-hero.png');"></div>
+            <!-- FACTORY:best-wine-pairing-sushi-2026 -->
+            <a href="/blog/best-wine-pairing-sushi-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('best-wine-pairing-sushi-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weingüter &amp; Reisen</span>
-                    <h3 class="card-title">Grillo-Traubenwein im Jahr 2026: Der definitive Leitfaden zu Siziliens Star unter den Weißweinen</h3>
-                    <p class="card-excerpt">Entdecken Sie Grillo-Traubenwein im Jahr 2026, Siziliens aufsteigenden Stern unter den Weißweinen. Entdecken Sie seine Geschichte, sein einzigartiges Geschmacksprofil,...</p>
+                    <span class="category">Food Pairing</span>
+                    <h3 class="card-title">Best Wine Pairing for Sushi in 2026: A Sommelier&#x27;s Expert Guide</h3>
+                    <p class="card-excerpt">Discover the ultimate wine pairings for sushi in 2026. This expert guide covers ideal white, red, and sparkling wines to complement various sushi types, enhanci</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:cava-wine-vs-prosecco-2026 -->
-            <a href="/de/blog/cava-wine-vs-prosecco-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/cava-wine-vs-prosecco-2026-hero.png');"></div>
+            <!-- FACTORY:what-is-oldest-winery-spain-2026 -->
+            <a href="/blog/what-is-oldest-winery-spain-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('what-is-oldest-winery-spain-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weinregionen</span>
-                    <h3 class="card-title">Cava Wein vs. Prosecco: Welcher Schaumwein triumphiert 2026?</h3>
-                    <p class="card-excerpt">Entdecken Sie die wichtigsten Unterschiede zwischen Cava und Prosecco im Jahr 2026. Erfahren Sie mehr über Herkunft, Trauben, Herstellung und Geschmack, um Ihren perfe...</p>
+                    <span class="category">Wineries &amp; Travel</span>
+                    <h3 class="card-title">What is the Oldest Winery in Spain? Uncovering Its Rich History (2026)</h3>
+                    <p class="card-excerpt">Discover the ancient roots of Spanish winemaking. Explore the oldest winery in Spain, its historical significance, and enduring legacy in 2026: answer-first</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:how-to-choose-red-wine-glass-2026 -->
-            <a href="/de/blog/how-to-choose-red-wine-glass-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/how-to-choose-red-wine-glass-2026-hero.png');"></div>
+            <!-- FACTORY:best-wineries-italy-2026 -->
+            <a href="/blog/best-wineries-italy-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('best-wineries-italy-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Kaufberatung</span>
-                    <h3 class="card-title">So wählen Sie das perfekte Rotweinglas im Jahr 2026: Ein Sommelier-Leitfaden</h3>
-                    <p class="card-excerpt">Meistern Sie die Auswahl von Rotweingläsern im Jahr 2026. Erfahren Sie mehr über Formen, Materialien und Typen für Bordeaux, Burgund und mehr, um Ihr Weinerlebnis erhe...</p>
+                    <span class="category">Wineries &amp; Travel</span>
+                    <h3 class="card-title">Best Wineries in Italy 2026: An Expert&#x27;s Guide to Iconic Vineyards</h3>
+                    <p class="card-excerpt">Discover Italy&#x27;s best wineries for 2026, from historic estates in Tuscany to innovative producers in Piedmont. Plan your unforgettable Italian wine journey now.</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:what-is-oldest-winery-spain-2026 -->
-            <a href="/de/blog/what-is-oldest-winery-spain-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/what-is-oldest-winery-spain-2026-hero.png');"></div>
+            <!-- FACTORY:grillo-grape-wine-2026 -->
+            <a href="/blog/grillo-grape-wine-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('grillo-grape-wine-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weingüter &amp; Reisen</span>
-                    <h3 class="card-title">Was ist das älteste Weingut Spaniens? Eine Entdeckung seiner reichen Geschichte (2026)</h3>
-                    <p class="card-excerpt">Entdecken Sie die alten Wurzeln des spanischen Weinbaus. Erforschen Sie das älteste Weingut Spaniens, seine historische Bedeutung und sein bleibendes Erbe im Jahr 2026...</p>
+                    <span class="category">Wineries &amp; Travel</span>
+                    <h3 class="card-title">Grillo Grape Wine in 2026: The Definitive Guide to Sicily&#x27;s Star White</h3>
+                    <p class="card-excerpt">Explore Grillo grape wine in 2026, Sicily&#x27;s rising star white. Discover its history, unique flavor profile, ideal food pairings, and the best regions to experie</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:best-puglia-wines-2026 -->
-            <a href="/de/blog/best-puglia-wines-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/best-puglia-wines-2026-hero.png');"></div>
+            <!-- FACTORY:best-puglia-wines-2026 -->
+            <a href="/blog/best-puglia-wines-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('best-puglia-wines-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weingüter &amp; Reisen</span>
-                    <h3 class="card-title">Die besten Weine Apuliens 2026 entdecken: Ein unverzichtbarer Leitfaden</h3>
-                    <p class="card-excerpt">Entdecken Sie die besten Weine Apuliens für 2026, von kräftigen Rotweinen wie Primitivo und Negroamaro bis hin zu frischen Weißweinen. Dieser Leitfaden behandelt die w...</p>
+                    <span class="category">Wineries &amp; Travel</span>
+                    <h3 class="card-title">Discovering Puglia&#x27;s Best Wines in 2026: An Essential Guide</h3>
+                    <p class="card-excerpt">Explore the finest Puglia wines for 2026, from robust reds like Primitivo and Negroamaro to crisp whites. This guide covers top varietals, regions, and pairings</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:best-champagne-snacks-2026 -->
-            <a href="/de/blog/best-champagne-snacks-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/best-champagne-snacks-2026-hero.png');"></div>
+            <!-- FACTORY:best-champagne-snacks-2026 -->
+            <a href="/blog/best-champagne-snacks-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('best-champagne-snacks-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Speisenbegleitung</span>
-                    <h3 class="card-title">Beste Champagner-Snacks für 2026: Veredeln Sie Ihr prickelndes Erlebnis</h3>
-                    <p class="card-excerpt">Entdecken Sie die besten Champagner-Snacks für 2026. Veredeln Sie Ihre Feier mit perfekten Kombinationen, von eleganten Canapés bis zu Gourmet-Häppchen, die jeden Schl...</p>
+                    <span class="category">Food Pairing</span>
+                    <h3 class="card-title">Best Champagne Snacks for 2026: Elevate Your Bubbly Experience</h3>
+                    <p class="card-excerpt">Discover the best champagne snacks for 2026. Elevate your celebration with perfect pairings, from elegant canapés to gourmet bites, enhancing every sip: answer</p>
                 </div>
             </a>
 
-            <!-- FACTORY-DE:best-wineries-italy-2026 -->
-            <a href="/de/blog/best-wineries-italy-2026.html" class="blog-card">
-                <div class="card-image" style="background-image: url('/blog/best-wineries-italy-2026-hero.png');"></div>
+            <!-- FACTORY:cava-wine-vs-prosecco-2026 -->
+            <a href="/blog/cava-wine-vs-prosecco-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('cava-wine-vs-prosecco-2026-img-1.png');"></div>
                 <div class="card-content">
-                    <span class="category">Weingüter &amp; Reisen</span>
-                    <h3 class="card-title">Die besten Weingüter Italiens 2026: Ein Expertenführer zu ikonischen Weinbergen</h3>
-                    <p class="card-excerpt">Entdecken Sie die besten Weingüter Italiens für 2026, von historischen Gütern in der Toskana bis zu innovativen Produzenten im Piemont. Planen Sie jetzt Ihre unvergess...</p>
+                    <span class="category">Wine Regions</span>
+                    <h3 class="card-title">Cava Wine vs. Prosecco: Which Sparkling Wine Reigns Supreme in 2026?</h3>
+                    <p class="card-excerpt">Uncover the key differences between Cava and Prosecco in 2026. Explore origins, grapes, production, and taste to choose your perfect sparkling wine: answer-firs</p>
+                </div>
+            </a>
+
+            <!-- FACTORY:how-to-choose-red-wine-glass-2026 -->
+            <a href="/blog/how-to-choose-red-wine-glass-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('how-to-choose-red-wine-glass-2026-img-1.png');"></div>
+                <div class="card-content">
+                    <span class="category">Buying Guides</span>
+                    <h3 class="card-title">How to Choose the Perfect Red Wine Glass in 2026: A Sommelier&#x27;s Guide</h3>
+                    <p class="card-excerpt">Master red wine glass selection in 2026. Learn shapes, materials, and types for Bordeaux, Burgundy, and more to enhance your wine experience significantly.</p>
                 </div>
             </a>
 
             <!-- Cards are inserted here by the Factory on Publish -->
     </div>
     <div id="empty" class="empty">No posts yet. Create your first article in the factory.</div>
+    <div class="blog-pagination" id="blogPagination" style="display:none;">
+      <div class="pager-group" id="pagerGroup"></div>
+      <button class="pager-btn pager-load" id="loadMoreBtn" type="button">Load more</button>
+      <div class="pager-meta" id="pagerMeta"></div>
+    </div>
+
   </section>
+
+
+
+  <div class="share-section" style="margin-top: 80px; margin-bottom: 40px;">
+<span class="share-label">Spread the word about our blog</span>
+<div class="share-group">
+<a class="share-icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/" target="_blank" title="Share on LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+<a class="share-icon-btn" href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/&amp;text=Check out the YAS Wine Blog for the latest wine insights!" target="_blank" title="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+<a class="share-icon-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/" target="_blank" title="Share on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+<a class="share-icon-btn" href="https://api.whatsapp.com/send?text=Check%20out%20the%20YAS%20Wine%20Blog%20https%3A%2F%2Fyas.wine%2Fblog%2F" target="_blank" title="Share on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"></path></svg></a>
+<a class="share-icon-btn" href="https://t.me/share/url?url=https://yas.wine/blog/&amp;text=Check out the YAS Wine Blog" target="_blank" title="Share on Telegram"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z"></path></svg></a>
+<div class="share-icon-btn" onclick="copyUrlBlog()" title="Copy Link"><svg viewBox="0 0 24 24"><path d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z"></path></svg></div>
+</div>
+</div>
+<script>
+function copyUrlBlog() {
+  navigator.clipboard.writeText("https://yas.wine/blog/");
+  alert('Blog link copied to clipboard!');
+}
+</script>
 
   <footer>
     <p>© 2026 YAS Wine. All rights reserved.</p>
@@ -409,13 +526,149 @@ body { background: var(--bg-dark) !important; }
       if (window.scrollY > 20) nav.classList.add('nav-scrolled'); else nav.classList.remove('nav-scrolled');
     });
 
-    // Hide the empty state once factory cards exist.
-    window.addEventListener('load', function(){
+    function decodeHtml(s){
+      const t = document.createElement('textarea');
+      t.innerHTML = String(s || '');
+      return t.value;
+    }
+
+    function initBlogControls() {
+      const PAGE_SIZE = 12;
       const grid = document.querySelector('.blog-grid');
       const empty = document.getElementById('empty');
-      if (!grid || !empty) return;
-      if (grid.querySelector('a')) empty.style.display = 'none';
-    });
+      const topFilters = document.getElementById('blogFilters');
+      const bottomPager = document.getElementById('blogPagination');
+      const filterGroup = document.getElementById('filterGroup');
+      const pagerGroup = document.getElementById('pagerGroup');
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      const pagerMeta = document.getElementById('pagerMeta');
+      if (!grid || !empty || !topFilters || !bottomPager || !filterGroup || !pagerGroup || !loadMoreBtn || !pagerMeta) return;
+
+      const cards = Array.from(grid.querySelectorAll(':scope > .blog-card'));
+      if (!cards.length) {
+        empty.style.display = '';
+        controls.style.display = 'none';
+        return;
+      }
+
+      const categories = Array.from(new Set(cards.map(card => {
+        const el = card.querySelector('.category');
+        return decodeHtml((el ? el.textContent : '') || '').trim();
+      }).filter(Boolean)));
+
+      let activeCategory = 'All';
+      let currentVisible = PAGE_SIZE;
+
+      try {
+        const q = new URL(window.location.href).searchParams.get('category');
+        if (q && categories.includes(q)) activeCategory = q;
+      } catch (_) {}
+
+      function filteredCards(){
+        if (activeCategory === 'All') return cards;
+        return cards.filter(card => {
+          const el = card.querySelector('.category');
+          const cat = decodeHtml((el ? el.textContent : '') || '').trim();
+          return cat === activeCategory;
+        });
+      }
+
+      function currentPage(total){
+        return Math.max(1, Math.ceil(currentVisible / PAGE_SIZE));
+      }
+
+      function maxPage(total){
+        return Math.max(1, Math.ceil(total / PAGE_SIZE));
+      }
+
+      function syncUrl(page){
+        try {
+          const u = new URL(window.location.href);
+          if (activeCategory === 'All') u.searchParams.delete('category');
+          else u.searchParams.set('category', activeCategory);
+          if (page <= 1) u.searchParams.delete('page');
+          else u.searchParams.set('page', String(page));
+          history.replaceState({}, '', u.pathname + u.search + u.hash);
+        } catch (_) {}
+      }
+
+      function renderFilters(){
+        const items = ['All', ...categories];
+        filterGroup.innerHTML = '';
+        items.forEach(cat => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'pager-btn' + (cat === activeCategory ? ' active' : '');
+          b.textContent = cat;
+          b.addEventListener('click', () => {
+            activeCategory = cat;
+            currentVisible = PAGE_SIZE;
+            render();
+            window.scrollTo({ top: grid.offsetTop - 80, behavior: 'smooth' });
+          });
+          filterGroup.appendChild(b);
+        });
+      }
+
+      function renderPager(total){
+        const p = currentPage(total);
+        const mp = maxPage(total);
+        pagerGroup.innerHTML = '';
+        for (let i = 1; i <= mp; i += 1) {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'pager-btn' + (i === p ? ' active' : '');
+          b.textContent = String(i);
+          b.addEventListener('click', () => {
+            currentVisible = i * PAGE_SIZE;
+            render();
+            window.scrollTo({ top: grid.offsetTop - 80, behavior: 'smooth' });
+          });
+          pagerGroup.appendChild(b);
+        }
+        loadMoreBtn.style.display = currentVisible < total ? 'inline-flex' : 'none';
+        pagerMeta.textContent = 'Zeige ' + Math.min(currentVisible, total) + ' von ' + total + ' Beiträgen';
+        syncUrl(p);
+      }
+
+      function render(){
+        const filtered = filteredCards();
+        const total = filtered.length;
+        cards.forEach(card => { card.style.display = 'none'; });
+        filtered.forEach((card, idx) => {
+          card.style.display = idx < currentVisible ? '' : 'none';
+        });
+
+        if (!total) {
+          empty.textContent = 'Keine Beiträge in dieser Kategorie.';
+          empty.style.display = '';
+        } else {
+          empty.style.display = 'none';
+        }
+
+        renderFilters();
+        renderPager(total);
+      }
+
+      loadMoreBtn.addEventListener('click', () => {
+        const total = filteredCards().length;
+        currentVisible = Math.min(total, currentVisible + PAGE_SIZE);
+        render();
+      });
+
+      try {
+        const pageFromUrl = Number(new URL(window.location.href).searchParams.get('page') || '1');
+        if (Number.isFinite(pageFromUrl) && pageFromUrl > 1) {
+          currentVisible = pageFromUrl * PAGE_SIZE;
+        }
+      } catch (_) {}
+
+      topFilters.style.display = 'flex';
+      bottomPager.style.display = 'flex';
+      render();
+    }
+
+    window.addEventListener('DOMContentLoaded', function(){ renderLocaleCardsFromFeed().finally(initBlogControls); });
   </script>
 <script defer src="/shared/layout.js?v=20260218-3"></script>
 <script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>

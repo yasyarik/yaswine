@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcycling Wine Bottles into Glasses 2026: A Practical Guide</title>
+    <meta name="robots" content="index, follow">
+<meta name="description" content="Transform empty wine bottles into stylish glasses and decor in 2026. This guide covers tools, techniques, safety, and creative ideas for sustainable upcycling.">
+<meta property="og:title" content="Upcycling Wine Bottles into Glasses 2026: A Practical Guide">
+    <meta property="og:description" content="Transform empty wine bottles into stylish glasses and decor in 2026. This guide covers tools, techniques, safety, and creative ideas for sustainable upcycling.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html">
+    <meta property="og:image" content="https://yas.wine//blog/upcycling-wine-bottle-glass-2026-hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-white: #ededed;
+            --text-dim: #a1a1aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: var(--bg-gradient);
+            overflow: hidden;
+        }
+
+        .fixed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
+            background-size: 200% 200%;
+            animation: gradientShift 18s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        
+        main.container {
+            margin-top: 96px;
+        }
+#mainNav { 
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .nav-scrolled {
+            background: rgba(10, 5, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(10, 5, 20, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            margin-right: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(182, 58, 90, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        article {
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        
+            position: relative;
+            z-index: 1205;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+
+        .post-header {
+            margin-bottom: 50px;
+        }
+
+        .post-category {
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-hero {
+            width: 100%;
+            min-height: 450px;
+            height: auto;
+            border-radius: 32px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        .post-content h2 {
+            font-size: 32px;
+            color: white;
+            margin: 50px 0 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            background: var(--glass-bg);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /* Factory-injected blocks (breadcrumbs + TOC) */
+        .breadcrumbs {
+            margin: 18px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .breadcrumbs a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumbs a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.25);
+        }
+        .breadcrumbs .sep {
+            opacity: 0.55;
+        }
+        .breadcrumbs .current {
+            color: white;
+            font-weight: 600;
+        }
+
+        .toc-box {
+            margin: 18px 0 28px;
+            padding: 18px 18px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+        }
+        .toc-title {
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .toc-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+        .toc-items li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc-items a {
+            display: block;
+            color: var(--accent-green);
+            text-decoration: none;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            padding: 6px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-items a:hover {
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
+            color: white;
+        }
+        .toc-h3 {
+            margin-left: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Links + images inside article */
+        .post-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
+        }
+        .post-content a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.10);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+        .post-content figure {
+            margin: 26px 0;
+        }
+        .post-content figcaption {
+            margin-top: 10px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+
+        /* Tables */
+        .post-content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 26px 0;
+        }
+        .post-content thead th {
+            background: rgba(182, 58, 90, 0.14);
+            color: white;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .post-content th,
+        .post-content td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .post-content td {
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+        .post-content th:last-child,
+        .post-content td:last-child {
+            border-right: none;
+        }
+        .post-content tbody tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+.share-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .share-label {
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .share-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .share-icon-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .share-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            main.container {
+                margin-top: 74px;
+            }
+            h1 {
+                font-size: 34px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 30px;
+            }
+        }
+    </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Upcycling Wine Bottles into Glasses 2026: A Practical Guide">
+<meta name="twitter:description" content="Transform empty wine bottles into stylish glasses and decor in 2026. This guide covers tools, techniques, safety, and creative ideas for sustainable upcycling.">
+<meta name="twitter:image" content="https://yas.wine/blog/upcycling-wine-bottle-glass-2026-hero.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html"}, "headline": "Upcycling Wine Bottles into Glasses 2026: A Practical Guide", "description": "Transform empty wine bottles into stylish glasses and decor in 2026. This guide covers tools, techniques, safety, and creative ideas for sustainable upcycling.", "image": ["https://yas.wine/blog/upcycling-wine-bottle-glass-2026-hero.png"], "datePublished": "2026-02-20", "dateModified": "2026-02-20", "author": {"@type": "Organization", "name": "YAS Wine"}, "publisher": {"@type": "Organization", "name": "YAS Wine"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yas.wine/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yas.wine/blog/"}, {"@type": "ListItem", "position": 3, "name": "Upcycling Wine Bottles into Glasses 2026: A Practical Guide", "item": "https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it safe to drink from upcycled wine glasses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, it is safe to drink from upcycled wine glasses provided the rim has been thoroughly sanded and polished to a smooth finish, eliminating any sharp edges. Proper finishing is crucial for both safety and comfort."}}, {"@type": "Question", "name": "What kind of wine bottles are best for upcycling?", "acceptedAnswer": {"@type": "Answer", "text": "Bordeaux and Burgundy-style bottles are generally considered ideal due to their consistent shape and medium-to-thick glass. Champagne bottles also work well but are thicker and require more effort. Avoid very thin or irregularly shaped bottles."}}, {"@type": "Question", "name": "How do you get a smooth rim on an upcycled glass?", "acceptedAnswer": {"@type": "Answer", "text": "Achieving a smooth rim involves a multi-step wet-sanding process. Start with a coarse-grit sandpaper (e.g., 80-120 grit) to remove major roughness, then progressively move to finer grits (220-400, then 600-1000) until the edge feels completely smooth and slightly beveled."}}, {"@type": "Question", "name": "Can I upcycle any glass bottle, not just wine bottles?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, many types of glass bottles can be upcycled, including beer bottles, spirit bottles, and even some non-alcoholic beverage bottles. The key factors are glass thickness, shape consistency, and the ability to achieve a clean score and break."}}, {"@type": "Question", "name": "Where can I buy a glass cutting tool?", "acceptedAnswer": {"@type": "Answer", "text": "Glass bottle cutting tools are widely available online through e-commerce platforms and in many craft stores or hardware shops. Look for models specifically designed for glass bottles, which typically include a scoring wheel and a mechanism to hold the bottle steady."}}, {"@type": "Question", "name": "How long does it take to make an upcycled wine glass?", "acceptedAnswer": {"@type": "Answer", "text": "The time required can vary based on experience and the bottle's thickness. On average, preparing, scoring, breaking, and thoroughly sanding a single wine bottle into a glass can take anywhere from 30 minutes to an hour, excluding cleaning time for the bottle itself."}}]}</script>
+<link href="https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html" rel="canonical"/><link href="https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/upcycling-wine-bottle-glass-2026.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/upcycling-wine-bottle-glass-2026.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/upcycling-wine-bottle-glass-2026.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/upcycling-wine-bottle-glass-2026.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html" hreflang="x-default" rel="alternate"/></head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+    <main class="container">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+
+            <header class="post-header">
+                <span class="post-category">Wineries &amp; Travel</span>
+                <h1 itemprop="headline">Upcycling Wine Bottles into Glasses 2026: A Practical Guide</h1>
+                <div class="post-intro" style="margin-top:16px;"><p><strong>Upcycling empty wine bottles into functional glasses offers a sustainable and creative way to extend the life of cherished bottles, reducing waste and creating unique drinkware.</strong> This process transforms what would be discarded into personalized items, perfect for home use or as thoughtful gifts, reflecting a commitment to environmental responsibility and artisanal craftsmanship.</p></div>
+                <div class="post-meta">
+                    <time itemprop="datePublished" datetime="2026-02-20">Published 2026-02-20</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="post-hero" style="background-image: url('/blog/upcycling-wine-bottle-glass-2026-hero.png');"></div>
+
+            <div class="post-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">Upcycling Wine Bottles into Glasses 2026: A Practical Guide</span></nav><aside class="toc-box"><div class="toc-title">On this page</div><ul class="toc-items"><li><a class="toc-h2" href="#why-upcycle-wine-bottles-into-glasses">Why Upcycle Wine Bottles into Glasses?</a></li><li><a class="toc-h2" href="#how-to-choose-the-right-wine-bottle-for-upcycling">How to Choose the Right Wine Bottle for Upcycling?</a></li><li><a class="toc-h2" href="#what-essential-tools-do-you-need-for-diy-wine-glass-creation">What Essential Tools Do You Need for DIY Wine Glass Creation?</a></li><li><a class="toc-h2" href="#step-by-step-guide-how-to-upcycle-a-wine-bottle-into-a-glass">Step-by-Step Guide: How to Upcycle a Wine Bottle into a Glass</a></li><li><a class="toc-h2" href="#safety-first-precautions-and-best-practices">Safety First: Precautions and Best Practices</a></li><li><a class="toc-h2" href="#how-should-you-maintain-your-upcycled-wine-glasses">How Should You Maintain Your Upcycled Wine Glasses?</a></li><li><a class="toc-h2" href="#creative-uses-for-upcycled-wine-glasses">Creative Uses for Upcycled Wine Glasses</a></li><li><a class="toc-h2" href="#beyond-glasses-other-wine-bottle-upcycling-ideas">Beyond Glasses: Other Wine Bottle Upcycling Ideas</a></li><li><a class="toc-h2" href="#where-to-source-bottles-for-upcycling">Where to Source Bottles for Upcycling?</a></li><li><a class="toc-h2" href="#sustainable-wine-practices-and-upcycling">Sustainable Wine Practices and Upcycling</a></li></ul></aside><section id="why-upcycle-wine-bottles-into-glasses"><h2 id="why-upcycle-wine-bottles-into-glasses">Why Upcycle Wine Bottles into Glasses?</h2>
+<p><strong>Upcycling wine bottles into glasses provides significant environmental benefits, allows for personal expression, and offers a cost-effective alternative to purchasing new glassware.</strong> It's an engaging DIY project that aligns with sustainable living and celebrates the story behind each bottle.</p>
+
+<h3 id="environmental-benefits-of-repurposing">Environmental Benefits of Repurposing</h3>
+<p><strong>Repurposing wine bottles significantly reduces landfill waste and lowers the energy consumption associated with glass recycling and new glass production.</strong> Each bottle diverted from the waste stream contributes to a healthier planet by conserving raw materials and reducing carbon emissions.</p>
+
+<h3 id="creating-personalized-keepsakes-and-gifts">Creating Personalized Keepsakes and Gifts</h3>
+<p><strong>Transforming a wine bottle from a memorable vintage or a special occasion into a glass creates a unique keepsake that holds sentimental value.</strong> These personalized items make exceptional gifts, allowing the recipient to literally drink from a piece of their past experiences.</p>
+
+<h3 id="cost-effective-drinkware-solutions">Cost-Effective Drinkware Solutions</h3>
+<p><strong>Upcycling offers a highly economical way to acquire stylish and durable drinkware, often at a fraction of the cost of buying new, commercially produced glasses.</strong> With minimal investment in tools, you can create a full set of custom glasses.</p>
+
+</section><section id="how-to-choose-the-right-wine-bottle-for-upcycling"><h2 id="how-to-choose-the-right-wine-bottle-for-upcycling">How to Choose the Right Wine Bottle for Upcycling?</h2>
+<p><strong>Selecting the appropriate wine bottle is crucial for successful upcycling, considering factors like glass thickness, shape, and overall quality for safety and aesthetics.</strong> Different bottle types offer unique characteristics that affect the cutting process and the final product.</p>
+
+<h3 id="understanding-bottle-shape-and-thickness">Understanding Bottle Shape and Thickness</h3>
+<p><strong>Bordeaux and Burgundy-style bottles are generally preferred for upcycling due to their consistent cylindrical shapes and robust glass thickness.</strong> Champagne bottles are also excellent candidates, though their thicker glass requires more patience and precision during cutting.</p>
+
+<figure><img src="upcycling-wine-bottle-glass-2026-img-1.png" alt="A collection of diverse wine bottles, including Bordeaux, Burgundy, and Rhine styles, ready for upcycling." /><figcaption>Different wine bottle shapes offer unique opportunities for crafting distinctive upcycled glasses.</figcaption></figure>
+
+<h3 id="glass-color-and-aesthetic-considerations">Glass Color and Aesthetic Considerations</h3>
+<p><strong>The color of the bottle significantly influences the aesthetic of the finished glass, with clear, green, and amber bottles offering distinct visual appeals.</strong> Consider the intended use and personal preference when choosing, as lighter colors show off beverages more clearly, while darker ones add a rustic charm.</p>
+
+<h3 id="sourcing-winery-specific-bottles">Sourcing Winery-Specific Bottles</h3>
+<p><strong>Visiting local or renowned wineries offers an excellent opportunity to source unique and high-quality bottles, often with distinctive branding or historical significance.</strong> Wineries in regions like <a href="/blog/italy-wine-growing-regions-2026.html">Italy's premier wine regions</a> or <a href="/blog/spanish-wine-regions-guide-2026.html">Spain's diverse wine regions</a> often feature bottles ideal for upcycling, turning them into a memento of your travels.</p>
+
+</section><section id="what-essential-tools-do-you-need-for-diy-wine-glass-creation"><h2 id="what-essential-tools-do-you-need-for-diy-wine-glass-creation">What Essential Tools Do You Need for DIY Wine Glass Creation?</h2>
+<p><strong>Successful wine bottle upcycling requires a few key tools to ensure clean cuts, smooth edges, and a safe crafting experience.</strong> These include specialized glass cutters, abrasive materials for sanding, and essential safety gear.</p>
+
+<h3 id="glass-cutter-types-and-functionality">Glass Cutter Types and Functionality</h3>
+<p><strong>Manual glass bottle cutters, typically scoring devices with a tungsten carbide wheel, are the most common and accessible tools for home upcycling projects.</strong> Electric glass cutters or rotary tools with diamond bits can also be used for more precise or intricate cuts, though they require more experience.</p>
+
+<h3 id="sanding-and-finishing-tools">Sanding and Finishing Tools</h3>
+<p><strong>Various grits of sandpaper (from coarse to fine), diamond hand pads, or a Dremel tool with a grinding attachment are essential for smoothing the cut edge of the glass.</strong> Achieving a polished, safe rim is critical for usability.</p>
+
+<h3 id="protective-gear-for-safe-crafting">Protective Gear for Safe Crafting</h3>
+<p><strong>Always wear safety glasses to protect eyes from glass shards, and sturdy gloves to prevent cuts during the handling and sanding process.</strong> A dust mask is also advisable to avoid inhaling fine glass particles.</p>
+
+<figure><img src="upcycling-wine-bottle-glass-2026-img-2.png" alt="A collection of glass cutting and sanding tools, including a bottle cutter, sandpaper, and safety gloves, laid out for an upcycling project." /><figcaption>Proper tools and safety equipment are fundamental for a successful and safe glass upcycling project.</figcaption></figure>
+
+</section><section id="step-by-step-guide-how-to-upcycle-a-wine-bottle-into-a-glass"><h2 id="step-by-step-guide-how-to-upcycle-a-wine-bottle-into-a-glass">Step-by-Step Guide: How to Upcycle a Wine Bottle into a Glass</h2>
+<p><strong>Transforming a wine bottle into a drinking glass involves a precise series of steps: scoring, separating, and meticulously finishing the rim.</strong> Following these instructions carefully ensures a high-quality, safe, and attractive final product.</p>
+
+<h3 id="preparing-the-bottle">Preparing the Bottle</h3>
+<p><strong>Thoroughly clean the empty wine bottle, removing all labels and adhesive residue to ensure a clean surface for cutting.</strong> Soaking bottles in hot, soapy water helps loosen stubborn labels, which can then be scraped off with a non-abrasive scrubber.</p>
+
+<h3 id="scoring-the-glass">Scoring the Glass</h3>
+<p><strong>Using a bottle cutter, apply steady, even pressure to score a continuous line around the bottle at your desired height.</strong> A single, unbroken score line is ideal; avoid re-scoring the same line, as this can lead to an uneven break.</p>
+
+<h3 id="separating-the-halves">Separating the Halves</h3>
+<p><strong>Apply alternating cycles of heat and cold to the scored line to create a clean break.</strong> Typically, this involves pouring boiling water over the score line, followed immediately by cold water or an ice cube, repeating until the glass separates cleanly.</p>
+
+<h3 id="finishing-the-rim-for-safety-and-comfort">Finishing the Rim for Safety and Comfort</h3><p><strong>Finishing the Rim for Safety and Comfort ensures the glass is safe and pleasant to drink from.</strong></p>
+<ol>
+    <li><strong>Rough Sanding:</strong> Begin with coarse-grit sandpaper (e.g., 80-120 grit) or a diamond hand pad. Wet the sandpaper and the glass rim. Gently sand the newly cut edge in a circular motion to remove any sharp points and create a slight bevel.</li>
+    <li><strong>Medium Sanding:</strong> Progress to a medium-grit sandpaper (e.g., 220-400 grit). Continue wet sanding, maintaining the circular motion, to further smooth the rim and remove any remaining rough spots from the initial sanding.</li>
+    <li><strong>Fine Sanding:</strong> Finish with fine-grit sandpaper (e.g., 600-1000 grit or higher). This step is crucial for achieving a smooth, polished, and safe drinking rim. Continue wet sanding until the edge feels completely smooth to the touch, similar to a store-bought glass.</li>
+    <li><strong>Polishing (Optional):</strong> For an extra-smooth, professional finish, use a polishing compound and a felt wheel on a rotary tool, or very fine polishing paper, to buff the rim to a subtle shine.</li>
+</ol>
+
+</section><section id="safety-first-precautions-and-best-practices"><h2 id="safety-first-precautions-and-best-practices">Safety First: Precautions and Best Practices</h2>
+<p><strong>Prioritizing safety is paramount when working with glass, requiring careful handling, a well-prepared workspace, and appropriate personal protective equipment.</strong> Adhering to safety guidelines prevents injuries and ensures a positive crafting experience.</p>
+
+<h3 id="handling-sharp-edges-and-fragments">Handling Sharp Edges and Fragments</h3>
+<p><strong>Exercise extreme caution when handling freshly cut glass, as the edges are incredibly sharp until sanded smooth.</strong> Always wear cut-resistant gloves and dispose of glass fragments immediately and safely, wrapped in thick paper or cardboard.</p>
+
+<h3 id="ensuring-proper-ventilation-and-workspace">Ensuring Proper Ventilation and Workspace</h3>
+<p><strong>Work in a well-ventilated area to minimize the inhalation of fine glass dust generated during sanding.</strong> A clean, stable, and uncluttered workspace helps prevent accidents and allows for precise work.</p>
+
+<h3 id="utilizing-personal-protective-equipment-ppe">Utilizing Personal Protective Equipment (PPE)</h3>
+<p><strong>Always wear safety glasses, cut-resistant gloves, and a dust mask throughout the cutting and sanding phases of the upcycling process.</strong> This PPE forms an essential barrier against potential hazards.</p>
+
+</section><section id="how-should-you-maintain-your-upcycled-wine-glasses"><h2 id="how-should-you-maintain-your-upcycled-wine-glasses">How Should You Maintain Your Upcycled Wine Glasses?</h2>
+<p><strong>Proper care and maintenance will ensure your upcycled wine glasses remain beautiful and functional for years to come.</strong> While durable, they benefit from mindful cleaning and storage.</p>
+
+<h3 id="cleaning-upcycled-glassware">Cleaning Upcycled Glassware</h3>
+<p><strong>Upcycled wine glasses can typically be hand-washed with dish soap and water, similar to regular glassware.</strong> For best longevity, especially with any etched or painted designs, hand-washing is recommended over dishwashers.</p>
+
+<h3 id="storage-tips-for-durability">Storage Tips for Durability</h3>
+<p><strong>Store upcycled glasses upright in a cupboard or on a shelf, avoiding excessive stacking that could cause chips or breaks.</strong> Treating them as you would delicate wine glasses, such as those discussed in <a href="/blog/how-to-choose-red-wine-glass-2026.html">how to choose the perfect red wine glass</a>, will extend their life.</p>
+
+</section><section id="creative-uses-for-upcycled-wine-glasses"><h2 id="creative-uses-for-upcycled-wine-glasses">Creative Uses for Upcycled Wine Glasses</h2>
+<p><strong>Beyond serving as conventional drinking vessels, upcycled wine glasses can be repurposed into a variety of decorative and practical items.</strong> Their unique forms lend themselves to imaginative new roles around the home.</p>
+
+<h3 id="everyday-drinkware">Everyday Drinkware</h3>
+<p><strong>Use your upcycled creations as everyday glasses for water, juice, cocktails, or even a casual pour of your favorite <a href="/blog/grillo-grape-wine-2026.html">Grillo grape wine</a>.</strong> They bring a touch of personalized style to any meal or gathering.</p>
+
+<h3 id="candle-holders-and-votive-cups">Candle Holders and Votive Cups</h3>
+<p><strong>The lower half of an upcycled wine bottle, with its sturdy base, makes an excellent and attractive candle holder or votive cup.</strong> The glass diffuses light beautifully, creating a warm ambiance.</p>
+
+<h3 id="unique-gifts-and-home-decor">Unique Gifts and Home Decor</h3>
+<p><strong>Filled with small treats, decorative sands, or a tiny succulent, upcycled glasses make charming and thoughtful gifts, often more personal than store-bought options.</strong> They also serve as unique decorative elements on shelves or mantels.</p>
+
+</section><section id="beyond-glasses-other-wine-bottle-upcycling-ideas"><h2 id="beyond-glasses-other-wine-bottle-upcycling-ideas">Beyond Glasses: Other Wine Bottle Upcycling Ideas</h2>
+<p><strong>The versatility of wine bottles extends far beyond drinking glasses, offering numerous opportunities for creative upcycling into other useful and decorative items.</strong> The top halves, too, can find new life.</p>
+
+<table>
+    <caption>Comparative Suitability of Wine Bottle Types for Upcycling</caption>
+    <thead>
+        <tr>
+            <th>Bottle Type</th>
+            <th>Common Grapes</th>
+            <th>Typical Shape</th>
+            <th>Thickness</th>
+            <th>Ease of Cutting</th>
+            <th>Best for</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bordeaux</td>
+            <td>Cabernet Sauvignon, Merlot</td>
+            <td>Straight-sided with high shoulders</td>
+            <td>Medium-Thick</td>
+            <td>Good</td>
+            <td>Drinking glasses, tumblers</td>
+        </tr>
+        <tr>
+            <td>Burgundy</td>
+            <td>Pinot Noir, Chardonnay</td>
+            <td>Sloped shoulders, wider base</td>
+            <td>Medium</td>
+            <td>Good</td>
+            <td>Drinking glasses, small vases</td>
+        </tr>
+        <tr>
+            <td>Rhine (Hock)</td>
+            <td>Riesling, Gewürztraminer</td>
+            <td>Tall, slender, often with fluted neck</td>
+            <td>Thinner</td>
+            <td>Moderate</td>
+            <td>Elegant vases, candle holders</td>
+        </tr>
+        <tr>
+            <td>Champagne</td>
+            <td>Chardonnay, Pinot Noir, Pinot Meunier</td>
+            <td>Thick glass, deep punt, heavy base</td>
+            <td>Very Thick</td>
+            <td>Challenging</td>
+            <td>Sturdy tumblers, large candle holders</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="vases-and-planters">Vases and Planters</h3>
+<p><strong>The top halves of wine bottles, with their elegant necks, can be transformed into slender vases for single stems or small bouquets.</strong> The lower sections, left intact or cut to different heights, make charming planters for herbs or succulents.</p>
+
+<h3 id="creative-lighting-fixtures">Creative Lighting Fixtures</h3>
+<p><strong>Wine bottles can be repurposed into unique lampshades, pendant lights, or decorative string light holders, adding a distinctive glow to any space.</strong> This requires careful electrical work or the use of battery-operated lights.</p>
+
+<h3 id="decorative-items-and-art-projects">Decorative Items and Art Projects</h3>
+<p><strong>Beyond functional items, wine bottles can be incorporated into various art installations, mosaics, or garden decorations.</strong> Their diverse shapes and colors provide endless possibilities for artistic expression.</p>
+
+</section><section id="where-to-source-bottles-for-upcycling"><h2 id="where-to-source-bottles-for-upcycling">Where to Source Bottles for Upcycling?</h2>
+<p><strong>Acquiring a consistent supply of suitable wine bottles for upcycling can be achieved through various channels, from personal consumption to collaborations with local establishments.</strong> Thoughtful sourcing ensures a steady stream of raw material for your projects.</p>
+
+<h3 id="collecting-from-local-wineries-and-vineyards">Collecting from Local Wineries and Vineyards</h3>
+<p><strong>Many wineries are willing to provide empty bottles, especially if you explain your upcycling project, fostering community and promoting sustainability.</strong> This also offers a chance to discover <a href="/blog/unveiling-wine-gems-2026.html">unique wine gems</a> whose bottles would make excellent upcycled pieces.</p>
+
+<h3 id="partnerships-with-restaurants-and-bars">Partnerships with Restaurants and Bars</h3>
+<p><strong>Restaurants and bars are often a rich source of empty wine bottles, frequently having large quantities to discard.</strong> Establishing a partnership can provide a reliable and consistent supply, benefiting both parties.</p>
+
+<h3 id="utilizing-personal-collections-and-gatherings">Utilizing Personal Collections and Gatherings</h3>
+<p><strong>Your own consumption and bottles from gatherings with friends and family are a natural starting point for collecting.</strong> Encourage others to save their bottles for you, turning their discards into your resources.</p>
+
+</section><section id="sustainable-wine-practices-and-upcycling"><h2 id="sustainable-wine-practices-and-upcycling">Sustainable Wine Practices and Upcycling</h2>
+<p><strong>Upcycling wine bottles is an integral part of a broader movement towards sustainable wine practices, emphasizing resourcefulness and environmental consciousness within the wine industry and among consumers.</strong> It's a tangible way to participate in a circular economy.</p>
+
+<blockquote>
+    <p><strong>"Every empty bottle holds the potential for a new story. Upcycling isn't just about craft; it's about valuing resources and extending the narrative of enjoyment and sustainability beyond the last sip."</strong> - <em>A Sommelier's Perspective on Resourcefulness</em></p>
+</blockquote>
+
+<h3 id="contributing-to-waste-reduction">Contributing to Waste Reduction</h3>
+<p><strong>By choosing to upcycle, you directly contribute to reducing the overall volume of glass waste that ends up in landfills or requires energy-intensive recycling processes.</strong> This small act collectively makes a significant environmental impact.</p>
+
+<h3 id="supporting-green-initiatives-in-the-wine-industry">Supporting Green Initiatives in the Wine Industry</h3>
+<p><strong>Your engagement in upcycling aligns with and supports the growing number of wineries adopting sustainable viticulture and production practices.</strong> It demonstrates consumer demand for environmental responsibility, influencing industry trends.</p>
+
+<figure><img src="upcycling-wine-bottle-glass-2026-img-3.png" alt="A beautifully crafted art piece made from cut and polished wine bottle sections, showcasing advanced upcycling possibilities." /><figcaption>Wine bottles can be transformed into stunning decorative art, highlighting the material's versatility.</figcaption></figure>
+
+<h3 id="the-role-of-consumers-in-a-circular-economy">The Role of Consumers in a Circular Economy</h3>
+<p><strong>Consumers play a vital role in fostering a circular economy by actively participating in practices like upcycling, moving beyond linear consumption models of 'take, make, dispose'.</strong> This proactive approach closes the loop, maximizing resource utility.</p>
+</section>
+            </div>
+
+            <div class="share-section">
+                <span class="share-label">Share this article</span>
+                <div class="share-group">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html&text=Upcycling Wine Bottles into Glasses 2026: A Practical Guide"
+                        target="_blank" class="share-icon-btn" title="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Upcycling Wine Bottles into Glasses 2026: A Practical Guide%20https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://yas.wine/blog/upcycling-wine-bottle-glass-2026.html&text=Upcycling Wine Bottles into Glasses 2026: A Practical Guide"
+                        target="_blank" class="share-icon-btn" title="Share on Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z" />
+                        </svg>
+                    </a>
+                    <div class="share-icon-btn" onclick="copyUrl()" title="Copy Link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function copyUrl() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            </script>
+
+            
+
+        </article>
+    </main>
+
+    <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
+        });
+    </script>
+
+    <script>
+        function ensureTocBox() {
+            const root = document.querySelector('.post-content');
+            if (!root) return;
+            if (root.querySelector('.toc-box')) return;
+            const h2s = Array.from(root.querySelectorAll('h2[id]'));
+            if (!h2s.length) return;
+            const aside = document.createElement('aside');
+            aside.className = 'toc-box';
+            aside.setAttribute('aria-label', 'Table of contents');
+            const t = document.createElement('div');
+            t.className = 'toc-title';
+            t.textContent = 'On this page';
+            const ul = document.createElement('ul');
+            ul.className = 'toc-items';
+            h2s.forEach((h2, idx) => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#' + h2.id;
+                a.textContent = h2.textContent.trim();
+                li.appendChild(a);
+
+                const nxt = h2s[idx+1];
+                const sub = [];
+                let el = h2.nextElementSibling;
+                while (el && el !== nxt) {
+                    if (el.tagName === 'H3' && el.id) sub.push(el);
+                    el = el.nextElementSibling;
+                }
+                if (sub.length) {
+                    const ul2 = document.createElement('ul');
+                    ul2.className = 'toc-h3';
+                    sub.slice(0,3).forEach(h3 => {
+                        const li2 = document.createElement('li');
+                        const a2 = document.createElement('a');
+                        a2.href = '#' + h3.id;
+                        a2.textContent = h3.textContent.trim();
+                        li2.appendChild(a2);
+                        ul2.appendChild(li2);
+                    });
+                    li.appendChild(ul2);
+                }
+                ul.appendChild(li);
+            });
+            aside.appendChild(t);
+            aside.appendChild(ul);
+            const crumbs = root.querySelector('.breadcrumbs');
+            if (crumbs && crumbs.parentNode === root) crumbs.insertAdjacentElement('afterend', aside);
+            else root.prepend(aside);
+        }
+        document.addEventListener('DOMContentLoaded', ensureTocBox);
+    </script>
+
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+
+</html>
