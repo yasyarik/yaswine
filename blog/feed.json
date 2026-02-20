@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-20T14:01:50+00:00",
+  "updatedAt": "2026-02-20T20:01:44+00:00",
   "posts": [
+    {
+      "href": "/blog/mastering-the-wine-journey-2026.html",
+      "image": "/blog/mastering-the-wine-journey-2026-img-1.webp",
+      "category": "Buying Guides",
+      "title": "Mastering the Wine Journey: Grapes, Regions, Pairings & Smart Buying in 2026",
+      "description": "Unlock the world of wine with this expert guide covering essential grapes, key regions, perfect food pairings, top wineries, and smart buying decisions for"
+    },
     {
       "href": "/blog/upcycling-wine-bottle-glass-2026.html",
       "image": "/blog/upcycling-wine-bottle-glass-2026-img-1.webp",
