@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-21T14:42:03+00:00",
+  "updatedAt": "2026-02-21T20:03:41+00:00",
   "posts": [
+    {
+      "href": "/es/blog/wine-cooking-recipes-2026.html",
+      "image": "/blog/wine-cooking-recipes-2026-hero.png",
+      "category": "Maridaje",
+      "title": "Dominando la Cocina con Vino: Recetas Esenciales y Principios de Maridaje para 2026",
+      "description": "Descubre recetas esenciales de cocina con vino y principios de maridaje expertos para 2026. Eleva tus habilidades culinarias con consejos para salsas, estofados y post..."
+    },
     {
       "href": "/es/blog/best-wine-starters-2026.html",
       "image": "/blog/best-wine-starters-2026-hero.png",
