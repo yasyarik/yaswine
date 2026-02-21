@@ -601,7 +601,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Au-delà des cépages bien connus, une multitude de variétés moins répandues offre des expériences de dégustation uniques et une spécificité régionale.</strong> Des cépages comme le [<a href="/blog/grillo-grape-wine-2026.html">Grillo</a>] de Sicile, connu pour ses blancs aromatiques, ou le [<a href="/blog/what-is-glera-grape-2026.html">Glera</a>], le cœur du Prosecco, invitent à explorer des styles divers et des traditions locales, offrant souvent une excellente valeur et un caractère distinctif.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-1.png" alt="Une collection de divers cépages, présentant différentes couleurs et formes." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-1.png" alt="Une collection de divers cépages, présentant différentes couleurs et formes." />
   <figcaption>Des cépages divers sont le point de départ de chaque bouteille.</figcaption>
 </figure>
 
@@ -645,7 +645,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Les caves du Nouveau Monde, bien que plus jeunes, se sont rapidement établies comme des leaders mondiaux grâce à l'innovation, l'expérimentation et l'accent mis sur l'expression variétale.</strong> Les domaines de Napa Valley, Barossa Valley et Mendoza sont célébrés pour avoir repoussé les limites de la vinification, adoptant souvent des pratiques durables et des technologies modernes pour élaborer des vins de classe mondiale.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-2.png" alt="Un vignoble pittoresque s'étendant vers un bâtiment de cave historique sous un ciel clair." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-2.png" alt="Un vignoble pittoresque s'étendant vers un bâtiment de cave historique sous un ciel clair." />
   <figcaption>Les vignobles sont le cœur de l'héritage d'une cave, incarnant des siècles de tradition.</figcaption>
 </figure>
 
@@ -689,7 +689,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>La conservation à long terme nécessite un espace dédié avec des températures constantes (environ 13°C / 55°F), 60-70% d'humidité, l'obscurité et des vibrations minimales.</strong> Une cave à vin ou une cave sur mesure offre l'environnement idéal pour les vins destinés à vieillir pendant des années ou des décennies, garantissant qu'ils évoluent magnifiquement, comme exploré dans les <a href="/blog/aged-like-fine-wine-2026.html">guides sur la longévité du vin</a>.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-3.png" alt="Une cave à vin bien organisée avec des bouteilles stockées horizontalement dans des casiers en bois." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-3.png" alt="Une cave à vin bien organisée avec des bouteilles stockées horizontalement dans des casiers en bois." />
   <figcaption>Une bonne conservation du vin est cruciale pour préserver sa qualité et permettre un vieillissement élégant.</figcaption>
 </figure>
 
@@ -843,12 +843,15 @@ body { background: var(--bg-dark) !important; }
     </script>
 
     <script>
-        function ensureTocBox() {
+function ensureTocBox() {
             const root = document.querySelector('.post-content');
             if (!root) return;
-            if (root.querySelector('.toc-box')) return;
             const h2s = Array.from(root.querySelectorAll('h2[id]'));
             if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
             const aside = document.createElement('aside');
             aside.className = 'toc-box';
             aside.setAttribute('aria-label', 'Table of contents');
@@ -857,6 +860,7 @@ body { background: var(--bg-dark) !important; }
             t.textContent = 'On this page';
             const ul = document.createElement('ul');
             ul.className = 'toc-items';
+
             h2s.forEach((h2, idx) => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
@@ -886,6 +890,7 @@ body { background: var(--bg-dark) !important; }
                 }
                 ul.appendChild(li);
             });
+
             aside.appendChild(t);
             aside.appendChild(ul);
             const crumbs = root.querySelector('.breadcrumbs');

@@ -601,7 +601,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Más allá de las conocidas, una gran cantidad de variedades de uva menos conocidas ofrece experiencias de degustación únicas y especificidad regional.</strong> Uvas como [<a href="/blog/grillo-grape-wine-2026.html">Grillo</a>] de Sicilia, conocida por sus blancos aromáticos, o [<a href="/blog/what-is-glera-grape-2026.html">Glera</a>], el corazón del Prosecco, invitan a la exploración de diversos estilos y tradiciones locales, a menudo proporcionando una excelente relación calidad-precio y un carácter distintivo.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-1.png" alt="Una colección de varias uvas de vino, mostrando diferentes colores y formas." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-1.png" alt="Una colección de varias uvas de vino, mostrando diferentes colores y formas." />
   <figcaption>Diversas uvas de vino son el punto de partida para cada botella.</figcaption>
 </figure>
 
@@ -645,7 +645,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Las bodegas del Nuevo Mundo, aunque más jóvenes, se han establecido rápidamente como líderes mundiales a través de la innovación, la experimentación y un enfoque en la expresión varietal.</strong> Las fincas en Napa Valley, Barossa Valley y Mendoza son celebradas por romper barreras en la elaboración del vino, a menudo adoptando prácticas sostenibles y tecnología moderna para elaborar vinos de clase mundial.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-2.png" alt="Un viñedo pintoresco que se extiende hacia un edificio de bodega histórico bajo un cielo despejado." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-2.png" alt="Un viñedo pintoresco que se extiende hacia un edificio de bodega histórico bajo un cielo despejado." />
   <figcaption>Los viñedos son el corazón del legado de una bodega, encarnando siglos de tradición.</figcaption>
 </figure>
 
@@ -689,7 +689,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>La guarda a largo plazo requiere un espacio dedicado con temperaturas constantes (alrededor de 55°F / 13°C), 60-70% de humedad, oscuridad y mínima vibración.</strong> Una vinoteca o una bodega construida a medida proporciona el ambiente ideal para vinos destinados a envejecer durante años o décadas, asegurando que evolucionen bellamente, como se explora en las <a href="/blog/aged-like-fine-wine-2026.html">guías sobre la longevidad del vino</a>.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-3.png" alt="Una bodega bien organizada con botellas almacenadas horizontalmente en estantes de madera." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-3.png" alt="Una bodega bien organizada con botellas almacenadas horizontalmente en estantes de madera." />
   <figcaption>El almacenamiento adecuado del vino es crucial para preservar la calidad y permitir un envejecimiento elegante.</figcaption>
 </figure>
 
@@ -843,12 +843,15 @@ body { background: var(--bg-dark) !important; }
     </script>
 
     <script>
-        function ensureTocBox() {
+function ensureTocBox() {
             const root = document.querySelector('.post-content');
             if (!root) return;
-            if (root.querySelector('.toc-box')) return;
             const h2s = Array.from(root.querySelectorAll('h2[id]'));
             if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
             const aside = document.createElement('aside');
             aside.className = 'toc-box';
             aside.setAttribute('aria-label', 'Table of contents');
@@ -857,6 +860,7 @@ body { background: var(--bg-dark) !important; }
             t.textContent = 'On this page';
             const ul = document.createElement('ul');
             ul.className = 'toc-items';
+
             h2s.forEach((h2, idx) => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
@@ -886,6 +890,7 @@ body { background: var(--bg-dark) !important; }
                 }
                 ul.appendChild(li);
             });
+
             aside.appendChild(t);
             aside.appendChild(ul);
             const crumbs = root.querySelector('.breadcrumbs');

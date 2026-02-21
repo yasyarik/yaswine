@@ -601,7 +601,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Beyond the well-known, a wealth of lesser-known grape varieties offers unique tasting experiences and regional specificity.</strong> Grapes like [<a href="/blog/grillo-grape-wine-2026.html">Grillo</a>] from Sicily, known for its aromatic whites, or [<a href="/blog/what-is-glera-grape-2026.html">Glera</a>], the heart of Prosecco, invite exploration into diverse styles and local traditions, often providing excellent value and distinctive character.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-1.png" alt="A collection of various wine grapes, showcasing different colors and shapes." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-1.png" alt="A collection of various wine grapes, showcasing different colors and shapes." />
   <figcaption>Diverse wine grapes are the starting point for every bottle.</figcaption>
 </figure>
 
@@ -645,7 +645,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>New World wineries, though younger, have rapidly established themselves as global leaders through innovation, experimentation, and a focus on varietal expression.</strong> Estates in Napa Valley, Barossa Valley, and Mendoza are celebrated for pushing boundaries in winemaking, often embracing sustainable practices and modern technology to craft world-class wines.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-2.png" alt="A picturesque vineyard stretching towards a historic winery building under a clear sky." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-2.png" alt="A picturesque vineyard stretching towards a historic winery building under a clear sky." />
   <figcaption>Vineyards are the heart of a winery's legacy, embodying centuries of tradition.</figcaption>
 </figure>
 
@@ -689,7 +689,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Long-term cellaring requires a dedicated space with consistent temperatures (around 55°F / 13°C), 60-70% humidity, darkness, and minimal vibration.</strong> A wine cooler or a custom-built cellar provides the ideal environment for wines intended to age for years or decades, ensuring they evolve beautifully, as explored in <a href="/blog/aged-like-fine-wine-2026.html">guides to wine longevity</a>.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-3.png" alt="A well-organized wine cellar with bottles stored horizontally in wooden racks." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-3.png" alt="A well-organized wine cellar with bottles stored horizontally in wooden racks." />
   <figcaption>Proper wine storage is crucial for preserving quality and enabling graceful aging.</figcaption>
 </figure>
 
@@ -843,12 +843,15 @@ body { background: var(--bg-dark) !important; }
     </script>
 
     <script>
-        function ensureTocBox() {
+function ensureTocBox() {
             const root = document.querySelector('.post-content');
             if (!root) return;
-            if (root.querySelector('.toc-box')) return;
             const h2s = Array.from(root.querySelectorAll('h2[id]'));
             if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
             const aside = document.createElement('aside');
             aside.className = 'toc-box';
             aside.setAttribute('aria-label', 'Table of contents');
@@ -857,6 +860,7 @@ body { background: var(--bg-dark) !important; }
             t.textContent = 'On this page';
             const ul = document.createElement('ul');
             ul.className = 'toc-items';
+
             h2s.forEach((h2, idx) => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
@@ -886,6 +890,7 @@ body { background: var(--bg-dark) !important; }
                 }
                 ul.appendChild(li);
             });
+
             aside.appendChild(t);
             aside.appendChild(ul);
             const crumbs = root.querySelector('.breadcrumbs');

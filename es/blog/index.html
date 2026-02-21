@@ -185,8 +185,8 @@ body { background: var(--bg-dark) !important; }
   </header>
 
   <section class="container grid">
-    <div class="blog-filters" id="blogFilters" style="display:none;">
-      <div class="filter-group" id="filterGroup"></div>
+    <div class="blog-filters" id="blogFilters">
+      <div class="filter-group" id="filterGroup"><button type="button" class="pager-btn active">Todas</button><button type="button" class="pager-btn">Guías de compra</button><button type="button" class="pager-btn">Bodegas y viajes</button><button type="button" class="pager-btn">Regiones vinícolas</button><button type="button" class="pager-btn">Variedades de uva</button><button type="button" class="pager-btn">Maridaje</button></div>
     </div>
     <div class="blog-grid">
             <!-- FACTORY-ES:mastering-the-wine-journey-2026 -->
@@ -461,10 +461,10 @@ body { background: var(--bg-dark) !important; }
             </a>
     </div>
 
-    <div class="blog-pagination" id="blogPagination" style="display:none;">
-      <div class="pager-group" id="pagerGroup"></div>
+    <div class="blog-pagination" id="blogPagination">
+      <div class="pager-group" id="pagerGroup"><button type="button" class="pager-btn active">1</button></div>
       <button class="pager-btn pager-load" id="loadMoreBtn" type="button">Cargar mas</button>
-      <div class="pager-meta" id="pagerMeta"></div>
+      <div class="pager-meta" id="pagerMeta">Mostrando 30 de 30 publicaciones</div>
     </div>
 
   </section>
@@ -523,7 +523,7 @@ function copyUrlBlog() {
       const pagerMeta = document.getElementById('pagerMeta');
       if (!grid || !empty || !topFilters || !bottomPager || !filterGroup || !pagerGroup || !loadMoreBtn || !pagerMeta) return;
 
-      const cards = Array.from(grid.querySelectorAll(':scope > .blog-card'));
+      const cards = Array.from(grid.children).filter(el => el && el.classList && el.classList.contains('blog-card'));
       if (!cards.length) {
         empty.style.display = '';
         topFilters.style.display = 'none'; bottomPager.style.display = 'none';
@@ -538,10 +538,6 @@ function copyUrlBlog() {
       let activeCategory = 'Todos';
       let currentVisible = PAGE_SIZE;
 
-      try {
-        const q = new URL(window.location.href).searchParams.get('category');
-        if (q && categories.includes(q)) activeCategory = q;
-      } catch (_) {}
 
       function filteredCards(){
         if (activeCategory === 'Todos') return cards;
@@ -647,7 +643,69 @@ function copyUrlBlog() {
       render();
     }
 
-    window.addEventListener('DOMContentLoaded', function(){ initBlogControls(); });
+    
+    
+    function __ensurePagerIntegrity() {
+      const grid = document.querySelector('.blog-grid');
+      const pagerGroup = document.getElementById('pagerGroup');
+      if (!grid || !pagerGroup) return;
+      const cards = Array.from(grid.children).filter(el => el && el.classList && el.classList.contains('blog-card'));
+      const pageButtons = pagerGroup.querySelectorAll('button.pager-btn');
+      if (cards.length > 12 && pageButtons.length <= 1) {
+        try { __fallbackPaginate(); } catch(_) {}
+      }
+    }
+
+    function __fallbackPaginate() {
+      const PAGE_SIZE = 12;
+      const grid = document.querySelector('.blog-grid');
+      const pagerGroup = document.getElementById('pagerGroup');
+      const pagerMeta = document.getElementById('pagerMeta');
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      const cards = grid ? Array.from(grid.children).filter(el => el && el.classList && el.classList.contains('blog-card')) : [];
+      const total = cards.length;
+      const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+      function draw(page) {
+        cards.forEach((card, idx) => {
+          const show = idx >= (page - 1) * PAGE_SIZE && idx < page * PAGE_SIZE;
+          card.style.display = show ? '' : 'none';
+        });
+        if (pagerGroup) {
+          pagerGroup.innerHTML = '';
+          for (let i = 1; i <= pages; i++) {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'pager-btn' + (i === page ? ' active' : '');
+            b.textContent = String(i);
+            b.addEventListener('click', () => draw(i));
+            pagerGroup.appendChild(b);
+          }
+        }
+        if (pagerMeta) pagerMeta.textContent = 'Mostrando ' + Math.min(page * PAGE_SIZE, total) + ' de ' + total + ' publicaciones';
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+      }
+      draw(1);
+    }
+
+    (function(){
+      try { initBlogControls(); __ensurePagerIntegrity(); }
+      catch(e){
+        console.error('blog controls init failed', e);
+        const tf=document.getElementById('blogFilters');
+        const bp=document.getElementById('blogPagination');
+        if(tf) tf.style.display='flex';
+        if(bp) bp.style.display='flex';
+        try { __fallbackPaginate(); } catch(_) {}
+      }
+      window.addEventListener('DOMContentLoaded', function(){
+        try { initBlogControls(); __ensurePagerIntegrity(); }
+        catch(e){ 
+          console.error('blog controls init retry failed', e);
+          try { __fallbackPaginate(); } catch(_) {}
+        }
+      });
+    })();
+
   </script>
 <script defer src="/shared/layout.js?v=20260218-3"></script>
 <script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>

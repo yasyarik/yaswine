@@ -606,7 +606,7 @@ body { background: var(--bg-dark) !important; }
 <h3 id="comprendre-la-forme-et-lpaisseur-de-la-bouteille">Comprendre la forme et l'épaisseur de la bouteille</h3>
 <p><strong>Les bouteilles de type Bordeaux et Bourgogne sont généralement préférées pour le surcyclage en raison de leurs formes cylindriques constantes et de l'épaisseur robuste de leur verre.</strong> Les bouteilles de Champagne sont également d'excellents candidats, bien que leur verre plus épais exige plus de patience et de précision lors de la découpe.</p>
 
-<figure><img src="upcycling-wine-bottle-glass-2026-img-1.png" alt="Une collection de diverses bouteilles de vin, y compris des styles Bordeaux, Bourgogne et Rhin, prêtes pour le surcyclage." /><figcaption>Différentes formes de bouteilles de vin offrent des opportunités uniques pour la fabrication de verres surcyclés distinctifs.</figcaption></figure>
+<figure><img src="/blog/upcycling-wine-bottle-glass-2026-img-1.png" alt="Une collection de diverses bouteilles de vin, y compris des styles Bordeaux, Bourgogne et Rhin, prêtes pour le surcyclage." /><figcaption>Différentes formes de bouteilles de vin offrent des opportunités uniques pour la fabrication de verres surcyclés distinctifs.</figcaption></figure>
 
 <h3 id="couleur-du-verre-et-considrations-esthtiques">Couleur du verre et considérations esthétiques</h3>
 <p><strong>La couleur de la bouteille influence significativement l'esthétique du verre fini, les bouteilles claires, vertes et ambrées offrant des attraits visuels distincts.</strong> Tenez compte de l'utilisation prévue et des préférences personnelles lors du choix, car les couleurs plus claires mettent mieux en valeur les boissons, tandis que les plus foncées ajoutent un charme rustique.</p>
@@ -626,7 +626,7 @@ body { background: var(--bg-dark) !important; }
 <h3 id="quipement-de-protection-pour-un-artisanat-en-toute-scurit">Équipement de protection pour un artisanat en toute sécurité</h3>
 <p><strong>Portez toujours des lunettes de sécurité pour protéger vos yeux des éclats de verre et des gants robustes pour éviter les coupures pendant la manipulation et le ponçage.</strong> Un masque anti-poussière est également recommandé pour éviter d'inhaler de fines particules de verre.</p>
 
-<figure><img src="upcycling-wine-bottle-glass-2026-img-2.png" alt="Une collection d'outils de coupe et de ponçage du verre, comprenant un coupe-bouteille, du papier de verre et des gants de sécurité, disposés pour un projet de surcyclage." /><figcaption>Des outils et des équipements de sécurité appropriés sont fondamentaux pour un projet de surcyclage de verre réussi et sûr.</figcaption></figure>
+<figure><img src="/blog/upcycling-wine-bottle-glass-2026-img-2.png" alt="Une collection d'outils de coupe et de ponçage du verre, comprenant un coupe-bouteille, du papier de verre et des gants de sécurité, disposés pour un projet de surcyclage." /><figcaption>Des outils et des équipements de sécurité appropriés sont fondamentaux pour un projet de surcyclage de verre réussi et sûr.</figcaption></figure>
 
 </section><section id="guide-pas-pas-comment-surcycler-une-bouteille-de-vin-en-verre"><h2 id="guide-pas-pas-comment-surcycler-une-bouteille-de-vin-en-verre">Guide pas à pas : Comment surcycler une bouteille de vin en verre</h2>
 <p><strong>Transformer une bouteille de vin en verre à boire implique une série d'étapes précises : le traçage, la séparation et la finition méticuleuse du bord.</strong> Suivre attentivement ces instructions garantit un produit final de haute qualité, sûr et attrayant.</p>
@@ -766,7 +766,7 @@ body { background: var(--bg-dark) !important; }
 <h3 id="soutien-aux-initiatives-vertes-dans-lindustrie-du-vin">Soutien aux initiatives vertes dans l'industrie du vin</h3>
 <p><strong>Votre engagement dans le surcyclage s'aligne et soutient le nombre croissant de vignobles adoptant des pratiques de viticulture et de production durables.</strong> Il démontre la demande des consommateurs pour la responsabilité environnementale, influençant les tendances de l'industrie.</p>
 
-<figure><img src="upcycling-wine-bottle-glass-2026-img-3.png" alt="Une œuvre d'art magnifiquement conçue à partir de sections de bouteilles de vin coupées et polies, présentant des possibilités de surcyclage avancées." /><figcaption>Les bouteilles de vin peuvent être transformées en superbes œuvres d'art décoratives, soulignant la polyvalence du matériau.</figcaption></figure>
+<figure><img src="/blog/upcycling-wine-bottle-glass-2026-img-3.png" alt="Une œuvre d'art magnifiquement conçue à partir de sections de bouteilles de vin coupées et polies, présentant des possibilités de surcyclage avancées." /><figcaption>Les bouteilles de vin peuvent être transformées en superbes œuvres d'art décoratives, soulignant la polyvalence du matériau.</figcaption></figure>
 
 <h3 id="le-rle-des-consommateurs-dans-une-conomie-circulaire">Le rôle des consommateurs dans une économie circulaire</h3>
 <p><strong>Les consommateurs jouent un rôle vital dans la promotion d'une économie circulaire en participant activement à des pratiques telles que le surcyclage, dépassant les modèles de consommation linéaires de 'prendre, fabriquer, jeter'.</strong> Cette approche proactive boucle la boucle, maximisant l'utilisation des ressources.</p>
@@ -849,20 +849,24 @@ body { background: var(--bg-dark) !important; }
     </script>
 
     <script>
-        function ensureTocBox() {
+function ensureTocBox() {
             const root = document.querySelector('.post-content');
             if (!root) return;
-            if (root.querySelector('.toc-box')) return;
             const h2s = Array.from(root.querySelectorAll('h2[id]'));
             if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
             const aside = document.createElement('aside');
             aside.className = 'toc-box';
             aside.setAttribute('aria-label', 'Table of contents');
             const t = document.createElement('div');
             t.className = 'toc-title';
-            t.textContent = 'Sur cette page';
+            t.textContent = 'On this page';
             const ul = document.createElement('ul');
             ul.className = 'toc-items';
+
             h2s.forEach((h2, idx) => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
@@ -892,6 +896,7 @@ body { background: var(--bg-dark) !important; }
                 }
                 ul.appendChild(li);
             });
+
             aside.appendChild(t);
             aside.appendChild(ul);
             const crumbs = root.querySelector('.breadcrumbs');

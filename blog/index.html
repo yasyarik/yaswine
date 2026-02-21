@@ -554,7 +554,7 @@ function copyUrlBlog() {
       const pagerMeta = document.getElementById('pagerMeta');
       if (!grid || !empty || !topFilters || !bottomPager || !filterGroup || !pagerGroup || !loadMoreBtn || !pagerMeta) return;
 
-      const cards = Array.from(grid.querySelectorAll(':scope > .blog-card'));
+      const cards = Array.from(grid.children).filter(el => el && el.classList && el.classList.contains('blog-card'));
       if (!cards.length) {
         empty.style.display = '';
         controls.style.display = 'none';

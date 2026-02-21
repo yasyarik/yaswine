@@ -849,12 +849,15 @@ body { background: var(--bg-dark) !important; }
     </script>
 
     <script>
-        function ensureTocBox() {
+function ensureTocBox() {
             const root = document.querySelector('.post-content');
             if (!root) return;
-            if (root.querySelector('.toc-box')) return;
             const h2s = Array.from(root.querySelectorAll('h2[id]'));
             if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
             const aside = document.createElement('aside');
             aside.className = 'toc-box';
             aside.setAttribute('aria-label', 'Table of contents');
@@ -863,6 +866,7 @@ body { background: var(--bg-dark) !important; }
             t.textContent = 'On this page';
             const ul = document.createElement('ul');
             ul.className = 'toc-items';
+
             h2s.forEach((h2, idx) => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
@@ -892,6 +896,7 @@ body { background: var(--bg-dark) !important; }
                 }
                 ul.appendChild(li);
             });
+
             aside.appendChild(t);
             aside.appendChild(ul);
             const crumbs = root.querySelector('.breadcrumbs');

@@ -601,7 +601,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Помимо известных, множество менее известных сортов винограда предлагает уникальные дегустационные впечатления и региональную специфику.</strong> Такие сорта, как [<a href="/blog/grillo-grape-wine-2026.html">Грилло</a>] из Сицилии, известный своими ароматными белыми винами, или [<a href="/blog/what-is-glera-grape-2026.html">Глера</a>], сердце Просекко, приглашают к исследованию разнообразных стилей и местных традиций, часто предлагая отличное соотношение цены и качества и отличительный характер.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-1.png" alt="A collection of various wine grapes, showcasing different colors and shapes." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-1.png" alt="A collection of various wine grapes, showcasing different colors and shapes." />
   <figcaption>Разнообразные сорта винограда – отправная точка для каждой бутылки.</figcaption>
 </figure>
 
@@ -645,7 +645,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Винодельни Нового Света, хотя и моложе, быстро зарекомендовали себя как мировые лидеры благодаря инновациям, экспериментам и акценту на сортовое выражение.</strong> Поместья в Напа-Вэлли, Долине Баросса и Мендосе известны тем, что раздвигают границы в виноделии, часто применяя устойчивые практики и современные технологии для создания вин мирового класса.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-2.png" alt="A picturesque vineyard stretching towards a historic winery building under a clear sky." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-2.png" alt="A picturesque vineyard stretching towards a historic winery building under a clear sky." />
   <figcaption>Виноградники — это сердце наследия винодельни, воплощающее вековые традиции.</figcaption>
 </figure>
 
@@ -689,7 +689,7 @@ body { background: var(--bg-dark) !important; }
 <p><strong>Для долгосрочной выдержки в погребе требуется специальное помещение с постоянной температурой (около 13°C / 55°F), влажностью 60-70%, темнотой и минимальной вибрацией.</strong> Винный холодильник или специально построенный погреб обеспечивают идеальную среду для вин, предназначенных для выдержки в течение многих лет или десятилетий, гарантируя, что они прекрасно развиваются, как исследуется в <a href="/blog/aged-like-fine-wine-2026.html">руководствах по долговечности вина</a>.</p>
 
 <figure>
-  <img src="mastering-the-wine-journey-2026-img-3.png" alt="A well-organized wine cellar with bottles stored horizontally in wooden racks." />
+  <img src="/blog/mastering-the-wine-journey-2026-img-3.png" alt="A well-organized wine cellar with bottles stored horizontally in wooden racks." />
   <figcaption>Правильное хранение вина имеет решающее значение для сохранения качества и обеспечения изящной выдержки.</figcaption>
 </figure>
 
@@ -843,12 +843,15 @@ body { background: var(--bg-dark) !important; }
     </script>
 
     <script>
-        function ensureTocBox() {
+function ensureTocBox() {
             const root = document.querySelector('.post-content');
             if (!root) return;
-            if (root.querySelector('.toc-box')) return;
             const h2s = Array.from(root.querySelectorAll('h2[id]'));
             if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
             const aside = document.createElement('aside');
             aside.className = 'toc-box';
             aside.setAttribute('aria-label', 'Table of contents');
@@ -857,6 +860,7 @@ body { background: var(--bg-dark) !important; }
             t.textContent = 'On this page';
             const ul = document.createElement('ul');
             ul.className = 'toc-items';
+
             h2s.forEach((h2, idx) => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
@@ -886,6 +890,7 @@ body { background: var(--bg-dark) !important; }
                 }
                 ul.appendChild(li);
             });
+
             aside.appendChild(t);
             aside.appendChild(ul);
             const crumbs = root.querySelector('.breadcrumbs');

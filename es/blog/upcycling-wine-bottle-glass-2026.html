@@ -606,7 +606,7 @@ body { background: var(--bg-dark) !important; }
 <h3 id="comprendiendo-la-forma-y-el-grosor-de-la-botella">Comprendiendo la Forma y el Grosor de la Botella</h3>
 <p><strong>Las botellas estilo Burdeos y Borgoña son generalmente preferidas para la reutilización debido a sus formas cilíndricas consistentes y su robusto grosor de vidrio.</strong> Las botellas de champán también son excelentes candidatas, aunque su vidrio más grueso requiere más paciencia y precisión durante el corte.</p>
 
-<figure><img src="upcycling-wine-bottle-glass-2026-img-1.png" alt="Una colección de diversas botellas de vino, incluyendo estilos Burdeos, Borgoña y Rin, listas para reutilizar." /><figcaption>Las diferentes formas de botellas de vino ofrecen oportunidades únicas para crear vasos reutilizados distintivos.</figcaption></figure>
+<figure><img src="/blog/upcycling-wine-bottle-glass-2026-img-1.png" alt="Una colección de diversas botellas de vino, incluyendo estilos Burdeos, Borgoña y Rin, listas para reutilizar." /><figcaption>Las diferentes formas de botellas de vino ofrecen oportunidades únicas para crear vasos reutilizados distintivos.</figcaption></figure>
 
 <h3 id="color-del-vidrio-y-consideraciones-estticas">Color del Vidrio y Consideraciones Estéticas</h3>
 <p><strong>El color de la botella influye significativamente en la estética del vaso terminado, con botellas transparentes, verdes y ámbar que ofrecen atractivos visuales distintos.</strong> Considera el uso previsto y la preferencia personal al elegir, ya que los colores más claros muestran las bebidas con mayor claridad, mientras que los más oscuros añaden un encanto rústico.</p>
@@ -626,7 +626,7 @@ body { background: var(--bg-dark) !important; }
 <h3 id="equipo-de-proteccin-para-una-elaboracin-segura">Equipo de Protección para una Elaboración Segura</h3>
 <p><strong>Usa siempre gafas de seguridad para proteger los ojos de las esquirlas de vidrio y guantes resistentes para prevenir cortes durante el proceso de manipulación y lijado.</strong> También es aconsejable usar una mascarilla antipolvo para evitar inhalar partículas finas de vidrio.</p>
 
-<figure><img src="upcycling-wine-bottle-glass-2026-img-2.png" alt="Una colección de herramientas de corte y lijado de vidrio, incluyendo un cortador de botellas, papel de lija y guantes de seguridad, dispuestas para un proyecto de reutilización." /><figcaption>Las herramientas y el equipo de seguridad adecuados son fundamentales para un proyecto de reutilización de vidrio exitoso y seguro.</figcaption></figure>
+<figure><img src="/blog/upcycling-wine-bottle-glass-2026-img-2.png" alt="Una colección de herramientas de corte y lijado de vidrio, incluyendo un cortador de botellas, papel de lija y guantes de seguridad, dispuestas para un proyecto de reutilización." /><figcaption>Las herramientas y el equipo de seguridad adecuados son fundamentales para un proyecto de reutilización de vidrio exitoso y seguro.</figcaption></figure>
 
 </section><section id="gua-paso-a-paso-cmo-reutilizar-una-botella-de-vino-para-convertirla-en-vaso"><h2 id="gua-paso-a-paso-cmo-reutilizar-una-botella-de-vino-para-convertirla-en-vaso">Guía Paso a Paso: Cómo Reutilizar una Botella de Vino para Convertirla en Vaso</h2>
 <p><strong>Transformar una botella de vino en un vaso para beber implica una serie precisa de pasos: marcar, separar y acabar meticulosamente el borde.</strong> Seguir estas instrucciones cuidadosamente asegura un producto final de alta calidad, seguro y atractivo.</p>
@@ -765,7 +765,7 @@ body { background: var(--bg-dark) !important; }
 <h3 id="apoyando-iniciativas-verdes-en-la-industria-vincola">Apoyando Iniciativas Verdes en la Industria Vinícola</h3>
 <p><strong>Tu participación en la reutilización se alinea y apoya al creciente número de bodegas que adoptan prácticas sostenibles de viticultura y producción.</strong> Demuestra la demanda del consumidor por la responsabilidad ambiental, influyendo en las tendencias de la industria.</p>
 
-<figure><img src="upcycling-wine-bottle-glass-2026-img-3.png" alt="Una pieza de arte bellamente elaborada con secciones de botellas de vino cortadas y pulidas, mostrando posibilidades avanzadas de reutilización." /><figcaption>Las botellas de vino pueden transformarse en impresionantes obras de arte decorativas, destacando la versatilidad del material.</figcaption></figure>
+<figure><img src="/blog/upcycling-wine-bottle-glass-2026-img-3.png" alt="Una pieza de arte bellamente elaborada con secciones de botellas de vino cortadas y pulidas, mostrando posibilidades avanzadas de reutilización." /><figcaption>Las botellas de vino pueden transformarse en impresionantes obras de arte decorativas, destacando la versatilidad del material.</figcaption></figure>
 
 <h3 id="el-papel-de-los-consumidores-en-una-economa-circular">El Papel de los Consumidores en una Economía Circular</h3>
 <p><strong>Los consumidores desempeñan un papel vital en el fomento de una economía circular al participar activamente en prácticas como la reutilización, yendo más allá de los modelos de consumo lineal de 'tomar, hacer, desechar'.</strong> Este enfoque proactivo cierra el ciclo, maximizando la utilidad de los recursos.</p>
@@ -848,20 +848,24 @@ body { background: var(--bg-dark) !important; }
     </script>
 
     <script>
-        function ensureTocBox() {
+function ensureTocBox() {
             const root = document.querySelector('.post-content');
             if (!root) return;
-            if (root.querySelector('.toc-box')) return;
             const h2s = Array.from(root.querySelectorAll('h2[id]'));
             if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
             const aside = document.createElement('aside');
             aside.className = 'toc-box';
             aside.setAttribute('aria-label', 'Table of contents');
             const t = document.createElement('div');
             t.className = 'toc-title';
-            t.textContent = 'En esta página';
+            t.textContent = 'On this page';
             const ul = document.createElement('ul');
             ul.className = 'toc-items';
+
             h2s.forEach((h2, idx) => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
@@ -891,6 +895,7 @@ body { background: var(--bg-dark) !important; }
                 }
                 ul.appendChild(li);
             });
+
             aside.appendChild(t);
             aside.appendChild(ul);
             const crumbs = root.querySelector('.breadcrumbs');
