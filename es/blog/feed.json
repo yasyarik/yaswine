@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-02-21T10:45:10+00:00",
+  "updatedAt": "2026-02-21T11:40:41+00:00",
   "posts": [
+    {
+      "href": "/es/blog/wine-pairing-matrix-automation-2026.html",
+      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
+      "category": "Maridaje",
+      "title": "Mejor Guía de Maridaje de Vinos 2026: Elige el Vino Adecuado para Cada Plato con IA",
+      "description": "Descubre maridajes perfectos de vino y comida en 2026 con una matriz automatizada. Explora los conocimientos impulsados por la IA, el análisis de datos y el futuro de..."
+    },
     {
       "href": "/es/blog/bordeaux-wine-travel-itinerary-2026.html",
       "image": "/blog/bordeaux-wine-travel-itinerary-2026-hero.png",
       "category": "Bodegas y Viajes",
       "title": "Itinerario de Viaje del Vino de Burdeos 2026: Bodegas, Catas y Guía de Presupuesto",
       "description": "Planifica tu itinerario de viaje del vino de Burdeos definitivo para 2026. Descubre las mejores bodegas, catas esenciales, consejos de presupuesto y una ruta detallada..."
-    },
-    {
-      "href": "/es/blog/wine-pairing-matrix-automation-2026.html",
-      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
-      "category": "Maridaje de Alimentos",
-      "title": "Automatización de maridajes de vino en 2026: La guía definitiva de la matriz",
-      "description": "Descubre maridajes perfectos de vino y comida en 2026 con una matriz automatizada. Aprende sobre IA, datos y el futuro de las recomendaciones de sumiller para cualquie..."
     },
     {
       "href": "/es/blog/mastering-the-wine-journey-2026.html",

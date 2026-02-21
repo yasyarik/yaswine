@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-02-21T10:46:56+00:00",
+  "updatedAt": "2026-02-21T11:42:25+00:00",
   "posts": [
+    {
+      "href": "/fr/blog/wine-pairing-matrix-automation-2026.html",
+      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
+      "category": "Accords mets-vins",
+      "title": "Meilleur Guide d'Accords Mets & Vins 2026 : Choisissez le Bon Vin pour Chaque Plat avec l'IA",
+      "description": "Débloquez les accords mets et vins parfaits en 2026 grâce à une matrice automatisée. Explorez les aperçus basés sur l'IA, l'analyse de données et l'avenir des recomman..."
+    },
     {
       "href": "/fr/blog/bordeaux-wine-travel-itinerary-2026.html",
       "image": "/blog/bordeaux-wine-travel-itinerary-2026-hero.png",
       "category": "Vignobles et Voyage",
       "title": "Itinéraire de Voyage Vinicole à Bordeaux 2026 : Vignobles, Dégustations et Guide Budgétaire",
       "description": "Planifiez votre itinéraire de voyage œnologique ultime à Bordeaux pour 2026. Découvrez les meilleurs vignobles, les dégustations incontournables, des conseils budgétai..."
-    },
-    {
-      "href": "/fr/blog/wine-pairing-matrix-automation-2026.html",
-      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
-      "category": "Accords Mets-Vins",
-      "title": "Automatiser les accords mets-vins en 2026 : Le guide ultime de la matrice",
-      "description": "Découvrez les accords mets-vins parfaits en 2026 grâce à une matrice automatisée. Apprenez-en davantage sur l'IA, les données et l'avenir des recommandations de sommel..."
     },
     {
       "href": "/fr/blog/mastering-the-wine-journey-2026.html",
