@@ -406,10 +406,11 @@ window.__ROUTE_TEXTS = {"tuscany": {"title": "Классический марш�
     function localizedHref(href){const h=String(href||'/blog/'); if(h.startsWith('/blog/')) return '/ru'+h; return h;}
     function normalizeCategory(c){
       const t = String(c||'').toLowerCase();
-      if (t.includes('winery') || t.includes('travel') || t.includes('vineyard') || t.includes('gastronomy')) return 'Wineries & Travel';
-      if (t.includes('region') || t.includes('terroir') || t === 'wine') return 'Wine Regions';
-      if (t.includes('grape') || t.includes('variet') || t.includes('viticulture')) return 'Grape Varieties';
-      if (t.includes('pair') || t.includes('food')) return 'Food Pairing';
+      if (/(winery|wineries|travel|vineyard|gastronomy|bodega|bodegas|viaj|weingut|reisen|domaines?|voyage|винодель|путешеств)/.test(t)) return 'Wineries & Travel';
+      if (/(region|regions|terroir|appellation|rioja|tuscany|bordeaux|регион|терруар|regi[oó]n|weinregion|région)/.test(t)) return 'Wine Regions';
+      if (/(grape|grapes|variet|viticulture|uva|uvas|cepage|cépage|rebsorte|виноград|сорт)/.test(t)) return 'Grape Varieties';
+      if (/(pair|pairing|food|dish|meal|marid|comida|accord|mets|speise|gericht|еда|блюд|сочет)/.test(t)) return 'Food Pairing';
+      if (/(buy|buying|guide|guides|price|cost|gift|compr|kauf|achat|покуп|гайд|руковод)/.test(t)) return 'Buying Guides';
       return 'Buying Guides';
     }
     function optimizedImg(img){
