@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дымовое тестирование вашего винного маршрута 2026 (2026)</title>
+    <meta name="robots" content="index, follow">
+<meta name="description" content="Узнайте, как провести «дымовое тестирование» и обеспечить качество вашего винного маршрута 2026 года для незабываемого, бесшовного путешествия. Планируйте Learn">
+<meta property="og:title" content="Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия">
+    <meta property="og:description" content="Узнайте, как провести «дымовое тестирование» и обеспечить качество вашего винного маршрута 2026 года для незабываемого, бесшовного путешествия. Планируйте Learn">
+    <meta property="og:type" content="article">
+    <meta content="https://yas.wine/ru/blog/smoke-test-wine-route-qa-2026.html" property="og:url"/>
+    <meta property="og:image" content="https://yas.wine//blog/smoke-test-wine-route-qa-2026-hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-white: #ededed;
+            --text-dim: #a1a1aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: var(--bg-gradient);
+            overflow: hidden;
+        }
+
+        .fixed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
+            background-size: 200% 200%;
+            animation: gradientShift 18s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        
+        main.container {
+            margin-top: 96px;
+        }
+#mainNav { 
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .nav-scrolled {
+            background: rgba(10, 5, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(10, 5, 20, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            margin-right: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(182, 58, 90, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        article {
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        
+            position: relative;
+            z-index: 1205;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+
+        .post-header {
+            margin-bottom: 50px;
+        }
+
+        .post-category {
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-hero {
+            width: 100%;
+            min-height: 450px;
+            height: auto;
+            border-radius: 32px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        .post-content h2 {
+            font-size: 32px;
+            color: white;
+            margin: 50px 0 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            background: var(--glass-bg);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /* Factory-injected blocks (breadcrumbs + TOC) */
+        .breadcrumbs {
+            margin: 18px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .breadcrumbs a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumbs a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.25);
+        }
+        .breadcrumbs .sep {
+            opacity: 0.55;
+        }
+        .breadcrumbs .current {
+            color: white;
+            font-weight: 600;
+        }
+
+        .toc-box {
+            margin: 18px 0 28px;
+            padding: 18px 18px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+        }
+        .toc-title {
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .toc-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+        .toc-items li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc-items a {
+            display: block;
+            color: var(--accent-green);
+            text-decoration: none;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            padding: 6px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-items a:hover {
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
+            color: white;
+        }
+        .toc-h3 {
+            margin-left: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Links + images inside article */
+        .post-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
+        }
+        .post-content a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.10);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+        .post-content figure {
+            margin: 26px 0;
+        }
+        .post-content figcaption {
+            margin-top: 10px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+
+        /* Tables */
+        .post-content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 26px 0;
+        }
+        .post-content thead th {
+            background: rgba(182, 58, 90, 0.14);
+            color: white;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .post-content th,
+        .post-content td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .post-content td {
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+        .post-content th:last-child,
+        .post-content td:last-child {
+            border-right: none;
+        }
+        .post-content tbody tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+.share-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .share-label {
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .share-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .share-icon-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .share-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            main.container {
+                margin-top: 74px;
+            }
+            h1 {
+                font-size: 34px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 30px;
+            }
+        }
+    </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия">
+<meta name="twitter:description" content="Узнайте, как провести «дымовое тестирование» и обеспечить качество вашего винного маршрута 2026 года для незабываемого, бесшовного путешествия. Планируйте Learn">
+<meta name="twitter:image" content="https://yas.wine/blog/smoke-test-wine-route-qa-2026-hero.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://yas.wine/blog/smoke-test-wine-route-qa-2026.html"}, "headline": "Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия", "description": "Узнайте, как провести «дымовое тестирование» и обеспечить качество вашего винного маршрута 2026 года для незабываемого, бесшовного путешествия. Планируйте Learn", "image": ["https://yas.wine/blog/smoke-test-wine-route-qa-2026-hero.png"], "datePublished": "2026-02-21", "dateModified": "2026-02-21", "author": {"@type": "Organization", "name": "YAS Wine"}, "publisher": {"@type": "Organization", "name": "YAS Wine"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yas.wine/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yas.wine/blog/"}, {"@type": "ListItem", "position": 3, "name": "Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия", "item": "https://yas.wine/blog/smoke-test-wine-route-qa-2026.html"}]}</script>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что означает «дымовое тестирование» в контексте винного маршрута?", "acceptedAnswer": {"@type": "Answer", "text": "В контексте винного маршрута «дымовое тестирование» относится к предварительной, высокоуровневой проверке качества вашего запланированного маршрута. Оно гарантирует, что основная логистика, такая как доступность виноделен, время в пути и бронирование жилья, является фундаментально надежной, прежде чем вы отправитесь в путешествие."}}, {"@type": "Question", "name": "Почему важно провести QA моего винного маршрута на 2026 год?", "acceptedAnswer": {"@type": "Answer", "text": "Обеспечение качества вашего винного маршрута на 2026 год важно для предотвращения распространенных проблем в путешествиях, таких как пропущенные бронирования, неожиданные закрытия и неэффективное время в пути. Это помогает создать более плавное, приятное и беззаботное винное исследование, максимизируя ваш опыт в новых регионах."}}, {"@type": "Question", "name": "Каковы наиболее распространенные ошибки при планировании винного маршрута?", "acceptedAnswer": {"@type": "Answer", "text": "Наиболее распространенные ошибки включают недооценку времени в пути между виноградниками, невыполнение необходимых бронирований для дегустаций и питания, упущение из виду сезонных или праздничных закрытий виноделен и чрезмерное планирование маршрута, что приводит к поспешным впечатлениям."}}, {"@type": "Question", "name": "Как технологии могут помочь в «дымовом тестировании» винного маршрута?", "acceptedAnswer": {"@type": "Answer", "text": "Технологии помогают в «дымовом тестировании» с помощью картографических инструментов (например, Google Maps) для оптимизации маршрута и оценки времени в пути, систем онлайн-бронирования для безопасного бронирования и платформ обзоров для получения актуальной информации о винодельнях и услугах."}}, {"@type": "Question", "name": "Стоит ли мне предусмотреть гибкость в моем винном маршруте?", "acceptedAnswer": {"@type": "Answer", "text": "Да, настоятельно рекомендуется предусмотреть гибкость в вашем винном маршруте. Это позволяет проявить спонтанность, учесть непредвиденные изменения, такие как погода или спонтанные объезды, и предотвращает выгорание от жесткого расписания, обеспечивая более расслабленное и приятное путешествие."}}, {"@type": "Question", "name": "Сколько виноделен я должен планировать посетить за один день?", "acceptedAnswer": {"@type": "Answer", "text": "Идеальное количество виноделен для посещения за один день зависит от их близости и глубины опыта, который вы желаете, но обычно 2-3 винодельни позволяют провести содержательные дегустации и экскурсии без ощущения спешки. Для более неторопливого темпа 1-2 может быть достаточно, особенно если включить обед."}}, {"@type": "Question", "name": "Лучше ли самому водить машину или нанять водителя для винного маршрута?", "acceptedAnswer": {"@type": "Answer", "text": "Для винного маршрута найм назначенного водителя или использование экскурсионной услуги часто лучше, чем самостоятельное вождение, особенно если вы планируете полностью участвовать в дегустациях. Это обеспечивает безопасность, позволяет всем участникам вашей группы наслаждаться вином без беспокойства и снимает стресс от навигации."}}]}</script>
+<link href="https://yas.wine/ru/blog/smoke-test-wine-route-qa-2026.html" rel="canonical"/><link href="https://yas.wine/blog/smoke-test-wine-route-qa-2026.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/smoke-test-wine-route-qa-2026.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/smoke-test-wine-route-qa-2026.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/smoke-test-wine-route-qa-2026.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/smoke-test-wine-route-qa-2026.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/smoke-test-wine-route-qa-2026.html" hreflang="x-default" rel="alternate"/></head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+    <main class="container">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+
+            <header class="post-header">
+                <span class="post-category">Винодельни и путешествия</span>
+                <h1 itemprop="headline">Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия</h1>
+                <div class="post-intro" style="margin-top:16px;"><p><strong>Эффективное «дымовое тестирование» вашего винного маршрута 2026 года означает проведение предварительного процесса обеспечения качества, чтобы убедиться, что ваш запланированный маршрут является бесшовным, приятным и обеспечивает исключительный винный опыт.</strong> Этот проактивный шаг помогает выявить и устранить потенциальные проблемы до вашей поездки, гарантируя более расслабляющее и полезное путешествие по известным винодельческим регионам.</p></div>
+                <div class="post-meta">
+                    <time itemprop="datePublished" datetime="2026-02-21">Published 2026-02-21</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="post-hero" style="background-image: url('/blog/smoke-test-wine-route-qa-2026-hero.png');"></div>
+
+            <div class="post-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия</span></nav><aside class="toc-box"><div class="toc-title">На этой странице</div><ul class="toc-items"><li><a class="toc-h2" href="#post">Что такое «дымовое тестирование» винного маршрута?</a></li><li><a class="toc-h2" href="#post">Каковы ключевые элементы «дымового тестирования» винного маршрута?</a></li><li><a class="toc-h2" href="#2026">Как вы можете «дымовым тестом» проверить свой винный маршрут 2026 года?</a></li><li><a class="toc-h2" href="#qa">Каковы распространенные ошибки в винных маршрутах и как QA может помочь?</a></li><li><a class="toc-h2" href="#qa">Как технологии могут улучшить QA винного маршрута?</a></li><li><a class="toc-h2" href="#post">Как оптимизировать винный маршрут после первоначального «дымового теста»?</a></li><li><a class="toc-h2" href="#qa">Есть ли региональные различия в передовой практике QA для винных маршрутов?</a></li><li><a class="toc-h2" href="#post">Почему обратная связь имеет решающее значение для совершенствования будущих винных маршрутов?</a></li><li><a class="toc-h2" href="#2026">Как вы можете обеспечить высококачественный винный опыт в 2026 году?</a></li><li><a class="toc-h2" href="#post">Что такое непрерывное улучшение качества для винных маршрутов помимо «дымового теста»?</a></li></ul></aside><section id="post"><h2 id="post">Что такое «дымовое тестирование» винного маршрута?</h2>
+<p><strong>«Дымовое тестирование» винного маршрута — это метафорический процесс проведения высокоуровневой, предварительной проверки вашего запланированного маршрута для подтверждения его фундаментальной жизнеспособности и привлекательности.</strong> Речь идет о том, чтобы убедиться, что основные элементы вашего плана винного путешествия — такие как доступность виноделен, логистика бронирования и время в пути — надежны, прежде чем углубляться в более мелкие детали.</p>
+
+<h3 id="post">Почему предварительная проверка необходима для винных путешествий?</h3>
+<p><strong>Предварительная проверка необходима для винных путешествий, чтобы предотвратить распространенные ошибки, сэкономить время и максимизировать удовольствие.</strong> Заблаговременное подтверждение деталей, таких как часы работы, наличие экскурсий и транспортное сообщение, помогает избежать пустой траты времени на поездки и разочарований, особенно при посещении популярных направлений, таких как <a href="/blog/bordeaux-wine-travel-itinerary-2026.html">Бордо</a> или оживленные <a href="/blog/italy-wine-growing-regions-2026.html">итальянские винодельческие регионы</a>.</p>
+
+<h3 id="qa">Как QA применяется к винным маршрутам?</h3>
+<p><strong>Обеспечение качества (QA) в винных маршрутах применяется путем систематической оценки каждого компонента вашей поездки для оптимального опыта, от выбранных виноделен до вариантов питания и размещения.</strong> Это гарантирует, что каждый аспект вашего винного путешествия соответствует вашим ожиданиям в отношении качества и удовольствия, подобно тому, как можно тщательно отбирать <a href="/blog/unveiling-wine-gems-2026.html">уникальные винные жемчужины</a> для погреба.</p>
+
+</section><section id="post"><h2 id="post">Каковы ключевые элементы «дымового тестирования» винного маршрута?</h2>
+<p><strong>Ключевые элементы «дымового тестирования» винного маршрута включают логистику транспорта, доступность виноделен, пригодность жилья, бронирование столиков в ресторанах и общий темп маршрута.</strong> Каждый из этих компонентов должен быть жизнеспособен независимо и гармонично интегрироваться в более широкий план путешествия.</p>
+
+<h3 id="post">Проверки транспорта и доступности</h3>
+<p><strong>Проверьте варианты транспорта и доступность, чтобы обеспечить плавные переходы между винодельнями и достопримечательностями.</strong> Это включает проверку состояния дорог, расписания общественного транспорта, наличия такси/попутчиков и парковки в каждом пункте назначения. Например, некоторые отдаленные виноградники в <a href="/blog/spanish-wine-regions-guide-2026.html">испанских винодельческих регионах</a> могут потребовать определенных типов транспортных средств.</p>
+
+<h3 id="post">Доступность виноделен и дегустаций</h3>
+<p><strong>Подтвердите часы работы винодельни, наличие дегустаций и необходимость бронирования, особенно для популярных поместий.</strong> Многие винодельни, особенно премиум-класса или предлагающие особые впечатления, работают только по предварительной записи или имеют ограниченное количество мест для экскурсий. Всегда перепроверяйте праздничные часы.</p>
+
+<h3 id="post">Логистика размещения и питания</h3>
+<p><strong>Оцените практичность выбранного вами жилья и возможность бронирования столиков в ресторанах в рамках вашего маршрута.</strong> Убедитесь, что отели удобно расположены, а бронирование ресторанов соответствует вашему расписанию дегустаций, оставляя достаточно времени для поездок и досуга.</p>
+
+</section><section id="2026"><h2 id="2026">Как вы можете «дымовым тестом» проверить свой винный маршрут 2026 года?</h2>
+<p><strong>Проведение «дымового теста» для вашего винного маршрута 2026 года включает методический обзор каждой запланированной остановки и перехода для выявления немедленных логистических или эмпирических недостатков.</strong> Это руководство поможет упростить процесс планирования.</p>
+
+<ol>
+  <li><strong>Составьте маршрут в цифровом формате:</strong> Используйте такие инструменты, как Google Maps, чтобы отметить все винодельни, места проживания и рестораны. Проверьте время в пути между ними, учитывая возможные пробки или живописные объезды.</li>
+  <li><strong>Проверьте часы и даты работы:</strong> Сравните все запланированные посещения с официальными сайтами виноделен, ресторанов и достопримечательностей на предмет их точных часов работы в 2026 году, включая любые сезонные закрытия или дни особых мероприятий.</li>
+  <li><strong>Проверьте требования к бронированию:</strong> Определите, какие остановки требуют предварительного бронирования для дегустаций, экскурсий или питания. Запишите контактную информацию и сроки бронирования.</li>
+  <li><strong>Оцените осуществимость транспорта:</strong> Подтвердите, как вы будете добираться из пункта А в пункт Б. Практично ли ехать на машине? Доступны ли такси? Возможен ли общественный транспорт? Рассмотрите возможность найма назначенного водителя или использования услуг экскурсий, если вы дегустируете несколько вин.</li>
+  <li><strong>Просмотрите темп и буферное время:</strong> Оцените, не слишком ли насыщен маршрут. Добавьте буферное время для непредвиденных задержек, более длительных, чем ожидалось, дегустаций и отдыха. Чрезмерное планирование — распространенная ошибка.</li>
+  <li><strong>Сымитируйте день:</strong> Мысленно пройдитесь по типичному дню вашего маршрута. Есть ли неудобные пробелы или поспешные переходы? Имеет ли последовательность действий смысл с географической и эмпирической точки зрения?</li>
+</ol>
+
+<figure>
+  <img src="/blog/smoke-test-wine-route-qa-2026-img-1.png" alt="Подробная карта, показывающая запланированный винный маршрут с точками для виноделен и мест проживания." />
+  <figcaption>Визуальное планирование винного маршрута помогает выявить логистические проблемы на ранних этапах планирования.</figcaption>
+</figure>
+
+</section><section id="qa"><h2 id="qa">Каковы распространенные ошибки в винных маршрутах и как QA может помочь?</h2>
+<p><strong>Распространенные ошибки в винных маршрутах часто включают недооценку времени в пути, игнорирование требований к бронированию и упущение из виду сезонных закрытий.</strong> Эффективные решения QA включают тщательное исследование, гибкое планирование и наличие запасных вариантов.</p>
+
+<h3 id="post">Чрезмерное планирование и поспешные впечатления</h3>
+<p><strong>Чрезмерное планирование приводит к поспешным, неприятным впечатлениям, отвлекая от неторопливого темпа, которого заслуживает дегустация вин.</strong> Чтобы это смягчить, предусмотрите щедрое буферное время между встречами и рассмотрите возможность сосредоточиться на меньшем количестве, но более качественных впечатлений, а не пытаться посетить каждую винодельню.</p>
+
+<h3 id="post">Игнорирование сезонных или праздничных закрытий</h3>
+<p><strong>Игнорирование сезонных или праздничных закрытий может привести к прибытию в закрытую винодельню или ресторан, что приведет к потере ценного времени в пути.</strong> Всегда проверяйте конкретные календари на 2026 год для каждого места, так как многие винодельни закрываются в определенные дни или на ежегодные праздники.</p>
+
+<h3 id="post">Недооценка времени в пути</h3>
+<p><strong>Недооценка времени в пути между виноградниками, особенно в сельской местности, может нарушить расписание целого дня.</strong> Используйте картографические приложения в реальном времени и добавляйте не менее 20-30% дополнительного времени к расчетному времени в пути, особенно если вы планируете посетить несколько <a href="/blog/best-wineries-italy-2026.html">лучших виноделен Италии</a>, где дороги могут быть извилистыми.</p>
+
+</section><section id="qa"><h2 id="qa">Как технологии могут улучшить QA винного маршрута?</h2>
+<p><strong>Использование технологий может значительно улучшить процесс обеспечения качества для вашего винного маршрута, предлагая инструменты для составления карт, бронирования и получения информации в реальном времени.</strong> Цифровые помощники делают планирование более эффективным и надежным.</p>
+
+<h3 id="gps">Картографические инструменты и GPS-навигация</h3>
+<p><strong>Картографические инструменты, такие как Google Maps или Waze, бесценны для расчета точного времени в пути, выявления потенциальных объездов и обеспечения оптимального маршрута между пунктами назначения.</strong> Эти приложения также могут предоставить информацию о пиковых часах трафика, помогая корректировать расписание.</p>
+
+<h3 id="post">Системы онлайн-бронирования</h3>
+<p><strong>Используйте системы онлайн-бронирования для виноделен, ресторанов и жилья, чтобы забронировать места заранее и получить мгновенные подтверждения.</strong> Многие винодельни предлагают прямое онлайн-бронирование дегустаций и экскурсий, что упрощает процесс.</p>
+
+<figure>
+  <img src="/blog/smoke-test-wine-route-qa-2026-img-2.png" alt="Человек использует планшет для онлайн-бронирования дегустации вина." />
+  <figcaption>Платформы онлайн-бронирования имеют решающее значение для обеспечения бронирования в популярных винодельнях и обеспечения плавного маршрута.</figcaption>
+</figure>
+
+</section><section id="post"><h2 id="post">Как оптимизировать винный маршрут после первоначального «дымового теста»?</h2>
+<p><strong>Оптимизация вашего маршрута после первоначального «дымового теста» включает уточнение деталей, добавление личных штрихов и обеспечение целостного, высококачественного опыта.</strong> Именно здесь вы превращаете функциональный маршрут в по-настоящему запоминающееся винное путешествие, как описано в <a href="/blog/mastering-the-wine-journey-2026.html">«Освоении винного путешествия»</a>.</p>
+
+<h3 id="post">Включение местного опыта</h3>
+<p><strong>Включите местный опыт, помимо дегустации вин, такой как региональные кулинарные особенности, культурные достопримечательности или ремесленные магазины, чтобы обогатить ваше путешествие.</strong> Это добавляет глубины и разнообразия, позволяя шире оценить уникальный характер региона.</p>
+
+<h3 id="post">Встраивание гибкости в ваш план</h3>
+<p><strong>Встраивание гибкости в ваш план имеет решающее значение для наслаждения спонтанностью и управления непредвиденными изменениями без стресса.</strong> Предусмотрите свободные послеобеденные часы, необязательные мероприятия или буферные дни для корректировки расписания по мере необходимости.</p>
+
+<h3 id="post">Учет темпа и времени простоя</h3>
+<p><strong>Правильный темп и выделенное время простоя необходимы для предотвращения усталости и обеспечения настоящего расслабления и наслаждения.</strong> Помните, что винная поездка — это также отпуск; балансируйте структурированные мероприятия с возможностями расслабиться и насладиться атмосферой.</p>
+
+<blockquote>
+  <p>«Радость винного маршрута не только в вине, но и в самом путешествии — живописных поездках, местных вкусах и случайных открытиях. Хорошо спланированный маршрут гарантирует, что вы сможете наслаждаться каждым моментом без логистических забот».</p>
+  <cite>Советы сомелье для путешествий</cite>
+</blockquote>
+
+</section><section id="qa"><h2 id="qa">Есть ли региональные различия в передовой практике QA для винных маршрутов?</h2>
+<p><strong>Передовая практика QA значительно различается в зависимости от винного региона, так как каждый предлагает уникальные проблемы и возможности.</strong> Адаптация вашего «дымового теста» к конкретным характеристикам вашего пункта назначения обеспечивает более эффективный процесс предварительной проверки.</p>
+
+<h3 id="post">Европейские винные маршруты: нюансы и навигация по традициям</h3>
+<p><strong>Европейские винные маршруты часто требуют тщательной навигации по историческим местам, разным часам работы, а иногда и языковым барьерам.</strong> Подтверждение точных адресов и часов работы, особенно для небольших, семейных виноградников, имеет решающее значение.</p>
+
+<h3 id="post">Винные регионы Нового Света: современные удобства и обширные терруары</h3>
+<p><strong>Винные регионы Нового Света, такие как в Калифорнии или Австралии, обычно предлагают современные удобства и более стабильные часы работы, но большие расстояния между винодельнями могут быть проблемой при планировании.</strong> Сосредоточьте QA на оптимизации маршрутов движения и предварительном бронировании популярных дегустаций.</p>
+
+<figure>
+  <img src="/blog/smoke-test-wine-route-qa-2026-img-3.png" alt="Безмятежный виноградник на закате, подчеркивающий красоту хорошо спланированной винной поездки." />
+  <figcaption>Идеально «дымовым тестом» проверенный винный маршрут приводит к моментам спокойствия и наслаждения в потрясающих виноградниках.</figcaption>
+</figure>
+
+</section><section id="post"><h2 id="post">Почему обратная связь имеет решающее значение для совершенствования будущих винных маршрутов?</h2>
+<p><strong>Сбор обратной связи о вашем текущем винном маршруте бесценен для совершенствования будущих планов путешествий и обмена идеями с другими энтузиастами.</strong> Этот непрерывный цикл улучшений гарантирует, что каждое последующее винное путешествие будет еще лучше.</p>
+
+<h3 id="post">Документирование вашего опыта</h3>
+<p><strong>Документирование вашего опыта, включая то, что сработало хорошо, а что нет, предоставляет конкретные данные для улучшения будущих маршрутов.</strong> Ведите путевой дневник или заметки о посещении виноделен, ужинах и логистике.</p>
+
+<h3 id="post">Обмен опытом с другими путешественниками</h3>
+<p><strong>Обмен вашими идеями и выводами «дымового теста» с другими путешественниками может принести пользу более широкому винному сообществу.</strong> Платформы для обзоров и рекомендаций позволяют другим учиться на вашем процессе QA.</p>
+
+</section><section id="2026"><h2 id="2026">Как вы можете обеспечить высококачественный винный опыт в 2026 году?</h2>
+<p><strong>Обеспечение высококачественного винного опыта в 2026 году включает тщательное планирование и проактивный подход «дымового тестирования» к вашему маршруту.</strong> Эта приверженность деталям превращает простую поездку в незабываемое исследование винной культуры.</p>
+
+<h3 id="post">Предварительное бронирование и подтвержденные резервации</h3>
+<p><strong>Предварительное бронирование и подтвержденные резервации имеют первостепенное значение для гарантированного доступа к желаемым винодельням, ресторанам и жилью, особенно в пиковые сезоны.</strong> Это минимизирует стресс и максимизирует ваше время, наслаждаясь винами.</p>
+
+<h3 id="post">Гибкость и планирование на случай непредвиденных обстоятельств</h3>
+<p><strong>Гибкость и планирование на случай непредвиденных обстоятельств жизненно важны для адаптации к непредвиденным обстоятельствам, от изменений погоды до неожиданных закрытий виноделен.</strong> Всегда имейте запасной план или альтернативное занятие.</p>
+
+<h3 id="post">Темп для наслаждения, а не только для количества</h3>
+<p><strong>Распределение маршрута для наслаждения, а не для простого количества, гарантирует, что вы сможете наслаждаться каждым моментом, а не спешить из одного пункта назначения в другой.</strong> Действительно высококачественный винный опыт отдает приоритет глубине над широтой.</p>
+
+</section><section id="post"><h2 id="post">Что такое непрерывное улучшение качества для винных маршрутов помимо «дымового теста»?</h2>
+<p><strong>Помимо первоначального «дымового теста», непрерывное улучшение качества для винных маршрутов включает итеративные корректировки, основанные на опыте в реальном времени и обратной связи.</strong> Этот непрерывный процесс гарантирует постоянно улучшающиеся планы путешествий.</p>
+
+<h3 id="post">Послепоездочный обзор и анализ</h3>
+<p><strong>Проведение послепоездочного обзора и анализа помогает выявить конкретные области для улучшения в будущих винных маршрутах.</strong> Размышляйте о логистических проблемах, неожиданных радостях и областях, где опыт мог бы быть более гладким.</p>
+
+<h3 id="post">Обновление ваших «лучших практик» для винных путешествий</h3>
+<p><strong>Регулярное обновление ваших «лучших практик» для винных путешествий, основанное на каждом путешествии, гарантирует, что ваше планирование становится все более эффективным.</strong> Эти накопленные знания являются ценным активом для любого винного энтузиаста.</p>
+
+<table>
+  <caption>Контрольный список QA и приоритеты винного маршрута 2026 года</caption>
+  <thead>
+    <tr>
+      <th>Пункт QA</th>
+      <th>Описание</th>
+      <th>Приоритет (1-5)</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Бронирование виноделен</td>
+      <td>Подтвержденные бронирования для дегустаций/экскурсий</td>
+      <td>5</td>
+      <td>&#10003;</td>
+    </tr>
+    <tr>
+      <td>Бронирование жилья</td>
+      <td>Подтвержденные бронирования отелей/вилл</td>
+      <td>5</td>
+      <td>&#10003;</td>
+    </tr>
+    <tr>
+      <td>Точность времени в пути</td>
+      <td>Проверенное время в пути между остановками</td>
+      <td>4</td>
+      <td>&#10003;</td>
+    </tr>
+    <tr>
+      <td>Проверка часов работы</td>
+      <td>Проверены все часы работы заведений</td>
+      <td>4</td>
+      <td>&#10003;</td>
+    </tr>
+    <tr>
+      <td>Бронирование столиков в ресторанах</td>
+      <td>Забронированы ключевые рестораны</td>
+      <td>3</td>
+      <td>&#10003;</td>
+    </tr>
+    <tr>
+      <td>План на случай непредвиденных обстоятельств</td>
+      <td>Альтернативные варианты для основных мероприятий</td>
+      <td>3</td>
+      <td>&#10003;</td>
+    </tr>
+    <tr>
+      <td>Исследование местных мероприятий</td>
+      <td>Исследованы мероприятия, не связанные с вином</td>
+      <td>2</td>
+      <td>&#10003;</td>
+    </tr>
+  </tbody>
+</table></section>
+            </div>
+
+            <div class="share-section">
+                <span class="share-label">Share this article</span>
+                <div class="share-group">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/smoke-test-wine-route-qa-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/smoke-test-wine-route-qa-2026.html&text=Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия"
+                        target="_blank" class="share-icon-btn" title="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/smoke-test-wine-route-qa-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия%20https://yas.wine/blog/smoke-test-wine-route-qa-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://yas.wine/blog/smoke-test-wine-route-qa-2026.html&text=Дымовое тестирование вашего винного маршрута 2026: Руководство по обеспечению качества для безупречного винного путешествия"
+                        target="_blank" class="share-icon-btn" title="Share on Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z" />
+                        </svg>
+                    </a>
+                    <div class="share-icon-btn" onclick="copyUrl()" title="Copy Link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function copyUrl() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            </script>
+
+            
+
+        </article>
+    </main>
+
+    <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
+        });
+    </script>
+
+    <script>
+function ensureTocBox() {
+            const root = document.querySelector('.post-content');
+            if (!root) return;
+            const h2s = Array.from(root.querySelectorAll('h2[id]'));
+            if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
+            const aside = document.createElement('aside');
+            aside.className = 'toc-box';
+            aside.setAttribute('aria-label', 'Table of contents');
+            const t = document.createElement('div');
+            t.className = 'toc-title';
+            t.textContent = 'On this page';
+            const ul = document.createElement('ul');
+            ul.className = 'toc-items';
+
+            h2s.forEach((h2, idx) => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#' + h2.id;
+                a.textContent = h2.textContent.trim();
+                li.appendChild(a);
+
+                const nxt = h2s[idx+1];
+                const sub = [];
+                let el = h2.nextElementSibling;
+                while (el && el !== nxt) {
+                    if (el.tagName === 'H3' && el.id) sub.push(el);
+                    el = el.nextElementSibling;
+                }
+                if (sub.length) {
+                    const ul2 = document.createElement('ul');
+                    ul2.className = 'toc-h3';
+                    sub.slice(0,3).forEach(h3 => {
+                        const li2 = document.createElement('li');
+                        const a2 = document.createElement('a');
+                        a2.href = '#' + h3.id;
+                        a2.textContent = h3.textContent.trim();
+                        li2.appendChild(a2);
+                        ul2.appendChild(li2);
+                    });
+                    li.appendChild(ul2);
+                }
+                ul.appendChild(li);
+            });
+
+            aside.appendChild(t);
+            aside.appendChild(ul);
+            const crumbs = root.querySelector('.breadcrumbs');
+            if (crumbs && crumbs.parentNode === root) crumbs.insertAdjacentElement('afterend', aside);
+            else root.prepend(aside);
+        }
+        document.addEventListener('DOMContentLoaded', ensureTocBox);
+    </script>
+
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+
+</html>
