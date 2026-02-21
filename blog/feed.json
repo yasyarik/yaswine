@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-02-20T20:01:44+00:00",
+  "updatedAt": "2026-02-21T10:07:01+00:00",
   "posts": [
+    {
+      "href": "/blog/wine-pairing-matrix-automation-2026.html",
+      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
+      "category": "Food Pairing",
+      "title": "Automating Wine Pairings in 2026: The Ultimate Matrix Guide",
+      "description": "Unlock perfect wine and food pairings in 2026 with an automated matrix. Learn about AI, data, and the future of sommelier recommendations for any dish: answer-f"
+    },
+    {
+      "href": "/blog/best-wineries-portugal-2026.html",
+      "image": "/blog/best-wineries-portugal-2026-hero.png",
+      "category": "Wineries & Travel",
+      "title": "Best Wineries in Portugal 2026: An Expert's Guide to Iconic Vineyards & Tastings",
+      "description": "Discover the best wineries in Portugal for 2026, from the majestic Douro Valley to sun-drenched Alentejo. Explore top vineyards, taste unique wines, and plan"
+    },
     {
       "href": "/blog/mastering-the-wine-journey-2026.html",
       "image": "/blog/mastering-the-wine-journey-2026-img-1.webp",

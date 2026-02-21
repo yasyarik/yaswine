@@ -1,213 +1,220 @@
 {
-  "updatedAt": "2026-02-20T21:14:12+00:00",
+  "updatedAt": "2026-02-21T10:10:22+00:00",
   "posts": [
+    {
+      "href": "/fr/blog/wine-pairing-matrix-automation-2026.html",
+      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
+      "category": "Accords Mets-Vins",
+      "title": "Automatiser les accords mets-vins en 2026 : Le guide ultime de la matrice",
+      "description": "Découvrez les accords mets-vins parfaits en 2026 grâce à une matrice automatisée. Apprenez-en davantage sur l'IA, les données et l'avenir des recommandations de sommel..."
+    },
     {
       "href": "/fr/blog/mastering-the-wine-journey-2026.html",
       "image": "/blog/mastering-the-wine-journey-2026-img-1.webp",
-      "category": "Buying Guides",
+      "category": "Guides d'achat",
       "title": "Maîtriser le parcours du vin : Cépages, régions, accords mets-vins et achats judicieux en 2026",
       "description": "Découvrez le monde du vin avec ce guide expert couvrant les cépages essentiels, les régions clés, les accords mets-vins parfaits, les meilleures caves et les achats judicieux en 2026."
     },
     {
       "href": "/fr/blog/upcycling-wine-bottle-glass-2026.html",
       "image": "/blog/upcycling-wine-bottle-glass-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Upcycler des bouteilles de vin en verres 2026 : Un guide pratique",
       "description": "Transformez des bouteilles de vin vides en verres et objets de décoration élégants en 2026. Ce guide couvre les outils, les techniques, la sécurité et des idées créatives pour un artisanat durable."
     },
     {
       "href": "/fr/blog/aged-like-fine-wine-guide-2026.html",
       "image": "/blog/aged-like-fine-wine-guide-2026-img-1.webp",
-      "category": "Buying Guides",
+      "category": "Guides d'achat",
       "title": "Vieilli comme un grand vin : Un guide 2026 sur la longévité, les cépages et l'achat",
       "description": "Découvrez les secrets des vins vieillis en 2026 avec ce guide expert. Explorez les cépages aptes au vieillissement, les meilleures régions, les accords idéaux et des conseils d'achat judicieux."
     },
     {
       "href": "/fr/blog/unveiling-wine-gems-2026.html",
       "image": "/blog/unveiling-wine-gems-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Découvrir des Vins Uniques : La 'Girafe' de la Cave et des Verres Mémorables",
       "description": "Explorez des cépages, des régions et des expériences œnologiques inoubliables et uniques en 2026. Découvrez des vins qui se distinguent par leur élégance et"
     },
     {
       "href": "/fr/blog/italy-wine-growing-regions-2026.html",
       "image": "/blog/italy-wine-growing-regions-2026-img-1.webp",
-      "category": "Wine Regions",
+      "category": "Régions viticoles",
       "title": "Principales régions viticoles d’Italie 2026 : cépages, accords et guide d’achat",
       "description": "Explorez les principales régions viticoles d'Italie en 2026, du Piémont à la Sicile. Découvrez les cépages clés, les accords mets-vins idéaux, les caves renommées et les conseils d'achat essentiels."
     },
     {
       "href": "/fr/blog/spanish-wine-regions-guide-2026.html",
       "image": "/blog/spanish-wine-regions-guide-2026-img-1.webp",
-      "category": "Wine Regions",
+      "category": "Régions viticoles",
       "title": "Régions Viticoles Espagnoles 2026 : Un Guide Expert des Cépages, Domaines & Achats",
       "description": "Explorez les diverses régions viticoles d'Espagne en 2026, de la Rioja au Priorat. Découvrez les cépages clés, les meilleurs domaines viticoles, les accords mets-vins idéaux et des conseils d'achat judicieux."
     },
     {
       "href": "/fr/blog/global-grape-map-2026.html",
       "image": "/blog/global-grape-map-2026-img-1.webp",
-      "category": "Grape Varieties",
+      "category": "Cépages",
       "title": "Carte Mondiale des Cépages 2026 : Un Guide Essentiel sur les Lieux de Culture des Raisins de Vin",
       "description": "Explorez la carte mondiale de la culture des cépages en 2026. Ce guide détaille les régions clés, les cépages populaires, les impacts climatiques et les conseils d'achat d'experts."
     },
     {
       "href": "/fr/blog/most-sour-wine-grapes-2026.html",
       "image": "/blog/most-sour-wine-grapes-2026-img-1.webp",
-      "category": "Grape Varieties",
+      "category": "Cépages",
       "title": "Les Cépages les Plus Acides : Le Guide d'un Sommelier sur l'Acidité en 2026",
       "description": "Découvrez les cépages les plus acides, leurs caractéristiques distinctives et comment une acidité élevée influence le goût, les accords mets-vins et les expressions régionales en 2026."
     },
     {
       "href": "/fr/blog/how-to-pair-pinot-noir-dinner-2026.html",
       "image": "/blog/how-to-pair-pinot-noir-dinner-2026-img-1.webp",
-      "category": "Food Pairing",
+      "category": "Accords mets-vins",
       "title": "Comment Accorder le Pinot Noir avec le Dîner en 2026 : Un Guide Expert",
       "description": "Maîtrisez les accords mets-vins avec le Pinot Noir en 2026 grâce à ce guide expert. Découvrez les plats idéaux, les différences régionales, les conseils de service et les conseils d'achat pour des repas parfaits."
     },
     {
       "href": "/fr/blog/how-to-choose-red-wine-for-steak-2026.html",
       "image": "/blog/how-to-choose-red-wine-for-steak-2026-img-1.webp",
-      "category": "Food Pairing",
+      "category": "Accords mets-vins",
       "title": "Comment Choisir le Vin Rouge pour un Steak en 2026 : Le Guide d'un Sommelier Expert",
       "description": "Maîtrisez l'art d'accorder le vin rouge avec le steak en 2026. Ce guide couvre les meilleurs cépages, les régions, les conseils d'experts et les conseils d'achat pour des accords parfaits."
     },
     {
       "href": "/fr/blog/what-is-glera-grape-2026.html",
       "image": "/blog/what-is-glera-grape-2026-img-1.webp",
-      "category": "Grape Varieties",
+      "category": "Cépages",
       "title": "Qu'est-ce que le cépage Glera ? Le cœur du Prosecco dévoilé en 2026",
       "description": "Le Glera est le cépage blanc par excellence du Prosecco, célébré pour son acidité vive et ses arômes vibrants, qui propulse les tendances mondiales du vin Learn"
     },
     {
       "href": "/fr/blog/wine-country-gift-baskets-2026.html",
       "image": "/blog/wine-country-gift-baskets-2026-img-1.webp",
-      "category": "Buying Guides",
+      "category": "Guides d'achat",
       "title": "Le Guide Ultime des Paniers Cadeaux Vinicoles en 2026",
       "description": "Découvrez les meilleurs paniers cadeaux vinicoles pour toute occasion en 2026. Ce guide couvre la sélection, la personnalisation, les principales régions et les conseils d'experts pour des cadeaux attentionnés."
     },
     {
       "href": "/fr/blog/aged-like-fine-wine-2026.html",
       "image": "/blog/aged-like-fine-wine-2026-img-1.webp",
-      "category": "Buying Guides",
+      "category": "Guides d'achat",
       "title": "Vieilli comme un bon vin : Dévoiler les secrets de la longévité en 2026",
       "description": "Vieilli comme un bon vin : Dévoiler les secrets de la longévité en 2026. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/wine-gifts-men-2026.html",
       "image": "/blog/wine-gifts-men-2026-img-1.webp",
-      "category": "Buying Guides",
+      "category": "Guides d'achat",
       "title": "Les Meilleurs Cadeaux de Vin pour Hommes en 2026 : Le Guide Expert des Présents Réfléchis",
       "description": "Les Meilleurs Cadeaux de Vin pour Hommes en 2026 : Le Guide Expert des Présents Réfléchis. Faits clés, conseils pratiques et étapes claires à appliquer."
     },
     {
       "href": "/fr/blog/wine-gifts-for-her-2026.html",
       "image": "/blog/wine-gifts-for-her-2026-img-1.webp",
-      "category": "Buying Guides",
+      "category": "Guides d'achat",
       "title": "Les meilleurs cadeaux de vin pour elle en 2026 : Le guide ultime des présents attentionnés",
       "description": "Les meilleurs cadeaux de vin pour elle en 2026 : Le guide ultime des présents attentionnés. Faits clés, conseils pratiques et étapes claires à appliquer."
     },
     {
       "href": "/fr/blog/tempranillo-grape-wine-guide-2026.html",
       "image": "/blog/tempranillo-grape-wine-guide-2026-img-1.webp",
-      "category": "Grape Varieties",
+      "category": "Cépages",
       "title": "Guide du vin Tempranillo 2026 : Le noble cépage espagnol exploré",
       "description": "Guide du vin Tempranillo 2026 : Le noble cépage espagnol exploré. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/best-wine-pizza-pairing-2026.html",
       "image": "/blog/best-wine-pizza-pairing-2026-img-1.webp",
-      "category": "Food Pairing",
+      "category": "Accords mets-vins",
       "title": "Meilleur accord vin et pizza en 2026 : Le guide d'un sommelier pour des mariages parfaits",
       "description": "Meilleur accord vin et pizza en 2026 : Le guide d'un sommelier pour des mariages parfaits. Faits clés, conseils pratiques et étapes claires à appliquer."
     },
     {
       "href": "/fr/blog/how-to-buy-winery-italy-2026.html",
       "image": "/blog/how-to-buy-winery-italy-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Comment acheter un domaine viticole en Italie ? Un guide de l'investisseur 2026",
       "description": "Comment acheter un domaine viticole en Italie ? Un guide de l'investisseur 2026. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/winery-spain-architecture.html",
       "image": "/blog/winery-spain-architecture-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Architecture emblématique des caves espagnoles : Un voyage à travers le design et le terroir (2026)",
       "description": "Architecture emblématique des caves espagnoles : Un voyage à travers le design et le terroir (2026). Faits clés, conseils pratiques et étapes claires à."
     },
     {
       "href": "/fr/blog/winery-bardoix-guide-2026.html",
       "image": "/blog/winery-bardoix-guide-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Winery Bardoix 2026 : Un guide essentiel pour la visite et la dégustation",
       "description": "Winery Bardoix 2026 : Un guide essentiel pour la visite et la dégustation. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/what-is-chianti-classico.html",
       "image": "/blog/what-is-chianti-classico-img-1.webp",
-      "category": "Wine Regions",
+      "category": "Régions viticoles",
       "title": "Qu'est-ce que le Chianti Classico ? Votre guide essentiel du vin iconique de Toscane (2026)",
       "description": "Qu'est-ce que le Chianti Classico ? Votre guide essentiel du vin iconique de Toscane (2026). Faits clés, conseils pratiques et étapes claires à appliquer."
     },
     {
       "href": "/fr/blog/best-wineries-toscana-2026.html",
       "image": "/blog/best-wineries-toscana-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Découvrir les meilleures caves de Toscane en 2026 : Un guide essentiel",
       "description": "Découvrir les meilleures caves de Toscane en 2026 : Un guide essentiel. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/best-wine-pairing-sushi-2026.html",
       "image": "/blog/best-wine-pairing-sushi-2026-img-1.webp",
-      "category": "Food Pairing",
+      "category": "Accords mets-vins",
       "title": "Meilleurs Accords Mets-Vins avec les Sushis en 2026 : Le Guide Expert d'un Sommelier",
       "description": "Meilleurs Accords Mets-Vins avec les Sushis en 2026 : Le Guide Expert d'un Sommelier. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/what-is-oldest-winery-spain-2026.html",
       "image": "/blog/what-is-oldest-winery-spain-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Quelle est la plus ancienne cave d'Espagne ? Découverte de sa riche histoire (2026)",
       "description": "Quelle est la plus ancienne cave d'Espagne ? Découverte de sa riche histoire (2026). Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/best-wineries-italy-2026.html",
       "image": "/blog/best-wineries-italy-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Les meilleurs vignobles d'Italie 2026 : Un guide d'expert des domaines emblématiques",
       "description": "Les meilleurs vignobles d'Italie 2026 : Un guide d'expert des domaines emblématiques. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/grillo-grape-wine-2026.html",
       "image": "/blog/grillo-grape-wine-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Vin de cépage Grillo en 2026 : guide définitif de la star blanche de Sicile",
       "description": "Vin de cépage Grillo en 2026 : guide définitif de la star blanche de Sicile. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/best-puglia-wines-2026.html",
       "image": "/blog/best-puglia-wines-2026-img-1.webp",
-      "category": "Wineries & Travel",
+      "category": "Domaines & voyages",
       "title": "Découvrir les meilleurs vins des Pouilles en 2026 : Un guide essentiel",
       "description": "Découvrir les meilleurs vins des Pouilles en 2026 : Un guide essentiel. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/best-champagne-snacks-2026.html",
       "image": "/blog/best-champagne-snacks-2026-img-1.webp",
-      "category": "Food Pairing",
+      "category": "Accords mets-vins",
       "title": "Meilleurs Snacks pour le Champagne en 2026 : Sublimez Votre Expérience Pétillante",
       "description": "Meilleurs Snacks pour le Champagne en 2026 : Sublimez Votre Expérience Pétillante. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/cava-wine-vs-prosecco-2026.html",
       "image": "/blog/cava-wine-vs-prosecco-2026-img-1.webp",
-      "category": "Wine Regions",
+      "category": "Régions viticoles",
       "title": "Cava contre Prosecco : Quel vin mousseux règne en maître en 2026 ?",
       "description": "Cava contre Prosecco : Quel vin mousseux règne en maître en 2026 ?. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     },
     {
       "href": "/fr/blog/how-to-choose-red-wine-glass-2026.html",
       "image": "/blog/how-to-choose-red-wine-glass-2026-img-1.webp",
-      "category": "Buying Guides",
+      "category": "Guides d'achat",
       "title": "Comment choisir le verre à vin rouge parfait en 2026 : Le guide du sommelier",
       "description": "Comment choisir le verre à vin rouge parfait en 2026 : Le guide du sommelier. Faits clés, conseils pratiques et étapes claires à appliquer rapidement."
     }
