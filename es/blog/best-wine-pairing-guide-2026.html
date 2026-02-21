@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2K6PK6MRG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2K6PK6MRG');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino</title>
+    <meta name="robots" content="index, follow">
+<meta name="description" content="Descubre maridajes perfectos de vino y comida en 2026 con esta guía experta. Aprende principios, recomendaciones específicas y evita errores comunes para cada">
+<meta property="og:title" content="Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato">
+    <meta property="og:description" content="Descubre maridajes perfectos de vino y comida en 2026 con esta guía experta. Aprende principios, recomendaciones específicas y evita errores comunes para cada">
+    <meta property="og:type" content="article">
+    <meta content="https://yas.wine/es/blog/best-wine-pairing-guide-2026.html" property="og:url"/>
+    <meta property="og:image" content="https://yas.wine//blog/best-wine-pairing-guide-2026-hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12070c;
+            --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+            --accent-green: #b63a5a;
+            --accent-hover: #962f49;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-white: #ededed;
+            --text-dim: #a1a1aa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: var(--bg-gradient);
+            overflow: hidden;
+        }
+
+        .fixed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 25%, rgba(144,22,56,.45) 0%, transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(188,88,116,.28) 0%, transparent 35%);
+            background-size: 200% 200%;
+            animation: gradientShift 18s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        
+        main.container {
+            margin-top: 96px;
+        }
+#mainNav { 
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .nav-scrolled {
+            background: rgba(10, 5, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(10, 5, 20, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            margin-right: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(182, 58, 90, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        article {
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        
+            position: relative;
+            z-index: 1205;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+
+        .post-header {
+            margin-bottom: 50px;
+        }
+
+        .post-category {
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .post-hero {
+            width: 100%;
+            min-height: 450px;
+            height: auto;
+            border-radius: 32px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        .post-content h2 {
+            font-size: 32px;
+            color: white;
+            margin: 50px 0 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            background: var(--glass-bg);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /* Factory-injected blocks (breadcrumbs + TOC) */
+        .breadcrumbs {
+            margin: 18px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .breadcrumbs a {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .breadcrumbs a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.25);
+        }
+        .breadcrumbs .sep {
+            opacity: 0.55;
+        }
+        .breadcrumbs .current {
+            color: white;
+            font-weight: 600;
+        }
+
+        .toc-box {
+            margin: 18px 0 28px;
+            padding: 18px 18px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+        }
+        .toc-title {
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .toc-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+        .toc-items li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc-items a {
+            display: block;
+            color: var(--accent-green);
+            text-decoration: none;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            padding: 6px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .toc-items a:hover {
+            background: rgba(182, 58, 90, 0.14);
+            border-color: rgba(182, 58, 90, 0.32);
+            color: white;
+        }
+        .toc-h3 {
+            margin-left: 12px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Links + images inside article */
+        .post-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(182, 58, 90, 0.35);
+        }
+        .post-content a:hover {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.10);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+        .post-content figure {
+            margin: 26px 0;
+        }
+        .post-content figcaption {
+            margin-top: 10px;
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+
+        /* Tables */
+        .post-content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 26px 0;
+        }
+        .post-content thead th {
+            background: rgba(182, 58, 90, 0.14);
+            color: white;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .post-content th,
+        .post-content td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .post-content td {
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+        .post-content tr:last-child td {
+            border-bottom: none;
+        }
+        .post-content th:last-child,
+        .post-content td:last-child {
+            border-right: none;
+        }
+        .post-content tbody tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+.share-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .share-label {
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .share-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .share-icon-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(182, 58, 90, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .share-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2a0d16 0%, #4f1424 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            main.container {
+                margin-top: 74px;
+            }
+            h1 {
+                font-size: 34px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 30px;
+            }
+        }
+    </style>
+<style id="site-theme-override">
+:root {
+  --bg-dark: #12070c;
+  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
+  --accent: #b63a5a;
+  --accent-hover: #962f49;
+  --glass-bg: rgba(255,255,255,.035);
+  --glass-border: rgba(255,255,255,.12);
+  --text: #f4edf0;
+  --dim: #cfbec5;
+}
+body { background: var(--bg-dark) !important; }
+.fixed-bg { background: var(--bg-gradient) !important; }
+.fixed-bg:before {
+  background:
+    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+}
+</style>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato">
+<meta name="twitter:description" content="Descubre maridajes perfectos de vino y comida en 2026 con esta guía experta. Aprende principios, recomendaciones específicas y evita errores comunes para cada">
+<meta name="twitter:image" content="https://yas.wine/blog/best-wine-pairing-guide-2026-hero.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://yas.wine/blog/best-wine-pairing-guide-2026.html"}, "headline": "Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato", "description": "Descubre maridajes perfectos de vino y comida en 2026 con esta guía experta. Aprende principios, recomendaciones específicas y evita errores comunes para cada", "image": ["https://yas.wine/blog/best-wine-pairing-guide-2026-hero.png"], "datePublished": "2026-02-21", "dateModified": "2026-02-21", "author": {"@type": "Organization", "name": "YAS Wine"}, "publisher": {"@type": "Organization", "name": "YAS Wine"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yas.wine/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yas.wine/blog/"}, {"@type": "ListItem", "position": 3, "name": "Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato", "item": "https://yas.wine/blog/best-wine-pairing-guide-2026.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuáles son los principios fundamentales del maridaje de vinos?", "acceptedAnswer": {"@type": "Answer", "text": "Los principios fundamentales del maridaje de vinos giran en torno a equilibrar el peso y la intensidad tanto de la comida como del vino, y decidir si crear un contraste complementario o una combinación congruente de sabores."}}, {"@type": "Question", "name": "¿Qué vinos maridan mejor con carne roja?", "acceptedAnswer": {"@type": "Answer", "text": "Las carnes rojas generalmente maridan mejor con vinos tintos de cuerpo completo que tienen estructura y taninos, como Cabernet Sauvignon, mezclas de Burdeos, Syrah/Shiraz, Rioja, Barolo o Pinot Noir, dependiendo del corte y la preparación específicos."}}, {"@type": "Question", "name": "¿Cómo elijo el vino para platos de pescado y mariscos?", "acceptedAnswer": {"@type": "Answer", "text": "Para pescado y mariscos, opta por vinos blancos, aunque los tintos más ligeros o rosados pueden funcionar con preparaciones más ricas. Los pescados delicados maridan bien con blancos crujientes y de alta acidez como Sauvignon Blanc, mientras que los pescados más carnosos o mariscos pueden manejar blancos con más cuerpo como un Chardonnay con barrica o un Rosado seco."}}, {"@type": "Question", "name": "¿Cuál es el mejor enfoque para maridar vino con comida picante?", "acceptedAnswer": {"@type": "Answer", "text": "Al maridar con comida picante, elige vinos con un toque de dulzor residual y buena acidez, como un Riesling semiseco o un Gewürztraminer, para calmar el picor. Los vinos espumosos de bajo alcohol y algunos blancos aromáticos o tintos ligeros y afrutados también pueden funcionar bien."}}, {"@type": "Question", "name": "¿Hay reglas específicas para maridar vino con postres?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, una regla crucial para el maridaje de vinos de postre es que el vino debe ser más dulce que el propio postre para evitar que el vino sepa amargo. Combina los niveles de intensidad y dulzor, y busca sabores complementarios, como Oporto con chocolate o Sauternes con tartas de frutas."}}, {"@type": "Question", "name": "¿Qué errores comunes de maridaje de vinos deben evitarse?", "acceptedAnswer": {"@type": "Answer", "text": "Los errores comunes de maridaje de vinos incluyen dominar platos delicados con vinos audaces, ignorar los niveles de acidez o taninos de un vino, lo que puede llevar a sabores desagradables, y siempre apegarse a reglas rígidas en lugar de experimentar y confiar en tu paladar."}}]}</script>
+<link href="https://yas.wine/es/blog/best-wine-pairing-guide-2026.html" rel="canonical"/><link href="https://yas.wine/blog/best-wine-pairing-guide-2026.html" hreflang="en" rel="alternate"/><link href="https://yas.wine/ru/blog/best-wine-pairing-guide-2026.html" hreflang="ru" rel="alternate"/><link href="https://yas.wine/es/blog/best-wine-pairing-guide-2026.html" hreflang="es" rel="alternate"/><link href="https://yas.wine/de/blog/best-wine-pairing-guide-2026.html" hreflang="de" rel="alternate"/><link href="https://yas.wine/fr/blog/best-wine-pairing-guide-2026.html" hreflang="fr" rel="alternate"/><link href="https://yas.wine/blog/best-wine-pairing-guide-2026.html" hreflang="x-default" rel="alternate"/></head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav>
+    <div class="nav-container">
+      <a class="logo" href="/"><img class="logo-img" src="/logo-yas-wine.png" alt="YAS Wine Logo" /></a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div id="lang-switcher-host"></div>
+      </div>
+    </div>
+  </nav>
+
+    <main class="container">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+
+            <header class="post-header">
+                <span class="post-category">Maridaje</span>
+                <h1 itemprop="headline">Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato</h1>
+                <div class="post-intro" style="margin-top:16px;"><p><strong>Elegir el vino adecuado para cada plato transforma una comida en una experiencia culinaria inolvidable.</strong> Comprender los principios fundamentales del maridaje te permite seleccionar con confianza vinos que complementan, realzan o contrastan sabores, elevando tanto la comida como el vino.</p></div>
+                <div class="post-meta">
+                    <time itemprop="datePublished" datetime="2026-02-21">Published 2026-02-21</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="post-hero" style="background-image: url('/blog/best-wine-pairing-guide-2026-hero.png');"></div>
+
+            <div class="post-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato</span></nav><aside class="toc-box"><div class="toc-title">En esta página</div><ul class="toc-items"><li><a class="toc-h2" href="#los-principios-fundamentales-del-maridaje-de-vinos">Los Principios Fundamentales del Maridaje de Vinos</a></li><li><a class="toc-h2" href="#cmo-marido-vino-con-carne-roja">¿Cómo Marido Vino con Carne Roja?</a></li><li><a class="toc-h2" href="#qu-vinos-combinan-mejor-con-aves-y-cerdo">¿Qué Vinos Combinan Mejor con Aves y Cerdo?</a></li><li><a class="toc-h2" href="#descubriendo-maridajes-perfectos-para-pescado-y-mariscos">Descubriendo Maridajes Perfectos para Pescado y Mariscos</a></li><li><a class="toc-h2" href="#cmo-elijo-el-vino-para-platos-vegetarianos">¿Cómo Elijo el Vino para Platos Vegetarianos?</a></li><li><a class="toc-h2" href="#dominando-el-maridaje-de-vinos-para-comida-picante">Dominando el Maridaje de Vinos para Comida Picante</a></li><li><a class="toc-h2" href="#finales-dulces-maridaje-de-vino-con-postres">Finales Dulces: Maridaje de Vino con Postres</a></li><li><a class="toc-h2" href="#existe-un-mtodo-paso-a-paso-para-un-maridaje-de-vinos-exitoso">¿Existe un Método Paso a Paso para un Maridaje de Vinos Exitoso?</a></li><li><a class="toc-h2" href="#elevando-tu-cena-cocina-global-y-vino">Elevando Tu Cena: Cocina Global y Vino</a></li><li><a class="toc-h2" href="#cules-son-los-errores-comunes-de-maridaje-de-vinos-a-evitar">¿Cuáles Son los Errores Comunes de Maridaje de Vinos a Evitar?</a></li></ul></aside><section id="los-principios-fundamentales-del-maridaje-de-vinos"><h2 id="los-principios-fundamentales-del-maridaje-de-vinos">Los Principios Fundamentales del Maridaje de Vinos</h2>
+<p><strong>Un maridaje de vinos exitoso depende de la comprensión de la interacción de sabores, texturas y aromas entre la comida y el vino.</strong> El objetivo es la armonía, asegurando que ni el plato ni el vino dominen al otro, sino que creen un efecto sinérgico.</p>
+
+<h3 id="el-equilibrio-es-clave-peso-e-intensidad">El Equilibrio es Clave: Peso e Intensidad</h3>
+<p><strong>El peso y la intensidad del vino deben coincidir con los de la comida.</strong> Un plato rico y pesado, como un estofado de ternera cocido a fuego lento, exige un vino tinto con cuerpo, mientras que un delicado pescado escalfado se vería abrumado por un vino así y, en su lugar, requiere un blanco ligero y crujiente.</p>
+
+<h3 id="maridajes-complementarios-vs-congruentes">Maridajes Complementarios vs. Congruentes</h3>
+<p><strong>Los maridajes pueden complementar o armonizar de forma congruente los sabores.</strong> Los maridajes complementarios buscan elementos contrastantes que se equilibren entre sí, como un Sauvignon Blanc fresco y ácido que corta la riqueza del queso de cabra. Los maridajes congruentes, por el contrario, buscan compuestos de sabor similares que se amplifiquen entre sí, como un Pinot Noir terroso con risotto de champiñones.</p>
+
+<figure><img src="best-wine-pairing-guide-2026-img-1.png" alt="Infografía que ilustra los principios de maridaje de vinos para diferentes tipos de alimentos" /><figcaption>Comprender los principios fundamentales ayuda a desmitificar el maridaje de vinos para cualquier comida.</figcaption></figure>
+
+</section><section id="cmo-marido-vino-con-carne-roja"><h2 id="cmo-marido-vino-con-carne-roja">¿Cómo Marido Vino con Carne Roja?</h2>
+<p><strong>Las carnes rojas generalmente maridan mejor con vinos tintos que tienen estructura, taninos y perfiles de sabor complementarios.</strong> Los sabores robustos y el alto contenido de grasa de las carnes rojas a menudo requieren un vino que pueda resistirlos sin ser eclipsado.</p>
+
+<h3 id="maridajes-clsicos-de-carne-roja-y-vino-tinto">Maridajes Clásicos de Carne Roja y Vino Tinto</h3>
+<p><strong>Para un bistec rico, un Cabernet Sauvignon o una mezcla de Burdeos es una elección icónica.</strong> Los taninos de estos vinos cortan la grasa de la carne, limpiando el paladar y realzando los sabores salados. Para obtener una guía específica sobre el bistec, consulta nuestro artículo sobre <a href="/blog/how-to-choose-red-wine-for-steak-2026.html">cómo elegir vino tinto para bistec en 2026</a>.</p>
+
+<h3 id="ms-all-del-bistec-cordero-venado-y-ms">Más Allá del Bistec: Cordero, Venado y Más</h3>
+<p><strong>El cordero, especialmente asado, encuentra un maridaje excelente en un Syrah/Shiraz o un Rioja, con sus notas sabrosas, a veces picantes.</strong> Las carnes de caza como el venado, con sus características terrosas y magras, maridan maravillosamente con tintos elegantes y estructurados como un Barolo añejo o un Pinot Noir complejo, como se explora en <a href="/blog/how-to-pair-pinot-noir-dinner-2026.html">cómo maridar Pinot Noir con la cena en 2026</a>.</p>
+
+</section><section id="qu-vinos-combinan-mejor-con-aves-y-cerdo"><h2 id="qu-vinos-combinan-mejor-con-aves-y-cerdo">¿Qué Vinos Combinan Mejor con Aves y Cerdo?</h2>
+<p><strong>Las aves y el cerdo ofrecen un amplio espectro de posibilidades de maridaje, que van desde vinos blancos ligeros hasta tintos de cuerpo medio, dependiendo de su preparación.</strong> Su versatilidad permite maridajes creativos que pueden resaltar diferentes aspectos del plato.</p>
+
+<h3 id="opciones-verstiles-de-blancos-y-tintos-ligeros">Opciones Versátiles de Blancos y Tintos Ligeros</h3>
+<p><strong>Para pollo o pavo simplemente preparados, un Chardonnay (sin barrica), Sauvignon Blanc o un Pinot Noir de cuerpo ligero pueden ser excelentes opciones.</strong> Estos vinos ofrecen acidez o fruta sutil que complementa sin abrumar. El lomo de cerdo a menudo brilla con un Riesling seco o un Grüner Veltliner.</p>
+
+<h3 id="maridaje-con-preparaciones-ms-ricas">Maridaje con Preparaciones Más Ricas</h3>
+<p><strong>Cuando las aves o el cerdo se preparan con salsas más ricas, ahumados o asados, entran en juego vinos más robustos.</strong> Para pollo asado con hierbas, un Chardonnay ligeramente envejecido en barrica o un Côtes du Rhône funciona bien. El cerdo desmenuzado (pulled pork) o la barbacoa se benefician de un Zinfandel con mucha fruta o un Rosado ligeramente envejecido en barrica.</p>
+
+</section><section id="descubriendo-maridajes-perfectos-para-pescado-y-mariscos"><h2 id="descubriendo-maridajes-perfectos-para-pescado-y-mariscos">Descubriendo Maridajes Perfectos para Pescado y Mariscos</h2>
+<p><strong>El pescado y los mariscos generalmente requieren vinos blancos, aunque ciertas preparaciones y tipos de pescado pueden admitir tintos más ligeros o rosados.</strong> La clave es evitar los taninos fuertes que pueden chocar con las delicadas proteínas y los sabores a menudo ricos en yodo de los mariscos.</p>
+
+<h3 id="blancos-ligeros-y-frescos-para-pescados-delicados">Blancos Ligeros y Frescos para Pescados Delicados</h3>
+<p><strong>Los pescados blancos delicados como el lenguado o el bacalao, especialmente al vapor o a la parrilla, se maridan mejor con vinos blancos crujientes y de alta acidez como Sauvignon Blanc, Pinot Grigio o Muscadet.</strong> Estos vinos ofrecen un contrapunto refrescante sin enmascarar los sabores sutiles del pescado.</p>
+
+<h3 id="blancos-con-carcter-y-rosados-para-mariscos-ms-ricos">Blancos con Carácter y Rosados para Mariscos Más Ricos</h3>
+<p><strong>Pescados más ricos y carnosos como el salmón, el atún o el pez espada, y mariscos como la langosta o las vieiras, pueden manejar vinos blancos más sustanciosos.</strong> Un Chardonnay con barrica, Viognier, o incluso un Rosado seco, constituyen un maridaje delicioso, ofreciendo suficiente cuerpo y sabor para igualar la riqueza del plato.</p>
+
+<h3 id="sushi-y-vino-un-equilibrio-delicado">Sushi y Vino: Un Equilibrio Delicado</h3>
+<p><strong>Maridar vino con sushi requiere un toque cuidadoso para respetar sus sabores y texturas matizadas.</strong> Un Riesling semiseco, un Pinot Grigio fresco o incluso un vino espumoso ligero pueden proporcionar un contraste refrescante. Descubre más en nuestra guía detallada sobre el <a href="/blog/best-wine-pairing-sushi-2026.html">mejor maridaje de vinos para sushi en 2026</a>.</p>
+
+</section><section id="cmo-elijo-el-vino-para-platos-vegetarianos"><h2 id="cmo-elijo-el-vino-para-platos-vegetarianos">¿Cómo Elijo el Vino para Platos Vegetarianos?</h2>
+<p><strong>Los platos vegetarianos, con sus diversos ingredientes y estilos de preparación, ofrecen un vasto campo de juego para el maridaje de vinos.</strong> Concéntrate en los sabores y texturas dominantes, de forma muy similar a como lo harías con los platos de carne.</p>
+
+<h3 id="vinos-terrosos-para-championes-y-vegetales-de-raz">Vinos Terrosos para Champiñones y Vegetales de Raíz</h3>
+<p><strong>Los platos con champiñones, trufas o vegetales de raíz a menudo combinan a la perfección con vinos terrosos como Pinot Noir o un Merlot de cuerpo medio.</strong> Las notas sabrosas y umami de estas verduras encuentran una armonía congruente con los complejos aromas de estos tintos.</p>
+
+<h3 id="blancos-aromticos-para-platos-verdes-y-herbceos">Blancos Aromáticos para Platos Verdes y Herbáceos</h3>
+<p><strong>Los platos frescos, verdes y herbáceos, como ensaladas con vinagreta o pasta al pesto, prosperan con vinos blancos aromáticos y vibrantes.</strong> Sauvignon Blanc, Grüner Veltliner o un Vermentino pueden complementar los sabores brillantes sin abrumarlos.</p>
+
+</section><section id="dominando-el-maridaje-de-vinos-para-comida-picante"><h2 id="dominando-el-maridaje-de-vinos-para-comida-picante">Dominando el Maridaje de Vinos para Comida Picante</h2>
+<p><strong>El secreto para maridar vino con comida picante reside en contrarrestar el picor y realzar los sabores sin intensificar la sensación de quemazón.</strong> Evita los vinos con alto contenido de alcohol y taninos, que pueden hacer que los platos picantes sepan más ásperos.</p>
+
+<h3 id="dulzor-y-acidez-para-calmar-el-picor">Dulzor y Acidez para Calmar el Picor</h3>
+<p><strong>Los vinos con un toque de dulzor residual y buena acidez, como un Riesling semiseco o un Gewürztraminer, son ideales para platos picantes.</strong> El dulzor calma el picor, mientras que la acidez proporciona un toque refrescante. Los vinos espumosos también funcionan maravillosamente.</p>
+
+<h3 id="blancos-aromticos-y-tintos-ligeros-para-el-picante">Blancos Aromáticos y Tintos Ligeros para el Picante</h3>
+<p><strong>Más allá de los vinos dulces, los blancos aromáticos como el Torrontés o un Rosado seco pueden soportar un picante moderado.</strong> Para platos de carne más picantes, un tinto ligero y afrutado como un Beaujolais también puede ser un maridaje sorprendentemente bueno.</p>
+
+<blockquote>
+<p>"Wine makes every meal an occasion, every table more elegant, every day more civilized." — André Simon</p>
+</blockquote>
+
+</section><section id="finales-dulces-maridaje-de-vino-con-postres"><h2 id="finales-dulces-maridaje-de-vino-con-postres">Finales Dulces: Maridaje de Vino con Postres</h2>
+<p><strong>Maridar vino con postre requiere que el vino sea más dulce que el propio plato, o sabrá amargo.</strong> Esta es una regla crucial para un maridaje dulce armonioso.</p>
+
+<h3 id="coincidencia-de-niveles-de-dulzor">Coincidencia de Niveles de Dulzor</h3>
+<p><strong>Opta por vinos de postre como Sauternes con tartas de frutas, Oporto con postres a base de chocolate, o un Vino de Hielo con preparaciones más ligeras y afrutadas.</strong> La intensidad y el dulzor deben estar en equilibrio.</p>
+
+<h3 id="sabores-complementarios-para-vinos-de-postre">Sabores Complementarios para Vinos de Postre</h3>
+<p><strong>Más allá del dulzor, busca sabores complementarios.</strong> Un Oporto Tawny con notas de nuez marida maravillosamente con postres de almendras, mientras que el dulzor burbujeante y las notas de melocotón de un Moscato d'Asti realzan una sencilla panna cotta o frutos rojos frescos.</p>
+
+<figure><img src="best-wine-pairing-guide-2026-img-2.png" alt="Copa de Sauternes con una tarta de frutas sobre una mesa" /><figcaption>Los vinos de postre, como el Sauternes, ofrecen un cierre perfecto para una comida, especialmente con platos dulces complementarios.</figcaption></figure>
+
+</section><section id="existe-un-mtodo-paso-a-paso-para-un-maridaje-de-vinos-exitoso"><h2 id="existe-un-mtodo-paso-a-paso-para-un-maridaje-de-vinos-exitoso">¿Existe un Método Paso a Paso para un Maridaje de Vinos Exitoso?</h2>
+<p><strong>Sí, un enfoque estructurado puede guiarte hacia maridajes de vinos consistentemente exitosos.</strong> Al considerar algunos factores clave, puedes ganar confianza en tus elecciones.</p>
+
+<h3 id="una-gua-prctica-para-crear-tus-propios-maridajes">Una Guía Práctica para Crear Tus Propios Maridajes</h3>
+<p><strong>Sigue estos pasos para elegir el mejor vino para tu comida:</strong></p>
+<ol>
+  <li><strong>Identifica el Ingrediente Principal del Plato:</strong> ¿Es carne roja, pescado, aves o verduras? Esto establece la dirección inicial (tinto, blanco o rosado).</li>
+  <li><strong>Evalúa el Perfil de Sabor Dominante:</strong> ¿Es rico, delicado, picante, ácido, salado, dulce o terroso?</li>
+  <li><strong>Considera el Método de Cocción y la Salsa:</strong> Un plato a la parrilla exige un vino diferente que uno con salsa cremosa. Las salsas a menudo dictan el maridaje más que la propia proteína.</li>
+  <li><strong>Combina Peso e Intensidad:</strong> Comida ligera, vino ligero; comida pesada, vino pesado.</li>
+  <li><strong>Busca Sabores Complementarios o Congruentes:</strong> ¿El vino contrasta o refleja las notas principales de la comida?</li>
+  <li><strong>Prueba y Ajusta:</strong> ¡No tengas miedo de experimentar! Tu paladar es la guía definitiva.</li>
+</ol>
+
+<h3 id="confa-en-tu-paladar-y-experimenta">Confía en Tu Paladar y Experimenta</h3>
+<p><strong>Si bien las guías son útiles, la regla más importante es beber lo que disfrutas con lo que comes.</strong> La experimentación es parte de la diversión, y a veces los maridajes más inesperados producen los resultados más deliciosos. Nuestra guía completa sobre <a href="/blog/mastering-the-wine-journey-2026.html">dominando el viaje del vino en 2026</a> ofrece más información.</p>
+
+</section><section id="elevando-tu-cena-cocina-global-y-vino"><h2 id="elevando-tu-cena-cocina-global-y-vino">Elevando Tu Cena: Cocina Global y Vino</h2>
+<p><strong>Comprender los orígenes de una cocina y sus ingredientes básicos puede abrir fantásticas oportunidades de maridaje de vinos.</strong> Diferentes regiones a menudo producen vinos que complementan naturalmente sus platos locales.</p>
+
+<h3 id="influencias-italianas-y-mediterrneas">Influencias Italianas y Mediterráneas</h3>
+<p><strong>Los vinos italianos están intrínsecamente diseñados para maridar con la comida italiana, a menudo presentando una alta acidez para cortar las ricas salsas de tomate y el aceite de oliva.</strong> Un Sangiovese (Chianti) con pasta, o un Vermentino con mariscos, ejemplifica esta sinergia natural. Para los amantes de la pizza, una Barbera o un Valpolicella suelen ser una combinación perfecta, como se explora en nuestra guía sobre el <a href="/blog/best-wine-pizza-pairing-2026.html">mejor maridaje de vino y pizza en 2026</a>.</p>
+
+<h3 id="sabores-asiticos-y-combinaciones-inesperadas">Sabores Asiáticos y Combinaciones Inesperadas</h3>
+<p><strong>Las cocinas asiáticas, con sus complejos perfiles dulces, ácidos, salados y umami, pueden ser desafiantes pero gratificantes de maridar.</strong> Los Rieslings semisecos, Gewürztraminers, o incluso los vinos espumosos crujientes a menudo sobresalen, proporcionando un contrapunto refrescante a los sabores vibrantes.</p>
+
+<figure><img src="best-wine-pairing-guide-2026-img-3.png" alt="Variedad de platos asiáticos con una botella de Riesling" /><figcaption>Los vinos blancos aromáticos son a menudo excelentes opciones para los diversos y complejos sabores de la cocina asiática.</figcaption></figure>
+
+</section><section id="cules-son-los-errores-comunes-de-maridaje-de-vinos-a-evitar"><h2 id="cules-son-los-errores-comunes-de-maridaje-de-vinos-a-evitar">¿Cuáles Son los Errores Comunes de Maridaje de Vinos a Evitar?</h2>
+<p><strong>Evitar errores comunes puede mejorar significativamente el éxito y el disfrute de tu maridaje de vinos.</strong> Estos errores a menudo provienen de reglas rígidas o de pasar por alto características clave de la comida o el vino.</p>
+
+<h3 id="dominar-platos-delicados">Dominar Platos Delicados</h3>
+<p><strong>Un error común es maridar un vino tinto audaz y con muchos taninos con platos delicados como pescado blanco o ensaladas ligeras.</strong> El vino dominará por completo, haciendo que la comida sepa insípida o metálica. Siempre combina la intensidad.</p>
+
+<h3 id="ignorar-la-acidez-y-los-taninos">Ignorar la Acidez y los Taninos</h3>
+<p><strong>No considerar los niveles de acidez o taninos de un vino puede llevar a maridajes desastrosos.</strong> Los vinos con muchos taninos combinados con alimentos muy ácidos pueden crear un sabor amargo desagradable. Por el contrario, los vinos de alta acidez son esenciales para cortar alimentos grasos o aceitosos.</p>
+
+<p>Esta tabla resume las consideraciones clave de maridaje:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Característica del Alimento</th>
+      <th>Característica Ideal del Vino</th>
+      <th>Ejemplo de Maridaje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alto en Grasa / Rico</td>
+      <td>Alta Acidez / Tanino</td>
+      <td>Cabernet Sauvignon con Bistec</td>
+    </tr>
+    <tr>
+      <td>Delicado / Ligero</td>
+      <td>Cuerpo Ligero / Alta Acidez</td>
+      <td>Pinot Grigio con Pescado Blanco</td>
+    </tr>
+    <tr>
+      <td>Picante</td>
+      <td>Semiseco / Bajo Alcohol</td>
+      <td>Riesling con Curry Tailandés</td>
+    </tr>
+    <tr>
+      <td>Terroso / Umami</td>
+      <td>Tinto Terroso / Afrutado</td>
+      <td>Pinot Noir con Risotto de Champiñones</td>
+    </tr>
+    <tr>
+      <td>Dulce</td>
+      <td>Más Dulce que el Plato</td>
+      <td>Sauternes con Tarta de Frutas</td>
+    </tr>
+  </tbody>
+</table></section>
+            </div>
+
+            <div class="share-section">
+                <span class="share-label">Share this article</span>
+                <div class="share-group">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yas.wine/blog/best-wine-pairing-guide-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yas.wine/blog/best-wine-pairing-guide-2026.html&text=Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato"
+                        target="_blank" class="share-icon-btn" title="Share on X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yas.wine/blog/best-wine-pairing-guide-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato%20https://yas.wine/blog/best-wine-pairing-guide-2026.html"
+                        target="_blank" class="share-icon-btn" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.038.37.281.133.319.454 1.107.493 1.187.039.079.065.172.013.277-.052.106-.078.172-.155.263-.077.091-.162.203-.231.273-.078.079-.16.166-.069.324.091.158.401.662.862 1.071.593.527 1.091.689 1.248.767.158.078.252.065.346-.04.094-.105.403-.468.513-.626.11-.158.216-.132.364-.077s.941.443 1.103.523c.163.079.271.119.311.186.039.066.039.382-.105.787zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/share/url?url=https://yas.wine/blog/best-wine-pairing-guide-2026.html&text=Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato"
+                        target="_blank" class="share-icon-btn" title="Share on Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.5 4.42-1.76 4.92-1.77.11 0 .36.03.52.16.13.11.17.26.19.37.02.04.02.13.01.18z" />
+                        </svg>
+                    </a>
+                    <div class="share-icon-btn" onclick="copyUrl()" title="Copy Link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12v-2zm3 4h-9c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-9v-14h9v14z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function copyUrl() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            </script>
+
+            
+
+        </article>
+    </main>
+
+    <footer>
+    <p>© 2026 YAS Wine. All rights reserved.</p>
+    <div style="margin-top:15px">
+      <a href="/policy/terms/">Terms of Service</a> |
+      <a href="/policy/privacy/">Privacy Policy</a> |
+      <a href="/policy/refund/">Refund Policy</a>
+    </div>
+  </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
+        });
+    </script>
+
+    <script>
+function ensureTocBox() {
+            const root = document.querySelector('.post-content');
+            if (!root) return;
+            const h2s = Array.from(root.querySelectorAll('h2[id]'));
+            if (!h2s.length) return;
+
+            const old = root.querySelector('.toc-box');
+            if (old) old.remove();
+
+            const aside = document.createElement('aside');
+            aside.className = 'toc-box';
+            aside.setAttribute('aria-label', 'Table of contents');
+            const t = document.createElement('div');
+            t.className = 'toc-title';
+            t.textContent = 'On this page';
+            const ul = document.createElement('ul');
+            ul.className = 'toc-items';
+
+            h2s.forEach((h2, idx) => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#' + h2.id;
+                a.textContent = h2.textContent.trim();
+                li.appendChild(a);
+
+                const nxt = h2s[idx+1];
+                const sub = [];
+                let el = h2.nextElementSibling;
+                while (el && el !== nxt) {
+                    if (el.tagName === 'H3' && el.id) sub.push(el);
+                    el = el.nextElementSibling;
+                }
+                if (sub.length) {
+                    const ul2 = document.createElement('ul');
+                    ul2.className = 'toc-h3';
+                    sub.slice(0,3).forEach(h3 => {
+                        const li2 = document.createElement('li');
+                        const a2 = document.createElement('a');
+                        a2.href = '#' + h3.id;
+                        a2.textContent = h3.textContent.trim();
+                        li2.appendChild(a2);
+                        ul2.appendChild(li2);
+                    });
+                    li.appendChild(ul2);
+                }
+                ul.appendChild(li);
+            });
+
+            aside.appendChild(t);
+            aside.appendChild(ul);
+            const crumbs = root.querySelector('.breadcrumbs');
+            if (crumbs && crumbs.parentNode === root) crumbs.insertAdjacentElement('afterend', aside);
+            else root.prepend(aside);
+        }
+        document.addEventListener('DOMContentLoaded', ensureTocBox);
+    </script>
+
+<script src="https://api.yas.wine/assistant.js?v=2"></script>
+<script defer src="/shared/layout.js?v=20260218-3"></script>
+<script defer="defer" src="/i18n-switcher.js?v=20260218-1"></script>
+</body>
+
+</html>

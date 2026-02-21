@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-21T11:38:52+00:00",
+  "updatedAt": "2026-02-21T11:50:29+00:00",
   "posts": [
+    {
+      "href": "/blog/best-wine-pairing-guide-2026.html",
+      "image": "/blog/best-wine-pairing-guide-2026-hero.png",
+      "category": "Food Pairing",
+      "title": "Best Wine Pairing Guide 2026: Choose the Right Wine for Each Dish",
+      "description": "Unlock perfect wine and food pairings in 2026 with this expert guide. Discover principles, specific recommendations, and avoid common mistakes for every meal."
+    },
     {
       "href": "/blog/wine-pairing-matrix-automation-2026.html",
       "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",

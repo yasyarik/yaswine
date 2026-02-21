@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-21T11:39:53+00:00",
+  "updatedAt": "2026-02-21T11:51:20+00:00",
   "posts": [
+    {
+      "href": "/ru/blog/best-wine-pairing-guide-2026.html",
+      "image": "/blog/best-wine-pairing-guide-2026-hero.png",
+      "category": "Подбор еды и вина",
+      "title": "Лучшее руководство по подбору вина 2026: Как выбрать идеальное вино к каждому блюду",
+      "description": "Откройте для себя идеальные сочетания вина и еды в 2026 году с помощью этого экспертного руководства. Изучите принципы, конкретные рекомендации и избегайте распростран..."
+    },
     {
       "href": "/ru/blog/wine-pairing-matrix-automation-2026.html",
       "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",

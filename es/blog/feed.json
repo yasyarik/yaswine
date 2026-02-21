@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-21T11:40:41+00:00",
+  "updatedAt": "2026-02-21T11:52:08+00:00",
   "posts": [
+    {
+      "href": "/es/blog/best-wine-pairing-guide-2026.html",
+      "image": "/blog/best-wine-pairing-guide-2026-hero.png",
+      "category": "Maridaje",
+      "title": "Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato",
+      "description": "Descubre maridajes perfectos de vino y comida en 2026 con esta guía experta. Aprende principios, recomendaciones específicas y evita errores comunes para cada comida."
+    },
     {
       "href": "/es/blog/wine-pairing-matrix-automation-2026.html",
       "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",

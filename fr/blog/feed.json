@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-21T11:42:25+00:00",
+  "updatedAt": "2026-02-21T11:53:56+00:00",
   "posts": [
+    {
+      "href": "/fr/blog/best-wine-pairing-guide-2026.html",
+      "image": "/blog/best-wine-pairing-guide-2026-hero.png",
+      "category": "Accords mets-vins",
+      "title": "Meilleur Guide d'Accords Mets-Vins 2026 : Choisissez le Bon Vin pour Chaque Plat",
+      "description": "Découvrez les accords mets-vins parfaits en 2026 grâce à ce guide expert. Découvrez les principes, des recommandations spécifiques et évitez les erreurs courantes pour..."
+    },
     {
       "href": "/fr/blog/wine-pairing-matrix-automation-2026.html",
       "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
