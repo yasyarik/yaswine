@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-02-21T11:52:08+00:00",
+  "updatedAt": "2026-02-21T14:03:50+00:00",
   "posts": [
+    {
+      "href": "/es/blog/best-wineries-portugal-2026.html",
+      "image": "/blog/best-wineries-portugal-2026-hero.png",
+      "category": "Bodegas y viajes",
+      "title": "Las Mejores Bodegas de Portugal 2026: Guía Experta de Viñedos Icónicos y Catas",
+      "description": "Descubre las mejores bodegas de Portugal para 2026, desde el majestuoso Valle del Douro hasta el soleado Alentejo. Explora viñedos destacados, degusta vinos únicos y p..."
+    },
     {
       "href": "/es/blog/best-wine-pairing-guide-2026.html",
       "image": "/blog/best-wine-pairing-guide-2026-hero.png",
       "category": "Maridaje",
       "title": "Guía Definitiva de Maridaje de Vinos 2026: Elige el Vino Perfecto para Cada Plato",
       "description": "Descubre maridajes perfectos de vino y comida en 2026 con esta guía experta. Aprende principios, recomendaciones específicas y evita errores comunes para cada comida."
-    },
-    {
-      "href": "/es/blog/wine-pairing-matrix-automation-2026.html",
-      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
-      "category": "Maridaje",
-      "title": "Mejor Guía de Maridaje de Vinos 2026: Elige el Vino Adecuado para Cada Plato con IA",
-      "description": "Descubre maridajes perfectos de vino y comida en 2026 con una matriz automatizada. Explora los conocimientos impulsados por la IA, el análisis de datos y el futuro de..."
     },
     {
       "href": "/es/blog/bordeaux-wine-travel-itinerary-2026.html",

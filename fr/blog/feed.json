@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-02-21T11:53:56+00:00",
+  "updatedAt": "2026-02-21T14:06:34+00:00",
   "posts": [
+    {
+      "href": "/fr/blog/best-wineries-portugal-2026.html",
+      "image": "/blog/best-wineries-portugal-2026-hero.png",
+      "category": "Domaines & voyages",
+      "title": "Meilleurs Domaines Viticoles du Portugal 2026 : Le Guide d'un Expert des Vignobles & Dégustations Emblématiques",
+      "description": "Découvrez les meilleurs domaines viticoles du Portugal pour 2026, de la majestueuse vallée du Douro à l'Alentejo ensoleillé. Explorez les vignobles d'exception, dégust..."
+    },
     {
       "href": "/fr/blog/best-wine-pairing-guide-2026.html",
       "image": "/blog/best-wine-pairing-guide-2026-hero.png",
       "category": "Accords mets-vins",
       "title": "Meilleur Guide d'Accords Mets-Vins 2026 : Choisissez le Bon Vin pour Chaque Plat",
       "description": "Découvrez les accords mets-vins parfaits en 2026 grâce à ce guide expert. Découvrez les principes, des recommandations spécifiques et évitez les erreurs courantes pour..."
-    },
-    {
-      "href": "/fr/blog/wine-pairing-matrix-automation-2026.html",
-      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
-      "category": "Accords mets-vins",
-      "title": "Meilleur Guide d'Accords Mets & Vins 2026 : Choisissez le Bon Vin pour Chaque Plat avec l'IA",
-      "description": "Débloquez les accords mets et vins parfaits en 2026 grâce à une matrice automatisée. Explorez les aperçus basés sur l'IA, l'analyse de données et l'avenir des recomman..."
     },
     {
       "href": "/fr/blog/bordeaux-wine-travel-itinerary-2026.html",

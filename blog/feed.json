@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-21T11:50:29+00:00",
+  "updatedAt": "2026-02-21T14:00:14+00:00",
   "posts": [
+    {
+      "href": "/blog/best-wineries-portugal-2026.html",
+      "image": "/blog/best-wineries-portugal-2026-hero.png",
+      "category": "Wineries & Travel",
+      "title": "Best Wineries in Portugal 2026: An Expert's Guide to Iconic Vineyards & Tastings",
+      "description": "Discover the best wineries in Portugal for 2026, from the majestic Douro Valley to sun-drenched Alentejo. Explore top vineyards, taste unique wines, and plan"
+    },
     {
       "href": "/blog/best-wine-pairing-guide-2026.html",
       "image": "/blog/best-wine-pairing-guide-2026-hero.png",
@@ -9,25 +16,11 @@
       "description": "Unlock perfect wine and food pairings in 2026 with this expert guide. Discover principles, specific recommendations, and avoid common mistakes for every meal."
     },
     {
-      "href": "/blog/wine-pairing-matrix-automation-2026.html",
-      "image": "/blog/wine-pairing-matrix-automation-2026-hero.png",
-      "category": "Food Pairing",
-      "title": "Best Wine Pairing Guide 2026: Choose the Right Wine for Each Dish with AI",
-      "description": "Unlock perfect wine and food pairings in 2026 with an automated matrix. Explore AI-driven insights, data analysis, and the future of sommelier recommendations"
-    },
-    {
       "href": "/blog/bordeaux-wine-travel-itinerary-2026.html",
       "image": "/blog/bordeaux-wine-travel-itinerary-2026-hero.png",
       "category": "Wineries & Travel",
       "title": "Bordeaux Wine Travel Itinerary 2026: Wineries, Tastings & Budget Guide",
       "description": "Plan your ultimate Bordeaux wine travel itinerary for 2026. Discover top wineries, essential tastings, budget tips, and a detailed route for an unforgettable"
-    },
-    {
-      "href": "/blog/best-wineries-portugal-2026.html",
-      "image": "/blog/best-wineries-portugal-2026-hero.png",
-      "category": "Wineries & Travel",
-      "title": "Best Wineries in Portugal 2026: An Expert's Guide to Iconic Vineyards & Tastings",
-      "description": "Discover the best wineries in Portugal for 2026, from the majestic Douro Valley to sun-drenched Alentejo. Explore top vineyards, taste unique wines, and plan"
     },
     {
       "href": "/blog/mastering-the-wine-journey-2026.html",

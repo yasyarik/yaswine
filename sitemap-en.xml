@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">  <url>
-    <loc>https://yas.wine/blog/wine-pairing-matrix-automation-2026.html</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
     <loc>https://yas.wine/blog/bordeaux-wine-travel-itinerary-2026.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -13,6 +7,12 @@
   </url>
   <url>
     <loc>https://yas.wine/blog/best-wine-pairing-guide-2026.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yas.wine/blog/best-wineries-portugal-2026.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
