@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-22T07:06:03+00:00",
+  "updatedAt": "2026-02-22T14:07:39+00:00",
   "posts": [
+    {
+      "href": "/fr/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine.html",
+      "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.png",
+      "category": "Domaines & voyages",
+      "title": "Décrypter la bouteille à 40 000 $ : Un voyage dans le vin de grand luxe et sa valeur en 2026",
+      "description": "Explorez ce qui fait qu'un vin atteint un prix de 40 000 $, en plongeant dans la rareté, la provenance, la réputation du producteur et l'expérience ultime du vin de luxe."
+    },
     {
       "href": "/fr/blog/wine-calories-by-type-2026.html",
       "image": "/blog/wine-calories-by-type-2026-hero.png",

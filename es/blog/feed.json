@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-22T07:04:04+00:00",
+  "updatedAt": "2026-02-22T14:05:30+00:00",
   "posts": [
+    {
+      "href": "/es/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine.html",
+      "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.png",
+      "category": "Bodegas y viajes",
+      "title": "Decodificando la Botella de $40,000: Un Viaje al Vino Ultra-Lujoso y el Valor en 2026",
+      "description": "Descubre qué hace que un vino tenga un precio de $40,000, profundizando en la rareza, procedencia, reputación del productor y la máxima experiencia de vino de lujo: an..."
+    },
     {
       "href": "/es/blog/wine-calories-by-type-2026.html",
       "image": "/blog/wine-calories-by-type-2026-hero.png",
