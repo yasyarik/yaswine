@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-22T14:03:41+00:00",
+  "updatedAt": "2026-02-22T20:01:21+00:00",
   "posts": [
+    {
+      "href": "/blog/aged-like-a-fine-fine-wine.html",
+      "image": "/blog/aged-like-a-fine-fine-wine-hero.png",
+      "category": "Wineries & Travel",
+      "title": "Aged Like a Fine Wine: Unlocking Longevity and Value in 2026",
+      "description": "Discover what it means for wine to age well in 2026, exploring age-worthy grapes, ideal storage, and how to truly appreciate mature vintages. Expert guide."
+    },
     {
       "href": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine.html",
       "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.png",

@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-22T14:07:39+00:00",
+  "updatedAt": "2026-02-22T20:05:44+00:00",
   "posts": [
+    {
+      "href": "/fr/blog/aged-like-a-fine-fine-wine.html",
+      "image": "/blog/aged-like-a-fine-fine-wine-hero.png",
+      "category": "Domaines & voyages",
+      "title": "Vieilli comme un grand vin : Dévoiler la longévité et la valeur en 2026",
+      "description": "Découvrez ce que signifie pour un vin bien vieillir en 2026, en explorant les cépages de garde, la conservation idéale et comment apprécier véritablement les millésime..."
+    },
     {
       "href": "/fr/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine.html",
       "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.png",

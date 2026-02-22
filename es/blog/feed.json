@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-22T14:05:30+00:00",
+  "updatedAt": "2026-02-22T20:03:33+00:00",
   "posts": [
+    {
+      "href": "/es/blog/aged-like-a-fine-fine-wine.html",
+      "image": "/blog/aged-like-a-fine-fine-wine-hero.png",
+      "category": "Bodegas y viajes",
+      "title": "Envejecido como un buen vino: Desvelando la longevidad y el valor en 2026",
+      "description": "Descubre lo que significa para un vino envejecer bien en 2026, explorando uvas con potencial de guarda, almacenamiento ideal y cómo apreciar verdaderamente las cosecha..."
+    },
     {
       "href": "/es/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine.html",
       "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.png",

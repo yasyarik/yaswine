@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-02-22T14:04:13+00:00",
+  "updatedAt": "2026-02-22T20:02:29+00:00",
   "posts": [
+    {
+      "href": "/ru/blog/aged-like-a-fine-fine-wine.html",
+      "image": "/blog/aged-like-a-fine-fine-wine-hero.png",
+      "category": "Винодельни и путешествия",
+      "title": "Выдержанный как благородное вино: раскрывая долговечность и ценность в 2026 году",
+      "description": "Узнайте, что значит для вина хорошо стареть в 2026 году, исследуя сорта винограда, пригодные для выдержки, идеальное хранение и как по-настоящему ценить зрелые урожаи...."
+    },
     {
       "href": "/ru/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine.html",
       "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.png",
