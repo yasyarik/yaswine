@@ -186,29 +186,78 @@
     footer a{color:var(--dim);text-decoration:none;margin:0 10px}
 
     @media (max-width:1280px){.uc-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
-    @media (max-width:1120px){.hero-wrap{grid-template-columns:0.6fr 1fr;min-height:214px}.uc-card h3{font-size:15px}.uc-card p{font-size:12px;min-height:64px}.cat-icon{width:52px;height:52px;padding:10px}}
-    @media (max-width:900px){.uc-grid{grid-template-columns:repeat(2,1fr)}.pairing-layout{grid-template-columns:1fr}.pairing-left{position:static}.pairing-grid{grid-template-columns:1fr 1fr}.route-layout{grid-template-columns:1fr;min-height:unset}.route-map,.route-info{height:auto;min-height:420px}.pulse-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:740px){.uc-grid{grid-template-columns:1fr}.logo-img{height:52px}.nav-links{gap:14px}.blog-carousel{grid-auto-columns:minmax(280px,1fr)}.hero-thumb{flex-basis:100%}.blog-card{height:500px}#prev,#next{display:none}.dish-grid{grid-template-columns:1fr}.pairing-grid,.pulse-grid{grid-template-columns:1fr}}
+    @media (max-width:1120px){
+      .hero{min-height:auto;padding:108px 0 26px}
+      .hero-wrap{grid-template-columns:1fr;gap:16px;align-items:start}
+      .hero-art{min-height:0;padding:10px}
+      .hero-thumb{aspect-ratio:1/1}
+      .hero h1{font-size:clamp(30px,7vw,44px)}
+      .hero p{font-size:16px}
+      .uc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .uc-card h3{font-size:15px}
+      .uc-card p{font-size:12px;min-height:52px}
+      .cat-icon{width:52px;height:52px;padding:10px}
+
+      /* Tablet adaptation for Food-to-Wine Pairing Lab */
+      .pairing-layout{grid-template-columns:1fr;gap:12px}
+      .pairing-left{position:static;top:auto}
+      .dish-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .pairing-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .pair-card{min-height:350px}
+      .pair-img{height:220px}
+    }
+    @media (max-width:900px){
+      .uc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .pairing-layout{grid-template-columns:1fr}
+      .pairing-left{position:static}
+      .pairing-grid{grid-template-columns:1fr 1fr}
+      .route-layout{grid-template-columns:1fr;min-height:unset}
+      .route-map,.route-info{height:auto;min-height:420px}
+      .pulse-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:740px){
+      .logo-img{height:52px}
+      .nav-links{gap:12px}
+      .hero{padding-top:98px}
+      .hero-wrap{grid-template-columns:1fr;gap:14px}
+      .hero-art{border-radius:16px;padding:8px}
+      .hero-nav{width:36px;height:36px}
+      .uc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .uc-card{min-height:176px;padding:14px 10px;border-radius:14px}
+      .cat-icon{width:46px;height:46px;padding:8px;margin-bottom:8px}
+      .uc-card h3{font-size:14px;margin-bottom:5px}
+      .uc-card p{font-size:11px;line-height:1.35;min-height:44px}
+      .uc-card span{font-size:12px;margin-top:8px}
+      .blog-carousel{grid-auto-columns:minmax(280px,1fr)}
+      .hero-thumb{flex-basis:100%}
+      .blog-card{height:500px}
+      #prev,#next{display:none}
+      .dish-grid{grid-template-columns:1fr}
+      .pairing-grid,.pulse-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:480px){
+      .uc-grid{grid-template-columns:1fr}
+      .hero h1{font-size:30px}
+      .hero p{font-size:15px}
+    }
   </style>
 <style id="site-theme-override">
 :root {
   --bg-dark: #12070c;
-  --bg-gradient: linear-gradient(135deg, #12070c 0%, #2a0d16 50%, #4f1424 100%);
-  --accent: #b63a5a;
-  --accent-hover: #962f49;
-  --glass-bg: rgba(255,255,255,.035);
-  --glass-border: rgba(255,255,255,.12);
-  --text: #f4edf0;
-  --dim: #cfbec5;
+  --bg-gradient: linear-gradient(135deg, #0c0508 0%, #12070c 50%, #463e41 100%);
 }
 body { background: var(--bg-dark) !important; }
 .fixed-bg { background: var(--bg-gradient) !important; }
 .fixed-bg:before {
   background:
-    radial-gradient(circle at 18% 26%, rgba(144,22,56,.45) 0%, transparent 36%),
-    radial-gradient(circle at 82% 16%, rgba(188,88,116,.28) 0%, transparent 40%),
-    radial-gradient(circle at 50% 76%, rgba(92,16,37,.42) 0%, transparent 42%) !important;
+    radial-gradient(circle at 18% 26%, rgba(113,16,57,0.45) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(90,15,33,0.28) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(71,12,31,0.42) 0%, transparent 42%) !important;
+  background-size: 220% 220% !important;
+  animation: shift 16s ease infinite !important;
+  will-change: background-position;
 }
+@keyframes shift {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 </style>
 
 <link rel="alternate" hreflang="en" href="https://yas.wine/">
@@ -272,54 +321,10 @@ body { background: var(--bg-dark) !important; }
     <div id="categoryRowsFoodPairing"></div>
   </section>
 
-    <section class="section container" id="pairingLabSection">
-    <h2>Food-to-Wine Pairing Lab</h2>
-    <p class="lead">Interactive pairing constructor: pick a dish and profile to get practical wine matches in seconds.</p>
-    <div class="pairing-layout">
-      <aside class="pairing-left">
-        <p class="pairing-seo">This interactive food pairing tool helps users choose wine by dish type, intensity, and flavor balance, improving dining decisions with practical, sommelier-style guidance.</p>
-        <div class="dish-grid" id="dishGrid"></div>
-        <div class="pairing-note" id="pairingNote"></div>
-        <div class="style-tabs" id="styleTabs">
-          <button type="button" class="style-tab active" data-style="balanced">Balanced</button>
-          <button type="button" class="style-tab" data-style="fresh">Fresh & Light</button>
-          <button type="button" class="style-tab" data-style="rich">Rich & Bold</button>
-        </div>
-      </aside>
-      <div class="pairing-right">
-        <div class="pairing-grid" id="pairingGrid"></div>
-      </div>
-    </div>
-  </section>
-
   <section class="section container" id="catWineriesTravel">
     <h2>Wineries &amp; Travel</h2>
     <p class="lead">Latest posts in Wineries &amp; Travel.</p>
     <div id="categoryRowsWineriesTravel"></div>
-  </section>
-
-  <section class="section container" id="routesSection">
-    <h2>Winery Route Maps</h2>
-    <p class="lead">Real travel routes through iconic wine regions with stop-by-stop plans.</p>
-    <div class="route-layout">
-      <div class="route-info" id="routeInfo">
-        <h3>Route Details</h3>
-        <div class="route-list" id="routeList"></div>
-        <h3 id="routeTitle">Route</h3>
-        <p id="routeDuration"></p>
-        <ol id="routeStops"></ol>
-        <button id="routeShowMap" class="btn btn-primary" type="button">Show map here</button>
-        <div class="route-embed" id="routeEmbed">
-          <div class="route-embed-actions">
-            <button id="routeShare" class="btn" type="button">Share</button>
-            <button id="routeSendPhone" class="btn" type="button">Send to phone</button>
-            <button id="routeOpenNew" class="btn" type="button">Open in new tab</button>
-          </div>
-          <iframe id="routeFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src=""></iframe>
-        </div>
-      </div>
-      <a class="route-map" id="routeMap" href="#" target="_blank" rel="noopener"></a>
-    </div>
   </section>
 
   <section class="section container" id="catWineRegions">
@@ -397,7 +402,9 @@ body { background: var(--bg-dark) !important; }
     }
     function optimizedImg(img){
       const v = String(img || "");
-      if (/^\/blog\/.*-img-1\.png$/i.test(v)) return v.replace(/\.png$/i, ".webp");
+      if (/^\/blog\/.*\.(png|jpe?g)$/i.test(v)) {
+        return v.replace(/\.(png|jpe?g)$/i, ".webp");
+      }
       return v;
     }
     function card(p){

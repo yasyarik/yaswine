@@ -99,7 +99,7 @@ if key:
         print('[warn] logo generation failed:', e)
 
     try:
-        hero = gen(f"Cinematic 16:9 hero banner for blog about {topic}. No text, no watermark, editorial quality.")
+        hero = gen(f"Square 1:1 hero image for blog about {topic}. No text, no watermark, editorial quality.")
         (root / hero_file).write_bytes(hero)
         print('[ok] hero generated')
     except Exception as e:

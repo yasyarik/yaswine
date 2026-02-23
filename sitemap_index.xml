@@ -1,2 +1,10 @@
-<?xml version='1.0' encoding='utf-8'?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://yas.wine/sitemap.xml</loc><lastmod>2026-02-20</lastmod></sitemap><sitemap><loc>https://yas.wine/sitemap-ru.xml</loc><lastmod>2026-02-20</lastmod></sitemap><sitemap><loc>https://yas.wine/sitemap-es.xml</loc><lastmod>2026-02-20</lastmod></sitemap><sitemap><loc>https://yas.wine/sitemap-de.xml</loc><lastmod>2026-02-20</lastmod></sitemap><sitemap><loc>https://yas.wine/sitemap-fr.xml</loc><lastmod>2026-02-20</lastmod></sitemap></sitemapindex>
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://example.com/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://example.com/sitemap_blog.xml</loc></sitemap>
+  <sitemap><loc>https://example.com/sitemap-en.xml</loc></sitemap>
+  <sitemap><loc>https://example.com/sitemap-ru.xml</loc></sitemap>
+  <sitemap><loc>https://example.com/sitemap-es.xml</loc></sitemap>
+  <sitemap><loc>https://example.com/sitemap-de.xml</loc></sitemap>
+  <sitemap><loc>https://example.com/sitemap-fr.xml</loc></sitemap>
+</sitemapindex>

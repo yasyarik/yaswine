@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
     <loc>https://yas.wine/blog/bordeaux-wine-travel-itinerary-2026.html</loc>
     <lastmod>2026-02-21</lastmod>
@@ -55,6 +56,17 @@
   </url>
   <url>
     <loc>https://yas.wine/blog/wine-store-near-me-2026.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+=======
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://example.com/blog/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+>>>>>>> Stashed changes
+  <url>
+    <loc>https://airep24.com/blog/dubai-property-market-2026-yield-risks-strategy.html</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

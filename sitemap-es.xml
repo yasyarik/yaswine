@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://yas.wine/es/blog/aged-like-fine-wine-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/aged-like-fine-wine-guide-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/best-champagne-snacks-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/best-puglia-wines-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/best-wine-pairing-sushi-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/best-wine-pizza-pairing-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/best-wineries-italy-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/best-wineries-toscana-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/cava-wine-vs-prosecco-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/global-grape-map-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/grillo-grape-wine-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/how-to-buy-winery-italy-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/how-to-choose-red-wine-for-steak-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/how-to-choose-red-wine-glass-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/how-to-pair-pinot-noir-dinner-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/italy-wine-growing-regions-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/spanish-wine-regions-guide-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/tempranillo-grape-wine-guide-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/unveiling-wine-gems-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/what-is-chianti-classico.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/what-is-glera-grape-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/what-is-oldest-winery-spain-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/wine-country-gift-baskets-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/wine-gifts-for-her-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/wine-gifts-men-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/winery-bardoix-guide-2026.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://yas.wine/es/blog/winery-spain-architecture.html</loc><lastmod>2026-02-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url>
     <loc>https://yas.wine/es/blog/upcycling-wine-bottle-glass-2026.html</loc>
@@ -70,4 +71,23 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://airep24.com/es/blog/dubai-property-market-2026-yield-risks-strategy.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/es/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://example.com/es/blog/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://airep24.com/es/blog/dubai-property-market-2026-yield-risks-strategy.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+>>>>>>> Stashed changes
