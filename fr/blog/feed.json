@@ -1,58 +1,65 @@
 {
-  "updatedAt": "2026-02-22T20:05:44+00:00",
+  "updatedAt": "2026-02-23T07:05:38+00:00",
   "posts": [
     {
+      "href": "/fr/blog/drinking-wine-while-pregnant-understanding-risks-safe-alternatives-2026.html",
+      "image": "/blog/drinking-wine-while-pregnant-understanding-risks-safe-alternatives-2026-hero.png",
+      "category": "Domaines & voyages",
+      "title": "Boire du vin pendant la grossesse : Comprendre les risques et les alternatives sûres en 2026",
+      "description": "Découvrez les directives définitives concernant la consommation de vin pendant la grossesse en 2026. Explorez les risques, les alternatives non alcoolisées sûres et de..."
+    },
+    {
       "href": "/fr/blog/aged-like-a-fine-fine-wine.html",
-      "image": "/blog/aged-like-a-fine-fine-wine-hero.png",
+      "image": "/blog/aged-like-a-fine-fine-wine-hero.webp",
       "category": "Domaines & voyages",
       "title": "Vieilli comme un grand vin : Dévoiler la longévité et la valeur en 2026",
       "description": "Découvrez ce que signifie pour un vin bien vieillir en 2026, en explorant les cépages de garde, la conservation idéale et comment apprécier véritablement les millésime..."
     },
     {
       "href": "/fr/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine.html",
-      "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.png",
+      "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.webp",
       "category": "Domaines & voyages",
       "title": "Décrypter la bouteille à 40 000 $ : Un voyage dans le vin de grand luxe et sa valeur en 2026",
       "description": "Explorez ce qui fait qu'un vin atteint un prix de 40 000 $, en plongeant dans la rareté, la provenance, la réputation du producteur et l'expérience ultime du vin de luxe."
     },
     {
       "href": "/fr/blog/wine-calories-by-type-2026.html",
-      "image": "/blog/wine-calories-by-type-2026-hero.png",
+      "image": "/blog/wine-calories-by-type-2026-hero.webp",
       "category": "Cépages",
       "title": "Wine Calories by Type in 2026: Your Essential Guide to Low-Calorie Choices",
       "description": "Understand wine calories by type in 2026. This guide offers insights into reds, whites, sparkling, and rosé, helping you make informed, low-calorie wine choices"
     },
     {
       "href": "/fr/blog/wine-cooking-recipes-2026.html",
-      "image": "/blog/wine-cooking-recipes-2026-hero.png",
+      "image": "/blog/wine-cooking-recipes-2026-hero.webp",
       "category": "Accords mets-vins",
       "title": "Maîtriser la cuisine au vin : Recettes essentielles et principes d'accords pour 2026",
       "description": "Découvrez des recettes de cuisine au vin essentielles et des principes d'accords experts pour 2026. Améliorez vos compétences culinaires avec des conseils pour les sau..."
     },
     {
       "href": "/fr/blog/best-wine-starters-2026.html",
-      "image": "/blog/best-wine-starters-2026-hero.png",
+      "image": "/blog/best-wine-starters-2026-hero.webp",
       "category": "Accords mets-vins",
       "title": "Meilleurs amuse-bouches pour le vin en 2026 : Guide d'accords experts pour les apéritifs",
       "description": "Découvrez les meilleurs amuse-bouches pour le vin en 2026 grâce à notre guide d'accords experts. Apprenez à associer parfaitement les apéritifs avec différents vins po..."
     },
     {
       "href": "/fr/blog/best-wineries-portugal-2026.html",
-      "image": "/blog/best-wineries-portugal-2026-hero.png",
+      "image": "/blog/best-wineries-portugal-2026-hero.webp",
       "category": "Domaines & voyages",
       "title": "Meilleurs Domaines Viticoles du Portugal 2026 : Le Guide d'un Expert des Vignobles & Dégustations Emblématiques",
       "description": "Découvrez les meilleurs domaines viticoles du Portugal pour 2026, de la majestueuse vallée du Douro à l'Alentejo ensoleillé. Explorez les vignobles d'exception, dégust..."
     },
     {
       "href": "/fr/blog/best-wine-pairing-guide-2026.html",
-      "image": "/blog/best-wine-pairing-guide-2026-hero.png",
+      "image": "/blog/best-wine-pairing-guide-2026-hero.webp",
       "category": "Accords mets-vins",
       "title": "Meilleur Guide d'Accords Mets-Vins 2026 : Choisissez le Bon Vin pour Chaque Plat",
       "description": "Découvrez les accords mets-vins parfaits en 2026 grâce à ce guide expert. Découvrez les principes, des recommandations spécifiques et évitez les erreurs courantes pour..."
     },
     {
       "href": "/fr/blog/bordeaux-wine-travel-itinerary-2026.html",
-      "image": "/blog/bordeaux-wine-travel-itinerary-2026-hero.png",
+      "image": "/blog/bordeaux-wine-travel-itinerary-2026-hero.webp",
       "category": "Vignobles et Voyage",
       "title": "Itinéraire de Voyage Vinicole à Bordeaux 2026 : Vignobles, Dégustations et Guide Budgétaire",
       "description": "Planifiez votre itinéraire de voyage œnologique ultime à Bordeaux pour 2026. Découvrez les meilleurs vignobles, les dégustations incontournables, des conseils budgétai..."

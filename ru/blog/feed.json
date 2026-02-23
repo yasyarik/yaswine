@@ -1,58 +1,65 @@
 {
-  "updatedAt": "2026-02-22T20:02:29+00:00",
+  "updatedAt": "2026-02-23T07:03:05+00:00",
   "posts": [
     {
+      "href": "/ru/blog/drinking-wine-while-pregnant-understanding-risks-safe-alternatives-2026.html",
+      "image": "/blog/drinking-wine-while-pregnant-understanding-risks-safe-alternatives-2026-hero.png",
+      "category": "Винодельни и путешествия",
+      "title": "Употребление вина во время беременности: понимание рисков и безопасные альтернативы в 2026 году",
+      "description": "Ознакомьтесь с окончательными рекомендациями по употреблению вина во время беременности в 2026 году. Изучите риски, безопасные безалкогольные альтернативы и советы для..."
+    },
+    {
       "href": "/ru/blog/aged-like-a-fine-fine-wine.html",
-      "image": "/blog/aged-like-a-fine-fine-wine-hero.png",
+      "image": "/blog/aged-like-a-fine-fine-wine-hero.webp",
       "category": "Винодельни и путешествия",
       "title": "Выдержанный как благородное вино: раскрывая долговечность и ценность в 2026 году",
       "description": "Узнайте, что значит для вина хорошо стареть в 2026 году, исследуя сорта винограда, пригодные для выдержки, идеальное хранение и как по-настоящему ценить зрелые урожаи...."
     },
     {
       "href": "/ru/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine.html",
-      "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.png",
+      "image": "/blog/i-went-to-a-restaurant-that-had-a-40k-bottle-of-wine-hero.webp",
       "category": "Винодельни и путешествия",
       "title": "Расшифровывая бутылку за $40 000: Путешествие в мир ультра-роскошных вин и ценности в 2026 году",
       "description": "Узнайте, что делает вино стоимостью $40 000, углубляясь в его редкость, происхождение, репутацию производителя и незабываемый опыт употребления роскошного вина: answer..."
     },
     {
       "href": "/ru/blog/wine-calories-by-type-2026.html",
-      "image": "/blog/wine-calories-by-type-2026-hero.png",
+      "image": "/blog/wine-calories-by-type-2026-hero.webp",
       "category": "Сорта винограда",
       "title": "Калорийность вина по типам в 2026 году: Ваше основное руководство по выбору низкокалорийных вариантов",
       "description": "Узнайте о калорийности вина по типам в 2026 году. Это руководство предлагает информацию о красных, белых, игристых и розовых винах, помогая вам делать осознанный выбор..."
     },
     {
       "href": "/ru/blog/wine-cooking-recipes-2026.html",
-      "image": "/blog/wine-cooking-recipes-2026-hero.png",
+      "image": "/blog/wine-cooking-recipes-2026-hero.webp",
       "category": "Подбор еды и вина",
       "title": "Mastering Wine Cooking: Essential Recipes & Pairing Principles for 2026",
       "description": "Discover essential wine cooking recipes and expert pairing principles for 2026. Elevate your culinary skills with tips for sauces, braises, and desserts: answer"
     },
     {
       "href": "/ru/blog/best-wine-starters-2026.html",
-      "image": "/blog/best-wine-starters-2026-hero.png",
+      "image": "/blog/best-wine-starters-2026-hero.webp",
       "category": "Подбор еды и вина",
       "title": "Лучшие закуски к вину в 2026 году: Руководство эксперта по сочетаниям с аперитивами",
       "description": "Откройте для себя лучшие закуски к вину в 2026 году с нашим экспертным руководством по сочетаниям. Узнайте, как идеально подобрать аперитивы к различным винам, чтобы у..."
     },
     {
       "href": "/ru/blog/best-wineries-portugal-2026.html",
-      "image": "/blog/best-wineries-portugal-2026-hero.png",
+      "image": "/blog/best-wineries-portugal-2026-hero.webp",
       "category": "Винодельни и путешествия",
       "title": "Лучшие винодельни Португалии 2026: Путеводитель эксперта по знаковым виноградникам и дегустациям",
       "description": "Откройте для себя лучшие винодельни Португалии в 2026 году, от величественной долины Дору до залитого солнцем Алентежу. Исследуйте лучшие виноградники, попробуйте уник..."
     },
     {
       "href": "/ru/blog/best-wine-pairing-guide-2026.html",
-      "image": "/blog/best-wine-pairing-guide-2026-hero.png",
+      "image": "/blog/best-wine-pairing-guide-2026-hero.webp",
       "category": "Подбор еды и вина",
       "title": "Лучшее руководство по подбору вина 2026: Как выбрать идеальное вино к каждому блюду",
       "description": "Откройте для себя идеальные сочетания вина и еды в 2026 году с помощью этого экспертного руководства. Изучите принципы, конкретные рекомендации и избегайте распростран..."
     },
     {
       "href": "/ru/blog/bordeaux-wine-travel-itinerary-2026.html",
-      "image": "/blog/bordeaux-wine-travel-itinerary-2026-hero.png",
+      "image": "/blog/bordeaux-wine-travel-itinerary-2026-hero.webp",
       "category": "Винодельни и Путешествия",
       "title": "Винный маршрут по Бордо 2026: винодельни, дегустации и бюджетный гид",
       "description": "Спланируйте свой идеальный винный маршрут по Бордо на 2026 год. Откройте для себя лучшие винодельни, обязательные дегустации, советы по бюджету и подробный маршрут для..."
