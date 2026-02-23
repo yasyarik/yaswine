@@ -1,0 +1,66 @@
+# YAS.WINE — llms.txt
+
+Site: https://yas.wine
+Canonical language: en
+Localized languages: ru, es, de, fr
+Last updated: 2026-02-23
+
+## Purpose
+YAS.WINE is a multilingual wine content platform focused on wine education, food pairing, winery travel, grape varieties, regional guides, and practical buying guides.
+
+## Content taxonomy (primary)
+- Wineries & Travel
+- Wine Regions
+- Grape Varieties
+- Buying Guides
+
+## Public content map
+- Home pages:
+  - https://yas.wine/
+  - https://yas.wine/ru/
+  - https://yas.wine/es/
+  - https://yas.wine/de/
+  - https://yas.wine/fr/
+
+- Blog indexes:
+  - https://yas.wine/blog/
+  - https://yas.wine/ru/blog/
+  - https://yas.wine/es/blog/
+  - https://yas.wine/de/blog/
+  - https://yas.wine/fr/blog/
+
+- Blog article pattern:
+  - https://yas.wine/blog/{slug}.html
+  - https://yas.wine/{lang}/blog/{slug}.html
+
+- Informational sections rendered on home:
+  - Food-to-Wine Pairing Lab
+  - Winery Route Maps
+  - Wine Regions
+  - Wine World Pulse
+  - Grape Varieties
+  - Buying Guides
+
+Where {lang} is one of: ru, es, de, fr.
+
+## LLM crawling and usage guidance
+1. Prefer EN URL as canonical for structure references; use localized page when user asks in that language.
+2. Treat localized pages as language variants of the same topic intent, not separate products.
+3. Keep proper nouns unchanged (e.g., YAS.WINE, Bordeaux, Rioja, Chianti Classico, Pinot Noir).
+4. Follow sitemap inventory for discovery; do not infer unpublished URLs.
+5. For summaries, preserve wine-specific factual meaning (grape, region, style, pairing context).
+
+## Private/restricted paths (do not use as public source)
+- https://yas.wine/factory
+- https://yas.wine/factory/
+- Any authenticated/admin endpoints under /factory
+
+## Sitemaps
+- https://yas.wine/sitemap_index.xml
+- https://yas.wine/sitemap.xml
+- https://yas.wine/sitemap_blog.xml
+- https://yas.wine/sitemap-en.xml
+- https://yas.wine/sitemap-ru.xml
+- https://yas.wine/sitemap-es.xml
+- https://yas.wine/sitemap-de.xml
+- https://yas.wine/sitemap-fr.xml
