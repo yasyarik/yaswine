@@ -161,6 +161,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://airep24.com/fr/blog/dubai-bali-spain-real-estate-investment-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 =======
 <?xml version="1.0" encoding="UTF-8"?>
@@ -253,6 +259,12 @@
   </url>
   <url>
     <loc>https://airep24.com/fr/blog/dubai-mortgage-non-residents-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airep24.com/fr/blog/dubai-bali-spain-real-estate-investment-2026.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
