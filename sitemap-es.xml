@@ -77,6 +77,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://airep24.com/es/blog/dubai-off-plan-roi-2026-underwriting-new-launches.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 =======
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,6 +92,12 @@
   <url>
     <loc>https://airep24.com/es/blog/dubai-property-market-2026-yield-risks-strategy.html</loc>
     <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airep24.com/es/blog/dubai-off-plan-roi-2026-underwriting-new-launches.html</loc>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
