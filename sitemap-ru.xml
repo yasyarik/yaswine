@@ -107,6 +107,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://airep24.com/ru/blog/spain-foreign-buyer-taxes-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 =======
 <?xml version="1.0" encoding="UTF-8"?>
@@ -145,6 +151,12 @@
   </url>
   <url>
     <loc>https://airep24.com/ru/blog/how-to-build-3-city-overseas-property-portfolio-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airep24.com/ru/blog/spain-foreign-buyer-taxes-2026.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
