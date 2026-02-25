@@ -95,6 +95,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://airep24.com/de/blog/spain-golden-visa-alternatives-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 =======
 <?xml version="1.0" encoding="UTF-8"?>
@@ -121,6 +127,12 @@
   </url>
   <url>
     <loc>https://airep24.com/de/blog/bali-leasehold-vs-freehold-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airep24.com/de/blog/spain-golden-visa-alternatives-2026.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
