@@ -167,6 +167,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://airep24.com/de/blog/dubai-marina-downtown-palm-jumeirah-rental-investors-2026.html</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 =======
 <?xml version="1.0" encoding="UTF-8"?>
@@ -266,6 +272,12 @@
   <url>
     <loc>https://airep24.com/de/blog/dubai-bali-spain-real-estate-investment-2026.html</loc>
     <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airep24.com/de/blog/dubai-marina-downtown-palm-jumeirah-rental-investors-2026.html</loc>
+    <lastmod>2026-02-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

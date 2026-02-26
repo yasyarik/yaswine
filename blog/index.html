@@ -133,13 +133,17 @@ body { background: var(--bg-dark) !important; }
 .fixed-bg { background: var(--bg-gradient) !important; }
 .fixed-bg:before {
   background:
-    radial-gradient(circle at 18% 26%, rgba(108,23,67,0.62) 0%, transparent 36%),
-    radial-gradient(circle at 82% 16%, rgba(83,24,48,0.44) 0%, transparent 40%),
-    radial-gradient(circle at 50% 76%, rgba(65,20,44,0.58) 0%, transparent 42%) !important;
+    radial-gradient(circle at 18% 26%, rgba(56,189,248,0.62) 0%, transparent 36%),
+    radial-gradient(circle at 82% 16%, rgba(168,85,247,0.44) 0%, transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(34,197,94,0.58) 0%, transparent 42%) !important;
   background-size: 220% 220% !important;
   animation: shift 18s ease infinite !important;
   will-change: background-position;
 }
+.pill { background: rgba(47,168,255,0.16) !important; color: #e6f4ff !important; }
+.style-tab.active { background: rgba(47,168,255,0.35) !important; border-color: rgba(255,255,255,.32) !important; }
+.route-item.active { background: rgba(47,168,255,0.35) !important; border-color: rgba(255,255,255,.34) !important; }
+.uc-card:hover .cat-icon { border-color: rgba(47,168,255,0.35) !important; }
 @keyframes shift {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 </style>
 
@@ -180,6 +184,16 @@ body { background: var(--bg-dark) !important; }
       <div class="filter-group" id="filterGroup"></div>
     </div>
     <div class="blog-grid">
+            <!-- FACTORY:dubai-marina-downtown-palm-jumeirah-rental-investors-2026 -->
+            <a href="/blog/dubai-marina-downtown-palm-jumeirah-rental-investors-2026.html" class="blog-card">
+                <div class="card-image" style="background-image: url('dubai-marina-downtown-palm-jumeirah-rental-investors-2026-hero.webp');"></div>
+                <div class="card-content">
+                    <span class="category">Market Insights</span>
+                    <h3 class="card-title">Dubai Marina vs Downtown vs Palm Jumeirah: Best for Rental Investors in 2026</h3>
+                    <p class="card-excerpt">Compare Dubai Marina, Downtown, and Palm Jumeirah for 2026 rental investments. Discover ROI, demand, and growth potential to optimize your Dubai portfolio.</p>
+                </div>
+            </a>
+
             <!-- FACTORY:dubai-bali-spain-real-estate-investment-2026 -->
             <a href="/blog/dubai-bali-spain-real-estate-investment-2026.html" class="blog-card">
                 <div class="card-image" style="background-image: url('dubai-bali-spain-real-estate-investment-2026-hero.webp');"></div>
@@ -438,7 +452,8 @@ function copyUrlBlog() {
       const cards = Array.from(grid.children).filter(el => el && el.classList && el.classList.contains('blog-card'));
       if (!cards.length) {
         empty.style.display = '';
-        controls.style.display = 'none';
+        topFilters.style.display = 'none';
+        bottomPager.style.display = 'none';
         return;
       }
 
@@ -448,7 +463,7 @@ function copyUrlBlog() {
       }).filter(Boolean)));
 
       let activeCategory = 'All';
-      let currentVisible = PAGE_SIZE;
+      let currentPageNum = 1;
 
       try {
         const q = new URL(window.location.href).searchParams.get('category');
@@ -462,10 +477,6 @@ function copyUrlBlog() {
           const cat = decodeHtml((el ? el.textContent : '') || '').trim();
           return cat === activeCategory;
         });
-      }
-
-      function currentPage(total){
-        return Math.max(1, Math.ceil(currentVisible / PAGE_SIZE));
       }
 
       function maxPage(total){
@@ -493,7 +504,7 @@ function copyUrlBlog() {
           b.textContent = cat;
           b.addEventListener('click', () => {
             activeCategory = cat;
-            currentVisible = PAGE_SIZE;
+            currentPageNum = 1;
             render();
             window.scrollTo({ top: grid.offsetTop - 80, behavior: 'smooth' });
           });
@@ -502,32 +513,40 @@ function copyUrlBlog() {
       }
 
       function renderPager(total){
-        const p = currentPage(total);
         const mp = maxPage(total);
+        if (currentPageNum > mp) currentPageNum = mp;
         pagerGroup.innerHTML = '';
         for (let i = 1; i <= mp; i += 1) {
           const b = document.createElement('button');
           b.type = 'button';
-          b.className = 'pager-btn' + (i === p ? ' active' : '');
+          b.className = 'pager-btn' + (i === currentPageNum ? ' active' : '');
           b.textContent = String(i);
           b.addEventListener('click', () => {
-            currentVisible = i * PAGE_SIZE;
+            currentPageNum = i;
             render();
             window.scrollTo({ top: grid.offsetTop - 80, behavior: 'smooth' });
           });
           pagerGroup.appendChild(b);
         }
-        loadMoreBtn.style.display = currentVisible < total ? 'inline-flex' : 'none';
-        pagerMeta.textContent = 'Showing ' + Math.min(currentVisible, total) + ' of ' + total + ' posts';
-        syncUrl(p);
+
+        loadMoreBtn.style.display = currentPageNum < mp ? 'inline-flex' : 'none';
+        loadMoreBtn.textContent = 'Next page';
+
+        const start = total ? ((currentPageNum - 1) * PAGE_SIZE + 1) : 0;
+        const end = Math.min(total, currentPageNum * PAGE_SIZE);
+        pagerMeta.textContent = 'Showing ' + start + '-' + end + ' of ' + total + ' posts';
+        syncUrl(currentPageNum);
       }
 
       function render(){
         const filtered = filteredCards();
         const total = filtered.length;
+        const startIdx = (currentPageNum - 1) * PAGE_SIZE;
+        const endIdx = startIdx + PAGE_SIZE;
+
         cards.forEach(card => { card.style.display = 'none'; });
-        filtered.forEach((card, idx) => {
-          card.style.display = idx < currentVisible ? '' : 'none';
+        filtered.slice(startIdx, endIdx).forEach(card => {
+          card.style.display = '';
         });
 
         if (!total) {
@@ -543,14 +562,18 @@ function copyUrlBlog() {
 
       loadMoreBtn.addEventListener('click', () => {
         const total = filteredCards().length;
-        currentVisible = Math.min(total, currentVisible + PAGE_SIZE);
-        render();
+        const mp = maxPage(total);
+        if (currentPageNum < mp) {
+          currentPageNum += 1;
+          render();
+          window.scrollTo({ top: grid.offsetTop - 80, behavior: 'smooth' });
+        }
       });
 
       try {
         const pageFromUrl = Number(new URL(window.location.href).searchParams.get('page') || '1');
         if (Number.isFinite(pageFromUrl) && pageFromUrl > 1) {
-          currentVisible = pageFromUrl * PAGE_SIZE;
+          currentPageNum = Math.floor(pageFromUrl);
         }
       } catch (_) {}
 
