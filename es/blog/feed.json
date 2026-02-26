@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-02-26T00:51:38+00:00",
+  "updatedAt": "2026-02-26T00:55:35+00:00",
   "posts": [
+    {
+      "href": "/es/blog/spain-property-madrid-valencia-malaga-comparison-2026.html",
+      "image": "/blog/spain-property-madrid-valencia-malaga-comparison-2026-hero.png",
+      "category": "Analisis de mercado",
+      "title": "Inversión Inmobiliaria en España 2026: Madrid vs. Valencia vs. Málaga",
+      "description": "Compare Madrid, Valencia y Málaga para la inversión inmobiliaria en España en 2026. Descubra el ROI, el estilo de vida y las tendencias del mercado para tomar decision..."
+    },
+    {
+      "href": "/es/blog/top-data-signals-property-demand-dubai-bali-spain-2026.html",
+      "image": "/blog/top-data-signals-property-demand-dubai-bali-spain-2026-hero.png",
+      "category": "Analisis de mercado",
+      "title": "Top Data Signals to Forecast Property Demand in Dubai, Bali, and Spain in 2026",
+      "description": "Uncover the top data signals for forecasting property demand in Dubai, Bali, and Spain for 2026. Leverage economic, demographic, and digital insights for strate"
+    },
     {
       "href": "/es/blog/interest-rates-overseas-buy-to-let-2026.html",
       "image": "/blog/interest-rates-overseas-buy-to-let-2026-hero.png",
@@ -28,13 +42,6 @@
       "category": "Analisis de mercado",
       "title": "Best Neighborhoods in Dubai for Rental Property Investment in 2026",
       "description": "Discover the top neighborhoods in Dubai for rental property investment in 2026, offering high ROI and strong growth potential for savvy investors: answer-first"
-    },
-    {
-      "href": "/es/blog/spain-property-madrid-valencia-malaga-comparison-2026.html",
-      "image": "/blog/spain-property-madrid-valencia-malaga-comparison-2026-hero.png",
-      "category": "Analisis de mercado",
-      "title": "Inversión Inmobiliaria en España 2026: Madrid vs. Valencia vs. Málaga",
-      "description": "Compara Madrid, Valencia y Málaga para la inversión inmobiliaria en España en 2026. Descubre el ROI, el estilo de vida y las tendencias del mercado para tomar decision..."
     },
     {
       "href": "/es/blog/global-real-estate-capital-flows-dubai-bali-spain-2026.html",
