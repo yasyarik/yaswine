@@ -1,19 +1,26 @@
 {
-  "updatedAt": "2026-02-26T00:46:14+00:00",
+  "updatedAt": "2026-02-26T00:50:30+00:00",
   "posts": [
+    {
+      "href": "/es/blog/bali-real-estate-hotspots-foreign-buyers-2026.html",
+      "image": "/blog/bali-real-estate-hotspots-foreign-buyers-2026-hero.png",
+      "category": "Analisis de mercado",
+      "title": "Puntos Clave del Mercado Inmobiliario de Bali 2026: Dónde los Compradores Extranjeros Obtienen el Mejor Valor a Largo Plazo",
+      "description": "Descubre los principales puntos clave del mercado inmobiliario de Bali para compradores extranjeros en 2026, centrándose en el valor a largo plazo, alto ROI, conocimie..."
+    },
+    {
+      "href": "/es/blog/rental-yield-compression-risk-overseas-2026.html",
+      "image": "/blog/rental-yield-compression-risk-overseas-2026-hero.png",
+      "category": "Analisis de mercado",
+      "title": "Riesgo de Compresión del Rendimiento del Alquiler en los Principales Mercados Inmobiliarios Extranjeros en 2026: Estrategias para Inversores",
+      "description": "Comprenda los riesgos de compresión del rendimiento del alquiler en Dubai, Bali y España para 2026. Aprenda estrategias para mitigar el impacto, proteger el ROI e iden..."
+    },
     {
       "href": "/es/blog/best-dubai-neighborhoods-rental-property-investment-2026.html",
       "image": "/blog/best-dubai-neighborhoods-rental-property-investment-2026-hero.png",
       "category": "Analisis de mercado",
       "title": "Best Neighborhoods in Dubai for Rental Property Investment in 2026",
       "description": "Discover the top neighborhoods in Dubai for rental property investment in 2026, offering high ROI and strong growth potential for savvy investors: answer-first"
-    },
-    {
-      "href": "/es/blog/rental-yield-compression-risk-overseas-2026.html",
-      "image": "/blog/rental-yield-compression-risk-overseas-2026-hero.png",
-      "category": "Analisis de mercado",
-      "title": "Riesgo de Compresión del Rendimiento de Alquiler en los Principales Mercados Inmobiliarios Extranjeros en 2026: Estrategias para Inversores",
-      "description": "Comprenda los riesgos de compresión del rendimiento de alquiler en Dubai, Bali y España para 2026. Aprenda estrategias para mitigar el impacto, proteger el ROI e ident..."
     },
     {
       "href": "/es/blog/spain-property-madrid-valencia-malaga-comparison-2026.html",
@@ -28,13 +35,6 @@
       "category": "Analisis de mercado",
       "title": "Tendencias de Flujo de Capital Inmobiliario Global para Dubái, Bali y España en 2026: Una Guía para Inversores",
       "description": "Descubra las tendencias del flujo de capital inmobiliario global en 2026 que impactan Dubái, Bali y España. Navegue por los impulsores clave, la dinámica del mercado y..."
-    },
-    {
-      "href": "/es/blog/bali-real-estate-hotspots-foreign-buyers-2026.html",
-      "image": "/blog/bali-real-estate-hotspots-foreign-buyers-2026-hero.png",
-      "category": "Analisis de mercado",
-      "title": "Puntos Calientes Inmobiliarios de Bali 2026: Dónde los Compradores Extranjeros Obtienen el Mejor Valor a Largo Plazo",
-      "description": "Descubre los principales puntos calientes inmobiliarios de Bali para compradores extranjeros en 2026, centrándose en el valor a largo plazo, alto ROI, aspectos legales..."
     },
     {
       "href": "/es/blog/madrid-barcelona-real-estate-foreign-buyers-2026.html",
